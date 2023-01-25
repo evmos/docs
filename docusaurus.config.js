@@ -1,0 +1,220 @@
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+
+function defineSection(section, options = {}) {
+  return [
+    '@docusaurus/plugin-content-docs',
+    /** @type {import('@docusaurus/plugin-content-docs').Options} */
+    ({
+      path: `docs/${section}`,
+      routeBasePath: section,
+      id: section,
+      sidebarPath: require.resolve('./sidebars.js'),
+      breadcrumbs: false,
+      editUrl: 'https://github.com/osmosis-labs/docs/tree/main/',
+      ...options,
+    }),
+  ];
+}
+
+const SECTIONS = [
+  defineSection('use'),
+  defineSection('develop'),
+  defineSection('validate'),
+  defineSection('protocol'),
+];
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'Evmos Docs',
+  tagline: 'Develop on Evmos',
+  url: 'https://docs.evmos.org',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'evmos', // Usually your GitHub org/user name.
+  projectName: 'Docs', // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  customFields: {
+    project: {
+      name: "Evmos",
+      denom: "Evmos",
+      ticker: "EVMOS",
+      binary: "evmosd",
+      testnet_denom: "tEvmos",
+      testnet_ticker: "tEVMOS",
+      rpc_url: "https://eth.bd.evmos.org:8545",
+      rpc_url_testnet: "https://eth.bd.evmos.dev:8545",
+      rpc_url_local: "http://localhost:8545/",
+      chain_id: "9001",
+      testnet_chain_id: "9000",
+      latest_version: "v10.0.1",
+      mainnet_version: "v10.0.1",
+      testnet_version: "v10.0.0-rc4",
+      version_number: "2",
+      testnet_version_number: "4",
+      testnet_evm_explorer_url: "https://evm.evmos.dev",
+      evm_explorer_url: "https://escan.live",
+      testnet_cosmos_explorer_url: "https://testnet.mintscan.io/evmos-testnet",
+      cosmos_explorer_url: "https://www.mintscan.io/evmos",
+    },
+  },
+
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          path: 'docs/home',
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
+        blog: false,
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
+  plugins: [
+    ...SECTIONS,
+  ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: 'Evmos Docs',
+        logo: {
+          alt: 'Evmos Logo',
+          src: 'img/evmos.svg',
+        },
+        items: [
+          {
+            position: 'left',
+            label: 'Use',
+            to: '/use/introduction',
+          },
+          {
+            position: 'left',
+            label: 'Develop',
+            to: '/develop',
+          },
+          {
+            position: 'left',
+            label: 'Validate',
+            to: '/validate',
+          },
+          {
+            position: 'left',
+            label: 'Protocol',
+            to: '/protocol',
+          },
+          {
+            href: 'https://api.evmos.org',
+            label: 'API',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/evmos',
+            className: 'pseudo-icon github-icon',
+            position: 'right',
+          },
+        ],
+      },
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'YOUR_APP_ID',
+  
+      //   // Public API key: it is safe to commit it
+      //   apiKey: 'YOUR_SEARCH_API_KEY',
+  
+      //   indexName: 'YOUR_INDEX_NAME',
+  
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
+  
+      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      //   externalUrlRegex: 'external\\.com|domain\\.com',
+  
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
+  
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
+  
+      //   //... other Algolia params
+      // },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Use Evmos',
+                to: '/use',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Telegram',
+                href: 'https://t.me/EvmosOrg',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/evmos',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/EvmosOrg',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: 'https://medium.com/evmos',
+              },
+              {
+                label: 'Evmos GitHub',
+                href: 'https://github.com/evmos',
+              },
+            ],
+          },
+        ],
+        copyright: `Built with ❤️ by the Evmos Team. © ${new Date().getFullYear()} All rights reserved.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
+};
+
+module.exports = config;
