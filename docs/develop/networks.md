@@ -15,7 +15,6 @@ public testnets:
 You can also use [chainlist.org](https://chainlist.org/) to add the node directly to [Metamask](/use/connect-your-wallet/metamask#automatic-import).
 :::
 
-<!-- markdown-link-check-disable -->
 ### Mainnet
 
 | Address                                       | Category               | Maintainer                              |
@@ -56,7 +55,6 @@ You can also use [chainlist.org](https://chainlist.org/) to add the node directl
 | `https://jsonrpc-evmos.mms.team:443`          | `Ethereum` `JSON-RPC`  | [MMS](https://mms.team/) |
 
 ### Testnet
-<!-- markdown-link-check-disable -->
 
 | Address                                      | Category               | Maintainer                              |
 | -------------------------------------------- | ---------------------- | --------------------------------------- |

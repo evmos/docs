@@ -38,8 +38,6 @@ GOROOT=/usr/local/go
 
 ## Install dependencies
 
-<!-- markdown-link-check-disable-next-line -->
-
 Make sure you have installed all the dependencies mentioned in the **[Prerequisite Readings](#Prerequisite-readings)** section.
 
 ## Run Evmos local node

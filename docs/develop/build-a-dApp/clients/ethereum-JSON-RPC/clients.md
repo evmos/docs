@@ -30,8 +30,6 @@ See the list of supported gRPC-Gateway API endpoints for the Evmos testnet [here
 
 ## Ethereum JSON-RPC
 
-<!-- TODO: Link JSON-RPC docs -->
-
 Evmos supports most of the standard [JSON-RPC APIs](./JSON-RPC) to connect with existing Ethereum-compatible web3 tooling.
 
 :::tip
@@ -39,8 +37,6 @@ Check out the list of supported JSON-RPC API [endpoints](./JSON-RPC-methods) and
 :::
 
 ## Ethereum Websocket
-
-<!-- TODO: Link WSS docs -->
 
 Then, start a websocket subscription with [`ws`](https://github.com/hashrocket/ws)
 
@@ -81,7 +77,6 @@ The main events you can subscribe to are:
 - `ValidatorSetUpdates`: Contains validator set updates for the block.
 
 :::tip
-<!-- markdown-link-check-disable-next-line -->
 👉 The list of events types and values for each Cosmos SDK module can be found in the [Modules Specification](../../../../protocol/modules/) section.
 Check the `Events` page to obtain the event list of each supported module on Evmos.
 :::

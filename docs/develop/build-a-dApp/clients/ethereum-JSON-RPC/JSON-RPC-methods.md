@@ -12,7 +12,6 @@ Check the JSON-RPC methods supported on Evmos.
 - [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}
 
 ## Endpoints
-<!-- markdown-link-check-disable -->
 
 | Method                                                                            | Namespace | Implemented | Public | Notes              |
 |-----------------------------------------------------------------------------------|-----------|-------------|--------|--------------------|
@@ -158,8 +157,6 @@ Check the JSON-RPC methods supported on Evmos.
 | [`txpool_content`](#txpool-content)                                               | TxPool    | ✔           |        |                    |
 | [`txpool_inspect`](#txpool-inspect)                                               | TxPool    | ✔           |        |                    |
 | [`txpool_status`](#txpool-status)                                                 | TxPool    | ✔           |        |                    |
-
-<!-- markdown-link-check-enable -->
 
 :::tip
 Block Number can be entered as a Hex string, `"earliest"`, ``"latest"`` or `"pending"`.
@@ -490,7 +487,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 ### `eth_sendRawTransaction`
 
 Creates new message call transaction or a contract creation for signed transactions.
-<!-- markdown-link-check-disable-next-line -->
 You can get signed transaction data using the [`personal_sign`](#personal-sign) method.
 
 #### Parameters
@@ -929,7 +925,6 @@ Decrypts the key with the given address from the key store.
 
 Both passphrase and unlock duration are optional when using the JavaScript console. The unencrypted key will be held in memory until the unlock duration expires. If the unlock duration defaults to 300 seconds. An explicit duration of zero seconds unlocks the key until geth exits.
 
-<!-- markdown-link-check-disable-next-line -->
 The account can be used with [`eth_sign`](#eth-sign) and [`eth_sendTransaction`](#eth-sendtransaction) while it is unlocked.
 
 #### Parameters
@@ -956,7 +951,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_unlockAccount","params"
 
 Validate the given passphrase and submit transaction.
 
-<!-- markdown-link-check-disable-next-line -->
 The transaction is the same argument as for [`eth_sendTransaction`](#eth-sendtransaction) and contains the `from` address. If the passphrase can be used to decrypt the private key belonging to `tx.from` the transaction is verified, signed and send onto the network.
 
 :::warning
@@ -1013,14 +1007,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sign","params":["0xdead
 **Private**: Requires authentication.
 :::
 
-<!-- markdown-link-check-disable-next-line -->
 `ecRecover` returns the address associated with the private key that was used to calculate the signature in [`personal_sign`](#personal-sign).
 
 #### Parameters
 
 - Message
 
-<!-- markdown-link-check-disable-next-line -->
 - Signature returned from [`personal_sign`](#personal-sign)
 
 ```json

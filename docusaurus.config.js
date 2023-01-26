@@ -51,6 +51,9 @@ const config = {
     locales: ['en'],
   },
 
+  // @ts-ignore
+  onBrokenLinks: 'warn',
+
   customFields: {
     project: {
       name: "Evmos",
