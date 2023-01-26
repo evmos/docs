@@ -27,7 +27,7 @@ function Home() {
               />
 
               <Card
-                to="./use/introduction"
+                to="./use"
                 header={{
                   label: "☄️ Learn about Evmos",
                 }}

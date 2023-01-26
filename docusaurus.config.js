@@ -117,7 +117,7 @@ const config = {
           {
             position: 'left',
             label: 'Use',
-            to: '/use/introduction',
+            to: '/use',
           },
           {
             position: 'left',
