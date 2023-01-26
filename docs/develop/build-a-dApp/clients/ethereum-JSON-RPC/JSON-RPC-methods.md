@@ -183,29 +183,18 @@ Get the web3 client version.
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
-
-```shell
+```shell title="Shell HTTP"
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_clientVersion", "params": []}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
 
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "web3_clientVersion", "params": []}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 web3.clientVersion();
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 ### `web3_sha3`
 
@@ -225,29 +214,18 @@ Returns Keccak-256 (not the standardized SHA3-256) of the given data.
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
 
-```shell
+```shell title="Shell HTTP"
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_sha3", "params": [<input>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
-
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "web3_sha3", "params": [<input>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 web3.sha3(input);
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 ## Net Methods
 
@@ -1071,29 +1049,17 @@ Parameters must be given by position.
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
-
-```shell
+```shell title="Shell HTTP"
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "personal_initializeWallet", "params": [<url>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
-
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "personal_initializeWallet", "params": [<url>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 personal.initializeWallet(url);
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 ### `personal_unpair`
 
@@ -1111,29 +1077,18 @@ Unpair deletes a pairing between wallet and the node.
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
-
-```shell
+```shell title="Shell HTTP"
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="WebSocket">
 
-```shell
+```shell title="WebSocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 personal.unpair(url,pin);
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 ## Debug Methods
 
@@ -1334,29 +1289,17 @@ Returns a list of the exact details of all the transactions currently pending fo
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
-
-```shell
+```shell title="Shell HTTP"
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_content","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
-
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_content", "params": []}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 txpool.content();
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 #### Result
 
@@ -1372,29 +1315,18 @@ Returns a list on text format to summarize all the transactions currently pendin
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
 
-```shell
+```shell title="Shell HTTP"
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_inspect","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
-
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_inspect", "params": []}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 txpool.inspect();
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 #### Result
 
@@ -1410,29 +1342,17 @@ Returns the number of transactions currently pending for inclusion in the next b
 
 #### Client Examples
 
-<CodeGroup>
-<CodeGroupItem title="Shell HTTP">
-
-```shell
+```shell title="Shell HTTP"
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_status","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Websocket">
-
-```shell
+```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_status", "params": []}'
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="Javascript Console">
-
-```javascript
+```javascript title="Javascript Console"
 txpool.status();
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 
 #### Result
 
