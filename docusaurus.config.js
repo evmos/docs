@@ -34,9 +34,10 @@ const config = {
   tagline: 'Develop on Evmos',
   url: 'https://docs.evmos.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -50,9 +51,6 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
-  // @ts-ignore
-  onBrokenLinks: 'warn',
 
   customFields: {
     project: {
@@ -86,8 +84,9 @@ const config = {
       ({
         docs: {
           path: 'docs/home',
-          routeBasePath: '/',
+          // routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          breadcrumbs: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -110,6 +109,7 @@ const config = {
       navbar: {
         title: 'Evmos Docs',
         logo: {
+          href: '/',
           alt: 'Evmos Logo',
           src: 'img/evmos.svg',
         },
