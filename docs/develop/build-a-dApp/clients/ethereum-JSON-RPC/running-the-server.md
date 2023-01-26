@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Running the Server
 
-Learn how to run and setup the JSON-RPC server on Evmos. {synopsis}
+Learn how to run and setup the JSON-RPC server on Evmos. 
 
 :::tip
 **Important**: You cannot use all JSON RPC methods unless your node stores the entire copy of the blockchain locally. Do you need archives/snapshots of our networks? Go to [this section](https://docs.evmos.org/validators/snapshots_archives.html).
@@ -29,7 +29,7 @@ evmosd start --json-rpc.enable
 
 ## Defining Namespaces
 
-`Eth`,`Net` and `Web3` [namespaces](./namespaces.md) are enabled by default, but for the JSON-RPC you need to add more namespaces.
+`Eth`,`Net` and `Web3` [namespaces](./namespaces) are enabled by default, but for the JSON-RPC you need to add more namespaces.
 In order to enable other namespaces edit `app.toml` file.
 
 ```toml

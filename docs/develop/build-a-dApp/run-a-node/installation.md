@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Installation
 
-Build and install the Evmos binaries from source or using Docker. {synopsis}
+Build and install the Evmos binaries from source or using Docker. 
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 # EvmosJS
 
-Learn about the EvmosJS Library for connecting clients to Evmos. {synopsis}
+Learn about the EvmosJS Library for connecting clients to Evmos.
 
 [`evmosjs`](https://github.com/evmos/evmosjs) is a JavaScript and TypeScript client library for [Evmos](https://github.com/evmos/evmos) and [Ethermint](https://github.com/evmos/ethermint) nodes.
 

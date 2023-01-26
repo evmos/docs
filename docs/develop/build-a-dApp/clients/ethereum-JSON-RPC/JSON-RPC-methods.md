@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # JSON-RPC Methods
 
-Check the JSON-RPC methods supported on Evmos. {synopsis}
+Check the JSON-RPC methods supported on Evmos. 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) {prereq}
 - [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}

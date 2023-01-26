@@ -4,8 +4,8 @@ Configure and run an Evmos node
 
 ## Prerequisite Readings
 
-- [Installation](./installation.md) {prereq}
-- [`evmosd`](./binary.md) {prereq}
+- [Installation](./installation) {prereq}
+- [`evmosd`](./evmosd) {prereq}
 
 ## Automated deployment
 
@@ -23,7 +23,7 @@ to keep your binaries and configuration files.
 ## Manual deployment
 
 The instructions for setting up a brand new full node from scratch are the the same as running a
-[single node local testnet](./../../developers/localnet/single_node.md#manual-localnet).
+[single node local testnet](./single-node#manual-localnet).
 
 ## Start node
 
@@ -51,7 +51,7 @@ You can generate a new key/mnemonic with:
 evmosd keys add $KEY
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](./../../users/wallets/metamask.md) for example):
+To export your evmos key as an Ethereum private key (for use with [Metamask](../../../use/connect-your-wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key $KEY
@@ -77,7 +77,7 @@ evmosd config keyring-backend file
 ```
 
 :::tip
-For more information about the Keyring and its backend options, click [here](./../../users/keys/keyring.md).
+For more information about the Keyring and its backend options, click [here](../../../protocol/concepts/keyring).
 :::
 
 ## Enable Tracing
@@ -161,7 +161,3 @@ rate(evmosd_transactions_processed[1m])
 ```
 
 which will show the rate of transactions processed.
-
-## Next {hide}
-
-Learn about running a Evmos [testnet](./../testnet.md) {hide}

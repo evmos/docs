@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # Geth JavaScript Console Guide
 
-Use this guide to learn how to set up and use the Geth JS console with an Evmos node. {synopsis}
+Use this guide to learn how to set up and use the Geth JS console with an Evmos node. 
 
 Go-ethereum responds to instructions encoded as JSON objects as defined in the [JSON-RPC-API](https://geth.ethereum.org/docs/rpc/server). To perform and test these instructions, developers can use tools like curl. However, this is a low level and rather error-prone way to interact with the node. Most developers prefer to use convenient libraries that abstract away some of the more tedious and awkward tasks such as converting values from hexadecimal strings into numbers, or converting between denominations of ether (Wei, Gwei, etc). One such library is Web3.js. The purpose of Geth’s Javascript console is to provide a built-in environment to use a subset of the Web3.js libraries to interact with a Geth node. You can use this powerful tool to interact with an Evmos node too!
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Go-ethereum CLI](https://geth.ethereum.org/docs/interface/javascript-console) {prereq}
 - [Evmos (local) node](https://docs.evmos.org/developers/localnet/single_node.html) {prereq}
@@ -40,7 +40,7 @@ GOROOT=/usr/local/go
 
 <!-- markdown-link-check-disable-next-line -->
 
-Make sure you have installed all the dependencies mentioned in the **[Pre-requisite Readings](#pre-requisite-readings)** section.
+Make sure you have installed all the dependencies mentioned in the **[Prerequisite Readings](#Prerequisite-readings)** section.
 
 ## Run Evmos local node
 

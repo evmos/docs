@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Overview
 
-Learn about validating on Evmos {synopsis}
+Learn about validating on Evmos
 
 ## Introduction
 

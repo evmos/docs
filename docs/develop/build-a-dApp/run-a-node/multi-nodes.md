@@ -1,6 +1,6 @@
 # Multi Node
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Install Ignite CLI](https://docs.ignite.com/guide/install.html)  {prereq}
 - [Install Docker](https://docs.docker.com/engine/installation/)  {prereq}
@@ -184,7 +184,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 The IP address will be the public IP of the docker container.
 :::
 
-Additional instructions on how to interact with the WebSocket can be found on the [events documentation](./../json-rpc/events.md#ethereum-websocket).
+Additional instructions on how to interact with the WebSocket can be found on the [events documentation](../clients/ethereum-JSON-RPC/event#ethereum-websocket).
 
 ### Keys & Accounts
 

@@ -1,10 +1,10 @@
 # `evmosd`
 
-`evmosd` is the all-in-one command-line interface. It supports wallet management, queries and transaction operations {synopsis}
+`evmosd` is the all-in-one command-line interface. It supports wallet management, queries and transaction operations 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
-- [Installation](./installation.md) {prereq}
+- [Installation](./installation)
 
 ## Build and Configuration
 
@@ -28,7 +28,7 @@ There is also a `-h`, `--help` command available
 evmosd -h
 ```
 
-::: tip
+:::tip
 You can also enable auto-completion with the `evmosd completion` command. For example, at the start of a bash session, run `. <(evmosd completion)`, and all `evmosd` subcommands will be auto-completed.
 :::
 
@@ -83,7 +83,7 @@ The following pruning state settings are available:
 By default, every node is in `default` mode which is the recommended setting for most environments.
 If you would like to change your nodes pruning strategy then you must do so when the node is initialized. Passing a flag when starting `evmos` will always override settings in the `app.toml` file, if you would like to change your node to the `everything` mode then you can pass the `---pruning everything` flag when you call `evmosd start`.
 
-::: warning
+:::warning
 **IMPORTANT**:
 When you are pruning state you will not be able to query the heights that are not in your store.
 :::

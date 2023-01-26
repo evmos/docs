@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # JSON-RPC Server
 
-Learn about the JSON-RPC server to interact with the EVM. {synopsis}
+Learn about the JSON-RPC server to interact with the EVM.
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API) {prereq}
 - [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server) {prereq}
@@ -19,11 +19,11 @@ JSON-RPC is provided on multiple transports. Evmos supports JSON-RPC over HTTP a
 
 ## Web3 Support
 
-Evmos supports all standard web3 JSON-RPC APIs. You can find documentation for these APIs on the [`JSON-RPC Methods`](./endpoints.md) page.
+Evmos supports all standard web3 JSON-RPC APIs. You can find documentation for these APIs on the [`JSON-RPC Methods`](./JSON-RPC-methods) page.
 
 Ethereum JSON-RPC APIs use a name-space system. RPC methods are grouped into several categories depending on their purpose. All method names are composed of the namespace, an underscore, and the actual method name within the namespace. For example, the eth_call method resides in the eth namespace.
 
-Access to RPC methods can be enabled on a per-namespace basis. Find documentation for individual namespaces in the [Namespaces](./namespaces.md) page.
+Access to RPC methods can be enabled on a per-namespace basis. Find documentation for individual namespaces in the [Namespaces](./namespaces) page.
 
 ## HEX value encoding
 
@@ -54,11 +54,11 @@ When encoding unformatted data (byte arrays, account addresses, hashes, bytecode
 
 The following methods have an extra default block parameter:
 
-- [`eth_getBalance`](./endpoints.md#eth-getbalance)
-- [`eth_getCode`](./endpoints.md#eth-getcode)
-- [`eth_getTransactionCount`](./endpoints.md#eth-gettransactioncount)
-- [`eth_getStorageAt`](./endpoints.md#eth-getstorageat)
-- [`eth_call`](./endpoints.md#eth-call)
+- [`eth_getBalance`](./json-rpc-methods#eth-getbalance)
+- [`eth_getCode`](./json-rpc-methods#eth-getcode)
+- [`eth_getTransactionCount`](./json-rpc-methods#eth-gettransactioncount)
+- [`eth_getStorageAt`](./json-rpc-methods#eth-getstorageat)
+- [`eth_call`](./json-rpc-methods#eth-call)
 
 When requests are made that act on the state of Evmos, the last default block parameter determines the height of the block.
 

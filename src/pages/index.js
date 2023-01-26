@@ -16,40 +16,40 @@ function Home() {
           <div className="container">
             <div className="row cards__container">
               <Card
-                to=""
+                to="./develop/build-a-dApp/run-a-node"
                 header={{
-                  label: "🚀 Launch Your First Subnet",
+                  label: "🚀 Launch Your Local Node",
                 }}
                 body={{
                   label:
-                    "Start your Subnet development journey by creating a subnet in under five minutes",
+                    "Getting started on Evmos is simple and easy with local node",
                 }}
               />
 
               <Card
-                to="intro"
+                to="./use/introduction"
                 header={{
-                  label: "🔺 Learn about Evmos",
+                  label: "☄️ Learn about Evmos",
                 }}
                 body={{
                   label:
-                    "Discover how Subnets and Avalanche Consensus are revolutionizing Web3",
+                    "Discover why Evmos is the flagship EVM on the Cosmos Ecosystem",
                 }}
               />
 
               <Card
-                to="nodes"
+                to="./validate"
                 header={{
                   label: "😎 Become a Validator",
                 }}
                 body={{
                   label:
-                    "Join Avalanche's Proof-of-Stake protocol to help secure the network and earn rewards",
+                    "Join Evmos's Proof-of-Stake protocol to help secure the network and earn rewards",
                 }}
               />
 
               <Card
-                to="apis/avalanchego"
+                to="./api"
                 header={{
                   label: "💻 View Evmos APIs",
                 }}
@@ -60,7 +60,7 @@ function Home() {
               />
 
               <Card
-                to="dapps/launch-your-ethereum-dapp"
+                to="./develop/build-a-dApp/run-a-node/evmosd"
                 header={{
                   label: "🛠️ Launch dApp on Evmos",
                 }}
@@ -71,13 +71,13 @@ function Home() {
               />
 
               <Card
-                to="https://core.app"
+                to="https://github.com/evmos"
                 header={{
-                  label: "🦉 Protocol Development",
+                  label: "🛠️ Contribute to Evmos",
                 }}
                 body={{
                   label:
-                    "Access your portfolio with a wallet built specifically for subnets on Avalanche",
+                    "Contribute to the thriving ecosystem of Evmos and its open-source initiatives",
                 }}
               />
             </div>

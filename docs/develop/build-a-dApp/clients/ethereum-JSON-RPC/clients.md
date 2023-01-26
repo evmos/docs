@@ -32,10 +32,10 @@ See the list of supported gRPC-Gateway API endpoints for the Evmos testnet [here
 
 <!-- TODO: Link JSON-RPC docs -->
 
-Evmos supports most of the standard [JSON-RPC APIs](./json-rpc/server.md) to connect with existing Ethereum-compatible web3 tooling.
+Evmos supports most of the standard [JSON-RPC APIs](./JSON-RPC) to connect with existing Ethereum-compatible web3 tooling.
 
-::: tip
-Check out the list of supported JSON-RPC API [endpoints](./json-rpc/endpoints.md) and [namespaces](./json-rpc/namespaces.md).
+:::tip
+Check out the list of supported JSON-RPC API [endpoints](./JSON-RPC-methods) and [namespaces](./namespaces).
 :::
 
 ## Ethereum Websocket
@@ -57,7 +57,7 @@ ws ws://localhost:8546/
 
 Tendermint Core provides a Websocket connection to subscribe or unsubscribe to Tendermint ABCI events.
 
-::: tip
+:::tip
 For more info about how to subscribe to events, please refer to the official [Tendermint documentation](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
 :::
 
@@ -80,9 +80,9 @@ The main events you can subscribe to are:
 - `Tx`: Contains `events` triggered during `DeliverTx` (i.e. transaction processing).
 - `ValidatorSetUpdates`: Contains validator set updates for the block.
 
-::: tip
+:::tip
 <!-- markdown-link-check-disable-next-line -->
-👉 The list of events types and values for each Cosmos SDK module can be found in the [Modules Specification](./../modules/README.md) section.
+👉 The list of events types and values for each Cosmos SDK module can be found in the [Modules Specification](../../../../protocol/modules/) section.
 Check the `Events` page to obtain the event list of each supported module on Evmos.
 :::
 
@@ -158,9 +158,9 @@ Example response:
 Users can use the `{{ $themeConfig.project.binary }}` binary to interact directly with an Evmos node
 though the CLI.
 
-::: tip
+:::tip
 👉 To use the CLI, you will need to provide a Tendermint RPC address for the `--node` flag.
-Look for a publicly available addresses for testnet and mainnet in the [Quick Connect](./connect.md) page.
+Look for a publicly available addresses for testnet and mainnet in the [Networks & Connections](/develop/networks) page.
 :::
 
 - **Transactions**: `{{ $themeConfig.project.binary }} tx`
