@@ -1,6 +1,10 @@
+---
+sidebar_position: 9
+---
+
 # Networks
 
-Quickly connect your app or client to Evmos services {synopsis}
+Quickly connect your app or client to Evmos services 
 
 ## Public Available Endpoints
 

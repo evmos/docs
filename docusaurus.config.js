@@ -25,6 +25,7 @@ const SECTIONS = [
   defineSection('develop'),
   defineSection('validate'),
   defineSection('protocol'),
+  defineSection('api'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -131,9 +132,9 @@ const config = {
             to: '/protocol',
           },
           {
-            href: 'https://api.evmos.org',
-            label: 'API',
             position: 'right',
+            label: 'API Reference',
+            to: '/api',
           },
           {
             href: 'https://github.com/evmos',

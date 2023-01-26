@@ -1,47 +1,57 @@
 ---
 sidebar_position: 1
 ---
+# Overview
 
-# Validate
+Learn about validating on Evmos {synopsis}
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Introduction
 
-## Getting Started
+Evmos is based on [Tendermint Core](https://github.com/tendermint/tendermint/blob/master/docs/introduction/what-is-tendermint.md), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
 
-Get started by **creating a new site**.
+Validator candidates can bond their own staking tokens and have the tokens "delegated", or staked, to them by token holders. The **{{ $themeConfig.project.denom }}** is Evmos's native token. At its onset, Evmos will launch with 150 validators. The validators are determined by who has the most stake delegated to them - the top 150 validator candidates with the most stake will become Evmos validators.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Validators and their delegators will earn {{ $themeConfig.project.denom }} as block provisions and tokens as transaction fees through execution of the Tendermint consensus protocol. Initially, transaction fees will be paid in EVMOS but in the future, any token in the Cosmos ecosystem will be valid as fee tender if it is whitelisted by governance. Note that validators can set commission on the fees their delegators receive as additional incentive.
 
-### What you'll need
+If validators double sign, are frequently offline or do not participate in governance, their staked {{ $themeConfig.project.denom }} (including {{ $themeConfig.project.denom }} of users that delegated to them) can be slashed. The penalty depends on the severity of the violation.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Hardware
 
-## Generate a new site
+Validators should set up a physical operation secured with restricted access. A good starting place, for example, would be co-locating in secure data centers.
 
-Generate a new Docusaurus site using the **classic template**.
+Validators should expect to equip their datacenter location with redundant power, connectivity, and storage backups. Expect to have several redundant networking boxes for fiber, firewall and switching and then small servers with redundant hard drive and failover. Hardware can be on the low end of datacenter gear to start out with.
 
-The classic template will automatically be added to your project after you run the command:
+We anticipate that network requirements will be low initially. Bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommended for storing years of blockchain history.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Supported OS
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+We officially support macOS, Windows and Linux only in the following architectures:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+* `darwin/arm64`
+* `darwin/x86_64`
+* `linux/arm64`
+* `linux/amd64`
+* `windows/x86_64`
 
-## Start your site
+### Minimum Requirements
 
-Run the development server:
+To run mainnet or testnet validator nodes, you will need a machine with the following minimum hardware requirements:
 
-```bash
-cd my-website
-npm run start
-```
+* 4 or more physical CPU cores
+* At least 500GB of SSD disk storage
+* At least 32GB of memory (RAM)
+* At least 100mbps network bandwidth
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+As the usage of the blockchain grows, the server requirements may increase as well, so you should have a plan for updating your server as well.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Get Involved
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+:::tip
+Seek legal advice if you intend to run a validator.
+:::
+
+Set up a dedicated validator's website, social profile (eg: Twitter) and signal your intention to become a validator on Discord. This is important since users will want to have information about the entity they are staking their EVMOS to.
+
+## Community
+
+Discuss the finer details of being a validator and seek advise from the rest of the validator community on our [Discord](https://discord.gg/evmos).

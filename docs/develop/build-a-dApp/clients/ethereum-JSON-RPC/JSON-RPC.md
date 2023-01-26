@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # JSON-RPC Server
 
 Learn about the JSON-RPC server to interact with the EVM. {synopsis}
