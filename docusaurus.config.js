@@ -189,7 +189,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Built with ❤️ by the Evmos Team. © ${new Date().getFullYear()} All rights reserved.`,
+        copyright: `Built with ❤️ by the Evmos Core Development Team. © ${new Date().getFullYear()} All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
