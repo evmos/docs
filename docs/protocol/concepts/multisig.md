@@ -1,6 +1,6 @@
 # Multisig
 
-Learn how to generate, sign and broadcast a transaction using the keyring multisig {synopsis}
+Learn how to generate, sign and broadcast a transaction using the keyring multisig.
 
 A **multisig account** is an Evmos account with a special key that can require more than one signature to sign transactions. This can be useful for increasing the security of the account or for requiring the consent of multiple parties to make transactions. Multisig accounts can be created by specifying:
 

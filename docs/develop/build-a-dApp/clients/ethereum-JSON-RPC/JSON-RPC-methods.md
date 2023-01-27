@@ -8,8 +8,8 @@ Check the JSON-RPC methods supported on Evmos.
 
 ## Prerequisite Readings
 
-- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) {prereq}
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}
+- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) 
+- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) 
 
 ## Endpoints
 

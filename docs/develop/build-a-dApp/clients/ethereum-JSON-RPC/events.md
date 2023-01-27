@@ -11,8 +11,8 @@ messages and index transactions.
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html) {prereq}
-- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub) {prereq}
+- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html) 
+- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub) 
 
 ## Subscribing to Events
 

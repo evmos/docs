@@ -3,7 +3,7 @@ sidebar_position: 8
 ---
 # Resources
 
-Learn about Evmos with the list of official resources. {synopsis}
+Learn about Evmos with the list of official resources.
 
 :::tip
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧

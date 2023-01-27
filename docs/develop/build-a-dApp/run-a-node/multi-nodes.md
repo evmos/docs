@@ -2,9 +2,9 @@
 
 ## Prerequisite Readings
 
-- [Install Ignite CLI](https://docs.ignite.com/guide/install.html)  {prereq}
-- [Install Docker](https://docs.docker.com/engine/installation/)  {prereq}
-- [Install docker-compose](https://docs.docker.com/compose/install/)  {prereq}
+- [Install Ignite CLI](https://docs.ignite.com/guide/install.html)  
+- [Install Docker](https://docs.docker.com/engine/installation/)  
+- [Install docker-compose](https://docs.docker.com/compose/install/)  
 
 ## Automated Localnet with Ignite CLI
 

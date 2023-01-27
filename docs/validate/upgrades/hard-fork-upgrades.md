@@ -1,6 +1,6 @@
 # Hard Fork Upgrades
 
-Learn how to manually upgrade your node. {synopsis}
+Learn how to manually upgrade your node.
 
 One of the significant limitations of the normal upgrade procedure [via
 governance](./../../validate/upgrades/overview#governance-proposal) is that it requires waiting for the

@@ -4,7 +4,7 @@ Learn how Evmos handles pending state queries.
 
 ## Pre-requisite Readings
 
-- [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/) {prereq}
+- [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/) 
 
 ## Evmos vs Ethereum
 

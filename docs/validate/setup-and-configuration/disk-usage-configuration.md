@@ -1,6 +1,6 @@
 # Disk Usage Optimization
 
-Customize the configuration settings to lower the disk requirements for your validator node {synopsis}
+Customize the configuration settings to lower the disk requirements for your validator node.
 
 Blockchain database tends to grow over time, depending e.g. on block
 speed and transaction amount. For Evmos, we are talking about close to

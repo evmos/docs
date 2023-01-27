@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Telemetry and Observability
 
-Gather relevant insights about the Evmos application and modules with custom metrics and telemetry. {synopsis}
+Gather relevant insights about the Evmos application and modules with custom metrics and telemetry.
 
 To understand how to use the metrics below, please refer to the [Cosmos SDK telemetry documentation](https://docs.cosmos.network/main/core/telemetry.html).
 

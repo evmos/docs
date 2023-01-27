@@ -4,7 +4,7 @@ This document outlines the steps to join an existing testnet
 
 ## Pre-requisite Readings
 
-- [Validator Security](./security/validator-security) {prereq}
+- [Validator Security](./security/validator-security) 
 
 ## Mainnet
 

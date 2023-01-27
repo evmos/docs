@@ -1,10 +1,10 @@
 # Automated Upgrades
 
-Learn how to automate chain upgrades using Cosmovisor. 
+Learn how to automate chain upgrades using Cosmovisor.
 
 ## Pre-requisites
 
-- [Install Cosmovisor](https://docs.cosmos.network/main/tooling/cosmovisor#installation) {prereq}
+- [Install Cosmovisor](https://docs.cosmos.network/main/tooling/cosmovisor#installation)
 
 ## Using Cosmovisor
 

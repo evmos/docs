@@ -4,8 +4,8 @@ Configure and run an Evmos node
 
 ## Prerequisite Readings
 
-- [Installation](./installation) {prereq}
-- [`evmosd`](./evmosd) {prereq}
+- [Installation](./installation) 
+- [`evmosd`](./evmosd) 
 
 ## Automated deployment
 

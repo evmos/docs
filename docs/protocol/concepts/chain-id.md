@@ -1,6 +1,6 @@
 # Chain ID
 
-Learn about the Evmos chain-id format {synopsis}
+Learn about the Evmos chain-id format.
 
 ## Official Chain IDs
 

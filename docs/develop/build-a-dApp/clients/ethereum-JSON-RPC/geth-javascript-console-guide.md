@@ -10,8 +10,8 @@ Go-ethereum responds to instructions encoded as JSON objects as defined in the [
 
 ## Prerequisite Readings
 
-- [Go-ethereum CLI](https://geth.ethereum.org/docs/interface/javascript-console) {prereq}
-- [Evmos (local) node](https://docs.evmos.org/developers/localnet/single_node.html) {prereq}
+- [Go-ethereum CLI](https://geth.ethereum.org/docs/interface/javascript-console) 
+- [Evmos (local) node](https://docs.evmos.org/developers/localnet/single_node.html) 
 
 ### Installing Go-Ethereum
 

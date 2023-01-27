@@ -8,7 +8,7 @@ Build the `evmosd` binary deterministically using Docker.
 
 ## Prerequisites
 
-- [Install Docker](https://docs.docker.com/get-docker/) {prereq}
+- [Install Docker](https://docs.docker.com/get-docker/) 
 
 ## Introduction
 

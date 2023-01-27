@@ -1,6 +1,6 @@
 # Mempool
 
-Learn about the available mempool options in Tendermint.{synopsis}
+Learn about the available mempool options in Tendermint.
 
 ## FIFO Mempool
 

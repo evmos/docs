@@ -8,8 +8,8 @@ Learn about the JSON-RPC server to interact with the EVM.
 
 ## Prerequisite Readings
 
-- [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API) {prereq}
-- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server) {prereq}
+- [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API) 
+- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server) 
 
 The JSON-PRC Server provides an API that allows you to connect to the Evmos blockchain and interact with the EVM. This gives you direct access to reading Ethereum-formatted transactions or sending them to the network which otherwise wouldn't be possible on a Cosmos chain, such as Evmos.
 

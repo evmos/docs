@@ -1,11 +1,11 @@
 # Run a Validator
 
-Learn how to run a validator node 
+Learn how to run a validator node.
 
 ## Pre-requisite Readings
 
-- [Validator Overview](./../) {prereq}
-- [Validator Security](./../security/validator-security) {prereq}
+- [Validator Overview](./../) 
+- [Validator Security](./../security/validator-security) 
 
 :::tip
 If you plan to use a Key Management System (KMS), you should go through these steps first: [Using a KMS](./../../validate/security/tendermint-kms).
