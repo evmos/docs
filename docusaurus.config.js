@@ -14,7 +14,7 @@ function defineSection(section, options = {}) {
       id: section,
       sidebarPath: require.resolve('./sidebars.js'),
       breadcrumbs: false,
-      editUrl: 'https://github.com/osmosis-labs/docs/tree/main/',
+      editUrl: 'https://github.com/evmos/docs/tree/main/',
       ...options,
     }),
   ];

@@ -1,14 +1,14 @@
 # Run a Validator
 
-Learn how to run a validator node {synopsis}
+Learn how to run a validator node 
 
 ## Pre-requisite Readings
 
-- [Validator Overview](./../overview.md) {prereq}
-- [Validator Security](./../security/security.md) {prereq}
+- [Validator Overview](./../) {prereq}
+- [Validator Security](./../security/validator-security) {prereq}
 
 :::tip
-If you plan to use a Key Management System (KMS), you should go through these steps first: [Using a KMS](./../security/kms.md).
+If you plan to use a Key Management System (KMS), you should go through these steps first: [Using a KMS](./../../validate/security/tendermint-kms).
 :::
 
 ## Create Your Validator
@@ -20,7 +20,7 @@ evmosd tendermint show-validator
 ```
 
 :::danger
-🚨 **DANGER**: <u>Never</u> create your mainnet validator keys using a [`test`](./../../users/keys/keyring.md#testing) keying backend. Doing so might result in a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
+🚨 **DANGER**: <u>Never</u> create your mainnet validator keys using a [`test`](./../../protocol/concepts/keyring#testing) keying backend. Doing so might result in a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
 
 Ref: [Security Advisory: Insecurely configured geth can make funds remotely accessible](https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/)
 :::

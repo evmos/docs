@@ -3,13 +3,13 @@
 Learn how to manually upgrade your node. {synopsis}
 
 One of the significant limitations of the normal upgrade procedure [via
-governance](overview.md#governance-proposal) is that it requires waiting for the
+governance](./../../validate/upgrades/overview#governance-proposal) is that it requires waiting for the
 entire duration of the voting period. This duration makes it unsuitable for
 automated upgrades that involve patches for security vulnerabilities or other
 critical components.
 
 A faster alternative to using governance is to create a Hard Fork procedure.
-This procedure [automatically](automated.md) applies the changes from an upgrade plan, allowing
+This procedure [automatically](./automated-upgrades) applies the changes from an upgrade plan, allowing
 them to be executed at a given block height without the need of having to create
 a governance proposal.
 
@@ -32,5 +32,5 @@ The high-level strategy for coordinating an upgrade is as follows:
 **Important**: The release needs to be created with 1hr anticipation because the
 release binaries take ~30min to be created and validators need a buffer time to
 download them and update their
-[cosmovisor](/docs/validators/upgrades/automated.md#using-cosmovisor) settings.
+[cosmovisor](./automated-upgrades#using-cosmovisor) settings.
 :::

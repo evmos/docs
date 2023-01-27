@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Telemetry and Observability
 
 Gather relevant insights about the Evmos application and modules with custom metrics and telemetry. {synopsis}

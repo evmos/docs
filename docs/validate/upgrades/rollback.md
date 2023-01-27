@@ -1,6 +1,6 @@
 # Rollback
 
-Learn how to rollback the chain version in the case of an unsuccessful chain upgrade. {synopsis}
+Learn how to rollback the chain version in the case of an unsuccessful chain upgrade. 
 
 In order to restore a previous chain version, the following data must be recovered by validators:
 

@@ -1,6 +1,6 @@
 # Pending State
 
-Learn how Evmos handles pending state queries. {synopsis}
+Learn how Evmos handles pending state queries. 
 
 ## Pre-requisite Readings
 
@@ -32,10 +32,10 @@ different nodes.
 
 ### JSON-RPC Calls on Pending Transactions
 
-- [`eth_getBalance`](./../../developers/json-rpc/endpoints.md#eth_getbalance)
-- [`eth_getTransactionCount`](./../../developers/json-rpc/endpoints.md#eth-gettransactioncount)
-- [`eth_getBlockTransactionCountByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblocktransactioncountbynumber)
-- [`eth_getBlockByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblockbynumber)
-- [`eth_getTransactionByHash`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyhash)
-- [`eth_getTransactionByBlockNumberAndIndex`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyblockhashandindex)
-- [`eth_sendTransaction`](./../../developers/json-rpc/endpoints.md#eth-sendtransaction)
+- [`eth_getBalance`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth_getbalance)
+- [`eth_getTransactionCount`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactioncount)
+- [`eth_getBlockTransactionCountByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblocktransactioncountbynumber)
+- [`eth_getBlockByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblockbynumber)
+- [`eth_getTransactionByHash`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyhash)
+- [`eth_getTransactionByBlockNumberAndIndex`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyblockhashandindex)
+- [`eth_sendTransaction`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-sendtransaction)

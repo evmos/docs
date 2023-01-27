@@ -1,6 +1,6 @@
 # Overview
 
-Learn how to manage chain upgrades for your full and validator nodes. {synopsis}
+Learn how to manage chain upgrades for your full and validator nodes. 
 
 ## Upgrade Categories
 
@@ -30,7 +30,7 @@ If the proposal passes, the upgrade `Plan`, which targets a specific upgrade log
 
 ### Hard Forks
 
-A special type of planned upgrades are [hard forks](./hard_fork.md). Hard Forks, as opposed to Governance Proposal, don't require waiting for the full voting
+A special type of planned upgrades are [hard forks](./hard-fork-upgrades). Hard Forks, as opposed to Governance Proposal, don't require waiting for the full voting
 period. This makes them ideal for coordinating security vulnerabilities and patches.
 
 The upgrade (fork) block height is set in the `BeginBlock` of the application (i.e before the transactions are processed for the block). Once the blockchain reaches that height, it automatically schedules an upgrade `Plan` for the same height and then triggers the upgrade process. After upgrading, the block operations (`BeginBlock`, transaction processing and state `Commit`) continue normally.
@@ -95,7 +95,7 @@ With every new software release, we strongly recommend full nodes and validator 
 
 You can upgrade your node by either:
 
-- [automatically](./automated.md) bumping the software version and restart the node once the upgrade occurs, or
-- download the new binary and perform a [manual upgrade](./manual.md)
+- [automatically](./automated-upgrades) bumping the software version and restart the node once the upgrade occurs, or
+- download the new binary and perform a [manual upgrade](./manual-upgrades)
 
 Follow the links in the options above to learn how to upgrade your node according to your preferred option.

@@ -1,10 +1,10 @@
 # Manual Upgrades
 
-Learn how to manually upgrade your node. {synopsis}
+Learn how to manually upgrade your node.
 
 ## Pre-requisites
 
-- [Install Evmos](./../quickstart/installation.md) {prereq}
+- [Install Evmos](./../../develop/build-a-dApp/run-a-node/installation)
 
 ## 1. Upgrade the Evmos version
 
@@ -74,7 +74,7 @@ echo "<expected_hash>  genesis.json" | sha256sum -c
 ## 3. Data Reset
 
 :::danger
-Check [here](./upgrades.md) if the version you are upgrading require a data reset (hard fork). If this is not the case, you can skip to [Restart](https://docs.evmos.org/validators/upgrades/manual.html#_4-restart-node).
+Check [here](./list-of-upgrades) if the version you are upgrading require a data reset (hard fork). If this is not the case, you can skip to [Restart](https://docs.evmos.org/validators/upgrades/manual.html#_4-restart-node).
 :::
 
 Remove the outdated files and reset the data:

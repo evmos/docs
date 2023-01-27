@@ -1,6 +1,6 @@
 # Transactions
 
-Learn more about transactions on Evmos {synopsis}
+Learn more about transactions on Evmos 
 
 :::tip
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧

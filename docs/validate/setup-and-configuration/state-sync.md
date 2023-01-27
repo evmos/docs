@@ -127,7 +127,7 @@ Note that the snapshot interval must currently be a multiple of the `pruning-kee
 ## State Syncing a Node
 
 :::tip
-Looking for snapshots or archive nodes to sync your node with? Check out [this page](../snapshots_archives.md).
+Looking for snapshots or archive nodes to sync your node with? Check out [this page](./../../api/snapshots-archives).
 :::
 
 Once a few nodes in a network have taken state sync snapshots, new nodes can join the network using state sync. To do this, the node should first be configured as usual, and the following pieces of information must be obtained for light client verification:

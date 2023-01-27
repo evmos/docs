@@ -1,6 +1,6 @@
 # Validator Security
 
-Learn about sentry nodes and HSMs to secure a validator {synopsis}
+Learn about sentry nodes and HSMs to secure a validator 
 
 Each validator candidate is encouraged to run its operations independently, as diverse setups increase the resilience of the network. Validator candidates should commence their setup phase now in order to be on time for launch.
 
@@ -18,7 +18,7 @@ See documentation [here](https://github.com/strangelove-ventures/horcrux/blob/ma
 
 ## Tendermint KMS
 
-[Tendermint KMS](./kms.md) is a signature service with support for Hardware Security Modules (HSMs), such as YubiHSM2 and Ledger Nano . It’s intended to be run alongside Cosmos Validators, ideally on separate physical hosts, providing defense-in-depth for online validator signing keys, double signing protection, and functioning as a central signing service that can be used when operating multiple validators in several Cosmos Zones.
+[Tendermint KMS](./tendermint-kms) is a signature service with support for Hardware Security Modules (HSMs), such as YubiHSM2 and Ledger Nano . It’s intended to be run alongside Cosmos Validators, ideally on separate physical hosts, providing defense-in-depth for online validator signing keys, double signing protection, and functioning as a central signing service that can be used when operating multiple validators in several Cosmos Zones.
 
 ## Hardware HSM
 

@@ -1,6 +1,6 @@
 # Accounts
 
-This document describes the in-built accounts system of Evmos. {synopsis}
+This document describes the in-built accounts system of Evmos. 
 
 ## Pre-requisite Readings
 

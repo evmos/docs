@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Module Accounts
 
 Some modules have their own module account. Think of this as a wallet that can only be controlled by that module.

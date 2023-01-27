@@ -1,6 +1,6 @@
 # Keyring
 
-Create, import, export and delete keys using the CLI keyring {synopsis}
+Create, import, export and delete keys using the CLI keyring 
 
 The keyring holds the private/public keypairs used to interact with the node. For instance, a validator key needs to be set up before running the node, so that blocks can be correctly signed. The private key can be stored in different locations, called ["backends"](#keyring-backends), such as a file or the operating system's own key storage.
 

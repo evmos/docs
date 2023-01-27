@@ -1,6 +1,10 @@
+---
+sidebar_position: 5
+---
+
 # IBC Channels
 
-Check the IBC channels between Evmos and other Cosmos ecosystem chains {synopsis}
+Check the IBC channels between Evmos and other Cosmos ecosystem chains 
 
 IBC channels are added based on community consensus.
 

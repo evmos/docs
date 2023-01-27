@@ -1,6 +1,6 @@
 # List of Upgrades
 
-Check the details and requirements for each mainnet and testnet upgrade. {synopsis}
+Check the details and requirements for each mainnet and testnet upgrade. 
 
 #### Mainnet
 

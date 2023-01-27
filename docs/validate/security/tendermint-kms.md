@@ -74,4 +74,4 @@ Detailed information on how to setup a KMS with [YubiHSM 2](https://www.yubico.c
 
 ### Ledger Tendermint app
 
-Detailed information on how to setup a KMS with Ledger Tendermint App can be found [here](kms_ledger.md).
+Detailed information on how to setup a KMS with Ledger Tendermint App can be found [here](./temdermint-kms-plus-ledger).

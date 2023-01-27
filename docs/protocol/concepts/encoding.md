@@ -1,6 +1,6 @@
 # Encoding
 
-Learn about the encoding formats used on Evmos. {synopsis}
+Learn about the encoding formats used on Evmos. 
 
 ## Pre-requisite Readings
 

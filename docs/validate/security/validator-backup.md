@@ -1,6 +1,6 @@
 # Validator Backup
 
-Learn how to backup your validator. {synopsis}
+Learn how to backup your validator. 
 
 It is ***crucial*** to backup your validator's private key. It's the only way to restore your validator in the event of a disaster.
 
@@ -15,7 +15,7 @@ To backup everything you need to restore your validator, note that if you are us
 Then do the following:
 
 1. Backup the `json` file mentioned above (or backup the whole `config` folder).
-2. Backup the self-delegator wallet. See [backing up wallets with the Evmos Daemon](../../users/wallets/backup.md).
+2. Backup the self-delegator wallet. See [backing up wallets with the Evmos Daemon](./../../protocol/concepts/backup).
 
 To see your validator's associated public key:
 

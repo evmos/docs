@@ -1,6 +1,6 @@
 # Join a Testnet
 
-This document outlines the steps to join an existing testnet {synopsis}
+This document outlines the steps to join an existing testnet 
 
 ## Pick a Testnet
 
@@ -15,7 +15,7 @@ You specify the network you want to join by setting the **genesis file** and **s
 
 ## Install `evmosd`
 
-Follow the [installation](./quickstart/installation.md) document to install the {{ $themeConfig.project.name }} binary `{{ $themeConfig.project.binary }}`.
+Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the {{ $themeConfig.project.name }} binary `{{ $themeConfig.project.binary }}`.
 
 :::warning
 Make sure you have the right version of `{{ $themeConfig.project.binary }}` installed.
@@ -26,7 +26,7 @@ Make sure you have the right version of `{{ $themeConfig.project.binary }}` inst
 We recommend saving the testnet `chain-id` into your `{{ $themeConfig.project.binary }}`'s `client.toml`. This will make it so you do not have to manually pass in the `chain-id` flag for every CLI command.
 
 :::tip
-See the Official [Chain IDs](./../users/technical_concepts/chain_id.md#official-chain-ids) for reference.
+See the Official [Chain IDs](./../protocol/concepts/chain-id#official-chain-ids) for reference.
 :::
 
 ```bash
@@ -113,10 +113,10 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.evmos
 
 ## Run a Testnet Validator
 
-Claim your testnet {{ $themeConfig.project.testnet_denom }} on the [faucet](./../developers/testnet/faucet.md) using your validator account address and submit your validator account address:
+Claim your testnet {{ $themeConfig.project.testnet_denom }} on the [faucet](./../develop/move-to-testnet/faucet) using your validator account address and submit your validator account address:
 
 :::tip
-For more details on how to run your validator, follow [these](./setup/run_validator.md) instructions.
+For more details on how to run your validator, follow [these](./setup-and-configuration/run-a-validator) instructions.
 :::
 
 ```bash
@@ -136,7 +136,7 @@ evmosd tx staking create-validator \
 
 ## Start testnet
 
-The final step is to [start the nodes](./quickstart/run_node.md#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
 
 ```bash
 evmosd start
