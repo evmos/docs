@@ -135,6 +135,11 @@ const config = {
             to: '/protocol',
           },
           {
+            position: 'left',
+            label: 'Security',
+            to: '/security',
+          },          
+          {
             position: 'right',
             label: 'API Reference',
             to: '/api',
