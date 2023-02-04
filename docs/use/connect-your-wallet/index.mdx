@@ -1,27 +1,29 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Overview
 
-Evmos support a wide arrays of wallet connectivity. Below are some of the wallets we currently support. 
+Evmos network supports both Cosmos and ERC-20 coins. There are several wallets that work with the network. Some of these wallets support Ledger 
 
-| Wallet                 | Supported  | Detail                                  |
-| ---------------------- | ---------- |-----------------------------------------
-| [Metamask](https://metamask.io/)               | ✅         | Supports ERC-20 tokens, no Cosmos coins|
-| [Keplr](https://www.keplr.app/)                  | ✅         | Supports Cosmos coins and ERC-20 support coming soon |
-| [WalletConnect v2](https://docs.walletconnect.com/2.0)       | ✅         | Supported only on the [Dashboard Assets](https://app.evmos.org/assets)
-| [WalletConnect v1](https://docs.walletconnect.com/1.0/)       | ✅         | Supported only on the [Dashboard](https://app.evmos.org/) (excluding Assets). Deprecating soon. |
-| [Ledger](https://www.ledger.com/)                 | ✅         | Supported on Metamask, Keplr, and CLI |
-| [Trust Wallet](https://trustwallet.com/)           | ✅         | Mobile
+| Wallet                 | Supported  | Ledger | Detail                                  |
+| ---------------------- | ---------- |---------|-------------------------------------------
+| [Metamask](https://metamask.io/)               | ✅   | ✅    | Mobile & Browsers. Supports ERC-20 tokens, but no Cosmos coins|
+| [Keplr](https://www.keplr.app/)                  | ✅ | ✅        | Mobile & Browsers. Supports Cosmos coins but ERC-20 support coming soon |
+| [WalletConnect v2](https://docs.walletconnect.com/2.0)       | ✅   | ✅      | Supported only on the [Dashboard Assets](https://app.evmos.org/assets)
+| [WalletConnect v1](https://docs.walletconnect.com/1.0/)       | 🟡   | ✅      | Supported only on the [Dashboard](https://app.evmos.org/) (excluding Assets). Deprecating soon. |
+| [Ledger](https://www.ledger.com/)                 | ✅   | ✅      | Desktop & Mobile. Supported on Metamask, Keplr, and CLI |
+| [Trust Wallet](https://trustwallet.com/)           | ✅   | ❌      | Mobile & Browser |
+| [Leap Wallet](https://www.leapwallet.io/)           | ✅   | ❌      | Brwoser |
+| [Coinbase Wallet](https://www.coinbase.com/wallet)           | ❌   | ✅      | Not Supported |
 
-# Backup
+## Backup
 
-Learn how to backup your wallet's mnemonic and private key. 
+All of these wallets will issue a mnemonic seed or private key and it is critical to handle this information carefully. It is vital to secure this phrase or key and backup this phrase. There are no `Forget Your Password`. Many wallets will require a password to secure the account. Using a strong and unique password will ensure better likelihood of wallet safety.
 
-## Mnemonics
+## Mnemonics from the Evmos CLI
 
-When you create a new key, you'll recieve a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:
+When you create a new key, you'll receive a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:
 
 ```bash
 evmosd keys add dev0

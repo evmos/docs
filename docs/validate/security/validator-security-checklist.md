@@ -2,7 +2,7 @@
 
  Conduct a security checklist survey to go through the security measures of a validator 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Validator Security](./validator-security)
 

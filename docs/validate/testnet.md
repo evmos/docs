@@ -1,6 +1,6 @@
-# Join a Testnet
+# Testnet
 
-This document outlines the steps to join an existing testnet 
+This document outlines the steps to join an existing testnet.
 
 ## Pick a Testnet
 
@@ -113,7 +113,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.evmos
 
 ## Run a Testnet Validator
 
-Claim your testnet {{ $themeConfig.project.testnet_denom }} on the [faucet](./../develop/move-to-testnet/faucet) using your validator account address and submit your validator account address:
+Claim your testnet {{ $themeConfig.project.testnet_denom }} on the [faucet](./../develop/testnet/faucet) using your validator account address and submit your validator account address:
 
 :::tip
 For more details on how to run your validator, follow [these](./setup-and-configuration/run-a-validator) instructions.

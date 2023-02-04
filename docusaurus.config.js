@@ -25,6 +25,7 @@ const SECTIONS = [
   defineSection('develop'),
   defineSection('validate'),
   defineSection('protocol'),
+  defineSection('security'),
   defineSection('api'),
 ];
 
@@ -117,7 +118,7 @@ const config = {
           {
             position: 'left',
             label: 'Use',
-            to: '/use',
+            to: '/use/intro',
           },
           {
             position: 'left',

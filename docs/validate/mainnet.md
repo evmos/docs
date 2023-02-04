@@ -1,8 +1,8 @@
-# Join Mainnet
+# Mainnet
 
 This document outlines the steps to join an existing testnet 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Validator Security](./security/validator-security) 
 

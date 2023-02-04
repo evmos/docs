@@ -2,7 +2,7 @@
 
 Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos.
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html) 
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) 

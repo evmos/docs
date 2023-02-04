@@ -1,11 +1,11 @@
 # Run a Node
 
-Configure and run an Evmos node 
+Configure and run an Evmos node
 
 ## Prerequisite Readings
 
-- [Installation](./installation) 
-- [`evmosd`](./evmosd) 
+- [Installation](./installation)
+- [`evmosd`](./evmosd)
 
 ## Automated deployment
 
@@ -127,7 +127,7 @@ To clear all data except key storage (if keyring backend chosen) and then you ca
 ## Recording Transactions Per Second (TPS)
 
 In order to get a progressive value of the transactions per second, we use Prometheus to return the values.
-The Prometheus exporter runs at address http://localhost:8877 so please add this
+The Prometheus exporter runs at address <http://localhost:8877> so please add this
 section to your [Prometheus installation](https://opencensus.io/codelabs/prometheus/#1) config.yaml file like this
 
 ```yaml
@@ -152,7 +152,7 @@ and then run Prometheus like this
 prometheus --config.file=prom_config.yaml
 ```
 
-and then visit the Prometheus dashboard at http://localhost:9090/ then navigate to the expression area and enter the following expression
+and then visit the Prometheus dashboard at <http://localhost:9090/> then navigate to the expression area and enter the following expression
 
 ```shell
 rate(evmosd_transactions_processed[1m])
