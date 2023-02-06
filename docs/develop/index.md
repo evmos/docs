@@ -32,6 +32,6 @@ As Evmos lives at the crossroads of Cosmos and Ethereum, there are RPC connectio
 - **[Cosmos gRPC & REST](https://api.evmos.org/)**: Documentation of the available gRPC implementation on Evmos.
 - **[Tendermint RPC](https://docs.tendermint.com/v0.34/rpc/)**: Documentation for the RPC protocols supported by Tendermint.
 
-### Tutorials For Ethereum Devs
+### Tutorials For Ethereum Developers
 
 TODO: Redirect learnings & Guides to ACADEMY

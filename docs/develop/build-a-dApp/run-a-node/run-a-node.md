@@ -51,7 +51,7 @@ You can generate a new key/mnemonic with:
 evmosd keys add $KEY
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](../../../use/connect-your-wallet/metamask) for example):
+To export your evmos key as an Ethereum private key (for use with [Metamask](../../../use/wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key $KEY

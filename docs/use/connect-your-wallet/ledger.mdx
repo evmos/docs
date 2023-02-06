@@ -1,10 +1,11 @@
 ---
 sidebar_position: 4
+slug: 'ledger'
 ---
 
 # Ledger
 
-Get started with your Ledger hardware wallet on Evmos 
+Ledger offers a hardware wallet to hold user's private keys.
 
 ## Prerequisites
 
@@ -46,7 +47,7 @@ In the Ledger Live app, you should see the Ethereum app listed under the **Apps 
 
 In the table below you can find a list of Chain IDs to use with the Ethereum Ledger app.
 
-|               | EIP155 chain ID |
+| Network       | EIP155 chain ID |
 | ------------- | --------------- |
 | Evmos mainnet | `9001`          |
 | Evmos testnet | `9000`          |
@@ -78,6 +79,10 @@ Now you can import your Ledger account to MetaMask by using the following steps:
 4. Import the hex addresses that you want to use
 
 ![mm3.png](/img/mm3.png)
+
+### Keplr
+
+Reference the [Keplr Wallet](./keplr) to setup Ledger support.
 
 ### Evmos CLI
 
@@ -197,4 +202,4 @@ The Ledger's connection to the CLI can fail for a number of reasons. Make sure t
 
 3. **I can’t use Metamask or Keplr with the Cosmos Ledger app**
 
-Since Evmos only support Ethereum keys and uses the same HD path as Ethereum, the Cosmos Ledger app doesn’t work to sign cosmos transactions.
+Since Evmos only support Ethereum keys and uses the same HD (hierarchival determination) wallet derivation path as Ethereum, the Cosmos Ledger app doesn’t work to sign cosmos transactions. Using Keplr with the Cosmos Ledger app will only work with derivation path `m/44'/118'/0'/0` (Cosmos) and not `m/44'/60'/0'/0` (Ethereum). On your Ledger hardware device, you can always switch to Ethereum to reconnect to the Keplr Evmos network.

@@ -66,9 +66,9 @@ const config = {
       rpc_url_local: "http://localhost:8545/",
       chain_id: "9001",
       testnet_chain_id: "9000",
-      latest_version: "v10.0.1",
-      mainnet_version: "v10.0.1",
-      testnet_version: "v10.0.0-rc4",
+      latest_version: "v11.0.1",
+      mainnet_version: "v11.0.1",
+      testnet_version: "v11.0.1",
       version_number: "2",
       testnet_version_number: "4",
       testnet_evm_explorer_url: "https://evm.evmos.dev",
@@ -97,11 +97,25 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-3JSJBBPS3L',
+          anonymizeIP: false,
+        },
       }),
     ],
   ],
   plugins: [
     ...SECTIONS,
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 80,
+        max: 1030, // max resized image's size.
+        min: 640, // min resized image's size. if original is lower, use that size.
+        steps: 2, // the max number of images generated between min and max (inclusive)
+        disableInDev: false,
+      },
+    ],
   ],
 
   themeConfig:

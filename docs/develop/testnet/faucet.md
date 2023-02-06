@@ -2,10 +2,10 @@
 
 Check how to obtain testnet tokens from the Evmos faucet website 
 
-The Evmos Testnet Faucet distributes small amounts of {{ $themeConfig.project.testnet_denom }} to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the [Keplr Wallet](../../use/connect-your-wallet/keplr) or follow the instructions on this page.
+The Evmos Testnet Faucet distributes small amounts of {{ $themeConfig.project.testnet_denom }} to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the [Keplr Wallet](../../use/wallet/keplr) or follow the instructions on this page.
 
 :::tip
-Follow the [Metamask](../../use/connect-your-wallet/metamask), [Keplr](../../use/connect-your-wallet/keplr) or [Keyring](../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
+Follow the [Metamask](../../use/wallet/metamask), [Keplr](../../use/wallet/keplr) or [Keyring](../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
 :::
 
 ## Request Testnet tokens

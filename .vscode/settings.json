@@ -5,7 +5,12 @@
         "evmosd",
         "evmosdnode",
         "gentxs",
+        "ICNS",
+        "interchain",
+        "keplr",
         "localnet",
+        "Nameservice",
+        "OSMO",
         "Tendermint"
     ]
 }
