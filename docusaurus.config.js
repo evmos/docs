@@ -153,11 +153,21 @@ const config = {
             position: 'left',
             label: 'Security',
             to: '/security',
+          },
+          {
+            position: 'right',
+            label: 'Tools',
+            to: '/develop/tools',
           },          
           {
             position: 'right',
-            label: 'API Reference',
+            label: 'APIs',
             to: '/api',
+          },
+          {
+            position: 'right',
+            label: 'App',
+            to: 'https://app.evmos.org',
           },
           {
             href: 'https://github.com/evmos',
