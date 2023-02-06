@@ -2,7 +2,7 @@
 
 Learn how Evmos handles pending state queries. 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/) 
 
