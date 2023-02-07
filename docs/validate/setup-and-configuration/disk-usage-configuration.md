@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Disk Usage Optimization
 
 Customize the configuration settings to lower the disk requirements for your validator node.

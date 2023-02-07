@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Validator Security Checklist
 
  Conduct a security checklist survey to go through the security measures of a validator 

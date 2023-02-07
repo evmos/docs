@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Testnet
 
 This document outlines the steps to join an existing testnet.

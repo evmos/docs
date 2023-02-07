@@ -5,27 +5,136 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@font-face {
+  font-family: 'GreyCliffOblique';
+  src: url('../../static/fonts/GreyCliff/GreycliffCF-ExtraBoldOblique.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GreyCliff';
+  src: url('../../static/fonts/GreyCliff/GreycliffCF-ExtraBold.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url('../../static/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url('../../static/fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url('../../static/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../../static/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FFDIN';
+  src: url('../../static/fonts/FFDIN/FFDIN-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FFDIN';
+  src: url('../../static/fonts/FFDIN/FFDIN-Regular.otf');
+  src: url('../../static/fonts/FFDIN/FFDIN-Medium.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--color-pearl);
+  background: var(--color-darkGray-1);
+  font-family: 'IBM Plex', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article a {
+  text-decoration: underline;
+  color: --ifm-color-primary;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+[tabindex]:not([tabindex='0']):not([tabindex^='-']) {
+  &:focus-visible {
+    outline-offset: 4px;
+    outline: 1px solid var(--color-pearl);
+  }
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: 'GreyCliffOblique', sans-serif;
+  font-weight: bold;
+}
+
+.h4,
+.h5,
+.h6 {
+  font-family: 'GreyCliff', sans-serif;
+  font-weight: bold;
+}
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #e4761b;
+  --ifm-color-primary-dark: #d16914;
+  --ifm-color-primary-darker: #c8600b;
+  --ifm-color-primary-darkest: #c05803;
+  --ifm-color-primary-light: #e49656;
+  --ifm-color-primary-lighter: #e4a26c;
+  --ifm-color-primary-lightest: #e5a26b;
+  --ifm-code-font-size: 100%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #e37923;
+  --ifm-color-primary-dark: #d57220;
+  --ifm-color-primary-darker: #ce6611;
+  --ifm-color-primary-darkest: #c25d0b;
+  --ifm-color-primary-light: #e1975b;
+  --ifm-color-primary-lighter: #dca06e;
+  --ifm-color-primary-lightest: #c09068;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -49,15 +158,15 @@
 } 
 
 [data-theme='dark'] {
-  --docs-color-border: #2e2e2e;
+  --docs-color-border: #2D2925;
 
   --docs-color-text: #ffffff;
   --docs-color-text-100: #b4b4b4;
 
-  --docs-color-background: #161616;
-  --docs-color-background-100: #1c1c1c;
-  --docs-color-background-200: #2a2a2a;
-  --docs-color-background-300: #2e2e2e;
+  --docs-color-background: #0B0A09;
+  --docs-color-background-100: #2D2925;
+  --docs-color-background-200: #4F4740;
+  --docs-color-background-300: #70655C;
 
   --docs-color-code-background: #1e1e1e;
 }

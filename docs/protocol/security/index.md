@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Overview
+# Security Overview
 
 Learn about security on Evmos {synopsis}
 

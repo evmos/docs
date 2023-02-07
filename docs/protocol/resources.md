@@ -5,14 +5,6 @@ sidebar_position: 8
 
 Learn about Evmos with the list of official resources.
 
-:::tip
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-
-This documentation page is currently under work in progress.
-
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-:::
-
 - Documentation (this site): [https://docs.evmos.org/](https://docs.evmos.org/)
 - Open Source Codebase: [https://github.com/evmos/evmos](https://github.com/evmos/evmos)
 - Website: [https://evmos.org/](https://evmos.org/)

@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Tendermint KMS
 
 Set up a Key Management System for Evmos.

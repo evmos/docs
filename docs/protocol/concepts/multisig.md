@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Multisig
 
 Learn how to generate, sign and broadcast a transaction using the keyring multisig.

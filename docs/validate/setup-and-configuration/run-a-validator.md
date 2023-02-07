@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Run a Validator
 
 Learn how to run a validator node.

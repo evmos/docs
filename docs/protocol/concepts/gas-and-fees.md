@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Gas and Fees
 
 Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos.

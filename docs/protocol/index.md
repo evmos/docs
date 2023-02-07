@@ -6,14 +6,6 @@ sidebar_position: 0
 
 Learn how Evmos's architecture leverages the Cosmos SDK Proof-of-Stake functionality, EVM compatibility and fast-finality from Tendermint Core's BFT consensus.
 
-:::tip
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-
-This documentation page is currently under work in progress.
-
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-:::
-
 ## Cosmos SDK
 
 Evmos enables the full composability and modularity of the [Cosmos SDK](https://docs.cosmos.network/).
