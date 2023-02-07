@@ -1,5 +1,4 @@
 {
-    "label": "Run a Node",
-    "position": 1,
-    "link": null
+    "label": "Run a local Evmos node",
+    "position": 1
 }

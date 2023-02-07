@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Mempool
 
 Learn about the available mempool options in Tendermint.

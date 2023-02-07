@@ -2,7 +2,7 @@
 
 Learn how to manually upgrade your node.
 
-## Pre-requisites
+## Prerequisites
 
 - [Install Evmos](./../../develop/build-a-dApp/run-a-node/installation)
 

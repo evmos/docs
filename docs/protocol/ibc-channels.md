@@ -4,6 +4,8 @@ sidebar_position: 5
 
 # IBC Channels
 
+TODO: THIS PAGE WILL BECOME A LINK-OUT LINK TO MINTSCAN PAGE
+
 Check the IBC channels between Evmos and other Cosmos ecosystem chains 
 
 IBC channels are added based on community consensus.

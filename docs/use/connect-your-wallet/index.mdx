@@ -1,140 +1,22 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+title: Wallet Overview
+slug: '/wallet'
 ---
 
-# Overview
+# Wallet Overview
 
-Evmos support a wide arrays of wallet connectivity. Below are some of the wallets we currently support. 
+Evmos network supports both Cosmos and ERC-20 coins. There are several wallets that work with the network. Some of these wallets support Ledger connectivity. Consult the table below for more information. We recommend Metamask and Keplr wallets. These two wallets also work with the Ledger. For more information about Ledger, proceed to [here](./ledger).
 
-| Wallet                 | Supported  | Detail                                  |
-| ---------------------- | ---------- |-----------------------------------------
-| [Metamask](https://metamask.io/)               | ✅         | Supports ERC-20 tokens, no Cosmos coins|
-| [Keplr](https://www.keplr.app/)                  | ✅         | Supports Cosmos coins and ERC-20 support coming soon |
-| [WalletConnect v2](https://docs.walletconnect.com/2.0)       | ✅         | Supported only on the [Dashboard Assets](https://app.evmos.org/assets)
-| [WalletConnect v1](https://docs.walletconnect.com/1.0/)       | ✅         | Supported only on the [Dashboard](https://app.evmos.org/) (excluding Assets). Deprecating soon. |
-| [Ledger](https://www.ledger.com/)                 | ✅         | Supported on Metamask, Keplr, and CLI |
-| [Trust Wallet](https://trustwallet.com/)           | ✅         | Mobile
-
-# Backup
-
-Learn how to backup your wallet's mnemonic and private key. 
-
-## Mnemonics
-
-When you create a new key, you'll recieve a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:
-
-```bash
-evmosd keys add dev0
-{
-  "name": "dev0",
-  "type": "local",
-  "address": "evmos1n253dl2tgyhxjm592p580c38r4dn8023ctv28d",
-  "pubkey": '{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq"}',
-  "mnemonic": ""
-}
-
-**Important** write this mnemonic phrase in a safe place.
-It is the only way to recover your account if you ever forget your password.
-
-# <24 word mnemonic phrase>
-```
-
-To restore the key:
-
-```bash
-$ evmosd keys add dev0-restored --recover
-> Enter your bip39 mnemonic
-banner genuine height east ghost oak toward reflect asset marble else explain foster car nest make van divide twice culture announce shuffle net peanut
-{
-  "name": "dev0-restored",
-  "type": "local",
-  "address": "evmos1n253dl2tgyhxjm592p580c38r4dn8023ctv28d",
-  "pubkey": '{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq"}'
-}
-```
-
-## Export Key
-
-### Tendermint-Formatted Private Keys
-
-To backup this type of key without the mnemonic phrase, do the following:
-
-```bash
-evmosd keys export dev0
-Enter passphrase to decrypt your key:
-Enter passphrase to encrypt the exported key:
------BEGIN TENDERMINT PRIVATE KEY-----
-kdf: bcrypt
-salt: 14559BB13D881A86E0F4D3872B8B2C82
-type: secp256k1
-
-# <Tendermint private key>
------END TENDERMINT PRIVATE KEY-----
-
-$ echo "\
------BEGIN TENDERMINT PRIVATE KEY-----
-kdf: bcrypt
-salt: 14559BB13D881A86E0F4D3872B8B2C82
-type: secp256k1
-
-# <Tendermint private key>
------END TENDERMINT PRIVATE KEY-----" > dev0.export
-```
-
-### Ethereum-Formatted Private Keys
-
-:::tip
-**Note**: These types of keys are MetaMask-compatible.
-:::
-
-To backup this type of key without the mnemonic phrase, do the following:
-
-```bash
-evmosd keys unsafe-export-eth-key dev0 > dev0.export
-**WARNING** this is an unsafe way to export your unencrypted private key, are you sure? [y/N]: y
-Enter keyring passphrase:
-```
-
-## Import Key
-
-### Tendermint-Formatted Private Keys
-
-```bash
-$ evmosd keys import dev0-imported ./dev0.export
-Enter passphrase to decrypt your key:
-```
-
-### Ethereum-Formatted Private Keys
-
-```
-$ evmosd keys unsafe-import-eth-key dev0-imported ./dev0.export
-Enter passphrase to encrypt your key:
-```
-
-### Verification
-
-Verify that your key has been restored using the following command:
-
-```bash
-$ evmosd keys list
-[
-  {
-    "name": "dev0-imported",
-    "type": "local",
-    "address": "evmos1n253dl2tgyhxjm592p580c38r4dn8023ctv28d",
-    "pubkey": '{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq"}'
-  },
-  {
-    "name": "dev0-restored",
-    "type": "local",
-    "address": "evmos1n253dl2tgyhxjm592p580c38r4dn8023ctv28d",
-    "pubkey": '{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq"}'
-  },
-  {
-    "name": "dev0",
-    "type": "local",
-    "address": "evmos1n253dl2tgyhxjm592p580c38r4dn8023ctv28d",
-    "pubkey": '{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq"}'
-  }
-]
-```
+| Wallet                 | Supported  | Ledger | Detail                                  |
+| ---------------------- | ---------- |---------|-------------------------------------------
+| [Metamask](https://metamask.io/)               | ✅   | ✅    | Mobile & Browsers. Supports ERC-20 tokens, but no Cosmos coins|
+| [Keplr](https://www.keplr.app/)                  | ✅ | ✅        | Mobile & Browsers. Supports Cosmos coins but ERC-20 support coming soon |
+| [WalletConnect v2](https://docs.walletconnect.com/2.0)       | ✅   | ✅      | Supported only on the [Dashboard Assets](https://app.evmos.org/assets)
+| [WalletConnect v1](https://docs.walletconnect.com/1.0/)       | 🟡   | ✅      | Supported only on the [Dashboard](https://app.evmos.org/) (excluding Assets). Deprecating soon. |
+| [Ledger](https://www.ledger.com/)                 | ✅   | ✅      | Desktop & Mobile. Supported on Metamask, Keplr, and CLI |
+| [Trust Wallet](https://trustwallet.com/)           | ✅   | ❌      | Mobile & Browser |
+| [Leap Wallet](https://www.leapwallet.io/)           | ✅   | ❌      | Brwoser |
+| [Coinbase Wallet](https://www.coinbase.com/wallet)           | ❌   | ✅      | Not Supported |
+| [Cosmostation](https://wallet.cosmostation.io/cosmos)           | ✅   | ❌      | Supported on Browswer and Mobile |
+| [Cypher](https://www.cypherwallet.io/)           | ✅   | ❌      | Supported on Mobile |

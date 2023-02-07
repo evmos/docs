@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Chain ID
 
 Learn about the Evmos chain-id format.

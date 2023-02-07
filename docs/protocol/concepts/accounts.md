@@ -1,8 +1,12 @@
+---
+sidebar_position: 8
+---
+
 # Accounts
 
 This document describes the in-built accounts system of Evmos. 
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Cosmos SDK Accounts](https://docs.cosmos.network/main/basics/accounts.html) 
 - [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts) 

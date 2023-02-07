@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # State Sync
 
 Learn about Tendermint Core state sync and support offered by the Cosmos SDK. {synopsis}

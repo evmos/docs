@@ -2,7 +2,7 @@
 
 Learn how to automate chain upgrades using Cosmovisor.
 
-## Pre-requisites
+## Prerequisites
 
 - [Install Cosmovisor](https://docs.cosmos.network/main/tooling/cosmovisor#installation)
 
