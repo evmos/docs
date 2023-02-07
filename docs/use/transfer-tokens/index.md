@@ -13,7 +13,7 @@ Using either your wallet directly or connecting it to a dApp like the [Evmos Ass
 
 You can view the balances of all your crypto assets on Evmos, both the native $EVMOS token and assets that have been created on or sent to the Evmos network from other blockchains. The balance of an asset is described by the number of tokens and the equivalent value in $USD.
 
-Like any other currency, crypto assets can be used as a storage of value or a medium of exchange. Only if an asset is traded on an exchange, its price can be determined by demand and supply against other assets. The native $EVMOS token provides additional utility on Evmos as it is used to secure the network through staking, vote governance proposals, and pay for gas.
+Like any other currency, crypto assets can be used as a storage of value or a medium of exchange. Only if an asset is traded on an exchange, its price can be determined by demand and supply against other assets. The native $EVMOS token provides additional utility on Evmos as it is used to secure the network through [staking](https://app.evmos.org/staking), vote on [governance](https://app.evmos.org/governance) proposals, and pay for gas.
 
 On Evmos, assets can be represented as different types of tokens (e.g. Cosmos IBC Coins or EVM ERC20 tokens). We believe, however, that unless you are a developer, you don't need to be concerned with the underlying representation of a token. You just use the asset name and the Evmos network performs conversions between representations automatically.
 
