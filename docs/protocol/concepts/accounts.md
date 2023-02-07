@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Accounts
 
 This document describes the in-built accounts system of Evmos. 

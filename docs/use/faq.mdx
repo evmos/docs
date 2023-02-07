@@ -18,7 +18,15 @@ There are many wallets to select from but the top wallets with the widest suppor
 
 <summary>Can we use Ledger?</summary>
 
-Absolutely! Take a look at the [Ledger](./connect-your-wallet/keplr) for more information.
+Absolutely! Take a look at the [Ledger](./connect-your-wallet/keplr) for more information. Metamask, Keplr, and WalletConnect all work with Ledger. Certain setup will be required.
+
+</details>
+
+<details>
+
+<summary>For certain wallets, I see both bech32 and hex while others only show hex formatted addresses, which should I use?</summary>
+
+The Evmos network supports both formats: bech32 and hex. Other EVM peers and its ecosystem uses hex encoding while Cosmos-native uses bech32 formatted addresses. Keplr is unique and the EVM-compatible chains shows both formats. If you are sending tokens (via [IBC](https://www.mintscan.io/evmos/relayers)), you will use bech32 formatted addresses unless the receiving chain support EVM (i.e. Ethermint-based chains). You can further details [here](./../protocol/concepts/accounts).
 
 </details>
 
@@ -30,8 +38,11 @@ Absolutely! Take a look at the [Ledger](./connect-your-wallet/keplr) for more in
 
 <summary>Where can I acquire EVMOS token?</summary>
 
+There are several paths users can take to acquire EVMOS Token.
+
 - Decentralized Exchanges: [Osmosis](https://app.osmosis.zone/?from=ATOM&to=EVMOS) 
 - Centralized Exchanges to purchase `ATOM` and transfer the tokens to a wallet and exchange for `EVMOS`
-- [C14 Money](https://pay.c14.money/) is an onramp service to use credit card to purchase `EVMOS`
+- [C14 Money](https://pay.c14.money/) is an onramp service that uses credit card to purchase `EVMOS`
+- [Testnet Faucet](https://faucet.evmos.dev/)
 
 </details>

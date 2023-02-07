@@ -11,14 +11,14 @@ Please find the following resources for in-depth information:
 
 - **[Networks & Connections](/develop/networks)**: List of publicly available endpoints.
 - **[Evmos Clients](/develop/build-a-dApp/clients/ethereum-JSON-RPC/clients)**: Description of available clients.
-- **[Block Explorers](/develop/build-a-dApp/dev-tools/block-explorers)**: List of block explorers available for Evmos.
+- **[Block Explorers](/develop/build-a-dApp/tools/block-explorers)**: List of block explorers available for Evmos.
 - **[Testnet Faucet](/develop/testnet/faucet)**: Explaination of faucet use to obtain testnet tokens.
 - **Localnet**: Instructions on how to configure a local instance of the Evmos blockchain.
   - **[Single Node](develop/build-a-dApp/run-a-node/single-node)**: Run a single local node.
   - **[Multi Node](develop/build-a-dApp/run-a-node/multi-nodes)**: Run a local testnet with multiple nodes.
   - **[Testnet](develop/build-a-dApp/run-a-node/testnet-commands)**: Use the testnet command of the Evmos daemon.
 - **Libraries**:
-  - **[EvmosJS](develop/build-a-dApp/dev-tools/evmosjs)**: Javascript library for Evmos.
+  - **[EvmosJS](develop/build-a-dApp/tools/evmosjs)**: Javascript library for Evmos.
 
 ### Remote Procedure Calls (RPCs)
 

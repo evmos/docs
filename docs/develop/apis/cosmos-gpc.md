@@ -2,5 +2,5 @@
 sidebar_position: 3
 ---
 
-# Modules Overview
+# Cosmos gRPC & REST
 

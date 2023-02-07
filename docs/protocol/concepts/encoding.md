@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # Encoding
 
 Learn about the encoding formats used on Evmos. 

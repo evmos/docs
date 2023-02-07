@@ -1,6 +1,10 @@
+---
+sidebar_position: 6
+---
+
 # Validator FAQ
 
-Check the FAQ for running a validator on Evmos 
+Check the FAQ for running a validator on Evmos.
 
 ## General Concepts
 

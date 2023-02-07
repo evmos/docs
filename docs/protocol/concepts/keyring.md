@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Keyring
 
 Create, import, export and delete keys using the CLI keyring 
