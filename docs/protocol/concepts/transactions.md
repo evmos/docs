@@ -1,14 +1,11 @@
+---
+sidebar_position: 4
+---
 # Transactions
 
-Learn more about transactions on Evmos 
+TODO: THIS SECTION NEEDS MAJOR WORK
 
-:::tip
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-
-This documentation page is currently under work in progress.
-
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-:::
+Learn more about transactions on Evmos.
 
 <!-- 
 TODO: explain what transactions are on Evmos and blockchains. 

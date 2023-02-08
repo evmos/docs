@@ -1,8 +1,12 @@
+---
+sidebar_position: 1
+---
+
 # Run a Validator
 
 Learn how to run a validator node.
 
-## Pre-requisite Readings
+## Prerequisite Readings
 
 - [Validator Overview](./../) 
 - [Validator Security](./../security/validator-security) 
