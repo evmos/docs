@@ -142,7 +142,7 @@ evmosd tx staking create-validator \
 
 ## Start testnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
 
 ```bash
 evmosd start

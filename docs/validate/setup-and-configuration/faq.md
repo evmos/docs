@@ -22,7 +22,7 @@ Evmos is powered by [Tendermint](https://docs.tendermint.com/master/introduction
 
 Evmos is a public Proof-of-Stake (PoS) blockchain, meaning that validator's weight is determined by the amount of staking tokens (EVMOS) bonded as collateral. These staking tokens can be staked directly by the validator or delegated to them by EVMOS holders.
 
-Any user in the system can declare its intention to become a validator by sending a [`create-validator`](#how-to-become-a-validator) transaction. From there, they become validators.
+Any user in the system can declare its intention to become a validator by sending a `create-validator` transaction. From there, they become validators.
 
 The weight (i.e. total stake or voting power) of a validator determines wether or not it is an active validator, and also how frequently this node will have to propose a block and how much revenue it will obtain. Initially, only the top 150 validators with the most weight will be active validators. If validators double-sign, or are frequently offline, they risk their staked tokens (including EVMOS delegated by users) being "slashed" by the protocol to penalize negligence and misbehavior.
 
@@ -42,7 +42,7 @@ Of course, it is possible and encouraged for any user to run full nodes even if 
 
 <summary><b>What is a delegator?</b></summary>
 
-Delegators are EVMOS holders who cannot, or do not want to run validator operations themselves. Users can delegate EVMOS to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see [What is the incentive to stake?](#what-is-the-incentive-to-stake) and [What is a validator's commission?](#what-is-a-validators-commission) sections below).
+Delegators are EVMOS holders who cannot, or do not want to run validator operations themselves. Users can delegate EVMOS to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see `What is the incentive to stake?` and `What is a validator's commission?` sections below).
 
 Because they share revenue with their validators, delegators also share responsibility. Should a validator misbehave, each of its delegators will be partially slashed in proportion to their stake. This is why delegators should perform due-diligence on validators before delegating, as well as diversifying by spreading their stake over multiple validators.
 

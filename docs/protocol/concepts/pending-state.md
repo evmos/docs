@@ -36,10 +36,10 @@ different nodes.
 
 ### JSON-RPC Calls on Pending Transactions
 
-- [`eth_getBalance`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth_getbalance)
-- [`eth_getTransactionCount`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactioncount)
-- [`eth_getBlockTransactionCountByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblocktransactioncountbynumber)
-- [`eth_getBlockByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblockbynumber)
-- [`eth_getTransactionByHash`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyhash)
-- [`eth_getTransactionByBlockNumberAndIndex`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyblockhashandindex)
-- [`eth_sendTransaction`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-sendtransaction)
+- [`eth_getBalance`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_getbalance)
+- [`eth_getTransactionCount`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_gettransactioncount)
+- [`eth_getBlockTransactionCountByNumber`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_getblocktransactioncountbynumber)
+- [`eth_getBlockByNumber`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_getblockbynumber)
+- [`eth_getTransactionByHash`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_gettransactionbyhash)
+- [`eth_getTransactionByBlockNumberAndIndex`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_gettransactionbyblockhashandindex)
+- [`eth_sendTransaction`](./../../develop/apis/ethereum-JSON-RPC/JSON-RPC-methods#eth_sendtransaction)

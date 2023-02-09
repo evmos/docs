@@ -22,10 +22,6 @@ Below is a list of public block explorers that support Evmos Mainnet and Testnet
 | ATOMScan   | `cosmos`       | [atomscan.com/evmos](https://atomscan.com/evmos)       | No  |
 | NGExplorer | `cosmos`       | [evmos.explorers.guru](https://evmos.explorers.guru)   | No  |
 
-#### Mintscan
-
-
-
 ### Testnet
 
 |            | Support       | URL                                                                            |
