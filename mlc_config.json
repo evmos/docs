@@ -1,4 +1,14 @@
-{
+{"ignorePatterns": [
+    {
+      "pattern": "^http://docs.evmos.org"
+    },
+    {
+      "pattern": "^http://community.evmos.org"
+    },
+    {
+      "pattern": "^http://academy.evmos.org"
+    }
+  ],
     "retryOn429": true,
     "retryCount": 3,
     "fallbackRetryDelay": "20s"
