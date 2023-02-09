@@ -1,6 +1,6 @@
 # Faucet
 
-Check how to obtain testnet tokens from the Evmos faucet website 
+Check how to obtain testnet tokens from the Evmos faucet website.
 
 The Evmos Testnet Faucet distributes small amounts of {{ $themeConfig.project.testnet_denom }} to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the [Keplr Wallet](../../use/wallet/keplr) or follow the instructions on this page.
 
@@ -10,7 +10,10 @@ Follow the [Metamask](../../use/wallet/metamask), [Keplr](../../use/wallet/keplr
 
 ## Request Testnet tokens
 
-Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request` and `Request Connection` to add the {{ $themeConfig.project.name }} testnet chain (`evmos_{{ $themeConfig.project.testnet_chain_id }}-{{ $themeConfig.project.testnet_version_number }}`) to Keplr and approve the connection.
+import ProjectValue from '@site/src/components/ProjectValue';
+import Highlighter from '@site/src/components/Highlighter';
+
+Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request` and `Request Connection` to add the <ProjectValue keyword='name' /> testnet chain (`evmos_{{ $themeConfig.project.testnet_chain_id }}-{{ $themeConfig.project.testnet_version_number }}`) to Keplr and approve the connection.
 
 ![chain add request](/img/keplr_approve_chain.png)
 

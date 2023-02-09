@@ -1,5 +1,7 @@
 # Run an IBC Relayer
 
+TODO: ADD COMMON PITFALS AND TIME OUTS AND WHAT TO EXPECT SINCE BELOW IS FOR INSTALLATION/RUNNING. EXPLAIN WHAT A RELAYER IS.
+
 Learn how to run an IBC Relayer for Evmos. 
 
 ## Minimum Requirements

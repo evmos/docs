@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Overview
 
 Learn how to manage chain upgrades for your full and validator nodes. 
