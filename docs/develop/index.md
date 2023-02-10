@@ -12,7 +12,7 @@ interoperable with Ethereum. It's built using the [Cosmos SDK](https://github.co
 
 Evmos allows for running vanilla Ethereum as a [Cosmos](https://cosmos.network/)
 application-specific blockchain. This allows developers to have all the desired features of
-Ethereum, while at the same time, benefit from Tendermint’s PoS implementation. Also, because it is
+Ethereum, while at the same time, benefit from Tendermint’s Proof of Stake implementation. Also, because it is
 built on top of the Cosmos SDK, it will be able to exchange value with the rest of the Cosmos
 Ecosystem through the Inter Blockchain Communication Protocol (IBC).
 
