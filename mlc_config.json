@@ -1,22 +1,28 @@
 {
     "ignorePatterns": [
         {
-        "pattern": "^/"
+            "pattern": "^/"
         },
         {
-        "pattern": "^http://docs.evmos.org"
+            "pattern": "^http://docs.evmos.org"
         },
         {
-        "pattern": "^http://community.evmos.org"
+            "pattern": "^http://community.evmos.org"
         },
         {
-        "pattern": "^http://academy.evmos.org"
+            "pattern": "^http://academy.evmos.org"
         },
         {
-        "pattern": "^http://docs.tendermint.org"
+            "pattern": "^http://docs.tendermint.org"
         },
         {
-        "pattern": "^https://faucet.evmos.dev"
+            "pattern": "^https://faucet.evmos.dev"
+        },
+        {
+            "pattern": "^https://github.com"
+        },
+        {
+            "pattern": "^https://eips.ethereum.org"
         }
   ],
     "retryOn429": true,
