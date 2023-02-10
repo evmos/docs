@@ -41,6 +41,6 @@ Evmos has an on-chain governance mechanism for making changes to the network pro
 
 Developers propose changes through code updates and the community votes on whether to accept or reject the proposed change. Every participant can vote for proposals, as long as they have staked EVMOS tokens. Each vote is weighted by the amount of staked tokens.
 
-Evmos is known for hosting one of the most active governance communities in the blockchain space. As a decentralized autonomous organization (DAO) the ownership, norms, and culture of the Evmos network are thus spread amongst the community. Once you have staked your tokens, head over to the [Evmos Governance dApp](https://app.evmos.org/governance) to start voting on governance proposals.
+Evmos is known for hosting one of the most active governance communities in the blockchain space. Anyone can participate in governance so the ownership, norms, and culture of the Evmos network are thus spread across the community. Once you have staked your tokens, head over to the [Evmos Governance dApp](https://app.evmos.org/governance) to start voting on governance proposals.
 
 <!-- TODO Add CTA to community page -->
