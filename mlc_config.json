@@ -19,6 +19,9 @@
             "pattern": "^http://docs.tendermint.org"
         },
         {
+            "pattern": "^http://docs.cosmos.network"
+        },
+        {
             "pattern": "^https://faucet.evmos.dev"
         },
         {

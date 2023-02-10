@@ -9,7 +9,7 @@ Therefore, it is crucial to store your mnemonic phrase in a safe and secure plac
 ## Mnemonics from the Evmos CLI
 
 :::note
-Before proceeding with the CLI, please insure you have `evmosd` installed. Installation instruction are located [here](../../develop/build-a-dApp/run-a-node/installation).
+Before proceeding with the CLI, please insure you have `evmosd` installed. Installation instruction are located [here](./../../develop/build-a-dApp/run-a-node/installation).
 :::
 
 When you create a new key, you'll receive a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:
