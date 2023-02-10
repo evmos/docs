@@ -1,28 +1,38 @@
 {
     "ignorePatterns": [
         {
-        "pattern": "^/"
+            "pattern": "^/"
         },
         {
-        "pattern": "^http://docs.evmos.org"
+            "pattern": "^./"
         },
         {
-        "pattern": "^http://community.evmos.org"
+            "pattern": "^http://docs.evmos.org"
         },
         {
-        "pattern": "^http://academy.evmos.org"
+            "pattern": "^http://community.evmos.org"
         },
         {
-        "pattern": "^http://docs.tendermint.org"
+            "pattern": "^http://academy.evmos.org"
+        },
+        {
+            "pattern": "^http://docs.tendermint.org"
+        },
+        {
+            "pattern": "^https://faucet.evmos.dev"
+        },
+        {
+            "pattern": "^https://github.com/evmos"
+        },
+        {
+            "pattern": "^https://github.com/tendermint"
+        },
+        {
+            "pattern": "^https://eips.ethereum.org"
+        },
+        {
+            "pattern": "^https://medium.com"
         }
-  ],
-  "httpHeaders": [
-    {
-      "urls": ["https://docs.evmos.org/", "https://community.evmos.org/", "https://academy.evmos.org/", "https://docs.tendermint.org/"],
-      "headers": {
-        "Accept-Encoding": "zstd, br, gzip, deflate"
-      }
-    }
   ],
     "retryOn429": true,
     "retryCount": 3,
