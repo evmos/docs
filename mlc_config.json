@@ -25,7 +25,13 @@
             "pattern": "^https://github.com/evmos"
         },
         {
+            "pattern": "^https://github.com/tendermint"
+        },
+        {
             "pattern": "^https://eips.ethereum.org"
+        },
+        {
+            "pattern": "^https://medium.com"
         }
   ],
     "retryOn429": true,
