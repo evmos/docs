@@ -4,6 +4,9 @@
             "pattern": "^/"
         },
         {
+            "pattern": "^./"
+        },
+        {
             "pattern": "^http://docs.evmos.org"
         },
         {
