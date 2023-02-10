@@ -1,7 +1,7 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "^../"
+            "pattern": "^/"
         },
         {
             "pattern": "^./"
@@ -22,7 +22,7 @@
             "pattern": "^https://faucet.evmos.dev"
         },
         {
-            "pattern": "^https://github.com"
+            "pattern": "^https://github.com/evmos"
         },
         {
             "pattern": "^https://eips.ethereum.org"
