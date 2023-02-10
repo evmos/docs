@@ -1,5 +1,8 @@
 {"ignorePatterns": [
     {
+      "pattern": "^/"
+    },
+    {
       "pattern": "^http://docs.evmos.org"
     },
     {
@@ -7,6 +10,15 @@
     },
     {
       "pattern": "^http://academy.evmos.org"
+    },
+    {
+      "pattern": "^http://docs.tendermint.org"
+    },
+    {
+      "pattern": "^https://support.ledger.com"
+    },
+    {
+      "pattern": "^https://help.github.com"
     }
   ],
     "retryOn429": true,
