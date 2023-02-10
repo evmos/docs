@@ -14,15 +14,10 @@
         },
         {
         "pattern": "^http://docs.tendermint.org"
+        },
+        {
+        "pattern": "^https://faucet.evmos.dev"
         }
-  ],
-  "httpHeaders": [
-    {
-      "urls": ["https://docs.evmos.org/", "https://community.evmos.org/", "https://academy.evmos.org/", "https://docs.tendermint.org/"],
-      "headers": {
-        "Accept-Encoding": "zstd, br, gzip, deflate"
-      }
-    }
   ],
     "retryOn429": true,
     "retryCount": 3,

@@ -8,7 +8,7 @@ Learn how Evmos handles pending state queries.
 
 ## Prerequisite Readings
 
-- [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/) 
+- [Cosmos SDK Mempool](https://docs.cosmos.network/main/building-apps/app-mempool)
 
 ## Evmos vs Ethereum
 
@@ -25,7 +25,7 @@ all (if not most) of the transactions will be committed to the next block (avg. 
 few hiccups in terms of the Ethereum Web3-compatible queries that can be made to pending state.
 
 Another significant difference with Ethereum, is that blocks are produced by validators or block producers, who include transactions from their local mempool into blocks in a
-first-in-first-out (FIFO) fashion. Transactions on Evmos cannot be ordered or cherry picked out from the Tendermint node [mempool](https://docs.tendermint.com/master/tendermint-core/mempool/).
+first-in-first-out (FIFO) fashion. Transactions on Evmos cannot be ordered or cherry picked out from the Tendermint node [mempool](https://docs.tendermint.com/v0.34/tendermint-core/mempool.html).
 
 ## Pending State Queries
 
