@@ -5,7 +5,7 @@ slug: '/dapps'
 
 # Interact with dApps
 
-Before engaging with our dApps, it is important to have a wallet. If you have not installed a wallet, please visit our [wallet's](../wallet) section to select an appropriate wallet.
+Before engaging with our dApps, it is important to have a wallet. If you have not installed a wallet, please visit our [wallet's](./../wallet) section to select an appropriate wallet.
 
 ## Evmos Ecosystem
 
