@@ -13,7 +13,7 @@ You can start by using the Evmos dApps that are built and maintained by the Evmo
 
 Once you have your wallet set up, you can start using dApps on Evmos. Generally, reading information from the network (querying) is free and doesn't require you to pay transaction fees. So dApps can always display blockchain information, such as your asset balances without requiring you to pay a network fee.
 
-To engage with a dApp, you a required to sign transactions with your wallet and pay a small network fee. A transaction is a transfer of value on the blockchain. This can be anything like a simple transfer of tokens to another account, changing the ownership of a character in a game or accepting the terms of a loan when lending or borrowing assets.
+To engage with a dApp, you are required to sign transactions with your wallet and pay a small network fee. A transaction is a transfer of value on the blockchain. This can be anything like a simple transfer of tokens to another account, changing the ownership of a character in a game or accepting the terms of a loan when lending or borrowing assets.
 
 A typical flow to interact with a dApp can look like this:
 
@@ -33,7 +33,7 @@ Staking plays an essential role in keeping the Evmos network secure and decentra
 
 You can help keep the network secure and put your EVMOS tokens at "stake", by delegating them to a validator. This will earn you a daily interest in form of new EVMOS tokens (aka. staking rewards). As long as your tokens are staked, you cannot transfer or use them in other dApps. At any given time, you can undelegate your tokens. This will allow you to start using your tokens again after an unbonding period that is defined in the protocol (e.g. two weeks).
 
-You can choose validators to stake your tokens with from a list on the [Evmos Staking dApp](https://app.evmos.org/staking). We recommend choosing a reputable validator, that can promise to stay online and doesn't have a large voting power. Validators that are offline for an extended period or act maliciously can get slashed, resulting in a loss of your stake. Also, delegating to validators with less voting power keeps the network more decentralized. You can switch between validators without undelegating your tokens by redelegating them.
+You can choose validators to stake your tokens with from a list on the [Evmos Staking dApp](https://app.evmos.org/staking). We recommend choosing a reputable validator, that can promise to stay online and doesn't have a large voting power (e.g. is not in the top 20). Validators that are offline for an extended period or act maliciously can get slashed, resulting in a loss of your stake. Also, delegating to validators with less voting power keeps the network more decentralized. You can switch between validators without undelegating your tokens by redelegating them.
 
 ### Governance
 
