@@ -7,6 +7,12 @@
             "pattern": "^./"
         },
         {
+            "pattern": "^http://localhost:8877"
+        },
+        {
+            "pattern": "^http://localhost:9090"
+        },
+        {
             "pattern": "^http://docs.evmos.org"
         },
         {
