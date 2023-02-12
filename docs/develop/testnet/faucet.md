@@ -3,8 +3,6 @@
 import ProjectValue from '@site/src/components/ProjectValue';
 import Highlighter from '@site/src/components/Highlighter';
 
-Check how to obtain testnet tokens from the Evmos faucet website.
-
 The Evmos Testnet Faucet distributes small amounts of <ProjectValue keyword="testnet_denom" /> to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the [Keplr Wallet](./../../use/connect-your-wallet/keplr) or follow the instructions on this page.
 
 :::tip
