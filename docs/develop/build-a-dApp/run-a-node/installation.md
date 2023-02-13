@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Installation
 
+import ProjectValue from '@site/src/components/ProjectValue';
+
 Build and install the Evmos binaries from source or using Docker.
 
 ## Prerequisites
@@ -33,12 +35,12 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ## Install Binaries
 
 :::tip
-The latest {{ $themeConfig.project.name }} [version](https://github.com/evmos/evmos/releases) is `{{ $themeConfig.project.binary }} {{ $themeConfig.project.latest_version }}`
+The latest <ProjectValue keyword='name' /> [version](https://github.com/evmos/evmos/releases) is `{{ $themeConfig.project.binary }} {{ $themeConfig.project.latest_version }}`
 :::
 
 ### GitHub
 
-Clone and build {{ $themeConfig.project.name }} using `git`:
+Clone and build <ProjectValue keyword='name' /> using `git`:
 
 ```bash
 git clone https://github.com/evmos/evmos.git
@@ -58,7 +60,7 @@ evmosd version
 
 ### Docker
 
-You can build {{ $themeConfig.project.name }} using Docker by running:
+You can build <ProjectValue keyword='name' /> using Docker by running:
 
 ```bash
 make build-docker

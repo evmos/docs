@@ -4,7 +4,10 @@ sidebar_position: 9
 
 # Chain ID
 
-Learn about the Evmos chain-id format.
+import ProjectValue from '@site/src/components/ProjectValue';
+import Highlighter from '@site/src/components/Highlighter';
+
+A chain ID is a unique identifier that represents a blockchain network. We use it to distinguish different blockchain networks from each other and to ensure that transactions and messages are sent to the correct network. Evmos network follows the format of `identifier_EIP155-version` format.
 
 ## Official Chain IDs
 
@@ -14,19 +17,19 @@ Learn about the Evmos chain-id format.
 
 ### Mainnet
 
-| Name                                            | Chain ID                                      | Identifier | EIP155 Number                         | Version Number                              |
-| ----------------------------------------------- | --------------------------------------------- | ---------- | ------------------------------------- | ------------------------------------------- |
-| Evmos {{ $themeConfig.project.version_number }} | `evmos_{{ $themeConfig.project.chain_id }}-2` | `evmos`    | `{{ $themeConfig.project.chain_id }}` | `{{ $themeConfig.project.version_number }}` |
-| Evmos 1                                         | `evmos_{{ $themeConfig.project.chain_id }}-1` | `evmos`    | `{{ $themeConfig.project.chain_id }}` | `1`                                         |
+| Name                                            | Chain ID                                      | Identifier | EIP155 Number                         | Version Number                              | Active |
+| ----------------------------------------------- | --------------------------------------------- | ---------- | ------------------------------------- | ------------------------------------------- | -------|
+| Evmos <ProjectValue keyword="version_number" /> |  <Highlighter pretext="evmos_" keyword="chain_id" postText="-2" /> | `evmos`    | <Highlighter keyword="chain_id" /> |  <Highlighter keyword="version_number" /> | ✅ |
+| Evmos 1                                         | <Highlighter pretext="evmos_" keyword="chain_id" postText="-1" />  | `evmos`    | <Highlighter keyword="chain_id" /> | `1`                                         | 🚫 |
 
 ### Testnet
 
-| Name                              | Chain ID                                              | Identifier | EIP155 Number                                 | Version Number                                      |
-| --------------------------------- | ----------------------------------------------------- | ---------- | --------------------------------------------- | --------------------------------------------------- |
-| Evmos Public Testnet              | `evmos_{{ $themeConfig.project.testnet_chain_id }}-4` | `evmos`    | `{{ $themeConfig.project.testnet_chain_id }}` | `{{ $themeConfig.project.testnet_version_number }}` |
-| Evmos Public Testnet              | `evmos_{{ $themeConfig.project.testnet_chain_id }}-3` | `evmos`    | `{{ $themeConfig.project.testnet_chain_id }}` | `3`                                                 |
-| Olympus Mons Incentivized Testnet | `evmos_{{ $themeConfig.project.testnet_chain_id }}-2` | `evmos`    | `{{ $themeConfig.project.testnet_chain_id }}` | `2`                                                 |
-| Arsia Mons Testnet                | `evmos_{{ $themeConfig.project.testnet_chain_id }}-1` | `evmos`    | `{{ $themeConfig.project.testnet_chain_id }}` | `1`                                                 |
+| Name                              | Chain ID                                              | Identifier | EIP155 Number                                 | Version Number                                      | Active |
+| --------------------------------- | ----------------------------------------------------- | ---------- | --------------------------------------------- | --------------------------------------------------- | ------- |
+| Evmos Public Testnet              |  <Highlighter pretext="evmos_" keyword="testnet_chain_id" postText="-4" /> | `evmos`    |  <Highlighter keyword="testnet_chain_id" /> |  <Highlighter keyword="testnet_version_number" /> | ✅ |
+| Evmos Public Testnet              | <Highlighter pretext="evmos_" keyword="testnet_chain_id" postText="-3" /> | `evmos`    |  <Highlighter keyword="testnet_chain_id" /> | `3`                                                 | 🚫 |
+| Olympus Mons Incentivized Testnet | <Highlighter pretext="evmos_" keyword="testnet_chain_id" postText="-2" /> | `evmos`    |  <Highlighter keyword="testnet_chain_id" /> | `2`                                                 | 🚫 |
+| Arsia Mons Testnet                | <Highlighter pretext="evmos_" keyword="testnet_chain_id" postText="-1" /> | `evmos`    |  <Highlighter keyword="testnet_chain_id" /> | `1`                                                 | 🚫 |
 
 :::tip
 You can also lookup the [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `Chain ID` by referring to [chainlist.org](https://chainlist.org/).
