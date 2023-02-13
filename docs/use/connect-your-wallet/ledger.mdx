@@ -192,14 +192,29 @@ This step should be done automatically by the same service that generated the me
 
 ## FAQs
 
-1. **How can I generate Cosmos `secp256k1` keys with Ledger?**
+<details>
+
+<summary><b>How can I generate Cosmos `secp256k1` keys with Ledger?</b></summary>
 
 Cosmos `secp256k1` keys are not supported on Evmos with Ledger. Only Ethereum keys (`eth_secp256k1`) can be generated with Ledger.
 
-2. **My Ledger has trouble connecting or signing on the CLI**
+</details>
+
+
+<details>
+
+<summary><b>My Ledger has trouble connecting or signing on the CLI</b></summary>
 
 The Ledger's connection to the CLI can fail for a number of reasons. Make sure to close any other apps using the Ledger (such as Ledger Live or Metamask), unlock the Ledger, and open the Ethereum app. If this does not work, simply disconnecting and reconnecting the device often solves the issue.
 
-3. **I can’t use Metamask or Keplr with the Cosmos Ledger app**
+</details>
+
+
+<details>
+
+<summary><b>I can’t use Metamask or Keplr with the Cosmos Ledger app</b></summary>
 
 Since Evmos only support Ethereum keys and uses the same HD (hierarchival determination) wallet derivation path as Ethereum, the Cosmos Ledger app doesn’t work to sign cosmos transactions. Using Keplr with the Cosmos Ledger app will only work with derivation path `m/44'/118'/0'/0` (Cosmos) and not `m/44'/60'/0'/0` (Ethereum). On your Ledger hardware device, you can always switch to Ethereum to reconnect to the Keplr Evmos network.
+
+</details>
+

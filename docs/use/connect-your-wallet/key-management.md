@@ -1,11 +1,15 @@
 # Key Management
 
-All of these wallets will issue a mnemonic seed or private key and it is critical to handle this information carefully. It is vital to secure this phrase or key and backup this phrase. There are no `Forget Your Password`. Many wallets will require a password to secure the account. Using a strong and unique password will ensure better likelihood of wallet safety.
+A mnemonic phrase, also known as a seed phrase, is a set of words used to recover or restore a cryptocurrency wallet. It acts as a backup to access your digital assets in case you lose access to the original wallet. The phrase is typically a series of 12-24 words that are generated when you create a wallet, and it should be kept secure and private.
+
+The importance of mnemonic phrases lies in the fact that cryptocurrencies are stored in a decentralized manner, meaning that there is no central authority or institution that holds or controls your funds. This means that if you lose access to your wallet (e.g. forget your password, lose your device), you will not be able to recover your funds without the mnemonic phrase.
+
+Therefore, it is crucial to store your mnemonic phrase in a safe and secure place, such as a physical paper or a secure digital file. Additionally, it is recommended to make multiple copies and store them in different locations, so that you can access your funds in case of any emergency.
 
 ## Mnemonics from the Evmos CLI
 
 :::note
-Before proceeding with the CLI, please insure you have `evmosd` installed. Installation instruction are located [here](../../develop/build-a-dApp/run-a-node/installation).
+Before proceeding with the CLI, please insure you have `evmosd` installed. Installation instruction are located [here](./../../develop/build-a-dApp/run-a-node/installation).
 :::
 
 When you create a new key, you'll receive a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:

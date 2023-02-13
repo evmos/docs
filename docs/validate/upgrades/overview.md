@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Overview
 
 Learn how to manage chain upgrades for your full and validator nodes. 
@@ -20,7 +24,7 @@ Planned upgrades are coordinated scheduled upgrades that use the [upgrade module
 
 ### Governance Proposal
 
-Governance Proposals are a mechanism for coordinating an upgrade at a given height or time using an [`SoftwareProposal`](https://docs.evmos.org/modules/upgrade/01_concepts.html#proposal).
+Governance Proposals are a mechanism for coordinating an upgrade at a given height or time using an [`SoftwareProposal`](https://docs.cosmos.network/main/modules/upgrade).
 
 :::tip
 All governance proposals, including software upgrades, need to wait for the voting period to conclude before the upgrade can be executed. Consider this duration when submitting a software upgrade proposal.

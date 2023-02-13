@@ -4,6 +4,8 @@ sidebar_position: 6
 
 # Metrics
 
+TODO: Explain go metrics and also what the types mean like gauge and counter.
+
 Gather relevant insights about the Evmos application and modules with custom metrics and telemetry.
 
 To understand how to use the metrics below, please refer to the [Cosmos SDK telemetry documentation](https://docs.cosmos.network/main/core/telemetry.html).
