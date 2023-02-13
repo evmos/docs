@@ -1,11 +1,10 @@
 ---
 sidebar_position: 0
 ---
-# Overview
 
 # Introduction
-
-Evmos is a Cosmos-based chain with full Ethereum Virtual Machine (EVM) support. Because of this [architecture](./../protocol), tokens and assets in the network may come from different independent sources.
+<!--
+Evmos is a Cosmos-based chain with full Ethereum Virtual Machine (EVM) support. Because of this [architecture](), tokens and assets in the network may come from different independent sources.
 
 Evmos is a scalable, high-throughput Proof-of-Stake blockchain that is fully compatible and
 interoperable with Ethereum. It's built using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) which runs on top of [Tendermint Core](https://github.com/tendermint/tendermint) consensus engine.
@@ -30,9 +29,10 @@ Evmos enables these key features by:
 * Implementing Tendermint Core's Application Blockchain Interface ([ABCI](https://docs.tendermint.com/master/spec/abci/)) to manage the blockchain
 * Leveraging [modules](https://docs.cosmos.network/main/building-modules/intro.html) and other mechanisms implemented by the [Cosmos SDK](https://docs.cosmos.network/).
 * Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to promote code reuse and improve maintainability.
-* Exposing a fully compatible Web3 [JSON-RPC](../../develop/build-a-dApp/clients/ethereum-JSON-RPC/JSON-RPC) layer for interacting with existing Ethereum clients and tooling ([Metamask](../connect-your-wallet/metamask), [Remix](academy.evmos.org), [Truffle](academy.evmos.org), etc).
+* Exposing a fully compatible Web3 [JSON-RPC](./apis/ethereum-JSON-RPC/JSON-RPC.md) layer for interacting with existing Ethereum clients and tooling ([Metamask](../use/connect-your-wallet/metamask.mdx), Remix, Truffle, etc). -->
 
-The sum of these features allows developers to leverage existing Ethereum ecosystem tooling and
+
+<!-- The sum of these features allows developers to leverage existing Ethereum ecosystem tooling and
 software to seamlessly deploy smart contracts which interact with the rest of the Cosmos
 [ecosystem](https://cosmos.network/ecosystem)!
 
@@ -62,15 +62,15 @@ that are natively supported by the EVM.
 
 ## Quick Facts Table
 
-| Property               | Value                                                      |
-| ---------------------- | ---------------------------------------------------------- |
-| Evmos Testnet          | <ProjectValue keyword="testnet_chain_id" />                |
-| Evmos Mainnet          | <ProjectValue keyword="chain_id" />                        |
-| Blockchain Explorer(s) | [List of Block Explorers](/develop/build-a-dApp/dev-tools/block-explorers) |
-| Block Time             | `~2s`                                                      |
+| Property               | Value                                           |
+| ---------------------- | ----------------------------------------------- |
+| Evmos Testnet          | <ProjectValue keyword="testnet_chain_id" />     |
+| Evmos Mainnet          | <ProjectValue keyword="chain_id" />             |
+| Blockchain Explorer(s) | [List of Block Explorers](./tools/explorers.md) |
+| Block Time             | `~2s`                                           | -->
 
 
-
+<!--
 ## List of Resources
 
 Please find the following resources for in-depth information:
@@ -100,4 +100,4 @@ As Evmos lives at the crossroads of Cosmos and Ethereum, there are RPC connectio
 
 ### Tutorials For Ethereum Developers
 
-TODO: Redirect learnings & Guides to ACADEMY
+TODO: Redirect learnings & Guides to ACADEMY -->
