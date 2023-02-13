@@ -23,8 +23,10 @@ This allows validators to choose transactions based on the associated fees or ot
 It is achieved by passing a `priority` field with each [`CheckTx` response](https://github.com/tendermint/tendermint/blob/17c94bb0dcb354c57f49cdcd1e62f4742752c803/proto/tendermint/abci/types.proto#L234),
 which is run on any transaction trying to enter the mempool.
 
+<!-- TODO: FIX THE FEEMARKET LINK WHEN THE MODULE IS IMPORTED -->
+
 Evmos supports [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559#simple-summary) EVM transactions through its
-[feemarket](../../modules/feemarket/01_concepts.md) module.
+feemarket module.
 This transaction type uses a base fee and a selectable priority tip that add up to the total transaction fees.
 The prioritized mempool presents an option to automatically make use of this mechanism regarding block generation.
 
