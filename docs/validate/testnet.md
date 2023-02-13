@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Testnet
 
+import ProjectValue from '@site/src/components/ProjectValue';
+
 This document outlines the steps to join an existing testnet.
 
 ## Pick a Testnet
@@ -19,7 +21,7 @@ You specify the network you want to join by setting the **genesis file** and **s
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the {{ $themeConfig.project.name }} binary `{{ $themeConfig.project.binary }}`.
+Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary `{{ $themeConfig.project.binary }}`.
 
 :::warning
 Make sure you have the right version of `{{ $themeConfig.project.binary }}` installed.
@@ -140,7 +142,7 @@ evmosd tx staking create-validator \
 
 ## Start testnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
 
 ```bash
 evmosd start

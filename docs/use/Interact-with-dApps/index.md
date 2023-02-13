@@ -5,7 +5,7 @@ slug: '/dapps'
 
 # Use dApps
 
-Before engaging with dApps, it is important to have a wallet with some Evmos tokens. If you have not installed a wallet, please visit our [wallet's](../connect-your-wallet/index.mdx) section to select an appropriate wallet. If you do not have any EVMOS tokens, you can acquire them by reading the [Onramp to Evmos](../transfer-tokens/index.md#onramp-to-evmos) strategies.
+Before engaging with dApps, it is important to have a wallet with some Evmos tokens. If you have not installed a wallet, please visit our [wallet's](./../wallet) section to select an appropriate wallet. If you do not have any EVMOS tokens, you can acquire them by reading the [Onramp to Evmos](../transfer-tokens/index.md#onramp-to-evmos) strategies.
 
 <!-- add link to [dApps](../intro#what-are-dapps) -->
 

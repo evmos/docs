@@ -25,7 +25,7 @@ You need to set the **genesis file** and **seeds**. If you need more information
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the {{ $themeConfig.project.name }} binary `{{ $themeConfig.project.binary }}`.
+Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary `{{ $themeConfig.project.binary }}`.
 
 :::warning
 Make sure you have the right version of `{{ $themeConfig.project.binary }}` installed.
@@ -150,7 +150,7 @@ Ref: [Security Advisory: Insecurely configured geth can make funds remotely acce
 
 ## Start mainnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the node will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the node will start producing blocks.
 
 ```bash
 evmosd start
