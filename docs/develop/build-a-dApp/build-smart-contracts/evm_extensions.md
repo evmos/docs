@@ -20,6 +20,13 @@ It also is a key feature to achieve Evmos' vision of being the definitive dApp
 chain, where any dApp can be deployed once and users are able to interact with
 a wide range of different blockchains natively.
 
+To enable the described funtionalities, Evmos introduces socalled *stateful* precompiled smart contracts,
+which have the capability to perform a state transition,
+as opposed to those offered by the standard Go-Ethereum implementation,
+that can only read state information.
+This is necessary, because an operation like e.g. staking tokens
+will ultimately change the chain state.
+
 ## Available Extensions
 
 The following extensions are available in Evmos' implementation of the EVM:
