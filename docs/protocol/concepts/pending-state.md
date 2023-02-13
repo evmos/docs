@@ -4,11 +4,11 @@ sidebar_position: 11
 
 # Pending State
 
-Learn how Evmos handles pending state queries. 
+Learn how Evmos handles pending state queries.
 
 ## Prerequisite Readings
 
-- [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/) 
+- [Cosmos SDK Mempool](https://docs.cosmos.network/main/building-apps/app-mempool)
 
 ## Evmos vs Ethereum
 
@@ -25,7 +25,7 @@ all (if not most) of the transactions will be committed to the next block (avg. 
 few hiccups in terms of the Ethereum Web3-compatible queries that can be made to pending state.
 
 Another significant difference with Ethereum, is that blocks are produced by validators or block producers, who include transactions from their local mempool into blocks in a
-first-in-first-out (FIFO) fashion. Transactions on Evmos cannot be ordered or cherry picked out from the Tendermint node [mempool](https://docs.tendermint.com/master/tendermint-core/mempool/).
+first-in-first-out (FIFO) fashion. Transactions on Evmos cannot be ordered or cherry picked out from the Tendermint node [mempool](https://docs.tendermint.com/v0.34/tendermint-core/mempool.html).
 
 ## Pending State Queries
 
@@ -36,10 +36,10 @@ different nodes.
 
 ### JSON-RPC Calls on Pending Transactions
 
-- [`eth_getBalance`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth_getbalance)
-- [`eth_getTransactionCount`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactioncount)
-- [`eth_getBlockTransactionCountByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblocktransactioncountbynumber)
-- [`eth_getBlockByNumber`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-getblockbynumber)
-- [`eth_getTransactionByHash`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyhash)
-- [`eth_getTransactionByBlockNumberAndIndex`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-gettransactionbyblockhashandindex)
-- [`eth_sendTransaction`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-sendtransaction)
+- [`eth_getBalance`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_getbalance)
+- [`eth_getTransactionCount`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_gettransactioncount)
+- [`eth_getBlockTransactionCountByNumber`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_getblocktransactioncountbynumber)
+- [`eth_getBlockByNumber`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_getblockbynumber)
+- [`eth_getTransactionByHash`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_gettransactionbyhash)
+- [`eth_getTransactionByBlockNumberAndIndex`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_gettransactionbyblockhashandindex)
+- [`eth_sendTransaction`](./../../develop/apis/ethereum-JSON-RPC/json-rpc-methods#eth_sendtransaction)

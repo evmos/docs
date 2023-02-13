@@ -2,7 +2,7 @@
 
 ## Prerequisite Readings
 
-- [Install Ignite CLI](https://docs.ignite.com/guide/install.html)  
+- [Install Ignite CLI](https://github.com/ignite/cli)  
 - [Install Docker](https://docs.docker.com/engine/installation/)  
 - [Install docker-compose](https://docs.docker.com/compose/install/)  
 
@@ -14,7 +14,7 @@ Once you have installed `ignite`, just run the localnet by using
 ignite chain serve 
 ```
 
-Detailed instructions can be found in the [Ignite CLI documentation](https://docs.ignite.com/kb/serve.html)
+Detailed instructions can be found in the [Ignite CLI documentation](https://github.com/ignite/cli)
 
 ## Automated Localnet with Docker
 
@@ -184,7 +184,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 The IP address will be the public IP of the docker container.
 :::
 
-Additional instructions on how to interact with the WebSocket can be found on the [events documentation](../clients/ethereum-JSON-RPC/event#ethereum-websocket).
+Additional instructions on how to interact with the WebSocket can be found on the [events documentation](./../clients/ethereum-JSON-RPC/event#ethereum-websocket).
 
 ### Keys & Accounts
 

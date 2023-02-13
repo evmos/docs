@@ -14,13 +14,13 @@ Below is a list of public block explorers that support Evmos Mainnet and Testnet
 
 ### Mainnet
 
-|            | Support       | URL                                                    |
-|------------| -------------- |--------------------------------------------------------|
-| Mintscan   | `cosmos` `evm` | [mintscan.io/evmos](https://www.mintscan.io/evmos)     |
-| Escan      | `cosmos` `evm` | [escan.live](https://escan.live)                       |
-| BigDipper  | `cosmos`       | [evmos.bigdipper.live/](https://evmos.bigdipper.live/) |
-| ATOMScan   | `cosmos`       | [atomscan.com/evmos](https://atomscan.com/evmos)       |
-| NGExplorer | `cosmos`       | [evmos.explorers.guru](https://evmos.explorers.guru)   |
+|            | Support       | URL                                                    | Contract Verification  |
+|------------| -------------- |--------------------------------------------------------|-----------------------|
+| Mintscan   | `cosmos` `evm` | [mintscan.io/evmos](https://www.mintscan.io/evmos)     | Yes but requires form submission  |
+| Escan      | `cosmos` `evm` | [escan.live](https://escan.live)                       | Permissionless  |
+| BigDipper  | `cosmos`       | [evmos.bigdipper.live/](https://evmos.bigdipper.live/) | No  |
+| ATOMScan   | `cosmos`       | [atomscan.com/evmos](https://atomscan.com/evmos)       | No  |
+| NGExplorer | `cosmos`       | [evmos.explorers.guru](https://evmos.explorers.guru)   | No  |
 
 ### Testnet
 

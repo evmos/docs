@@ -137,7 +137,7 @@ curl -X GET "http://localhost:10337/cosmos/auth/v1beta1/accounts/evmos14au322k9m
 
 ### JSON-RPC
 
-To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`eth_accounts`](../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-accounts) or [`personal_listAccounts`](../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#personal-listAccounts) endpoints:
+To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`eth_accounts`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#eth-accounts) or [`personal_listAccounts`](./../../develop/build-a-dApp/clients/ethereum-JSON-RPC/json-rpc-methods#personal-listAccounts) endpoints:
 
 ```bash
 # query against a local node

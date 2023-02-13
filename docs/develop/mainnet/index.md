@@ -1,2 +1,2 @@
-# Move to Mainnet
+# Mainnet
 
