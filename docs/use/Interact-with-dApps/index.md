@@ -35,6 +35,8 @@ Staking plays an essential role in keeping the Evmos network secure and decentra
 
 You can help keep the network secure and put your EVMOS tokens at "stake", by delegating them to a validator. This will earn you a daily interest in form of new EVMOS tokens (aka. staking rewards). As long as your tokens are staked, you cannot transfer or use them in other dApps. At any given time, you can undelegate your tokens. This will allow you to start using your tokens again after an unbonding period that is defined in the protocol (e.g. two weeks).
 
+![evmos_staking.png](/img/evmos_staking.png)
+
 You can choose validators to stake your tokens with from a list on the [Evmos Staking dApp](https://app.evmos.org/staking). We recommend choosing a reputable validator, that can promise to stay online and doesn't have a large voting power (e.g. is not in the top 20). Validators that are offline for an extended period or act maliciously can get slashed, resulting in a loss of your stake. Also, delegating to validators with less voting power keeps the network more decentralized. You can switch between validators without undelegating your tokens by redelegating them.
 
 ### Governance
@@ -42,6 +44,8 @@ You can choose validators to stake your tokens with from a list on the [Evmos St
 Evmos has an on-chain governance mechanism for making changes to the network protocol, such as changing chain parameters (like the unbonding period for staking), spending funds from the community pool (e.g. to fund teams to build on Evmos), or upgrading the Evmos software that is run by validators.
 
 Developers propose changes through code updates and the community votes on whether to accept or reject the proposed change. Every participant can vote for proposals, as long as they have staked EVMOS tokens. Each vote is weighted by the amount of staked tokens.
+
+![evmos_governance.png](/img/evmos_governance.png)
 
 Evmos is known for hosting one of the most active governance communities in the blockchain space. Anyone can participate in governance so the ownership, norms, and culture of the Evmos network are thus spread across the community. Once you have staked your tokens, head over to the [Evmos Governance dApp](https://app.evmos.org/governance) to start voting on governance proposals.
 

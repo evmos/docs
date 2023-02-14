@@ -86,6 +86,7 @@ body {
 article a {
   text-decoration: underline;
   color: var(--ifm-color-primary);
+  text-decoration-color: var(--ifm-color-primary);
   touch-action: manipulation;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -236,4 +237,8 @@ article a[href^="http"]::after {
   width: 0.6rem;
   display: inline-block;
   margin-left: 0.3rem;
+}
+
+.alert a {
+  text-decoration-color: var(--ifm-color-primary);
 }
