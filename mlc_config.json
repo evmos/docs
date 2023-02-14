@@ -44,6 +44,18 @@
         },
         {
             "pattern": "^https://docs.docker.com"
+        },
+        {
+            "pattern": "^https://api.evmos.dev"
+        },
+        {
+            "pattern": "^https://api.evmos.org"
+        },
+        {
+            "pattern": "^https://www.keplr.app"
+        },
+        {
+            "pattern": "^https://metamask.io"
         }
   ],
     "retryOn429": true,

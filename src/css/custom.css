@@ -85,7 +85,7 @@ body {
 
 article a {
   text-decoration: underline;
-  color: --ifm-color-primary;
+  color: var(--ifm-color-primary);
   touch-action: manipulation;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;

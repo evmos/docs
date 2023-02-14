@@ -85,7 +85,7 @@ The command above creates all the configuration files needed for your node and v
 
 ### Adding Genesis Accounts
 
-Before starting the chain, you need to populate the state with at least one account using the [keyring](../../../protocol/concepts/keyring#add-keys):
+Before starting the chain, you need to populate the state with at least one account using the [keyring](./../../../protocol/concepts/keyring#add-keys):
 
 ```bash
 evmosd keys add my_validator

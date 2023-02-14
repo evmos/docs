@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # List of Upgrades
 
 Check the details and requirements for each mainnet and testnet upgrade. 
