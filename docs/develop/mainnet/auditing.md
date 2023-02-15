@@ -1,6 +1,6 @@
 # Security Audits
 
-Security audit is a comprehensive evaluation of the security and stability of a smart contract or decentralized application (dApp) built on the EVM chains. The purpose of this audit is to identify potential vulnerabilities and weaknesses in the code that could compromise the integrity of the dApp, as well as to ensure that the code is robust and free of bugs that could lead to unintended consequences.
+Security audit is a comprehensive evaluation of the security and stability of a smart contract or decentralized application (dApp) built on Evmos. The purpose of this audit is to identify potential vulnerabilities and weaknesses in the code that could compromise the integrity of the dApp, as well as to ensure that the code is robust and free of bugs that could lead to unintended consequences.
 
 A security audit typically involves a thorough examination of the smart contract code and its architecture, as well as any dependencies and external libraries that are used. The audit team will also consider the potential threat models and attack scenarios that the dApp may face, and test the code to ensure that it can withstand these attacks.
 
