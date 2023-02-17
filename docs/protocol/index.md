@@ -38,6 +38,7 @@ Evmos enables EVM compatibility by implementing various components that together
 - JSON-RPC client for interacting with the EVM
 
 
+
 <!-- Moved from other pages during the refactor
 
 
@@ -58,7 +59,7 @@ Evmos enables these key features by:
 * Implementing Tendermint Core's Application Blockchain Interface ([ABCI](https://docs.tendermint.com/master/spec/abci/)) to manage the blockchain
 * Leveraging [modules](https://docs.cosmos.network/main/building-modules/intro.html) and other mechanisms implemented by the [Cosmos SDK](https://docs.cosmos.network/).
 * Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to promote code reuse and improve maintainability.
-* Exposing a fully compatible Web3 [JSON-RPC](./apis/ethereum-JSON-RPC/JSON-RPC.md) layer for interacting with existing Ethereum clients and tooling Metamask, Remix, Truffle, etc).
+* Exposing a fully compatible Web3 [JSON-RPC](./apis/ethereum-JSON-RPC/JSON-RPC) layer for interacting with existing Ethereum clients and tooling Metamask, Remix, Truffle, etc).
 
 
 The sum of these features allows developers to leverage existing Ethereum ecosystem tooling and
@@ -95,7 +96,7 @@ that are natively supported by the EVM.
 | ---------------------- | ----------------------------------------------- |
 | Evmos Testnet          | <ProjectValue keyword="testnet_chain_id" />     |
 | Evmos Mainnet          | <ProjectValue keyword="chain_id" />             |
-| Blockchain Explorer(s) | [List of Block Explorers](./tools/explorers.md) |
+| Blockchain Explorer(s) | [List of Block Explorers](./../../develop/tools/explorers) |
 | Block Time             | `~2s`                                           |
 
 

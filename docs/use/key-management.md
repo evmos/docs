@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: key-management
+---
+
 # Key Management
 
 A mnemonic phrase, also known as a seed phrase, is a set of words used to recover or restore a cryptocurrency wallet. It acts as a backup to access your digital assets in case you lose access to the original wallet. The phrase is typically a series of 12-24 words that are generated when you create a wallet, and it should be kept secure and private.

@@ -13,7 +13,7 @@ function defineSection(section, options = {}) {
       routeBasePath: section,
       id: section,
       sidebarPath: require.resolve('./sidebars.js'),
-      breadcrumbs: false,
+      breadcrumbs: true,
       editUrl: 'https://github.com/evmos/docs/tree/main/',
       ...options,
     }),
@@ -156,7 +156,7 @@ const config = {
           {
             position: 'right',
             label: 'APIs',
-            to: '/api',
+            to: '/develop/apis/networks',
           },
           {
             position: 'right',
