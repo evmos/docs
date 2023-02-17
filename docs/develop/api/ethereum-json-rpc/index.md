@@ -6,6 +6,12 @@ sidebar_position: 1
 
 Learn about the JSON-RPC server to interact with the EVM.
 
+
+Evmos supports most of the standard [JSON-RPC APIs](./JSON-RPC) to connect
+with existing Ethereum-compatible web3 tooling. Check out the list
+of supported JSON-RPC API [endpoints](./JSON-RPC-methods) and [namespaces](./namespaces).
+
+
 ## Prerequisite Readings
 
 - [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API)
@@ -74,3 +80,19 @@ The following options are possible for the `defaultBlock` parameter:
 The curl options below might return a response where the node complains about the content type, this is because the `--data` option sets the content type to `application/x-www-form-urlencoded`. If your node does complain, manually set the header by placing `-H "Content-Type: application/json"` at the start of the call.
 
 The examples also do not include the URL/IP & port combination which must be the last argument given to curl e.x. `127.0.0.1:8545`
+
+
+## Ethereum Websocket
+
+The Etheruem Websocket to subscribe to Ethereum logs and events emitted in smart contracts.
+This way you don't need to continuously make requests when you want specific information.
+You can start a websocket subscription with [`ws`](https://github.com/hashrocket/ws):
+
+```bash
+# connect to tendermint websocket at port 8546 as defined above
+ws ws://localhost:8546/
+
+# subscribe to new Ethereum-formatted block Headers
+> {"id": 1, "method": "eth_subscribe", "params": ["newHeads", {}]}
+< {"jsonrpc":"2.0","result":"0x44e010cb2c3161e9c02207ff172166ef","id":1}
+```

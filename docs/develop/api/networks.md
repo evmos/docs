@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Networks
 
-Quickly connect your app or client to Evmos services 
-
 ## Public Available Endpoints
 
 Below is a list of publicly available endpoints that you can use to connect to the Evmos mainnet and
