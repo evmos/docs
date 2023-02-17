@@ -4,17 +4,37 @@ sidebar_position: 4
 
 # Tendermint RPC
 
-Query transactions, blocks, consensus state, broadcast transactions, etc.
+The [Tendermint RPC](https://docs.tendermint.com/v0.34/rpc/) allows you to query transactions, blocks, consensus state, broadcast transactions, etc.
 
-https://docs.tendermint.com/v0.34/rpc/
+## Subscribing to Cosmos and Tendermint Events via Websocket
+
+Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection to subscribe or unsubscribe to Tendermint `Events`. Events are objects that contain information about the execution of the application
+and are are triggered after a block is committed. They are mainly used by service providers
+like block explorers and wallet to track the execution of various messages and index transactions.
+You can get the full list of `event` categories and values [here](./clients#list-of-tendermint-events).
+
+More on Events
+
+- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
 
 ## Tendermint Websocket
 
-Tendermint Core provides a Websocket connection to subscribe or unsubscribe to Tendermint ABCI events.
+To start a connection with the Tendermint websocket you need to define the address with the `--rpc.laddr`
+flag when starting the node (default `tcp://127.0.0.1:26657`):
 
-:::tip
-For more info about how to subscribe to events, please refer to the official [Tendermint documentation](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
-:::
+```bash
+evmosd start --rpc.laddr="tcp://127.0.0.1:26657"
+```
+
+Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws)
+
+```bash
+# connect to tendermint websocket at port 8080
+ws ws://localhost:8080/websocket
+
+# subscribe to new Tendermint block headers
+> { "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='NewBlockHeader'"], "id": 1 }
+```
 
 ```json
 {
@@ -26,6 +46,25 @@ For more info about how to subscribe to events, please refer to the official [Te
     }
 }
 ```
+
+The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are
+looking for. For example, a an Ethereum transaction on Evmos (`MsgEthereumTx`) triggers an `event` of type `ethermint` and
+has `sender` and `recipient` as `attributes`. Subscribing to this `event` would be done like so:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "subscribe",
+    "id": "0",
+    "params": {
+        "query": "tm.event='Tx' AND ethereum.recipient='hexAddress'"
+    }
+}
+```
+
+where `hexAddress` is an Ethereum hex address (eg: `0x1122334455667788990011223344556677889900`).
+
+
 
 ### List of Tendermint Events
 
