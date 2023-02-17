@@ -23,7 +23,7 @@ All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with *Do
 Clone `evmos`:
 
 ``` bash
-git clone git@github.com:tharsis/evmos.git
+git clone git@github.com:evmos/evmos.git
 ```
 
 Checkout the commit, branch, or release tag you want to build (eg `v0.4.0`):
@@ -33,7 +33,7 @@ cd evmos/
 git checkout v0.4.0
 ```
 
-The buildsystem supports and produces binaries for the following architectures:
+The build system supports and produces binaries for the following architectures:
 
 * **linux/amd64**
 
