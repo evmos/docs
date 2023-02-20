@@ -143,7 +143,7 @@ evmosd keys add [name] \
 --keyring-backend test
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](../../use/connect-your-wallet/metamask.mdx) for example):
+To export your evmos key as an Ethereum private key (for use with [Metamask](../../../docs/use/connect-your-wallet/metamask.mdx) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key [name] \

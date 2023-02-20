@@ -794,7 +794,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x12345
 
 ## WebSocket Methods
 
-Read about websockets in [events](./events.md)
+Read about websockets in [Tendermint Events](../tendermint-rpc.md)
 
 ### `eth_subscribe`
 
