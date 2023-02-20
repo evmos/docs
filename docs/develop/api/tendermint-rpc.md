@@ -6,6 +6,23 @@ sidebar_position: 4
 
 The Tendermint RPC allows you to query transactions, blocks, consensus state, broadcast transactions, etc.
 
+The latest Tendermint RPC documentations can be found [here](https://docs.tendermint.com/v0.34/rpc/). Tendermint
+supports the following RPC protocols:
+
+- URI over HTTP
+- JSON-RPC over HTTP
+- JSON-RPC over websockets
+
+The docs will contain an interactive Swagger interface.
+
+## URI/HTTP
+
+A GET request with arguments encoded as query parameters:
+
+```
+curl localhost:26657/block?height=5
+```
+
 ## RPC/HTTP
 
 JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list
