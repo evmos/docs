@@ -65,7 +65,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 
 The Ethereum Websocket allows you to subscribe to Ethereum logs and events emitted in smart contracts. This way you don't need to continuously make requests when you want specific information.
 
-Since Evmos is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the [event format](./tendermint-rpc#subscribing-to-cosmos-and-tendermint-events) from them. However, in order to support the native Web3 compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/rpc/pubsub), Evmos needs to cast the Tendermint
+Since Evmos is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the [event format](./tendermint-rpc#subscribing-to-cosmos-and-tendermint-events) from them. However, in order to support the native Web3 compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub), Evmos needs to cast the Tendermint
 responses retrieved into the Ethereum types.
 
 You can start a connection with the Ethereum websocket using the `--json-rpc.ws-address` flag when starting
