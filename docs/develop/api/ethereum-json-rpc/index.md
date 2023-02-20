@@ -11,8 +11,8 @@ The JSON-PRC Server provides an API that allows you to connect to the Evmos bloc
 More on Ethereum JSON-RPC:
 
 - [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API)
-- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server)
-- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub)
+- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
+- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)
 
 ## JSON-RPC over HTTP
 
