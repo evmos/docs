@@ -56,7 +56,7 @@ If the `evmosd: command not found` error message is returned, confirm that you h
 
 ### Docker
 
-To build Evmos using Docker, check out the latest version as decribed above and create a docker container `tharsishq/evmos:latest` with:
+To build Evmos using Docker, check out the latest version as described above and create a docker container `tharsishq/evmos:latest` with:
 
 ```bash
 make build-docker
@@ -96,7 +96,7 @@ Run the local node by executing the `local_node.sh` script in the base directory
 
 The script stores the node configuration including the local default endpoints under `~/.tmp-evmosd/config/config.toml`. If you have previously run the script, the script allows you to overwrite the existing configuration and start a new local node.
 
-Once your node is running you will see it validating and producting blocks in your local Evmos blockchain:
+Once your node is running you will see it validating and producing blocks in your local Evmos blockchain:
 
 ```bash
 12:59PM INF executed block height=1 module=state num_invalid_txs=0 num_valid_txs=0 server=node
@@ -117,7 +117,7 @@ There is also a `-h`, `--help` command available
 evmosd -h
 ```
 
-It is possible to maintain multiple node configruations at the same time. To specify a configuration use the `--home` flag. In the following examples we will be using the default config for a local node, located at `~/.tmp-evmosd`.
+It is possible to maintain multiple node configurations at the same time. To specify a configuration use the `--home` flag. In the following examples we will be using the default config for a local node, located at `~/.tmp-evmosd`.
 
 ### Manage wallets
 
@@ -231,7 +231,7 @@ evmosd tx bank send [from_key_or_address] [to_address] [amount] \
 --fees 50000000000aevmos \
 -b block
 
-# Exmaple Output:
+# Example Output:
 # ...
 # txhash: 7BA2618295B789CC24BB13E654D9187CDD264F61FC446EB756EAC07AF3E7C40A
 ```
