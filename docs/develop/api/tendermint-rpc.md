@@ -4,23 +4,29 @@ sidebar_position: 4
 
 # Tendermint RPC
 
-The [Tendermint RPC](https://docs.tendermint.com/v0.34/rpc/) allows you to query transactions, blocks, consensus state, broadcast transactions, etc.
+The Tendermint RPC allows you to query transactions, blocks, consensus state, broadcast transactions, etc.
 
-## Subscribing to Cosmos and Tendermint Events via Websocket
+## RPC/HTTP
 
-Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection to subscribe or unsubscribe to Tendermint `Events`. Events are objects that contain information about the execution of the application
-and are are triggered after a block is committed. They are mainly used by service providers
+JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list
+of supported Tendermint RPC endpoints using swagger [here](../api#clients).
+
+## RPC/Websocket
+
+### Cosmos and Tendermint Events
+
+`Event`s are objects that contain information about the execution of the application
+and are triggered after a block is committed. They are mainly used by service providers
 like block explorers and wallet to track the execution of various messages and index transactions.
 You can get the full list of `event` categories and values [here](./clients#list-of-tendermint-events).
 
-More on Events
+More on Events:
 
 - [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
 
-## Tendermint Websocket
+### Subscribing to Events via Websocket
 
-To start a connection with the Tendermint websocket you need to define the address with the `--rpc.laddr`
-flag when starting the node (default `tcp://127.0.0.1:26657`):
+Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection to subscribe or unsubscribe to Tendermint `Events`. To start a connection with the Tendermint websocket you need to define the address with the `--rpc.laddr` flag when starting the node (default `tcp://127.0.0.1:26657`):
 
 ```bash
 evmosd start --rpc.laddr="tcp://127.0.0.1:26657"
@@ -34,17 +40,6 @@ ws ws://localhost:8080/websocket
 
 # subscribe to new Tendermint block headers
 > { "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='NewBlockHeader'"], "id": 1 }
-```
-
-```json
-{
-    "jsonrpc": "2.0",
-    "method": "subscribe",
-    "id": "0",
-    "params": {
-        "query": "tm.event='<event_value>' AND eventType.eventAttribute='<attribute_value>'"
-    }
-}
 ```
 
 The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are
@@ -64,7 +59,18 @@ has `sender` and `recipient` as `attributes`. Subscribing to this `event` would 
 
 where `hexAddress` is an Ethereum hex address (eg: `0x1122334455667788990011223344556677889900`).
 
+The generic syntax look like this:
 
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "subscribe",
+    "id": "0",
+    "params": {
+        "query": "tm.event='<event_value>' AND eventType.eventAttribute='<attribute_value>'"
+    }
+}
+```
 
 ### List of Tendermint Events
 
@@ -145,8 +151,6 @@ Example response:
     }
 }
 ```
-
-
 
 :::tip
 **Note:** When querying Ethereum transactions versus Cosmos transactions, the transaction hashes are different.
