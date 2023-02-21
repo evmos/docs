@@ -21,7 +21,7 @@ in order for the registration to succeed.
 After the transaction is executed successfully,
 the developer will start receiving a portion of the transaction fees paid when a user interacts with the registered contract.
 
-::: tip
+:::tip
  **NOTE**: If your contract is part of a developer project, please ensure
  that the deployer of the contract (or the factory that deployes the contract) is an account
  that is owned by that project.
@@ -80,7 +80,7 @@ If this is the first contract created by `FactoryB` - the nonce is `1`.
 We now have an address derivation path of `DeployerEOA` -> `FactoryA` -> `FactoryB` -> `MyContract`.
 To be able to verify that `DeployerEOA` can register `MyContract`, we need to provide the following nonces: `[5, 2, 1]`.
 
-::: tip
+:::tip
 **Note**: Even if `MyContract` is created from `FactoryB` through a transaction
 sent by an account different from `DeployerEOA`, only `DeployerEOA` can register `MyContract`.
 :::

@@ -10,6 +10,16 @@ The importance of mnemonic phrases lies in the fact that cryptocurrencies are st
 
 Therefore, it is crucial to store your mnemonic phrase in a safe and secure place, such as a physical paper or a secure digital file. Additionally, it is recommended to make multiple copies and store them in different locations, so that you can access your funds in case of any emergency.
 
+:::note
+**Mnemonic Phrase vs Private Key**
+A seed phrase, also known as a recovery phrase or backup phrase, is a sequence of words used to generate a private key. It is typically a set of 12 or 24 words, and it's used to recover or restore access to a cryptocurrency wallet in case the original private key is lost or damaged. A seed phrase can be used to generate multiple private keys, which can be used to access multiple cryptocurrency addresses and balances.
+
+On the other hand, a private key is a long string of characters that is used to sign transactions and provide access to your cryptocurrency funds. The private key is generated from the seed phrase and is unique to each cryptocurrency address. It is used to create digital signatures for transactions, which ensure that the transaction is legitimate and has been authorized by the rightful owner of the funds.
+
+In conclusion, the security of your private keys and mnemonic phrase is of utmost importance. If your private keys are compromised, it can put all associated accounts at risk. However, the loss of your mnemonic phrase can have even more severe consequences as it is used to generate multiple private keys. Therefore, it is crucial to take proper measures to safeguard both your private keys and mnemonic phrase to avoid any catastrophic loss.
+
+:::
+
 ## Mnemonics from the Evmos CLI
 
 :::note

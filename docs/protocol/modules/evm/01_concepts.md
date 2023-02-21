@@ -201,7 +201,7 @@ The block bloom value is stored in the transient store
 and then emitted through a cosmos event during `EndBlock` processing.
 They can be queried via gRPC and JSON-RPC.
 
-::: tip
+:::tip
 👉 **Note**: Since they are not stored on state, Transaction Logs and Block Blooms are not persisted after upgrades.
 A user must use an archival node after upgrades in order to obtain legacy chain events.
 :::

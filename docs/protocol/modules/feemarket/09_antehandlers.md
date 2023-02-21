@@ -25,7 +25,7 @@ Rejects EVM transactions with transactions fees lower than `MinGasPrice * GasLim
 - For `LegacyTx` and `AccessListTx`, the `GasPrice * GasLimit` is used.
 - For EIP-1559 (*aka.* `DynamicFeeTx`), the `EffectivePrice * GasLimit` is used.
 
-::: tip
+:::tip
 **Note**: For dynamic transactions,
 if the `feemarket` formula results in a `BaseFee` that lowers `EffectivePrice < MinGasPrices`,
 the users must increase the `GasTipCap` (priority fee) until `EffectivePrice > MinGasPrices`.
