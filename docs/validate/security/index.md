@@ -70,12 +70,13 @@ Sentry Nodes should edit their config.toml:
 private_peer_ids = "node_ids_of_private_peers"
 ```
 
-
 ## Validator Backup
 
-It is **crucial** to back up your validator's private key. It's the only way to restore your validator in the event of a disaster. The validator private key is a Tendermint Key: a unique key used to sign consensus votes.
+It is **crucial** to back up your validator's private key. It's the only way to restore your validator in the event of a
+ disaster. The validator private key is a Tendermint Key: a unique key used to sign consensus votes.
 
-To backup everything you need to restore your validator, note that if you are using the "software sign" (the default signing method of Tendermint), your Tendermint key is located at:
+To backup everything you need to restore your validator, note that if you are using the "software sign" (the default
+signing method of Tendermint), your Tendermint key is located at:
 
 ```bash
 ~/.evmosd/config/priv_validator_key.json
@@ -84,7 +85,7 @@ To backup everything you need to restore your validator, note that if you are us
 Then do the following:
 
 1. Back up the `json` file mentioned above (or backup the whole `config` folder).
-2. Back up the self-delegator wallet. See [backing up wallets with the Evmos Daemon](../../use/key-management.md).
+2. Back up the self-delegator wallet. See [backing up wallets with the Evmos Daemon](./../../use/key-management).
 
 To see your validator's associated public key:
 
