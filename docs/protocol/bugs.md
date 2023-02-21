@@ -8,7 +8,7 @@ When creating a Layer 1 (L1) protocol chain, taking security seriously is of utm
 backbone of the blockchain ecosystem, and any security vulnerabilities within the L1 can lead to a range of potential
  consequences, from financial loss to reputation damage to even the collapse of the entire network. As such, security
   is an essential aspect of developing any L1 protocol chain, and security must be considered at every step of the
-  development process. Check out our [Audits](./security/audits)
+  development process. Check out our [Audits](./security/audits).
 
 Despite our best efforts, security issues may still arise in our L1 protocol chain. In such cases, we encourage our users
  to report any vulnerabilities or bugs they may find. For sensitive bugs, we ask that users submit the issue to
