@@ -14,7 +14,7 @@ Also, a [validator security checklist](./validator-security-checklist.md) is pro
 
 Horcrux is a [multi-party-computation (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) signing service for Tendermint nodes, that improves your validator infrastructure in terms of security and availability. It offers
 
-- Composed of a cluster of signer nodes in place of the [remote signer](https://docs.tendermint.com/master/nodes/remote-signer.html), enabling High Availability (HA) for block signing through fault tolerance.
+- Composed of a cluster of signer nodes in place of the remote signer, enabling High Availability (HA) for block signing through fault tolerance.
 - Secure your validator private key by splitting it across multiple private signer nodes using threshold Ed25519 signatures
 - Add security and availability without sacrificing block sign performance.
 
