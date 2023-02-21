@@ -22,6 +22,11 @@
             "language": "markdown",
             "scheme": "file",
             "pattern": "docs/validate/security/index.md"
+        },
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "docs/protocol/index.md"
         }
     ]
 }
