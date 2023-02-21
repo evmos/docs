@@ -1,12 +1,21 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 # Validator Security
 
-Learn about sentry nodes and HSMs to secure a validator.
+Learn about best practices to * operating a validator securely way block sign performance
 
-Each validator candidate is encouraged to run its operations independently, as diverse setups increase the resilience of the network. Validator candidates should commence their setup phase now in order to be on time for launch.
+ sentry nodes and HSMs to secure a validator.
+
+Each validator is encouraged to run its operations independently, as diverse setups increase the resilience of the network. Validator candidates should commence their setup early enough to be on time and experienced in sercurity for their launch.
+
+* Securing private keys
+* remote access
+* cluster of nodes
+* protection agains double signing
+* Mitigating risk
+* DDOS protection
 
 ## Horcrux
 
