@@ -1,10 +1,14 @@
+---
+sidebar_position: 4
+---
+
 # Manual Upgrades
 
 Learn how to manually upgrade your node.
 
 ## Prerequisites
 
-- [Install Evmos](./../../develop/build-a-dApp/run-a-node/installation)
+- [Install evmosd](../../protocol/evmos-cli)
 
 ## 1. Upgrade the Evmos version
 

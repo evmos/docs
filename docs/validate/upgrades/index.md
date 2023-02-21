@@ -4,14 +4,10 @@ sidebar_position: 1
 
 # Overview
 
-Learn how to manage chain upgrades for your full and validator nodes. 
+Learn how to manage chain upgrades for full and validator nodes. There are 3 different categories for upgrades:
 
-## Upgrade Categories
-
-There are 3 different categories for upgrades:
-
-- **Planned or Unplanned Upgrades**: Chain upgrades can be scheduled at a given height through an upgrade proposal plan.
-- **Breaking or Non-breaking Upgrades**: Upgrades can be API or State Machine breaking, which affects backwards compatibility. To address this, the application state or genesis file would need to be migrated in preparation for the upgrade.
+- **Planned or Unplanned**: Chain upgrades can be scheduled at a given height through an upgrade proposal plan.
+- **Breaking or Non-breaking**: Upgrades can be API or State Machine breaking, which affects backwards compatibility. To address this, the application state or genesis file would need to be migrated in preparation for the upgrade.
 - **Data Reset Upgrades**: Some upgrades will need a full data reset in order to clean the state. This can sometimes occur in the case of a rollback or hard fork.
 
 Additionally, validators can choose how to manage the upgrade according to their preferred option:

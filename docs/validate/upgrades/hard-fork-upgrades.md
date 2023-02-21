@@ -1,6 +1,8 @@
-# Hard Fork Upgrades
+---
+sidebar_position: 2
+---
 
-Learn how to manually upgrade your node.
+# Hard Fork Upgrades
 
 One of the significant limitations of the normal upgrade procedure [via
 governance](./../../validate/upgrades/overview#governance-proposal) is that it requires waiting for the
@@ -28,7 +30,7 @@ The high-level strategy for coordinating an upgrade is as follows:
    the new major release (e.g. `v9.0.0`) including the vulnerability fix is
    published.
 
-:::danger
+:::info
 **Important**: The release needs to be created with 1hr anticipation because the
 release binaries take ~30min to be created and validators need a buffer time to
 download them and update their
