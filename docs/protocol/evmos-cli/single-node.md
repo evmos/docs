@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Manual Localnet
+# Single Node
 
 <!-- TODO: Descripe steps to start a local network without a script from scratch -->
 

@@ -3,13 +3,7 @@ sidebar_position: 1
 ---
 
 # Configuration
-
-<--- TODO Only include configurations: --->
-
-* Node Configuration
-  * pruning
-* Client Configuration
-  * command options
+The following page includes the basic node and client configurations.
 
 ## Config and data directory
 
@@ -143,29 +137,3 @@ evmosd config
  "broadcast-mode": "sync"
 }
 ```
-
-## CLI Configurations
-
-A list of commonly used flags of `evmosd` is listed below:
-
-| Option              | Description                   | Type                                             | Default Value |
-| ------------------- | ----------------------------- | ------------------------------------------------ | ------------- |
-| `--chain-id`        | Full Chain ID                 | `string`                                         | `""`          |
-| `--home`            | Directory for config and data | `string`                                         | `~/.evmosd`   |
-| `--keyring-backend` | Select keyring's backend      | `{"os"|"file"|"kwallet"|"pass"|"test"|"memory"}` | `"os"`        |
-| `--output`          | Output format                 | `string`                                         | "text"        |
-
-### Command list
-
-A list of commonly used `evmosd` commands. You can obtain the full list by using the `evmosd -h` command.
-
-| Command      | Description              | Subcommands (example)                                                     |
-| ------------ | ------------------------ | ------------------------------------------------------------------------- |
-| `keys`       | Keys management          | `list`, `show`, `add`, `add  --recover`, `delete`                         |
-| `tx`         | Transactions subcommands | `bank send`, `ibc-transfer transfer`, `distribution withdraw-all-rewards` |
-| `query`      | Query subcommands        | `bank balance`, `staking validators`, `gov proposals`                     |
-| `tendermint` | Tendermint subcommands   | `show-address`, `show-node-id`, `version`                                 |
-| `config`     | Client configuration     |                                                                           |
-| `init`       | Initialize full node     |                                                                           |
-| `start`      | Run full node            |                                                                           |
-| `version`    | Evmos version            |                                                                           |
