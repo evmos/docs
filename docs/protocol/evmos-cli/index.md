@@ -2,19 +2,22 @@ import ProjectValue from '@site/src/components/ProjectValue';
 
 # Evmos CLI
 
-`evmosd` is the all-in-one command-line interface (CLI). It allows you to run an Evmos node, manage wallets and interact with the Evmos network through queries and transactions. This introduction will explain how to install the `evmosd` binary onto your system and guide you through some simple examples how to use evmosd.
+`evmosd` is the all-in-one command-line interface (CLI). It allows you to run an Evmos node, manage wallets and interact
+ with the Evmos network through queries and transactions. This introduction will explain how to install the `evmosd` 
+ binary onto your system and guide you through some simple examples how to use evmosd.
 
 ## Prerequisites
 
 #### Go
 
-Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your verison with:
+Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your version with:
 
 ```bash
 go version
 ```
 
-Once you have installed the right version, confirm that your [`GOPATH`](https://golang.org/doc/gopath_code#GOPATH) is correctly configured by running the following command and adding it to your shell startup script:
+Once you have installed the right version, confirm that your [`GOPATH`](https://golang.org/doc/gopath_code#GOPATH)
+ is correctly configured by running the following command and adding it to your shell startup script:
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -22,7 +25,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 #### jq
 
-Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your verison with:
+Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your version with:
 
 ```
 jq --version
@@ -34,7 +37,8 @@ You can build and install the `evmosd` binaries from source or using Docker.
 
 ### Github
 
-Clone and build the Evmos from source using `git`. The `<tag>` refers to a release tag on Github. The latest Evmos [version](https://github.com/evmos/evmos/releases) is <ProjectValue keyword='latest_version'/>:
+Clone and build the Evmos from source using `git`. The `<tag>` refers to a release tag on Github. The latest Evmos
+ [version](https://github.com/evmos/evmos/releases) is <ProjectValue keyword='latest_version'/>:
 
 ```bash
 git clone https://github.com/evmos/evmos.git
@@ -56,11 +60,13 @@ If the `evmosd: command not found` error message is returned, confirm that you h
 
 ### Docker
 
-To build Evmos using Docker, check out the latest version as described above and create a docker container `tharsishq/evmos:latest` with:
+To build Evmos using Docker, check out the latest version as described above and create a docker container 
+`tharsishq/evmos:latest` with:
 
 ```bash
 make build-docker
 ```
+
 Now you can run `evmosd` in the container.
 
 ```bash
@@ -68,8 +74,7 @@ docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsis
 ```
 
 <!--
-TODO: The docekr setup is missing a script that lets you run a local node -> requires a better description
-
+TODO: The docker setup is missing a script that lets you run a local node -> requires a better description
 
 ```bash
 # To initialize
@@ -77,7 +82,6 @@ docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsis
 
 # To run
 docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd start
-
 
 Following just this, causes running into
 
@@ -111,6 +115,7 @@ After installing the `evmosd` binary, you can run commands using:
 ```bash
 evmosd [command]
 ```
+
 There is also a `-h`, `--help` command available
 
 ```bash

@@ -7,7 +7,9 @@ sidebar_position: 9
 import ProjectValue from '@site/src/components/ProjectValue';
 import Highlighter from '@site/src/components/Highlighter';
 
-A chain ID is a unique identifier that represents a blockchain network. We use it to distinguish different blockchain networks from each other and to ensure that transactions and messages are sent to the correct network. Evmos network follows the format of `identifier_EIP155-version` format.
+A chain ID is a unique identifier that represents a blockchain network. We use it to distinguish different blockchain
+networks from each other and to ensure that transactions and messages are sent to the correct network. Evmos network
+follows the format of `identifier_EIP155-version` format.
 
 ## Official Chain IDs
 
@@ -32,7 +34,8 @@ A chain ID is a unique identifier that represents a blockchain network. We use i
 | Arsia Mons Testnet                | <Highlighter pretext="evmos_" keyword="testnet_chain_id" postText="-1" /> | `evmos`    |  <Highlighter keyword="testnet_chain_id" /> | `1`                                                 | 🚫 |
 
 :::tip
-You can also lookup the [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `Chain ID` by referring to [chainlist.org](https://chainlist.org/).
+You can also lookup the [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `Chain ID` by referring
+to [chainlist.org](https://chainlist.org/).
 :::
 
 ![chainlist.org website](/img/chainlist.png)
@@ -40,14 +43,17 @@ You can also lookup the [EIP155](https://github.com/ethereum/EIPs/blob/master/EI
 ## The Chain Identifier
 
 Every chain must have a unique identifier or `chain-id`. Tendermint requires each application to
-define its own `chain-id` in the [genesis.json fields](https://docs.tendermint.com/master/spec/core/genesis.html#genesis-fields). However, in order to comply with both EIP155 and Cosmos standard for chain upgrades, Evmos-compatible chains must implement a special structure for their chain identifiers.
+define its own `chain-id` in the [genesis.json fields](https://docs.tendermint.com/master/spec/core/genesis.html#genesis-fields).
+ However, in order to comply with both EIP155 and Cosmos standard for chain upgrades, Evmos-compatible chains must implement
+  a special structure for their chain identifiers.
 
 ## Structure
 
 The Evmos Chain ID contains 3 main components
 
 - **Identifier**: Unstructured string that defines the name of the application.
-- **EIP155 Number**: Immutable [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `CHAIN_ID` that defines the replay attack protection number.
+- **EIP155 Number**: Immutable [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `CHAIN_ID` that
+ defines the replay attack protection number.
 - **Version Number**: Is the version number (always positive) that the chain is currently running.
 This number **MUST** be incremented every time the chain is upgraded or forked in order to avoid network or consensus errors.
 

@@ -4,12 +4,12 @@ sidebar_position: 8
 
 # Accounts
 
-This document describes the in-built accounts system of Evmos. 
+This document describes the in-built accounts system of Evmos.
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Accounts](https://docs.cosmos.network/main/basics/accounts.html) 
-- [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts) 
+- [Cosmos SDK Accounts](https://docs.cosmos.network/main/basics/accounts.html)
+- [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts)
 
 ## Evmos Accounts
 
@@ -21,7 +21,9 @@ The root HD path for Evmos-based accounts is `m/44'/60'/0'/0`.
 
 ## Addresses and Public Keys
 
-[BIP-0173](https://github.com/satoshilabs/slips/blob/master/slip-0173.md) defines a new format for segregated witness output addresses that contains a human-readable part that identifies the Bech32 usage. Evmos uses the following HRP (human readable prefix) as the base HRP:
+[BIP-0173](https://github.com/satoshilabs/slips/blob/master/slip-0173.md) defines a new format for segregated witness
+output addresses that contains a human-readable part that identifies the Bech32 usage. Evmos uses the following
+HRP (human readable prefix) as the base HRP:
 
 | Network   | Mainnet | Testnet |
 |-----------|---------|---------|

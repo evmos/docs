@@ -1,8 +1,14 @@
 # Run an IBC Relayer
 
-TODO: ADD COMMON PITFALS AND TIME OUTS AND WHAT TO EXPECT SINCE BELOW IS FOR INSTALLATION/RUNNING. EXPLAIN WHAT A RELAYER IS.
+## What is an IBC Relayer?
 
-Learn how to run an IBC Relayer for Evmos. 
+An IBC relayer is a software component that facilitates communication between two distinct blockchain networks that
+support the Inter-Blockchain Communication (IBC) protocol. The IBC protocol is a standard for the secure and reliable
+ transfer of digital assets and data across different blockchain networks.
+
+An IBC relayer is responsible for relaying IBC packets, which are used to send messages and data between two different
+ blockchain networks. It receives packets from one chain, verifies their authenticity and validity, and then relays
+  them to the receiving chain.
 
 ## Minimum Requirements
 
@@ -13,15 +19,15 @@ Learn how to run an IBC Relayer for Evmos.
 If running many nodes on a single VM, [ensure your open files limit is increased](https://tecadmin.net/increase-open-files-limit-ubuntu/).
 
 ## Prerequisites
-<!-- textlint-disable -->
-Before beginning, ensure you have an Evmos node running in the background of the same machine that you intend to relay on. Follow [this guide](./../develop/build-a-dApp/run-a-node/run-a-node) to set up an Evmos node if you have not already.
-<!-- textlint-enable -->
 
-In this guide, we will be relaying between [Evmos (channel-3) and Cosmos Hub (channel-292)](https://www.mintscan.io/evmos/relayers). When setting up your Evmos and Cosmos full nodes, be sure to offset the ports being used in both the `app.toml` and `config.toml` files of the respective chains (this process will be shown below).
+Before beginning, ensure you have an Evmos node running in the background of the same machine that you intend to relay on.
+ Follow [this guide](./../develop/build-a-dApp/run-a-node/run-a-node) to set up an Evmos node if you have not already.
 
-<!-- textlint-disable -->
+In this guide, we will be relaying between [Evmos (channel-3) and Cosmos Hub (channel-292)](https://www.mintscan.io/evmos/relayers).
+ When setting up your Evmos and Cosmos full nodes, be sure to offset the ports being used in both the `app.toml` and `config.toml`
+  files of the respective chains (this process will be shown below).
+
 In this example, the default ports for Evmos will be used, and the ports of the Cosmos Hub node will be manually changed.
-<!-- textlint-enable -->
 
 ## Evmos Daemon Settings
 
@@ -41,7 +47,8 @@ enable = true
 address = "0.0.0.0:9090"
 ```
 
-Then, set the `pprof_laddr` to port `6060`, `rpc laddr` to port `26657`, and `prp laddr` to `26656` in the `config.toml` file from the `$HOME/.evmosd/config` directory:
+Then, set the `pprof_laddr` to port `6060`, `rpc laddr` to port `26657`, and `prp laddr` to `26656` in the `config.toml`
+ file from the `$HOME/.evmosd/config` directory:
 
 ```bash
 vim $HOME/.evmosd/config/config.toml
@@ -84,7 +91,8 @@ enable = true
 address = "0.0.0.0:9092"
 ```
 
-Then, set the `pprof_laddr` to port `6062`, `rpc laddr` to port `26757`, and `prp laddr` to `26756` in the `config.toml` file from the `$HOME/.gaiad/config` directory:
+Then, set the `pprof_laddr` to port `6062`, `rpc laddr` to port `26757`, and `prp laddr` to `26756` in the `config.toml`
+ file from the `$HOME/.gaiad/config` directory:
 
 ```bash
 vim $HOME/.gaiad/config/app.toml
