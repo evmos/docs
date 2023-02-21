@@ -37,6 +37,9 @@
             "pattern": "^https://en.wikipedia.org"
         },
         {
+            "pattern": "^https://immunefi.com/bounty/evmos"
+        },
+        {
             "pattern": "^https://github.com/evmos"
         },
         {
