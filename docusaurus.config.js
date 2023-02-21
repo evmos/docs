@@ -156,7 +156,7 @@ const config = {
           {
             position: 'right',
             label: 'APIs',
-            to: '/develop/apis/networks',
+            to: '/develop/api/networks',
           },
           {
             position: 'right',
