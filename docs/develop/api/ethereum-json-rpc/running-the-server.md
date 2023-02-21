@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Running the Server
 
-Learn how to run and setup the JSON-RPC server on Evmos. 
+Learn how to run and setup the JSON-RPC server on Evmos.
 
 :::tip
 **Important**: You cannot use all JSON RPC methods unless your node stores the entire copy of the blockchain locally. Do you need archives/snapshots of our networks? Go to [this section](https://docs.evmos.org/validators/snapshots_archives.html).
@@ -114,7 +114,7 @@ The ETH Tx Indexer provides an optional indexer services for Ethereum transactio
 To enable the ETH Indexer run the following command
 
 ```bash
-evmosd start --json-rpc.enable-indexer 
+evmosd start --json-rpc.enable-indexer
 ```
 
 ### Index Historical Transactions

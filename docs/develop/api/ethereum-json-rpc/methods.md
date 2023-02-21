@@ -1,15 +1,16 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
-# JSON-RPC Methods
+# Methods
 
-Check the JSON-RPC methods supported on Evmos. 
+Find below a list of JSON-RPC methods supported on Evmos, sorted by namespaces.
 
-## Prerequisite Readings
+## Curl Examples Explained
 
-- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) 
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) 
+The curl options below might return a response where the node complains about the content type, this is because the `--data` option sets the content type to `application/x-www-form-urlencoded`. If your node does complain, manually set the header by placing `-H "Content-Type: application/json"` at the start of the call.
+
+The examples also do not include the URL/IP & port combination which must be the last argument given to curl e.x. `127.0.0.1:8545`
 
 ## Endpoints
 
@@ -600,7 +601,7 @@ Returns transaction details given the ethereum tx something.
 ```json
 // Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0xec5fa15e1368d6ac314f9f64118c5794f076f63c02e66f97ea5fe1de761a8973"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
- 
+
 // Result
 {"jsonrpc":"2.0","id":1,"result":{"blockHash":"0x7a7398cc11d9c4c8e6f53e0c73824297aceafdab62db9e4b867a0da694384864","blockNumber":"0x188","from":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70","gas":"0x147ee","gasPrice":"0x3b9aca00","hash":"0xec5fa15e1368d6ac314f9f64118c5794f076f63c02e66f97ea5fe1de761a8973","input":"0x6dba746c","nonce":"0x18","to":"0xa655256f589060437e5ffe2246dec385d040f148","transactionIndex":"0x0","value":"0x0","v":"0xa96","r":"0x6db399d694a452fb4106419140a6e5dbbe6817743a0f6f695a651e6576e59a5e","s":"0x25dd6ab1f936d0280d2fed0caeb0ebe5b9a46de6d8cb08ad8fd2c88deb55fc31"}}
 ```
@@ -730,7 +731,7 @@ Returns an array of all logs matching filter with given id.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x127e9eca4f7751fb4e5cb5291ad8b455"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 
 // Result
-{"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"filter 0x35b64c227ce30e84fc5c7bd347be380e doesn't have a LogsSubscription type: got 5"}} 
+{"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"filter 0x35b64c227ce30e84fc5c7bd347be380e doesn't have a LogsSubscription type: got 5"}}
 ```
 
 ### `eth_getLogs`
@@ -793,7 +794,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x12345
 
 ## WebSocket Methods
 
-Read about websockets in [events](./events.md)
+Read about websockets in [Tendermint Events](../tendermint-rpc.md)
 
 ### `eth_subscribe`
 
