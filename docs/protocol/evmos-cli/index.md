@@ -143,7 +143,7 @@ evmosd keys add [name] \
 --keyring-backend test
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](../../use/connect-your-wallet/metamask.mdx) for example):
+To export your evmos key as an Ethereum private key (for use with [Metamask](./../../../use/connect-your-wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key [name] \
@@ -165,7 +165,12 @@ For more information about the Keyring and its backend options, click [here](../
 
 ### Interact with a Network
 
-You can use evmosd to query information or submit transactions on the blockchain. Queries and transactions are requests that you send to a Tendermint RPC endpoint of the node running the network.
+You can use evmosd to query information or submit transactions on the blockchain. Queries and transactions are requests that you send to an Evmos node through the Tendermint RPC.
+
+:::tip
+👉 To use the CLI, you will need to provide a Tendermint RPC address for the `--node` flag.
+Look for a publicly available addresses for testnet and mainnet in the [Networks](../../develop/api/networks) page.
+:::
 
 #### Set Network Config
 
