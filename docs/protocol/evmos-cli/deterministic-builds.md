@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Deterministic Builds
 
-Build the `evmosd` binary deterministically using Docker. 
+Build the `evmosd` binary deterministically using Docker.
 
 ## Prerequisites
 
-- [Install Docker](https://docs.docker.com/get-docker/) 
+- [Install Docker](https://docs.docker.com/get-docker/)
 
 ## Introduction
 

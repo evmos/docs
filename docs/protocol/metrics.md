@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Metrics
 
-TODO: Explain go metrics and also what the types mean like gauge and counter.
+<!-- TODO: Explain go metrics and also what the types mean like gauge and counter. -->
 
 Gather relevant insights about the Evmos application and modules with custom metrics and telemetry.
 
@@ -23,8 +23,8 @@ To understand how to use the metrics below, please refer to the [Cosmos SDK tele
 | `tx_msg_convert_erc20_amount_total`            | Total amount of converted erc20 using a `ConvertERC20` msg                          | token       | counter |
 | `tx_msg_convert_erc20_total`                   | Total number of txs with a `ConvertERC20` msg                                       | tx          | counter |
 | `tx_msg_ethereum_tx_total`                     | Total number of txs processed via the EVM                                           | tx          | counter |
-| `tx_msg_ethereum_tx_gas_used_total`            | Total amount of gas used by an etheruem tx                                          | token       | counter |
-| `tx_msg_ethereum_tx_gas_limit_per_gas_used`    | Ratio of gas limit to gas used for a etheruem tx                                    | ratio       | gauge   |
+| `tx_msg_ethereum_tx_gas_used_total`            | Total amount of gas used by an Etheruem tx                                          | token       | counter |
+| `tx_msg_ethereum_tx_gas_limit_per_gas_used`    | Ratio of gas limit to gas used for a Etheruem tx                                    | ratio       | gauge   |
 | `tx_msg_ethereum_tx_incentives_total`          | Total number of txs with an incentivized contract processed via the EVM             | tx          | counter |
 | `tx_msg_ethereum_tx_incentives_gas_used_total` | Total amount of gas used by txs with an incentivized contract processed via the EVM | token       | counter |
 | `incentives_distribute_reward_total`           | Total amount of rewards that are distributed to all incentives' participants        | token       | counter |

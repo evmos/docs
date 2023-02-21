@@ -4,6 +4,11 @@ sidebar_position: 5
 
 # IBC Channels
 
+Inter Blockchain Communication (IBC) is the bedrock infrastructure that allows sovereign chains to establish 
+communication to another chain. It allows heterogenous chains to trustlessly communicate with each other and
+establish interoperability. A successful communication between the two chains will utilize dedicate channels to
+send informations. [Relayers](./concepts/relayers).
+
 TODO: THIS PAGE WILL BECOME A LINK-OUT LINK TO MINTSCAN PAGE
 
 Check the IBC channels between Evmos and other Cosmos ecosystem chains 
