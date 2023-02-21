@@ -12,13 +12,25 @@ If you instead want to generate a binary for use outside of Docker,
 but want to ensure the correct dependencies are used by building the binary inside a Docker container,
 then go ahead to the section on [building the Evmos binary with Docker](#building-the-binary-with-docker).
 
+:::note
+The given instructions have been tested on *Ubuntu 18.04.2 LTS* with *Docker 20.10.2* and *macOS 13.2.1* with *Docker 20.10.22*.
+:::
+
 ## Prerequisites
 
 - [Install Docker](https://docs.docker.com/get-docker/)
 
+## General Setup
+
+In order to build Evmos binaries with Docker, it is necessary to
+
+- clone the Evmos repository to your local machine (e.g. `git clone git@github.com/evmos/evmos.git`)
+- checkout the commit, branch, or release tag you want to build (e.g. `git checkout v11.0.2`)
+
 ## Building A Docker Image Containing The Binary
 
-To build a Docker image, that contains the Evmos binary, run the following command:
+To build a Docker image, that contains the Evmos binary,
+step into the cloned repository and run the following command in a terminal session:
 
 ```bash
 make build-docker
@@ -37,30 +49,9 @@ It is possible to build the `evmosd` binary deterministically using Docker.
 The container system that Docker provides offers the ability
 to create an instance of the Evmos binary in an isolated environment.
 
-:::tip
-All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with *Docker 20.10.2* and *MacOS 13.2.1* with *Docker 20.10.22*.
-:::
-
 ### Building the Image
 
-In order to build the docker image that contains the Evmos binary, clone the Evmos repository:
-
-``` bash
-git clone git@github.com:evmos/evmos.git
-```
-
-Checkout the commit, branch, or release tag you want to build (eg `v11.0.2`):
-
-```bash
-cd evmos/
-git checkout v11.0.2
-```
-
-The build system supports and produces binaries for the following architectures:
-
-* **linux/amd64**
-
-Run the following command to launch a build for all supported architectures:
+Run the following command to launch a build for all supported architectures (currently **linux/amd64**):
 
 ```bash
 make distclean build-reproducible

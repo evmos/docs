@@ -8,7 +8,7 @@ import ProjectValue from '@site/src/components/ProjectValue';
 
 #### Go
 
-Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your verison with:
+Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your version with:
 
 ```bash
 go version
@@ -22,7 +22,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 #### jq
 
-Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your verison with:
+Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your version with:
 
 ```
 jq --version
@@ -157,7 +157,7 @@ In the local setup the node is set to `tcp://localhost:26657`. You can view your
 ```bash
 evmosd config \
 --home ~/.tmp-evmosd
-# Exmaple Output
+# Example Output
 # {
 # 	"chain-id": "evmos_9000-1",
 # 	"keyring-backend": "test",
@@ -183,7 +183,7 @@ You can query information on the blockchain using `evmosd query` (short `evmosd 
 ```bash
 evmosd q bank balances [adress] \
 --home ~/.tmp-evmosd
-# Exmaple Output:
+# Example Output:
 # balances:
 # - amount: "99999000000000000000002500"
 #   denom: aevmos
