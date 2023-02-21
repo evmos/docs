@@ -100,7 +100,7 @@ which is signed by the addresses, that have been allocated the tokens.
 
 The recipient Evmos address of this IBC transfer is the address, that the tokens will be airdropped to.
 
-::: warning
+:::warning
 **IMPORTANT**
 
 Only submit an IBC transfer to an Evmos address that you own. Otherwise, you will lose your airdrop allocation.

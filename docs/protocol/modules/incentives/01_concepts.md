@@ -56,7 +56,7 @@ The gas used per address is recorded using transaction hooks and stored on the K
 At the end of an epoch, the allocated rewards in the incentive are distributed
 by transferring them to the participants accounts.
 
-::: tip
+:::tip
 💡 We use hooks instead of the transaction hash to measure the gas spent
 because the hook has access to the actual gas spent and the hash only includes the gas limit.
 :::

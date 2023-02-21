@@ -14,7 +14,7 @@ to understand the State Transitions in detail.
 
 ## Client-Side
 
-::: tip
+:::tip
 👉 This is based on the `eth_sendTransaction` JSON-RPC
 :::
 
