@@ -61,6 +61,7 @@ To build Evmos using Docker, check out the latest version as described above and
 ```bash
 make build-docker
 ```
+
 Now you can run `evmosd` in the container.
 
 ```bash
@@ -70,14 +71,12 @@ docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsis
 <!--
 TODO: The docekr setup is missing a script that lets you run a local node -> requires a better description
 
-
 ```bash
 # To initialize
 docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd init test-chain --chain-id test_9000-2
 
 # To run
 docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd start
-
 
 Following just this, causes running into
 
@@ -94,7 +93,9 @@ Run the local node by executing the `local_node.sh` script in the base directory
 ./local_node.sh
 ```
 
-The script stores the node configuration including the local default endpoints under `~/.tmp-evmosd/config/config.toml`. If you have previously run the script, the script allows you to overwrite the existing configuration and start a new local node.
+The script stores the node configuration including the local default endpoints under `~/.tmp-evmosd/config/config.toml`.
+ If you have previously run the script, the script allows you to overwrite the existing configuration and start a new
+  local node.
 
 Once your node is running you will see it validating and producing blocks in your local Evmos blockchain:
 
@@ -111,13 +112,15 @@ After installing the `evmosd` binary, you can run commands using:
 ```bash
 evmosd [command]
 ```
+
 There is also a `-h`, `--help` command available
 
 ```bash
 evmosd -h
 ```
 
-It is possible to maintain multiple node configurations at the same time. To specify a configuration use the `--home` flag. In the following examples we will be using the default config for a local node, located at `~/.tmp-evmosd`.
+It is possible to maintain multiple node configurations at the same time. To specify a configuration use the `--home` 
+flag. In the following examples we will be using the default config for a local node, located at `~/.tmp-evmosd`.
 
 ### Manage wallets
 
@@ -143,7 +146,8 @@ evmosd keys add [name] \
 --keyring-backend test
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](../../../use/connect-your-wallet/metamask) for example):
+To export your evmos key as an Ethereum private key (for use
+ with [Metamask](../../use/connect-your-wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key [name] \
@@ -165,12 +169,7 @@ For more information about the Keyring and its backend options, click [here](../
 
 ### Interact with a Network
 
-You can use evmosd to query information or submit transactions on the blockchain. Queries and transactions are requests that you send to an Evmos node through the Tendermint RPC.
-
-:::tip
-👉 To use the CLI, you will need to provide a Tendermint RPC address for the `--node` flag.
-Look for a publicly available addresses for testnet and mainnet in the [Networks](../../develop/api/networks) page.
-:::
+You can use evmosd to query information or submit transactions on the blockchain. Queries and transactions are requests that you send to a Tendermint RPC endpoint of the node running the network.
 
 #### Set Network Config
 
