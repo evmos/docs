@@ -8,7 +8,7 @@ Before real users begin to transact with actual funds on your dApp, it is import
 ## Deployment
 
 You can deploy your contracts on Mainnet using the [JSON-RPC](../build-a-dApp/build-smart-contracts/build-smart-contracts.md#deploy-with-ethereum-json-rpc).
- This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](../apis/networks.md).
+ This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/apis/networks).
  Before you do so, have a look at the following considerations.
 
 ### Security
@@ -58,7 +58,6 @@ eligible receivers of an airdrop have a look at the [Evmos Rektdrop](https://med
 Evmos allows for ERC-20 tokens to be used cross-chain. Once some of your tokens have been minted, you can register a token
  pair through governance, which will allow users to send your tokens across chains. Head over to our Academy to learn how
  to [register your ERC-20 token](https://academy.evmos.org/developers/guides/erc20-registration).
-
 
 ## Revenue
 
