@@ -1,24 +1,7 @@
 # Multi Node
 
-## Prerequisite Readings
-
-- [Install Ignite CLI](https://github.com/ignite/cli)  
-- [Install Docker](https://docs.docker.com/engine/installation/)  
-- [Install docker-compose](https://docs.docker.com/compose/install/)  
-
-## Automated Localnet with Ignite CLI
-
-Once you have installed `ignite`, just run the localnet by using
-
-```bash
-ignite chain serve 
-```
-
-Detailed instructions can be found in the [Ignite CLI documentation](https://github.com/ignite/cli)
-
-## Automated Localnet with Docker
-
-The localnet setup with docker consists of a 4-node local chain.
+Following this page, you can run a localnet setup with docker
+that consists of a 4-node local chain.
 This setup can be useful for developers to test their applications and
 protocol features on a multi-node setup.
 
@@ -28,7 +11,7 @@ This testing setup can be found on the [Evmos testing repository](https://github
 
 ### Build & Start
 
-To build start a 4 node testnet run:
+To build start a 4 node testnet using [docker](https://docs.docker.com/engine/installation/), run:
 
 ```bash
 make localnet-start
