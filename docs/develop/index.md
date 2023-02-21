@@ -17,22 +17,22 @@ Evmos focuses on cross-chain **innovation** so that developers can build entirel
 
 Evmos does this by leveraging the interoperability of the Cosmos Ecosystem and the market-dominating support for EVM
  development. This allows dApp developers to use Ethereum smart contracts to implement the business logic on-chain
-  while having access to Cosmos chain functionalities, such as exchanging value with the rest of the Cosmos Ecosystem 
+  while having access to Cosmos chain functionalities, such as exchanging value with the rest of the Cosmos Ecosystem
   through the Inter Blockchain Communication Protocol (IBC).
 
 ## How to build a dApp
 
-Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich 
-ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from 
-another chain, you can learn how to 
-[build and deploy smart contracts](./build-a-dApp/build-smart-contracts/build-smart-contracts.md) and what 
-[tools](./tools/index.md) are available to build a web3 
-[frontend](./build-a-dApp/build-a-frontend/wallet-integration.md) and 
+Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich
+ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from
+another chain, you can learn how to
+[build and deploy smart contracts](./build-a-dApp/build-smart-contracts/build-smart-contracts.md) and what
+[tools](./tools/index.md) are available to build a web3
+[frontend](./build-a-dApp/build-a-frontend/wallet-integration.md) and
 [backend](./build-a-dApp/create-centralized-backend.md) to create a seamless web3 experience for users of your dApp on Evmos.
 
 Once tested on [Testnet](../develop/testnet/api.md) and deployed on [Mainnet](../develop/mainnet/index.md), you can
- start [earning an income](../develop/mainnet/revenue.md) on transaction fees from interacting with your dApp or
-  [register your tokens](../develop/mainnet/token-registration.md) for cross-chain use.
+start [earning an income](../develop/mainnet/index.md#revenue) on transaction fees from interacting with your dApp or
+[register your tokens](../develop/mainnet/index.md#token-registration) for cross-chain use.
 
 ## Contributors
 
