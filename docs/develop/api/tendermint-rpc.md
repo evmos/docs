@@ -11,7 +11,7 @@ supports the following RPC protocols:
 
 - URI over HTTP
 - JSON-RPC over HTTP
-- JSON-RPC over websockets
+- JSON-RPC over Websockets
 
 The docs will contain an interactive Swagger interface.
 
@@ -26,7 +26,7 @@ curl localhost:26657/block?height=5
 ## RPC/HTTP
 
 JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list
-of supported Tendermint RPC endpoints using swagger [here](../api#clients).
+of supported Tendermint RPC endpoints using Swagger [here](../api#clients).
 
 ## RPC/Websocket
 
@@ -35,7 +35,7 @@ of supported Tendermint RPC endpoints using swagger [here](../api#clients).
 `Event`s are objects that contain information about the execution of the application
 and are triggered after a block is committed. They are mainly used by service providers
 like block explorers and wallet to track the execution of various messages and index transactions.
-You can get the full list of `event` categories and values [here](./clients#list-of-tendermint-events).
+You can get the full list of `event` categories and values [here](#list-of-tendermint-events).
 
 More on Events:
 
