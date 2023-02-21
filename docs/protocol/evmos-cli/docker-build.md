@@ -9,7 +9,7 @@ If you want to run Evmos inside a Docker setup and possibly connect the Docker c
 to other containerized compatible blockchain binaries, check out the guide on
 [building a Docker image containing the Evmos binary](#building-a-docker-image-containing-the-binary).
 If you instead want to generate a binary for use outside of Docker,
-but want to ensure the correct dependencies are used by building the binary inside of a Docker container,
+but want to ensure the correct dependencies are used by building the binary inside a Docker container,
 then go ahead to the section on [building the Evmos binary with Docker](#building-the-binary-with-docker).
 
 ## Prerequisites
@@ -30,9 +30,6 @@ Now it is possible to run the `evmosd` binary in the container, e.g. evaluating 
 ```bash
 docker run -it --rm tharsishq/evmos:latest evmosd version
 ```
-
-Further information on how to run a node with this binary can be found
-e.g. in the [Manual Localnet](./manual-localnet.md) section.
 
 ## Building The Binary With Docker
 
@@ -95,4 +92,5 @@ It also makes sure that the same, tested dependencies are used and statically bu
 ----
 
 Now that you have built the Evmos binary, either for local use or in a Docker container,
-you find the information to run a node instance in the following resources.
+you'll find information to run a node instance in the following section
+on [setting up a local network](./manual-localnet.md).

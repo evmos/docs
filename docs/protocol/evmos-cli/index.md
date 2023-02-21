@@ -58,7 +58,7 @@ If the `evmosd: command not found` error message is returned, confirm that you h
 
 When it comes to using Docker with Evmos, there are two options available:
 Build a binary of the Evmos daemon inside a dockerized build environment
-or build a Docker image, that can be used to spin up Docker containers running the Evmos binary.
+or build a Docker image, that can be used to spin up individual containers running the Evmos binary.
 For information on how to achieve this,
 proceed to the dedicated page on [working with Docker](./docker-build.md).
 
