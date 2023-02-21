@@ -2,9 +2,41 @@
 sidebar_position: 3	
 ---
 
-# Build with Docker
+# Working with Docker
 
-Build the `evmosd` binary deterministically using Docker.
+There are multiple ways to use Evmos with Docker.
+If you want to run Evmos inside a Docker setup and possibly connect the Docker container
+to other containerized compatible blockchain binaries, check out the guide on
+[building a Docker image containing the Evmos binary](#building-a-docker-image-containing-the-binary).
+If you instead want to generate a binary for use outside of Docker,
+but want to ensure the correct dependencies are used by building the binary inside of a Docker container,
+then go ahead to the section on [building the Evmos binary with Docker](#building-the-binary-with-docker).
+
+## Prerequisites
+
+- [Install Docker](https://docs.docker.com/get-docker/)
+
+## Building A Docker Image Containing The Binary
+
+To build a Docker image, that contains the Evmos binary, run the following command:
+
+```bash
+make build-docker
+```
+
+This will create an image with the name `tharsishq/evmos` and the version tag `latest`.
+Now it is possible to run the `evmosd` binary in the container, e.g. evaluating its version:
+
+```bash
+docker run -it --rm tharsishq/evmos:latest evmosd version
+```
+
+Further information on how to run a node with this binary can be found
+e.g. in the [Manual Localnet](./manual-localnet.md) section.
+
+## Building The Binary With Docker
+
+It is possible to build the `evmosd` binary deterministically using Docker.
 The container system that Docker provides offers the ability
 to create an instance of the Evmos binary in an isolated environment.
 
@@ -12,11 +44,7 @@ to create an instance of the Evmos binary in an isolated environment.
 All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with *Docker 20.10.2* and *MacOS 13.2.1* with *Docker 20.10.22*.
 :::
 
-## Prerequisites
-
-- [Install Docker](https://docs.docker.com/get-docker/) 
-
-## Building the Image
+### Building the Image
 
 In order to build the docker image that contains the Evmos binary, clone the Evmos repository:
 
@@ -63,3 +91,8 @@ The [Tendermint rbuilder Docker image](https://github.com/tendermint/images/tree
 provides a deterministic build environment that is used to build Cosmos SDK applications.
 It provides a way to be reasonably sure that the executables are really built from the git source.
 It also makes sure that the same, tested dependencies are used and statically built into the executable.
+
+----
+
+Now that you have built the Evmos binary, either for local use or in a Docker container,
+you find the information to run a node instance in the following resources.

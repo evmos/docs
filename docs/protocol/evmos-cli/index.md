@@ -32,7 +32,7 @@ jq --version
 
 You can build and install the `evmosd` binaries from source or using Docker.
 
-### Github
+### Build From Source
 
 Clone and build the Evmos from source using `git`. The `<tag>` refers to a release tag on Github. The latest Evmos [version](https://github.com/evmos/evmos/releases) is <ProjectValue keyword='latest_version'/>:
 
@@ -56,33 +56,11 @@ If the `evmosd: command not found` error message is returned, confirm that you h
 
 ### Docker
 
-To build Evmos using Docker, check out the latest version as described above and create a docker container `tharsishq/evmos:latest` with:
-
-```bash
-make build-docker
-```
-Now you can run `evmosd` in the container.
-
-```bash
-docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd version
-```
-
-<!--
-TODO: The docekr setup is missing a script that lets you run a local node -> requires a better description
-
-
-```bash
-# To initialize
-docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd init test-chain --chain-id test_9000-2
-
-# To run
-docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd start
-
-
-Following just this, causes running into
-
-`panic: validator set is empty after InitGenesis, please ensure at least one validator is initialized with a delegation greater than or equal to the DefaultPowerReduction ({824649071904})`
-``` -->
+When it comes to using Docker with Evmos, there are two options available:
+Build a binary of the Evmos daemon inside a dockerized build environment
+or build a Docker image, that can be used to spin up Docker containers running the Evmos binary.
+For information on how to achieve this,
+proceed to the dedicated page on [working with Docker](./docker-build.md).
 
 ## Run an Evmos node
 
