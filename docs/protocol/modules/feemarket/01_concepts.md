@@ -36,7 +36,7 @@ which is the maximum fee per gas they are willing to pay in total.
 Optionally, the `priorityTip` can be specified,
 which covers both the priority fee and the block's network fee per gas (aka: base fee).
 
-::: tip
+:::tip
 The Cosmos SDK uses a different terminology for `gas` than Ethereum.
 What is called `gasLimit` on Ethereum is called `gasWanted` on Cosmos.
 You might encounter both terminologies on Evmos since it builds Ethereum on top of the SDK,
@@ -114,7 +114,7 @@ The comparison of transaction gas price and the lower bound is implemented throu
 For EVM transactions, this is done in the `EthMempoolFeeDecorator` and `EthMinGasPriceDecorator` `AnteHandler`
 and for Cosmos transactions in `NewMempoolFeeDecorator` and `MinGasPriceDecorator` `AnteHandler`.
 
-::: tip
+:::tip
 If the base fee decreases to a value below the global `MinGasPrice`, it is set to the `MinGasPrice`.
 This is implemented, so that the base fee can't drop to gas prices
 that wouldn't allow transactions to be accepted in the mempool, because of a higher `MinGasPrice`.

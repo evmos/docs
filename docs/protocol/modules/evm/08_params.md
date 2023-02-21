@@ -26,7 +26,7 @@ In the case of Evmos, the default denomination is the **atto evmos**.
 In terms of precision, `EVMOS` and `ETH` share the same value,
 *i.e.* `1 EVMOS = 10^18 atto evmos` and `1 ETH = 10^18 wei`.
 
-::: tip
+:::tip
 Note: SDK applications that want to import the EVM module as a dependency
 will need to set their own `evm_denom` (i.e not `"aevmos"`).
 :::
@@ -46,7 +46,7 @@ When the parameter is disabled, it will prevent transfers between accounts and e
 The extra EIPs parameter defines the set of activateable Ethereum Improvement Proposals (**[EIPs](https://ethereum.org/en/eips/)**)
 on the Ethereum VM `Config` that apply custom jump tables.
 
-::: tip
+:::tip
 NOTE: some of these EIPs are already enabled by the chain configuration, depending on the hard fork number.
 :::
 
