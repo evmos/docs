@@ -8,7 +8,7 @@ import ProjectValue from '@site/src/components/ProjectValue';
 
 #### Go
 
-Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your verison with:
+Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your version with:
 
 ```bash
 go version
@@ -22,7 +22,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 #### jq
 
-Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your verison with:
+Evmos scripts are using [jq](https://stedolan.github.io/jq/download/) version `1.6+`. Check your version with:
 
 ```
 jq --version
