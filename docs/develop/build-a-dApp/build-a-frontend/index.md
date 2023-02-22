@@ -4,7 +4,6 @@ Decentralized applications (dApps) are a new way of building applications for th
 blockchain technology and smart contracts. Unlike traditional applications, dApps don't rely on a centralized server
 or backend for their functioning. Instead, their backend is hosted on a b
 
-
 - They are decentralized and operate on a peer-to-peer network, such as a blockchain, using smart contracts.
 - The application's data and records must be stored on a public blockchain.
 - They are open-source and operate on their own without any single entity controlling them.
