@@ -136,7 +136,31 @@ from Geth instead of the Cosmos SDK checks done on the auth module `AnteHandler`
 
 ### Interchain Transactions
 
-<!-- TODO: transactions that use IBC or bridges to send them to other chains -->
+Interchain transactions refer to the transfer of digital assets or data between two or more different blockchain networks.
+
+Each blockchain network has its own unique protocol and data structure,
+making it difficult to directly transfer assets or data from one blockchain to another.
+Interchain transactions allow for the transfer of assets and data between different blockchains
+by using intermediary mechanisms or protocols.
+
+One such mechanism is a cross-chain bridge, which acts as a connector between different blockchains,
+enabling the transfer of assets or data.
+Cross-chain bridges typically require some form of trust or
+consensus mechanism to ensure the security and integrity of the transaction.
+
+Another possibility is to use the [IBC (Inter-Blockchain Communication)](https://ibcprotocol.org/) protocol.
+To make an interchain transaction using IBC a user needs to:
+
+- Choose the source and destination blockchain networks that the user wants to transfer assets or data between.
+- Ensure that both blockchain networks have implemented the IBC protocol
+- Ensure there's a connection and channel established between the two blockchain networks using IBC
+- Initiate the transfer of assets or data: this is done by sending a transaction from the source blockchain
+  to the destination blockchain through the IBC channel
+
+Interchain transactions are becoming increasingly important as the number of different blockchain networks
+and applications continues to grow.
+They enable the interoperability of different blockchain networks,
+allowing for greater flexibility and efficiency in the transfer of digital assets and data.
 
 ## Transaction Receipts
 
