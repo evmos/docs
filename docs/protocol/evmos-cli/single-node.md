@@ -10,9 +10,9 @@ sidebar_position: 2
 
 - [Install Binary](./installation)
 
-## Automated Localnet (script)
+## Automated Local Node (script)
 
-You can customize the local testnet script by changing values for convenience for example:
+You can customize the local node script by changing values for convenience for example:
 
 ```bash
 # customize the name of your key, the chain-id, moniker of the node, keyring backend, and log level
@@ -136,7 +136,7 @@ evmosd collect-gentxs
 
 This command will add all the `gentxs` stored in `~/.evmosd/config/gentx` to the genesis file.
 
-### Run Testnet
+### Run Localnet
 
 Finally, check the correctness of the `genesis.json` file:
 
