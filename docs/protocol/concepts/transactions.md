@@ -4,12 +4,12 @@ sidebar_position: 11
 # Transactions
 
 A transaction refers to an action initiated by an account which changes the state of the blockchain.
-To effectively perform the state change, every transaction needs to be broadcasted to the whole network.
+To effectively perform the state change, every transaction is broadcasted to the whole network.
 Any node can broadcast a request for a transaction to be executed on the blockchain state machine;
 after this happens, a validator will validate, execute the transaction and propagate the resulting state change
 to the rest of the network.
 
-Computation resources on the network are consumed to process every transaction.
+To process every transaction, computation resources on the network are consumed.
 Thus, the concept of "gas" arises as a reference to the computation required to process the transaction by a validator.
 Users have to pay a fee for this computation, all transactions require an associated fee.
 This fee is calculated based on the gas required to execute the transaction and the gas price.
@@ -41,17 +41,18 @@ Evmos supports two transaction types:
 1. Cosmos transactions
 2. Ethereum transactions
 
-Although most of the information included on both of these is similar,
+This is possible because Evmos uses the [Cosmos-SDK](https://docs.cosmos.network/main)
+and implements the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/) as a module.
+In this way, Evmos provides the features and functionalities of Ethereum and Cosmos chains combined, and more.
+
+Although most of the information included on both of these transaction types is similar,
 there are differences among them.
 In the following sections these are explained.
 
-<!-- 
-TODO: explain what transactions are on Evmos and blockchains. 
-Explain that transactions can be identified by hashes and that they can 
-contain multiple messages. Why can transactions fail? 
-
-Explain that transactions can interoperate with other blockchains.
--->
+Nowadays, transactions can not only perform state transitions on the chain in which are submitted,
+but also can execute transactions on another blockchains.
+Interchain transactions are possible through the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/).
+Find a more detailed explanation on the section below.
 
 ## Transaction Confirmations
 
