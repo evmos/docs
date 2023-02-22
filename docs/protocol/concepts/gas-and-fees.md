@@ -4,23 +4,19 @@ sidebar_position: 4
 
 # Gas and Fees
 
-<!-- Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos. -->
-
 Users need to pay a fee to submit transactions on the Evmos network.
-Fees are handled differently on Ethereum and Cosmos.
-Since Evmos is a Cosmos-based chain that is compatible with Ethereum,
-the Evmos chain supports a Ethereum type fee calculation,
-wherevever the Cosmos SDK allows for it.
+As fees are handled differently on Ethereum and Cosmos,
+it is important to understand how the Evmos blockchain implements an Ethereum-type fee calculation,
+that is compatible with the Cosmos SDK.
 
-This overview aims to explain how these differences are implemented.
+Therefore this overview explains the basics of gas calculation,
+how to provide fees for transactions
+and how the Ethereum-type fee calculation uses a fee market (EIP1559)
+for prioritizing transactions.
 
-Provide an easy to understand intro that covers:
-* Cosmos doesn't have feemarket
-* How do we bridge the gap to Ethereum feemarket
-* Endpoints to use
-* Call to action or ref how the fees help with revenue
-
-
+Also, note the fees that are paid for interacting with smart contracts on Evmos
+can earn smart contract deployers a revenue. For information on this,
+head to the [develop](../../develop/mainnet/index.md#revenue).
 
 ## Prerequisite Readings
 
