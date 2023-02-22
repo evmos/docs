@@ -10,7 +10,7 @@ or backend for their functioning. Instead, their backend is hosted on a b
 - They use a cryptographic token to help keep their network secure.
 
  To develop dApps, it is essential to know how to interact with blockchain programmatically and understand the software
-  development aspect of it. Some applications build to leverage the Evmos Network involves 
+development aspect of it. Some applications build to leverage the Evmos Network involves 
   [Orbital Apes](https://www.orbitalapes.com), [SpaceFi](https://app.spacefi.io/#/home), and [more](https://evmos.org/ecosystem).
 
 ## Indexers
