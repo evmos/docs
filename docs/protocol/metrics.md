@@ -14,7 +14,7 @@ check this [blog article](https://blog.pvincent.io/2017/12/prometheus-blog-serie
 
 Find below a list of supported Evmos modules with custom metrics and telemetry.
 Using the metrics you can e.g. run performance profiles
-and display them in a [grafana](https://grafana.com/) dashboard.
+and display them in a [Grafana](https://grafana.com/) dashboard.
 
 ## Supported Metrics
 
