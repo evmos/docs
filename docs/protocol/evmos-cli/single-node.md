@@ -165,7 +165,6 @@ You can then stop the node using `Ctrl+C`.
 
 
 
----------------------------
 
 ## Further Configuration
 
