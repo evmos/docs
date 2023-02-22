@@ -26,4 +26,4 @@ Contributing to the docs is easy. head over to our [Contributing Guide](./CONTRI
 ## Issues
 
 If you found any issues with our docs, please feel free to submit a [New Issue](https://github.com/evmos/docs/issues)
-and we will look into it.
+and we will look into it. Please be as descriptive as possible and include any images.

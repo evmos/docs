@@ -27,3 +27,15 @@ these standard as you work on new or existing pages:
 belongs in the Protocol -> Concepts section because both Develop and Validate section uses this reference.
 6. Can I cross link (call-to-action) my article or contribution to other sections of the docs so that others can easily
 discover this new information?
+
+## Process
+
+The process to contribute is simple. Make sure you have a Github account and have the repository cloned. Any changes should
+be made in the form of a Pull Request. Make sure to use descriptive titles and descriptions to aid in the review process.
+Any physical code changes to the core protocol should be made with the [Evmos Repo](https://github.com/evmos/evmos/) and
+make sure to submit both code and docs changes at the same time.
+
+## Contact Us
+
+If you need any assistance or have any questions, please reach out to the Evmos Core Team via our social links found on our
+main site.
