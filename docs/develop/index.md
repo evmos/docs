@@ -25,14 +25,14 @@ Evmos does this by leveraging the interoperability of the Cosmos Ecosystem and t
 Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich
 ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from
 another chain, you can learn how to
-[build and deploy smart contracts](./build-a-dApp/build-smart-contracts/build-smart-contracts.md) and what
+[build and deploy smart contracts](./develop/build-a-dApp/build-a-frontend) and what
 [tools](./tools/index.md) are available to build a web3
-[frontend](./build-a-dApp/build-a-frontend/wallet-integration.md) and
-[backend](./build-a-dApp/create-centralized-backend.md) to create a seamless web3 experience for users of your dApp on Evmos.
+[frontend](./develop/build-a-dApp/build-a-frontend#wallet-integration) and
+[backend](./develop/create-backend) to create a seamless web3 experience for users of your dApp on Evmos.
 
 Once tested on [Testnet](./../develop/testnet) and deployed on [Mainnet](./../develop/mainnet), you can
 start [earning an income](./../develop/mainnet#revenue) on transaction fees from interacting with your dApp or
-[register your tokens](./../develop/mainnet/index.md#token-registration) for cross-chain use.
+[register your tokens](./../develop/mainnet#token-registration) for cross-chain use.
 
 ## Contributors
 
