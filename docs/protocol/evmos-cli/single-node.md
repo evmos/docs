@@ -188,8 +188,6 @@ evmosd keys add $KEY
 
 To export your Evmos key as an Ethereum private key (for use with [Metamask](./../../../use/connect-your-wallet/metamask) for example):
 
->>>>>>> ec2476d830d446f32fd7410f71cb93c353e80781:docs/protocol/evmos-cli/single-node.md
-
 ```bash
 evmosd keys unsafe-export-eth-key $KEY
 ```
@@ -215,7 +213,6 @@ evmosd config keyring-backend file
 
 :::tip
 For more information about the Keyring and its backend options, click [here](./../concepts/keyring).
->>>>>>> ec2476d830d446f32fd7410f71cb93c353e80781:docs/protocol/evmos-cli/single-node.md
 :::
 
 ### Enable Tracing
