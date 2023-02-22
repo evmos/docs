@@ -34,7 +34,7 @@ This allows the user to create accounts on multiple blockchains
 without having to manage multiple secrets.
 
 HD keys generate addresses by taking the mnemonic phrase
-and combining it with a piece of information called a derivation path.
+and combining it with a piece of information called a [derivation path](https://learnmeabitcoin.com/technical/derivation-paths).
 Blockchains can differ in which derivation path they support.
 To access all accounts from an mnemonic phrase on a blockchain,
 it is therefore important to use that blockchain's specific derivation path.
@@ -67,7 +67,7 @@ This cryptographic curve is not to be confused with [Bitcoin's ECDSA secp256k1](
 
 The root HD path for Evmos-based accounts is `m/44'/60'/0'/0`.
 Evmos uses the Coin type `60` to support Ethereum type accounts,
-unlike many other Cosmos chains that use Coin type `118`.
+unlike many other Cosmos chains that use Coin type `118` ([list of coin types](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
 The custom Evmos [EthAccount](https://github.com/evmos/evmos/blob/main/types/account.go#L28-L33)
 satisfies the `AccountI` interface from the Cosmos SDK auth module
