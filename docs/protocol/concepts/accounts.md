@@ -5,9 +5,9 @@ sidebar_position: 1
 # Accounts
 
 Crypto Wallets (or Accounts) can be created
-and represented in unique ways on differnt blockchains.
+and represented in unique ways on different blockchains.
 For developers who interface with account types on Evmos,
-e.g. during Wallet integration on their dApp frontend,
+e.g. during wallet integration on their dApp frontend,
 it is therefore important to understand that accounts on Evnos are implemented
 to be compatible with Ethereum type addresses.
 
@@ -29,7 +29,7 @@ Creating a mnemonic phrase gives you control of many accounts,
 all accessible with that same phrase.
 
 Cosmos blockchains, like Evmos, support creating accounts with mnemonic phrases,
-otherwise known as a [hierarchical deterministic key generation](https://github.com/confio/cosmos-hd-key-derivation-spec) (HD keys).
+otherwise known as [hierarchical deterministic key generation](https://github.com/confio/cosmos-hd-key-derivation-spec) (HD keys).
 This allows the user to create accounts on multiple blockchains
 without having to manage multiple secrets.
 
@@ -41,13 +41,13 @@ it is therefore important to use that blockchain's specific derivation path.
 
 ## Representing Accounts
 
-The terms "account" and "address" are often used interchangably to describe crypto wallets.
+The terms "account" and "address" are often used interchangeably to describe crypto wallets.
 In the Cosmos SDK, an account designates a pair of public key (PubKey) and private key (PrivKey).
-The derivitation path defines what the private key, public key, and address would be.
+The derivation path defines what the private key, public key, and address would be.
 
 The PubKey can be derived to generate various addresses in different formats,
 which are used to identify users (among other parties) in the application.
-A common address form for Cosmos chains is the bech32 to format (e.g. `evmos1...`).
+A common address form for Cosmos chains is the bech32 format (e.g. `evmos1...`).
 Addresses are also associated with messages to identify the sender of the message.
 
 The PrivKey is used to generate digital signatures to prove
@@ -58,9 +58,11 @@ to generate a PubKey that is compared with the address in the message.
 
 ## Evmos Accounts
 
-Evmos defines its own custom Account type
+Evmos defines its own custom `Account` type
 to implement a HD wallet that is compatible with Ethereum type addresses.
-It uses Ethereum's ECDSA secp256k1 curve for keys (`eth_secp265k1) and satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
+It uses Ethereum's ECDSA secp256k1 curve for keys (`eth_secp265k1`)
+and satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84)
+for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
 This cryptographic curve is not to be confused with [Bitcoin's ECDSA secp256k1](https://en.bitcoin.it/wiki/Secp256k1) curve.
 
 The root HD path for Evmos-based accounts is `m/44'/60'/0'/0`.
@@ -69,7 +71,7 @@ unlike many other Cosmos chains that use Coin type `118`.
 
 The custom Evmos [EthAccount](https://github.com/evmos/evmos/blob/main/types/account.go#L28-L33)
 satisfies the `AccountI` interface from the Cosmos SDK auth module
-and includes additional fields that are require for Ethereum type addresses:
+and includes additional fields that are required for Ethereum type addresses:
 
 ```go
 // EthAccountI represents the interface of an EVM compatible account
