@@ -7,7 +7,7 @@ sidebar_position: 3
 Following this page, you can run a single node local network manually or
 by using the already prepared automated script. Running a single node setup is useful
 for developers who want to test their applications and protocol features because of 
-it's simplicity and speed. For more complex setups, please refer to the [Multi Node Setup](./multi-nodes) page.
+its simplicity and speed. For more complex setups, please refer to the [Multi Node Setup](./multi-nodes) page.
 
 ## Prerequisite Readings
 
@@ -139,7 +139,7 @@ evmosd collect-gentxs
 
 This command will add all the `gentxs` stored in `~/.evmosd/config/gentx` to the genesis file.
 
-### Run Localnet
+### Run Single Node
 
 Finally, check the correctness of the `genesis.json` file:
 
