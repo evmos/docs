@@ -36,6 +36,13 @@ A widespread validation is that the sender is the transaction signer.
 In such a case, if you send a transaction where the sender address is different than the signer's address,
 the transation will fail, even if the fees are sufficient.
 
+Nowadays, transactions can not only perform state transitions on the chain in which are submitted,
+but also can execute transactions on another blockchains.
+Interchain transactions are possible through the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/).
+Find a more detailed explanation on the section below.
+
+## Transaction Types
+
 Evmos supports two transaction types:
 
 1. Cosmos transactions
@@ -47,31 +54,35 @@ In this way, Evmos provides the features and functionalities of Ethereum and Cos
 
 Although most of the information included on both of these transaction types is similar,
 there are differences among them.
-In the following sections these are explained.
+An important difference, is that Cosmos transactions allow multiple messages on the same transaction.
+Conversely, Ethereum transactions don't have this possibility.
+To bring these two types together, Evmos implements Ethereum transactions as a single [`sdk.Msg`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#Msg)
+contained in an [`auth.StdTx`](https://pkg.go.dev/github.com/cosmos/cosmos-sdk/x/auth#StdTx).
+All relevant Ethereum transaction information is contained in this message.
+This includes the signature, gas, payload, etc.
 
-Nowadays, transactions can not only perform state transitions on the chain in which are submitted,
-but also can execute transactions on another blockchains.
-Interchain transactions are possible through the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/).
-Find a more detailed explanation on the section below.
-
-## Transaction Confirmations
-
-<!-- TODO: why are Ethereum transactions different than Cosmos -->
-
-## Transaction Types
-
-<!-- TODO: explain which transactions types does Evmos support (i.e modules and changes) and provide a few examples. -->
-
-<!-- TODO: why are Ethereum transactions different than Cosmos -->
+Find more information about these two types on the following sections.
 
 ### Cosmos Transactions
 
-On Cosmos chains, transactions are comprised of metadata held in contexts and sdk.Msgs
-that trigger state changes within a module through the module's Protobuf Msg service.
+On Cosmos chains, transactions are comprised of metadata held in contexts and `sdk.Msg`s
+that trigger state changes within a module through the module's Protobuf [Msg service](https://docs.cosmos.network/main/building-modules/msg-services).
 
 When users want to interact with an application and make state changes (e.g. sending coins), they create transactions.
-Each of a transaction's sdk.Msg must be signed using the private key associated with the appropriate account(s),
+Cosmos transactions can have multiple `sdk.Msg`s.
+Each of these must be signed using the private key associated with the appropriate account(s),
 before the transaction is broadcasted to the network.
+
+A Cosmos transaction includes the following information:
+
+- `Msgs`: an array of msgs (`sdk.Msg`)
+- `GasLimit`: option chosen by the users for how to calculate how much gas they will need to pay
+- `FeeAmount`: max amount user is willing to pay in fees
+- `TimeoutHeight`: block height until which the transaction is valid
+- `Signatures`: array of signatures from all signers of the tx
+- `Memo`: a note or comment to send with the transaction
+
+To submit a Cosmos transaction, users must use one of the provided clients.
 
 ### Ethereum Transactions
 
@@ -90,6 +101,17 @@ There are several categories of Ethereum transactions:
 - execution of a contract: transactions that interact with a deployed smart contract,
   where the `to` address is the smart contract address
 
+An Ethereum transaction includes the following information:
+
+- `recipient`: receiving address
+- `signature`: sender's signature
+- `nonce`: counter of tx number from account
+- `value`: amount of ETH to transfer (in wei)
+- `data`: include arbitrary data. Used when deploying a smart contract or making a smart contract method call
+- `gasLimit`: max amount of gas to be consumed
+- `maxPriorityFeePerGas`: mas gas to be included as tip to validators
+- `maxFeePerGas`: max amount of gas to be paid for tx
+
 For more information on Ethereum transactions and the transaction lifecycle, [go here](https://ethereum.org/en/developers/docs/transactions/).
 
 Evmos supports the following Ethereum transactions.
@@ -102,10 +124,42 @@ Evmos supports the following Ethereum transactions.
 - Access List Transactions ([EIP-2930](https://eips.ethereum.org/EIPS/eip-2930))
 - Legacy Transactions ([EIP-2718](https://eips.ethereum.org/EIPS/eip-2718))
 
+Evmos is capable of processing Ethereum transactions by wrapping them on a `sdk.Msg`.
+Evmos achieves this by using the `MsgEthereumTx`.
+This message encapsulates an Ethereum transaction as an SDK message and contains the necessary transaction data fields.
+
+One remark about the `MsgEthereumTx` is that it implements both the `sdk.Msg` and `sdk.Tx` interfaces
+(generally SDK messages only implement the former, while the latter is a group of messages bundled together).
+The reason of this, is because the `MsgEthereumTx` must not be included in a `auth.StdTx`
+(SDK's standard transaction type) as it performs gas and fee checks using the Ethereum logic
+from Geth instead of the Cosmos SDK checks done on the auth module `AnteHandler`.
+
 ### Interchain Transactions
 
 <!-- TODO: transactions that use IBC or bridges to send them to other chains -->
 
 ## Transaction Receipts
 
-<!-- TODO: explain Ethereum transaction receipts -->
+A transaction receipt shows data returned by an Ethereum client to represent the result of a particular transaction,
+including a hash of the transaction, its block number, the amount of gas used, and,
+in case of deployment of a smart contract, the address of the contract.
+Additionally, it includes custom information from the events emitted in the smart contract.
+
+A receipt contains the following information:
+
+- `transactionHash` : hash of the transaction.
+- `transactionIndex`: integer of the transactions index position in the block.
+- `blockHash`: hash of the block where this transaction was in.
+- `blockNumber`: block number where this transaction was in.
+- `from`: address of the sender.
+- `to`: address of the receiver. null when its a contract creation transaction.
+- `cumulativeGasUsed` : The total amount of gas used when this transaction was executed in the block.
+- `effectiveGasPrice` : The sum of the base fee and tip paid per unit of gas.
+- `gasUsed` : The amount of gas used by this specific transaction alone.
+- `contractAddress` : The contract address created, if the transaction was a contract creation, otherwise null.
+- `logs`: Array of log objects, which this transaction generated.
+- `logsBloom`: Bloom filter for light clients to quickly retrieve related logs.
+- `type`: integer of the transaction type, 0x00 for legacy transactions, 0x01 for access list types,
+  0x02 for dynamic fees. It also returns either.
+- `root` : transaction stateroot (pre Byzantium)
+- `status`: either 1 (success) or 0 (failure)
