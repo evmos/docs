@@ -24,7 +24,7 @@ The sum of these features allows developers to leverage existing Ethereum ecosys
 software to seamlessly deploy smart contracts which interact with the rest of the Cosmos
 [ecosystem](https://cosmos.network/ecosystem).
 
-<!-- TODO ## High level Systems Design (Add visuilization) -->
+<!-- TODO ## High-level Systems Design (Add visualization) -->
 
 ## Cosmos SDK
 
