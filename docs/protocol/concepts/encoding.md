@@ -1,15 +1,15 @@
 ---
-sidebar_position: 10
+sidebar_position: 3
 ---
 
 # Encoding
 
-Learn about the encoding formats used on Evmos. 
+Learn about the encoding formats used on Evmos.
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Encoding](https://docs.cosmos.network/main/core/encoding.html) 
-- [Ethereum RLP](https://eth.wiki/en/fundamentals/rlp) 
+- [Cosmos SDK Encoding](https://docs.cosmos.network/main/core/encoding.html)
+- [Ethereum RLP](https://eth.wiki/en/fundamentals/rlp)
 
 ## Encoding Formats
 

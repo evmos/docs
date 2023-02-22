@@ -77,6 +77,6 @@ An essential part of building a dApp is getting in touch with the community to s
 start contributing to your project. This will not only help your dApp's visibility but might result in a new community
 of users, that want to improve your dApp.
 
-Head over to the E[vmos Discord](https://discord.gg/evmos) channel get in touch with the community and contributors and 
+Head over to the [Evmos Discord](https://discord.gg/evmos) channel get in touch with the community and contributors and
 showcase your dApp on one of the next community calls. We also have a [Telegram group](https://t.me/EvmosBuilders) for
 our builders.
