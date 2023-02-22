@@ -4,12 +4,6 @@ sidebar_position: 3
 
 # Simple Arrangement for Funding Upload (SAFU)
 
-Learn about the Simple Arrangement for Funding Upload (SAFU)
-on Evmos {synopsis}
-
-## Overview
-
-<!-- markdown-link-check-disable-next-line -->
 The [Simple Arrangement for Funding Upload (the "SAFU")](https://github.com/evmos/evmos/tree/main/SAFU.pdf)
 outlines the post-exploit policy for active vulnerabilities in the Evmos blockchain.
 The SAFU is intended for white hat hackers
@@ -43,7 +37,7 @@ In the event of a bounty distribution,
 the bounty for white hat hackers will be paid out
 from the account balance of this address.
 
-::: tip
+:::tip
 The dropbox address is not controlled by the team
 or any individual, it is controlled by the Evmos protocol.
 :::

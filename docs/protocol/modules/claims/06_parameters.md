@@ -6,7 +6,7 @@ sidebar_position: 6
 
 The `x/claims` module contains the parameters described below. All parameters can be modified via governance.
 
-::: danger
+:::danger
 🚨 **IMPORTANT**: `time.Duration` store value is in nanoseconds but the JSON / `String` value is in seconds!
 :::
 

@@ -14,7 +14,7 @@ Below is a list of public block explorers that support Evmos Mainnet and Testnet
 
 ### Mainnet
 
-|            | Support       | URL                                                    | Contract Verification  |
+|  Service   | Support       | URL                                                    | Contract Verification  |
 |------------| -------------- |--------------------------------------------------------|-----------------------|
 | Mintscan   | `cosmos` `evm` | [mintscan.io/evmos](https://www.mintscan.io/evmos)     | Yes but requires form submission  |
 | Escan      | `cosmos` `evm` | [escan.live](https://escan.live)                       | Permissionless  |
@@ -24,7 +24,7 @@ Below is a list of public block explorers that support Evmos Mainnet and Testnet
 
 ### Testnet
 
-|            | Support       | URL                                                                            |
+|  Service   | Support       | URL                                                                            |
 | ---------- |----------------| ------------------------------------------------------------------------------ |
 | Mintscan   | `cosmos` `evm` | [testnet.mintscan.io/evmos-testnet](https://testnet.mintscan.io/evmos-testnet) |
 | BigDipper  | `cosmos`       | [testnet.bigdipper.live](https://testnet.evmos.bigdipper.live/)                |
