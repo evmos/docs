@@ -30,9 +30,9 @@ another chain, you can learn how to
 [frontend](./build-a-dApp/build-a-frontend/wallet-integration.md) and
 [backend](./build-a-dApp/create-centralized-backend.md) to create a seamless web3 experience for users of your dApp on Evmos.
 
-Once tested on [Testnet](../develop/testnet/api.md) and deployed on [Mainnet](../develop/mainnet/index.md), you can
-start [earning an income](../develop/mainnet/index.md#revenue) on transaction fees from interacting with your dApp or
-[register your tokens](../develop/mainnet/index.md#token-registration) for cross-chain use.
+Once tested on [Testnet](./../develop/testnet) and deployed on [Mainnet](./../develop/mainnet), you can
+start [earning an income](./../develop/mainnet#revenue) on transaction fees from interacting with your dApp or
+[register your tokens](./../develop/mainnet/index.md#token-registration) for cross-chain use.
 
 ## Contributors
 
