@@ -10,7 +10,7 @@ sidebar_position: 3
 
 - [Install Binary](./installation)
 
-## Automated Local Node (script)
+## Automated Single Node (script)
 
 You can customize the local node script by changing values for convenience for example:
 
@@ -136,7 +136,7 @@ evmosd collect-gentxs
 
 This command will add all the `gentxs` stored in `~/.evmosd/config/gentx` to the genesis file.
 
-### Run Localnet
+### Run Single Node
 
 Finally, check the correctness of the `genesis.json` file:
 
