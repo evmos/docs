@@ -72,7 +72,7 @@ If you want to learn more about how Evmos achieves EVM compatibility as a Cosmos
 we recommend understanding the following concepts:
 
 * [Accounts](./concepts/accounts.md)
-* [Gasa and Fees](./concepts/gas-and-fees.md)
+* [Gas and Fees](./concepts/gas-and-fees.md)
 * [Token representations](./concepts/tokens.md)
 * [Transactions](./concepts/transactions.md)
 
