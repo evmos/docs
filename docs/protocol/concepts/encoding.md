@@ -4,7 +4,32 @@ sidebar_position: 3
 
 # Encoding
 
-Learn about the encoding formats used on Evmos.
+The Recursive Length Prefix (RLP) is a serialization format used extensively in Ethereum's execution clients. Its purpose
+is to encode arbitrarily nested arrays of binary data, and it is the main encoding method used to serialize objects in
+Ethereum. RLP only encodes structure and leaves encoding specific atomic data types, such as strings, integers, and floats,
+to higher-order protocols.
+
+In Ethereum, integers must be represented in big-endian binary form with no leading zeroes,
+making the integer value zero equivalent to the empty byte array. The RLP encoding function takes in an item, which is
+defined as a single byte whose value is in the [0x00, 0x7f] range or a string of 0-55 bytes long. If the string is
+more than 55 bytes long, the RLP encoding consists of a single byte with value 0xb7 (dec. 183) plus the length in
+bytes of the length of the string in binary form, followed by the length of the string, followed by the string. RLP
+is used for hash verification, where a transaction is signed by signing the RLP hash of the transaction
+data, and blocks are identified by the RLP hash of their header. RLP is also used for encoding data over the wire
+and for some cases where there should be support for efficient encoding of the merkle tree data structure. The
+Ethereum execution layer uses RLP as the primary encoding method to serialize objects, but the newer Simple
+Serialize (SSZ) replaces RLP as the encoding for the new consensus layer in Ethereum 2.0.
+
+The Cosmos Stargate release introduces protobuf as the main encoding format for both client and state serialization.
+All the EVM module types that are used for state and clients, such as transaction messages, genesis, query services,
+etc., will be implemented as protocol buffer messages. The Cosmos SDK also supports the legacy Amino encoding.
+Protocol Buffers (protobuf) is a language-agnostic binary serialization format that is smaller and faster than JSON.
+It is used to serialize structured data, such as messages, and is designed to be highly efficient and extensible. The
+encoding format is defined in a language-agnostic language called Protocol Buffers Language (proto3), and the encoded
+messages can be used to generate code for a variety of programming languages. The main advantage of protobuf is its
+efficiency, which results in smaller message sizes and faster serialization and deserialization times. The RLP decoding
+process is as follows: according to the first byte (i.e., prefix) of input data and decoding the data type, the length
+of the actual data and offset; according to the type and offset of data, decode the data correspondingly.
 
 ## Prerequisite Readings
 

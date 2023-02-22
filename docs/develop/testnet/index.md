@@ -1,17 +1,27 @@
-# Faucet
+# Testnet
+
+## Swagger Docs
+
+We hosted our testnet API endpoints [here](https://api.evmos.dev) and it uses Swagger.
+
+## Faucet
 
 import ProjectValue from '@site/src/components/ProjectValue';
 import Highlighter from '@site/src/components/Highlighter';
 
-The Evmos Testnet Faucet distributes small amounts of <ProjectValue keyword="testnet_denom" /> to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the [Keplr Wallet](./../../use/connect-your-wallet/keplr) or follow the instructions on this page.
+The Evmos Testnet Faucet distributes small amounts of <ProjectValue keyword="testnet_denom" />
+to anyone who can provide a valid testnet address for free. Request funds from the faucet either by using the
+[Keplr Wallet](./../../use/connect-your-wallet/keplr) or follow the instructions on this page.
 
 :::tip
-Follow the [Metamask](./../../use/connect-your-wallet/metamask), [Keplr](./../../use/connect-your-wallet/keplr) or [Keyring](./../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
+Follow the [Metamask](./../../use/connect-your-wallet/metamask), [Keplr](./../../use/connect-your-wallet/keplr)
+ or [Keyring](./../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
 :::
 
 ## Request Testnet tokens
 
-Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request` and `Request Connection` to add the <ProjectValue keyword='name' /> testnet chain (evmos_<ProjectValue keyword="chain_id" />-<ProjectValue keyword="testnet_version_number" />) to Keplr and approve the connection.
+Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens
+ for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request` and `Request Connection` to add the <ProjectValue keyword='name' /> testnet chain (evmos_<ProjectValue keyword="chain_id" />-<ProjectValue keyword="testnet_version_number" />) to Keplr and approve the connection.
 
 ![chain add request](/img/keplr_approve_chain.png)
 

@@ -5,6 +5,7 @@ sidebar_position: 4
 # Testnet
 
 import ProjectValue from '@site/src/components/ProjectValue';
+import Highlighter from '@site/src/components/Highlighter';
 
 This document outlines the steps to join an existing testnet.
 
@@ -14,22 +15,23 @@ You specify the network you want to join by setting the **genesis file** and **s
 
 | Testnet Chain ID | Description                       | Site                                                                       | Version                                                                                  | Status  |
 | ---------------- | --------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------- |
-| `evmos_9000-4`   | Evmos_9000-4 Testnet              | [Evmos 9000-4](https://github.com/evmos/testnets/tree/main/evmos_9000-4) | [`{{ $themeConfig.project.testnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
+| `evmos_9000-4`   | Evmos_9000-4 Testnet              | [Evmos 9000-4](https://github.com/evmos/testnets/tree/main/evmos_9000-4) | [<Highlighter keyword="testnet_version" />](https://github.com/evmos/evmos/releases) | `Live`  |
 | `evmos_9000-3`   | Evmos_9000-3 Testnet              | [Evmos 9000-3](https://github.com/evmos/testnets/tree/main/evmos_9000-3) | [`v1.0.0-beta1`](https://github.com/evmos/evmos/releases/tag/v1.0.0-beta1)             | `Stale` |
 | `evmos_9000-2`   | Olympus Mons Incentivized Testnet | [Olympus Mons](https://github.com/evmos/testnets/tree/main/olympus_mons) | [`v0.3.x`](https://github.com/evmos/evmos/releases)                                    | `Stale` |
 | `evmos_9000-1`   | Arsia Mons Testnet                | [Arsia Mons](https://github.com/evmos/testnets/tree/main/arsia_mons)     | [`v0.1.x`](https://github.com/evmos/evmos/releases)                                    | `Stale` |
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary `{{ $themeConfig.project.binary }}`.
+Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary <Highlighter keyword="binary" />.
 
 :::warning
-Make sure you have the right version of `{{ $themeConfig.project.binary }}` installed.
+Make sure you have the right version of <Highlighter keyword="binary" /> installed.
 :::
 
 ### Save Chain ID
 
-We recommend saving the testnet `chain-id` into your `{{ $themeConfig.project.binary }}`'s `client.toml`. This will make it so you do not have to manually pass in the `chain-id` flag for every CLI command.
+We recommend saving the testnet `chain-id` into your <Highlighter keyword="binary" />'s
+`client.toml`. This will make it so you do not have to manually pass in the `chain-id` flag for every CLI command.
 
 :::tip
 See the Official [Chain IDs](./../protocol/concepts/chain-id#official-chain-ids) for reference.
@@ -58,7 +60,9 @@ In the `config` directory, the most important files for configuration are `app.t
 
 ### Copy the Genesis File
 
-Check the `genesis.json` file from the [`archive`](https://archive.evmos.dev/evmos_9000-4/genesis.json) and copy it over to the `config` directory: `~/.evmosd/config/genesis.json`. This is a genesis file with the chain-id and genesis accounts balances.
+Check the `genesis.json` file from the [`archive`](https://archive.evmos.dev/evmos_9000-4/genesis.json)
+ and copy it over to the `config` directory: `~/.evmosd/config/genesis.json`. This is
+ a genesis file with the chain-id and genesis accounts balances.
 
 ```bash
 sudo apt install -y unzip wget
@@ -73,7 +77,9 @@ evmosd validate-genesis
 
 ### Add Seed Nodes
 
-Your node needs to know how to find [peers](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#peers). You'll need to add healthy [seed nodes](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#seed) to `$HOME/.evmosd/config/config.toml`. The [`testnets`](https://github.com/evmos/testnets) repo contains links to some seed nodes.
+Your node needs to know how to find [peers](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#peers). You'll need to add healthy [seed nodes](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#seed)
+ to `$HOME/.evmosd/config/config.toml`. The [`testnets`](https://github.com/evmos/testnets) repo contains links to
+  some seed nodes.
 
 Edit the file located in `~/.evmosd/config/config.toml` and the `seeds` to the following:
 
@@ -97,15 +103,19 @@ sed -i.bak -e "s/^seeds =.*/seeds = \"$SEEDS\"/" ~/.evmosd/config/config.toml
 ```
 
 :::tip
-For more information on seeds and peers, you can the Tendermint [P2P documentation](https://docs.tendermint.com/master/spec/p2p/peer.html).
+For more information on seeds and peers, you can the Tendermint
+[P2P documentation](https://docs.tendermint.com/master/spec/p2p/peer.html).
 :::
 
 ### Add Persistent Peers
 
-We can set the [`persistent_peers`](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer) field in `~/.evmosd/config/config.toml` to specify peers that your node will maintain persistent connections with. You can retrieve them from the list of
+We can set the [`persistent_peers`](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer) field in `~/.evmosd/config/config.toml` to specify peers that your node will maintain persistent
+ connections with. You can retrieve them from the list of
 available peers on the [`testnets`](https://github.com/evmos/testnets) repo.
 
-A list of available persistent peers is also available in the `#find-peers` channel in the [Evmos Discord](https://discord.gg/evmos). You can get a random 10 entries from the `peers.txt` file in the `PEERS` variable by running the following command:
+A list of available persistent peers is also available in the `#find-peers` channel in the
+[Evmos Discord](https://discord.gg/evmos). You can get a random 10 entries from the `peers.txt`
+ file in the `PEERS` variable by running the following command:
 
 ```bash
 PEERS=`curl -sL https://raw.githubusercontent.com/evmos/testnets/main/evmos_9000-4/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
@@ -119,7 +129,8 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.evmos
 
 ## Run a Testnet Validator
 
-Claim your testnet {{ $themeConfig.project.testnet_denom }} on the [faucet](./../develop/testnet/faucet) using your validator account address and submit your validator account address:
+Claim your testnet <ProjectValue keyword="testnet_denom" />  on the [faucet](./../develop/testnet)
+using your validator account address and submit your validator account address:
 
 :::tip
 For more details on how to run your validator, follow [these](./setup-and-configuration/run-a-validator) instructions.
@@ -142,7 +153,9 @@ evmosd tx staking create-validator \
 
 ## Start testnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the testnet will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node).
+Once enough voting power (+2/3) from the genesis validators is up-and-running, the
+testnet will start producing blocks.
 
 ```bash
 evmosd start
@@ -151,13 +164,15 @@ evmosd start
 ## Upgrading Your Node
 
 :::tip
-These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest testnet version.
+These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest
+ testnet version.
 :::
 
 ### Reset Data
 
 :::warning
-If the version <new_version> you are upgrading to is not breaking from the previous one, you **should not** reset the data. If this is the case you can skip to [Restart](#restart)
+If the version <new_version> you are upgrading to is not breaking from the previous one, you **should not** reset
+the data. If this is the case you can skip to [Restart](#restart)
 :::
 
 First, remove the outdated files and reset the data.
@@ -167,12 +182,15 @@ rm $HOME/.evmosd/config/addrbook.json $HOME/.evmosd/config/genesis.json
 evmosd tendermint unsafe-reset-all --home $HOME/.evmosd
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before,
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had
+ any sentry nodes or full nodes setup before,
 your node will still try to connect to them, but may fail if they haven't also
 been upgraded.
 
 :::danger Warning
-Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
+Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json`
+from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json`
+will cause you to double sign.
 :::
 
 ### Restart
@@ -193,9 +211,9 @@ To get your Node ID use
 ```bash
 evmosd tendermint show-node-id
 ```
-
 :::
 
 ## State Syncing a Node
 
-If you want to join the network using State Sync (quick, but not applicable for archive nodes), check our [State Sync](https://docs.evmos.org/validators/setup/statesync.html) page
+If you want to join the network using State Sync (quick, but not applicable for archive nodes), check
+our [State Sync](https://docs.evmos.org/validators/setup/statesync.html) page
