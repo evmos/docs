@@ -30,7 +30,7 @@ software to seamlessly deploy smart contracts which interact with the rest of th
 
 Evmos enables the full composability and modularity of the [Cosmos SDK](https://docs.cosmos.network/).
 As a Cosmos chain, Evmos is a sovereign blockchain with its own native token,
-that can connect to other chains through IBC. It includes standard modules from the SDK,
+that can connect to other chains through IBC. It includes standard modules from the Cosmos SDK,
 that work side to side with Evmos-specific modules, build by the Evmos core development team.
 Check out the [list of modules](modules/index.md) to get an overview of what each module is responsible for.
 
