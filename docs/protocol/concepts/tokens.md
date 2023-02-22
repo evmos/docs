@@ -25,7 +25,7 @@ of these are using the coins for staking, IBC transfers, governance deposits and
 Evmos is compatible with ERC20 tokens and other non-fungible token standards (EIP721, EIP1155)
 that are natively supported by the EVM.
 
-## Evmos Dashboard
+## Evmos Assets Page
 
 Check out how we represent ERC-20 tokens and Cosmos IBC Coins through our [Single Token Representation](https://app.evmos.org/assets)
 feature on the Evmos Dashboard.
