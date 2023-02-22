@@ -4,11 +4,17 @@ sidebar_position: 6
 
 # Metrics
 
-TODO: Explain go metrics and also what the types mean like gauge and counter.
+Evmos nodes can enable [Cosmos SDK telemetry](https://docs.cosmos.network/main/core/telemetry.html)
+to allow for observing and gathering insights about the Evmos application.
+Under the hood, it uses the [`go-metrics`](https://github.com/hashicorp/go-metrics) package
+and the Prometheus client library to expose different [types of metrics](https://prometheus.io/docs/concepts/metric_types/)
+like gauges and counters.
+For best practices on how to use different metrics types,
+check this [blog article](https://blog.pvincent.io/2017/12/prometheus-blog-series-part-2-metric-types/).
 
-Gather relevant insights about the Evmos application and modules with custom metrics and telemetry.
-
-To understand how to use the metrics below, please refer to the [Cosmos SDK telemetry documentation](https://docs.cosmos.network/main/core/telemetry.html).
+Find below a list of supported Evmos modules with custom metrics and telemetry.
+Using the metrics you can e.g. run performance profiles
+and display them in a [grafana](https://grafana.com/) dashboard.
 
 ## Supported Metrics
 
