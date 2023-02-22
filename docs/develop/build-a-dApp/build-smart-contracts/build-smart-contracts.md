@@ -12,7 +12,7 @@ the ability to control digital assets through [smart contracts](https://www.fon.
 has attracted a large community of developers
 to build decentralized applications on the Ethereum Virtual Machine (EVM).
 This community is continuously creating extensive tooling and introducing standards,
-which are further increasing the adoption rate of EVM compatible technology.
+which are further increasing the adoption rate of EVM-compatible technology.
 
 Whether you are building new use cases on Evmos
 or porting an existing dApp from another EVM-based chain (e.g. Ethereum),
@@ -48,14 +48,14 @@ By adding custom EVM extensions to Ethereum's basic feature set,
 Evmos allows developers to use previously unavailable functionality in smart contracts, like staking and governance operations.
 This will allow more complex smart contracts to be built on Evmos and further improves the interoperability between Cosmos and Ethereum.
 It also is a key feature to achieve Evmos' vision of being the definitive dApp
-chain, where any dApp can be deployed once and users are able to interact with
+chain, where any dApp can be deployed once and users can interact with
 a wide range of different blockchains natively.
 
-To enable the described funtionalities, Evmos introduces socalled *stateful* precompiled smart contracts,
-which have the capability to perform a state transition,
+To enable the described functionalities, Evmos introduces so-called *stateful* precompiled smart contracts,
+which can perform a state transition,
 as opposed to those offered by the standard Go-Ethereum implementation,
-that can only read state information.
-This is necessary, because an operation like e.g. staking tokens
+which can only read state information.
+This is necessary because an operation like e.g. staking tokens
 will ultimately change the chain state.
 
 View a list of available evm extensions [here](evm_extensions.md).
@@ -100,9 +100,9 @@ to prove to users that they are interacting with the correct smart contract.
 
 ## Evmos features
 
-The core protocol team is continously building features
+The core protocol team is continuously building features
 that enhance the experience of smart contract developers on Evmos.
-Head over to our mainnet sections to learn more about these functionlitues,
-e.g. how to earn a [revenue](../../mainnet/index.md#revenue) with your smart contract
+Head over to our Mainnet sections to learn more about these functionalities,
+e.g. how to earn [revenue](../../mainnet/index.md#revenue) with your smart contract
 or [register your ERC-20](../../mainnet/index.md#token-registration) token
 to be used cross-chain.
