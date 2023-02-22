@@ -222,7 +222,7 @@ evmosd config keyring-backend file
 ```
 
 :::tip
-For more information about the Keyring and its backend options, click [here](../../../protocol/concepts/keyring).
+For more information about the Keyring and its backend options, click [here](./../../protocol/concepts/keyring).
 :::
 
 ## Enable Tracing
