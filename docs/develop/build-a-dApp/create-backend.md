@@ -5,7 +5,7 @@ slug: '/create-backend'
 
 # Create A Backend
 
-When building a DApp, having a backend can provide several benefits, including:
+When building a dApp, having a backend can provide several benefits, including:
 
 - Resiliency: A DApp's backend is fully distributed and managed on a blockchain platform, so there is no downtime and
 the application will continue to be available as long as the platform is still operating.
