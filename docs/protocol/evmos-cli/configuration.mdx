@@ -3,11 +3,19 @@ sidebar_position: 1
 ---
 
 # Configuration
-The following page includes the basic node and client configurations.
+The following page will guide you through the configuration of a node and a client.
+The node is used to run the blockchain network, produce blocks and validate transactions.
+The client is used as a gateway to interact with the blockchain network by sending transactions and querying the state.
+Additionally we walk through [running the JSON-RPC server](#running-the-json-rpc-server)
+
+These configurations can impact the performance, security, and functionality of your node.
+Thus, understanding and correctly configuring your node and client is essential.
 
 ## Config and data directory
 
 By default, your config and data are stored in the folder located at the `~/.evmosd` directory.
+You can easily change the default directory by using the `--home` flag. It is important to note that
+you can have multiple home directories that each represent a different blockchain.
 
 ```bash
 .                                   # ~/.evmosd
@@ -140,20 +148,14 @@ evmosd config
 
 ## Running the JSON-RPC Server
 
-Learn how to run and setup the JSON-RPC server on Evmos.
+This section walks through the steps to enable the JSON-RPC server.
+JSON-RPC is provided on multiple transports. Evmos supports JSON-RPC over HTTP and WebSocket.
+In terms of requirements we recommend a server with minimum 8-core CPU and 64gb of RAM.
+You must have ports 8545 and 8546 open on your firewall.
 
 :::tip
 **Important**: You cannot use all JSON RPC methods unless your node stores the entire copy of the blockchain locally. Do you need archives/snapshots of our networks? Go to [this section](https://docs.evmos.org/validators/snapshots_archives.html).
 :::
-
-### Introduction
-
-JSON-RPC is provided on multiple transports. Evmos supports JSON-RPC over HTTP and WebSocket.
-
-### Requirements
-
-We recommend to use the server with minimum 8-core CPU and 64gb of RAM.
-You must have ports 8545 and 8546 open on your firewall.
 
 ### Enable Server
 

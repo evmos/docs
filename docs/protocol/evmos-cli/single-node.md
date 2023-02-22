@@ -4,13 +4,16 @@ sidebar_position: 3
 
 # Single Node
 
-<!-- TODO: Descripe steps to start a local network without a script from scratch -->
+Following this page, you can run a single node local network manually or
+by using the already prepared automated script. Running a single node setup is useful
+for developers who want to test their applications and protocol features because of 
+it's simplicity and speed. For more complex setups, please refer to the [Multi Node Setup](./multi-nodes) page.
 
 ## Prerequisite Readings
 
 - [Install Binary](./installation)
 
-## Automated Local Node (script)
+## Automated Script
 
 You can customize the local node script by changing values for convenience for example:
 
@@ -58,7 +61,7 @@ When working with the `local_node.sh` script, it is necessary to extend all `evm
 }
 ```
 
-## Manual Localnet
+## Manual Deployment
 
 This guide helps you create a single validator node that runs a network locally for testing and other development related uses.
 
@@ -164,21 +167,9 @@ You can then stop the node using `Ctrl+C`.
 
 ---------------------------
 
+## Further Configuration
 
-## Manual deployment
-
-The instructions for setting up a brand new full node from scratch are the the same as running a
-[single node local testnet](./single-node#manual-localnet).
-
-## Start node
-
-To start your node, just type:
-
-```bash
-evmosd start --json-rpc.enable=true --json-rpc.api="eth,web3,net"
-```
-
-## Key Management
+### Key Management
 
 To run a node with the same key every time: replace `evmosd keys add $KEY` in `./local_node.sh` with:
 
@@ -225,7 +216,7 @@ evmosd config keyring-backend file
 For more information about the Keyring and its backend options, click [here](./../../protocol/concepts/keyring).
 :::
 
-## Enable Tracing
+### Enable Tracing
 
  To enable tracing when running the node, modify the last line of the `local_node.sh` script to be the following command, where:
 
