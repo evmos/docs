@@ -20,7 +20,7 @@ More on Ethereum JSON-RPC:
 - [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)
 
 :::note
-Head over to our Academy to learn about our [Geth Javascript Console guide](https://academy.evmos.org/guides/geth-js-console).
+Head over to our Academy to learn about our [Geth Javascript Console guide](https://academy.evmos.org/developers/guides/geth-js-console).
 :::
 
 ## JSON-RPC over HTTP
