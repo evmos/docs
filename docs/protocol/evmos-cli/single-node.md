@@ -2,17 +2,20 @@
 sidebar_position: 3
 ---
 
-# Manual Localnet
+# Single Node
 
-<!-- TODO: Descripe steps to start a local network without a script from scratch -->
+Following this page, you can run a single node local network manually or
+by using the already prepared automated script. Running a single node setup is useful
+for developers who want to test their applications and protocol features because of 
+its simplicity and speed. For more complex setups, please refer to the [Multi Node Setup](./multi-nodes) page.
 
 ## Prerequisite Readings
 
 - [Install Binary](./installation)
 
-## Automated Localnet (script)
+## Automated Script
 
-You can customize the local testnet script by changing values for convenience for example:
+You can customize the local node script by changing values for convenience for example:
 
 ```bash
 # customize the name of your key, the chain-id, moniker of the node, keyring backend, and log level
@@ -58,7 +61,7 @@ When working with the `local_node.sh` script, it is necessary to extend all `evm
 }
 ```
 
-## Manual Localnet
+## Manual Deployment
 
 This guide helps you create a single validator node that runs a network locally for testing and other development related uses.
 
@@ -136,7 +139,7 @@ evmosd collect-gentxs
 
 This command will add all the `gentxs` stored in `~/.evmosd/config/gentx` to the genesis file.
 
-### Run Testnet
+### Run Single Node
 
 Finally, check the correctness of the `genesis.json` file:
 
@@ -162,23 +165,10 @@ You can then stop the node using `Ctrl+C`.
 
 
 
----------------------------
 
+## Further Configuration
 
-## Manual deployment
-
-The instructions for setting up a brand new full node from scratch are the the same as running a
-[single node local testnet](./single-node#manual-localnet).
-
-## Start node
-
-To start your node, just type:
-
-```bash
-evmosd start --json-rpc.enable=true --json-rpc.api="eth,web3,net"
-```
-
-## Key Management
+### Key Management
 
 To run a node with the same key every time: replace `evmosd keys add $KEY` in `./local_node.sh` with:
 
@@ -196,7 +186,7 @@ You can generate a new key/mnemonic with:
 evmosd keys add $KEY
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](./../../use/connect-your-wallet/metamask) for example):
+To export your Evmos key as an Ethereum private key (for use with [Metamask](./../../../use/connect-your-wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key $KEY
@@ -222,10 +212,10 @@ evmosd config keyring-backend file
 ```
 
 :::tip
-For more information about the Keyring and its backend options, click [here](./../../protocol/concepts/keyring).
+For more information about the Keyring and its backend options, click [here](./../concepts/keyring).
 :::
 
-## Enable Tracing
+### Enable Tracing
 
  To enable tracing when running the node, modify the last line of the `local_node.sh` script to be the following command, where:
 
@@ -257,17 +247,24 @@ rm $HOME/.evmosd/config/addrbook.json $HOME/.evmosd/config/genesis.json
 evmosd tendermint unsafe-reset-all --home $HOME/.evmosd
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. 
+If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, 
+but may fail if they haven't also been upgraded.
 
 ### Delete Data
 
-Data for the {{ $themeConfig.project.binary }} binary should be stored at `~/.{{ $themeConfig.project.binary }}`, respectively by default. To **delete** the existing binaries and configuration, run:
+import Highlighter from '@site/src/components/Highlighter';
+import ProjectValue from '@site/src/components/ProjectValue';
+
+Data for the <ProjectValue keyword="binary" /> binary should be stored at <Highlighter pretext="~/." keyword="binary" />,
+ respectively by default. To **delete** the existing binaries and configuration, run:
 
 ```bash
 rm -rf ~/.evmosd
 ```
 
-To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation commands from above to start the node again.
+To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation 
+commands from above to start the node again.
 
 ## Recording Transactions Per Second (TPS)
 

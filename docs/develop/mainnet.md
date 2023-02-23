@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Mainnet
 
 Before real users begin to transact with actual funds on your dApp, it is important to take into account certain factors
@@ -7,8 +11,8 @@ Before real users begin to transact with actual funds on your dApp, it is import
 
 ## Deployment
 
-You can deploy your contracts on Mainnet using the [JSON-RPC](../build-a-dApp/build-smart-contracts/build-smart-contracts.md#deploy-with-ethereum-json-rpc).
- This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/apis/networks).
+You can deploy your contracts on Mainnet using the [JSON-RPC](../develop/build-a-dApp/build-smart-contracts#deploy-with-ethereum-json-rpc).
+ This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/api/networks).
  Before you do so, have a look at the following considerations.
 
 ### Security
