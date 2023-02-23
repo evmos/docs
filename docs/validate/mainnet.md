@@ -4,19 +4,23 @@ sidebar_position: 5
 
 # Mainnet
 
-This document outlines the steps to join an existing testnet
+This document outlines the steps to join an existing mainnet.
 
 ## Prerequisite Readings
 
 - [Validator Security](./security/validator-security)
 
+import Highlighter from '@site/src/components/Highlighter';
+
 ## Mainnet
 
-You need to set the **genesis file** and **seeds**. If you need more information about past networks, check our [mainnet repo](https://github.com/evmos/mainnet). The table below gives an overview of all Mainnet Chain IDs. Note that, the displayed version might differ when an active Software Upgrade proposal exists on chain.
+You need to set the **genesis file** and **seeds**. If you need more information about past networks, check our
+ [mainnet repo](https://github.com/evmos/mainnet). The table below gives an overview of all Mainnet Chain
+  IDs. Note that, the displayed version might differ when an active Software Upgrade proposal exists on chain.
 
 | Chain ID       | Description     | Site                                                               | Version                                                      | Status  |
 | -------------- | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| `evmos_9001-2` | Evmos Mainnet 2 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-2) | [`{{ $themeConfig.project.mainnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
+| `evmos_9001-2` | Evmos Mainnet 2 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-2) | [<Highlighter keyword="mainnet_version" />](https://github.com/evmos/evmos/releases) | `Live`  |
 | `evmos_9001-1` | Evmos Mainnet 1 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-1) | [`v2.0.1`](https://github.com/evmos/evmos/releases/v2.0.1) | `Stale` |
 
 :::warning
@@ -25,15 +29,16 @@ You need to set the **genesis file** and **seeds**. If you need more information
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary `{{ $themeConfig.project.binary }}`.
+Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary <Highlighter keyword="binary" />.
 
 :::warning
-Make sure you have the right version of `{{ $themeConfig.project.binary }}` installed.
+Make sure you have the right version of <Highlighter keyword="binary" /> installed.
 :::
 
 ### Save Chain ID
 
-We recommend saving the mainnet `chain-id` into your `{{ $themeConfig.project.binary }}`'s `client.toml`. This will make it so you do not have to manually pass in the `chain-id` flag for every CLI command.
+We recommend saving the mainnet `chain-id` into your <Highlighter keyword="binary" />'s `client.toml`.
+This will make it so you do not have to manually pass in the `chain-id` flag for every CLI command.
 
 :::tip
 See the Official [Chain IDs](./../protocol/concepts/chain-id#official-chain-ids) for reference.
@@ -77,7 +82,8 @@ evmosd validate-genesis
 
 ### Add Seed Nodes
 
-Your node needs to know how to find [peers](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#peers). You'll need to add healthy [seed nodes](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#seed) to `$HOME/.evmosd/config/config.toml`. The [`mainnet`](https://github.com/evmos/mainnet) repo contains links to some seed nodes.
+Your node needs to know how to find [peers](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#peers). You'll need to add healthy [seed nodes](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#seed)
+ to `$HOME/.evmosd/config/config.toml`. The [`mainnet`](https://github.com/evmos/mainnet) repo contains links to some seed nodes.
 
 Edit the file located in `~/.evmosd/config/config.toml` and the `seeds` to the following:
 
@@ -106,10 +112,12 @@ For more information on seeds and peers, you can the Tendermint [P2P documentati
 
 ### Add Persistent Peers
 
-We can set the [`persistent_peers`](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer) field in `~/.evmosd/config/config.toml` to specify peers that your node will maintain persistent connections with. You can retrieve them from the list of
+We can set the [`persistent_peers`](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer) field in `~/.evmosd/config/config.toml` to specify peers that your node will maintain persistent
+connections with. You can retrieve them from the list of
 available peers on the [`mainnet`](https://github.com/evmos/mainnet) repo.
 
-A list of available persistent peers is also available in the `#find-peers` channel in the [Evmos Discord](https://discord.gg/evmos). You can get a random 10 entries from the `peers.txt` file in the `PEERS` variable by running the following command:
+A list of available persistent peers is also available in the `#find-peers` channel in the [Evmos Discord](https://discord.gg/evmos). You can get a random 10 entries from the `peers.txt` file in the `PEERS` variable by running
+the following command:
 
 ```bash
 PEERS=`curl -sL https://raw.githubusercontent.com/evmos/mainnet/main/evmos_9001-2/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
@@ -143,14 +151,16 @@ evmosd tx staking create-validator \
 ```
 
 :::danger
-🚨 **DANGER**: <u>Never</u> create your validator keys using a [`test`](./../protocol/concepts/keyring#testing) keying backend. Doing so might result in a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
+🚨 **DANGER**: <u>Never</u> create your validator keys using a [`test`](./../protocol/concepts/keyring#testing)
+ keying backend. Doing so might result in a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
 
 Ref: [Security Advisory: Insecurely configured geth can make funds remotely accessible](https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/)
 :::
 
 ## Start mainnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3) from the genesis validators is up-and-running, the node will start producing blocks.
+The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3)
+ from the genesis validators is up-and-running, the node will start producing blocks.
 
 ```bash
 evmosd start
