@@ -19,7 +19,7 @@ There are three types of assets:
 
 This matches Ethereum denomination of:
 
-1 ETH = 10<sup>18</sup> wei
+`1 ETH = 10<sup>18</sup> wei`
 
 ## Cosmos Coins
 

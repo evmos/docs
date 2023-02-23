@@ -6,7 +6,7 @@ sidebar_position: 0
 
 Evmos is a scalable Proof-of-Stake blockchain that is fully compatible and
 interoperable with the Ethereum Virtual Machine (EVM). It is built using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/)
-which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) (formely Tendermint) consensus engine,
+which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) (a fork of [Tendermint Core](https://docs.tendermint.com/)) consensus engine,
 to accomplish fast finality, high transaction throughput and short block times (~2 seconds).
 
 This architecture allows users to perform both Cosmos and EVM formatted transactions,
@@ -36,14 +36,15 @@ Check out the [list of modules](modules/index.md) to get an overview of what eac
 
 ## CometBFT & ABCI
 
-[CometBFT](https://github.com/cometbft/cometbft) (a fork of [Tendermint Core](https://docs.tendermint.com/)) consists of two chief technical components: a blockchain consensus
-engine and a generic application interface. The consensus engine ensures that the same
-transactions are recorded on every machine in the same order. The application
-interface, called the [Application Blockchain Interface (ABCI)](https://docs.tendermint.com/master/spec/abci/),
+[CometBFT](https://github.com/cometbft/cometbft) consists of two chief technical components:
+a blockchain consensus engine and a generic application interface.
+The consensus engine ensures that the same transactions
+are recorded on every machine in the same order.
+The application interface, called the [Application Blockchain Interface (ABCI)](https://docs.tendermint.com/master/spec/abci/),
 enables the transactions to be processed in any programming language.
 
 CometBFT has evolved to be a general-purpose blockchain consensus engine that
-can host arbitrary application states. Since CometBFT can replicate arbitrary
+can host arbitrary application states. Since it can replicate arbitrary
 applications, it can be used as a plug-and-play replacement for the consensus
 engines of other blockchains. Evmos is an example of an ABCI application
 replacing Ethereum's PoW via CometBFT's consensus engine.
