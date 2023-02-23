@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## Validating on Evmos
 
-Evmos is based on [Tendermint Core](https://github.com/tendermint/tendermint/blob/master/docs/introduction/what-is-tendermint.md),
+Evmos is based on [CometBFT](https://github.com/cometbft/cometbft),
 which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators
 participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each
 validator's private key.
