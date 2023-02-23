@@ -71,7 +71,7 @@ function Home() {
               />
 
               <Card
-                to="./security"
+                to="./protocol/security"
                 header={{
                   label: "🛡️ Security on Evmos",
                 }}
@@ -79,7 +79,7 @@ function Home() {
                   label:
                     "Learn about our Security Policy",
                 }}
-              />              
+              />
 
               <Card
                 to="https://github.com/evmos"
