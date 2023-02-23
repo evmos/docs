@@ -65,6 +65,9 @@
         },
         {
             "pattern": "^https://metamask.io"
+        },
+        {
+            "pattern": "^https://evm.evmos.dev"
         }
   ],
     "retryOn429": true,
