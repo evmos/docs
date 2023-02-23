@@ -58,7 +58,6 @@ to generate a PubKey that is compared with the address in the message.
 
 ## Evmos Accounts
 
-<<<<<<< HEAD
 Evmos defines its own custom `Account` type
 to implement a HD wallet that is compatible with Ethereum type addresses.
 It uses Ethereum's ECDSA secp256k1 curve for keys (`eth_secp265k1`)
@@ -66,11 +65,6 @@ and satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84)
 for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
 This cryptographic curve is not to be confused with [Bitcoin's ECDSA secp256k1](https://en.bitcoin.it/wiki/Secp256k1) curve.
 
-=======
-Evmos defines its own custom `Account` type that uses Ethereum's ECDSA secp256k1 curve for keys. This
-satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full
-[BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
->>>>>>> main
 The root HD path for Evmos-based accounts is `m/44'/60'/0'/0`.
 Evmos uses the Coin type `60` to support Ethereum type accounts,
 unlike many other Cosmos chains that use Coin type `118` ([list of coin types](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
