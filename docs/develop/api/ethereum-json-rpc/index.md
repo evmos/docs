@@ -4,9 +4,14 @@ sidebar_position: 1
 
 # Ethereum JSON-RPC
 
-The JSON-PRC Server provides an API that allows you to connect to the Evmos blockchain and interact with the EVM. This gives you direct access to reading Ethereum-formatted transactions or sending them to the network which otherwise wouldn't be possible on a Cosmos chain, such as Evmos.
+The JSON-PRC Server provides an API that allows you to connect to the Evmos blockchain and interact with the EVM. This
+gives you direct access to reading Ethereum-formatted transactions or sending them to the network which otherwise
+wouldn't be possible on a Cosmos chain, such as Evmos.
 
-[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. JSON-RPC is provided on multiple transports. Evmos supports JSON-RPC over HTTP and WebSocket. Transports must be enabled through command-line flags or through the `app.toml` configuration file. It uses JSON ([RFC 4627](https://www.ietf.org/rfc/rfc4627.txt)) as data format.
+[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It
+defines several data structures and the rules around their processing. JSON-RPC is provided on multiple transports.
+Evmos supports JSON-RPC over HTTP and WebSocket. Transports must be enabled through command-line flags or through the
+`app.toml` configuration file. It uses JSON ([RFC 4627](https://www.ietf.org/rfc/rfc4627.txt)) as data format.
 
 More on Ethereum JSON-RPC:
 
@@ -14,11 +19,20 @@ More on Ethereum JSON-RPC:
 - [Geth JSON-RPC Server](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
 - [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)
 
+:::note
+Head over to our Academy to learn about our [Geth Javascript Console guide](https://academy.evmos.org/guides/geth-js-console).
+:::
+
 ## JSON-RPC over HTTP
 
-Evmos supports most of the standard web3 JSON-RPC APIs to connect with existing Ethereum-compatible web3 tooling over HTTP. Ethereum JSON-RPC APIs use a namespace system. RPC methods are grouped into several categories depending on their purpose. All method names are composed of the namespace, an underscore, and the actual method name within the namespace. For example, the `eth_call` method resides in the eth namespace. Access to RPC methods can be enabled on a per-namespace basis.
+Evmos supports most of the standard web3 JSON-RPC APIs to connect with existing Ethereum-compatible web3 tooling over
+HTTP. Ethereum JSON-RPC APIs use a namespace system. RPC methods are grouped into several categories depending on
+their purpose. All method names are composed of the namespace, an underscore, and the actual method name within
+the namespace. For example, the `eth_call` method resides in the eth namespace. Access to RPC methods can be enabled
+on a per-namespace basis.
 
-Find below the JSON-RPC namespaces supported on Evmos or head over to the documentation for the individual API endpoints and their respective curl commands on the [JSON-RPC Methods](./methods.md) page.
+Find below the JSON-RPC namespaces supported on Evmos or head over to the documentation for the individual API endpoints
+and their respective curl commands on the [JSON-RPC Methods](./methods.md) page.
 
 | Namespace                                         | Description                                                                                                                                                                                                                  | Supported | Enabled by Default |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ |
@@ -32,9 +46,6 @@ Find below the JSON-RPC namespaces supported on Evmos or head over to the docume
 | [`txpool`](./JSON-RPC-methods#txpool-methods)     | The `txpool` API gives you access to several non-standard RPC methods to inspect the contents of the transaction pool containing all the currently pending transactions as well as the ones queued for future processing.    | ✔        | 🚫                 |
 | `admin`                                           | The `admin` API gives you access to several non-standard RPC methods, which will allow you to have a fine grained control over your nodeinstance, including but not limited to network peer and RPC endpoint management.     | 🚫        |                    |
 | [`personal`](./JSON-RPC-methods#personal-methods) | The `personal` API manages private keys in the key store.                                                                                                                                                                    | ✔        | 🚫                 |
-
-
-
 
 ## Subscribing to Ethereum Events
 
@@ -63,9 +74,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 
 ### Ethereum Websocket
 
-The Ethereum Websocket allows you to subscribe to Ethereum logs and events emitted in smart contracts. This way you don't need to continuously make requests when you want specific information.
+The Ethereum Websocket allows you to subscribe to Ethereum logs and events emitted in smart contracts. This way you
+don't need to continuously make requests when you want specific information.
 
-Since Evmos is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the [event format](./tendermint-rpc#subscribing-to-cosmos-and-tendermint-events) from them. However, in order to support the native Web3 compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub), Evmos needs to cast the Tendermint
+Since Evmos is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the
+[event format](./tendermint-rpc#subscribing-to-cosmos-and-tendermint-events) from them. However, in order to support the
+native Web3 compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub),
+Evmos needs to cast the Tendermint
 responses retrieved into the Ethereum types.
 
 You can start a connection with the Ethereum websocket using the `--json-rpc.ws-address` flag when starting
@@ -87,6 +102,7 @@ ws ws://localhost:8546/
 ```
 
 ## Further Considerations
+
 ### HEX value encoding
 
 At present there are two key datatypes that are passed over JSON:
@@ -96,7 +112,8 @@ At present there are two key datatypes that are passed over JSON:
 
 Both are passed with a hex encoding, however with different requirements to formatting.
 
-When encoding quantities (integers, numbers), encode as hex, prefix with `"0x"`, the most compact representation (slight exception: zero should be represented as `"0x0"`). Examples:
+When encoding quantities (integers, numbers), encode as hex, prefix with `"0x"`, the most compact representation (slight
+exception: zero should be represented as `"0x0"`). Examples:
 
 - `0x41` (65 in decimal)
 - `0x400` (1024 in decimal)
@@ -104,7 +121,8 @@ When encoding quantities (integers, numbers), encode as hex, prefix with `"0x"`,
 - WRONG: `0x0400` (no leading zeroes allowed)
 - WRONG: `ff` (must be prefixed `0x`)
 
-When encoding unformatted data (byte arrays, account addresses, hashes, bytecode arrays), encode as hex, prefix with `"0x"`, two hex digits per byte. Examples:
+When encoding unformatted data (byte arrays, account addresses, hashes, bytecode arrays), encode as hex, prefix with `"0x"`,
+two hex digits per byte. Examples:
 
 - `0x41` (size 1, `"A"`)
 - `0x004200` (size 3, `"\0B\0"`)

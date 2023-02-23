@@ -4,16 +4,18 @@ sidebar_position: 11
 
 # Tokens
 
-Tokens represent a digital asset that functions on a blockchain, while coins represent a cryptocurrency that can be
-exchanged and used as a medium of exchange.
-
 Evmos uses [Atto](https://en.wikipedia.org/wiki/Atto-) EVMOS as the base denomination to maintain parity with Ethereum.
+There are three types of assets:
 
-1 evmos = 10<sup>18</sup> aevmos
+- The native Evmos token
+- IBC Coins (via the IBC)
+- Ethereum-typed tokens, e.g. ERC-20
+
+`1 evmos = 10<sup>18</sup> aevmos`
 
 This matches Ethereum denomination of:
 
-1 ETH = 10<sup>18</sup> wei
+`1 ETH = 10<sup>18</sup> wei`
 
 ### Cosmos Coins
 
@@ -28,14 +30,10 @@ that are natively supported by the EVM.
 ## Evmos Assets Page
 
 Check out how we represent ERC-20 tokens and Cosmos IBC Coins through our [Single Token Representation](https://app.evmos.org/assets)
-feature on the Evmos Dashboard.
+feature on the Evmos Dashboard. Evmos enabled this feature to help with the user experiences by obfuscating the assets
+types away from the users and allow them to focus on the interaction. The protocol simplifies the process by handling the
+conversion and users are given the simplification of denomination and the amount of assets they hold.
 
 ![evmos-dashboard-assets])(/img/dashboard-assets.png)
 
-## Registration
-
-Any non-native coins coming over via IBC and need an ERC-20 representation can look into
-our process. [This](https://academy.evmos.org/developers/guides/erc20-registration) document will detail how to go
-through governance. On the other hand, if you already have the ERC-20 token representation and need an
-IBC representation, then head over to [here](https://academy.evmos.org/developers/guides/cosmos-coin-registration)
-to discover more.
+For more information on how we handle token registration, head over [here](./../../develop/mainnet#token-registration).
