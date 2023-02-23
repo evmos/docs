@@ -78,8 +78,8 @@ Run the local node by executing the `local_node.sh` script in the base directory
 ```
 
 The script stores the node configuration including the local default endpoints under `~/.tmp-evmosd/config/config.toml`.
- If you have previously run the script, the script allows you to overwrite the existing configuration and start a new
- local node.
+If you have previously run the script, the script allows you to overwrite the existing configuration and start a new
+local node.
 
 Once your node is running you will see it validating and producing blocks in your local Evmos blockchain:
 
@@ -88,6 +88,9 @@ Once your node is running you will see it validating and producing blocks in you
 # ...
 1:00PM INF indexed block exents height=7 module=txindex server=node
 ```
+
+For more information on how to customize a local node,
+head over to the [Single Node](single-node.md) page.
 
 ## Using `evmosd`
 
@@ -146,11 +149,9 @@ For more about the available key commands, use the `--help` flag
 evmosd keys -h
 ```
 
-<!-- TODD: Add link to node configurations
 :::tip
-For more information about the Keyring and its backend options, click [here](../../../protocol/concepts/keyring).
+For more information about the Keyring and its backend options, click [here](../concepts/keyring.md).
 :::
--->
 
 ### Interact with a Network
 
@@ -186,7 +187,7 @@ evmosd config node [tendermint-rpc-endpoint] \
 --home ~/.tmp-evmosd
 ```
 
-<!-- TODD Add Link to learn about more node configurations -->
+Learn about more node configurations [here](configuration.mdx).
 
 #### Queries
 
@@ -238,10 +239,5 @@ evmosd tx
 evmosd tx bank
 ```
 
-<!-- TODO add CTA for
-
-- Academy
-- Node configurations
-- Manual node setup
-- Running Validator node
--  -->
+Now that you've learned the basics of how to run and interact with an Evmos network,
+head over to [configurations](configuration.mdx) for futher customization.
