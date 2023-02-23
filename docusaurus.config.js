@@ -151,7 +151,7 @@ const config = {
             position: 'right',
             label: 'Tools',
             to: '/develop/tools',
-          },          
+          },
           {
             position: 'right',
             label: 'Networks',
@@ -163,7 +163,7 @@ const config = {
             to: 'https://app.evmos.org',
           },
           {
-            href: 'https://github.com/evmos',
+            href: 'https://github.com/evmos/evmos',
             className: 'pseudo-icon github-icon',
             position: 'right',
           },
