@@ -4,13 +4,13 @@ sidebar_position: 0
 
 # Technical Architecture
 
-Evmos is a scalable, Proof-of-Stake blockchain that is fully compatible and
+Evmos is a scalable Proof-of-Stake blockchain that is fully compatible and
 interoperable with the Ethereum Virtual Machine (EVM). It is built using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/)
-which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) consensus engine,
+which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) (formely Tendermint) consensus engine,
 to accomplish fast finality, high transaction throughput and short block times (~2 seconds).
 
-This architecture allows users to perform both Cosmos and EVM formatted transactions with Fast Finality and High throughput,
-developers to scale EVM dApps cross-chain via [IBC](https://cosmos.network/ibc)
+This architecture allows users to perform both Cosmos and EVM formatted transactions,
+developers to scale EVM dApps cross-chain via [IBC](https://cosmos.network/ibc),
 and tokens and assets in the network to come from different independent sources.
 
 Evmos enables these key features by:
@@ -31,14 +31,13 @@ software to seamlessly deploy smart contracts which interact with the rest of th
 Evmos enables the full composability and modularity of the [Cosmos SDK](https://docs.cosmos.network/).
 As a Cosmos chain, Evmos is a sovereign blockchain with its own native token,
 that can connect to other chains through IBC. It includes standard modules from the Cosmos SDK,
-that work side to side with Evmos-specific modules, build by the Evmos core development team.
+that work side to side with Evmos-specific modules, built by the Evmos core development team.
 Check out the [list of modules](modules/index.md) to get an overview of what each module is responsible for.
 
 ## CometBFT & ABCI
 
 [CometBFT](https://github.com/cometbft/cometbft) (a fork of [Tendermint Core](https://docs.tendermint.com/)) consists of two chief technical components: a blockchain consensus
-engine and a generic application interface. The consensus engine, called
-CometBFT, ensures that the same
+engine and a generic application interface. The consensus engine ensures that the same
 transactions are recorded on every machine in the same order. The application
 interface, called the [Application Blockchain Interface (ABCI)](https://docs.tendermint.com/master/spec/abci/),
 enables the transactions to be processed in any programming language.
@@ -59,13 +58,13 @@ Evmos enables EVM compatibility by implementing various components
 that together support all the EVM state transitions
 while ensuring the same developer experience as Ethereum:
 
-- Ethereum transaction format as a Cosmos SDK `Tx` and `Msg` interface
+- Ethereum's transaction format as a Cosmos SDK `Tx` and `Msg` interface
 - Ethereum's `secp256k1` curve for the Cosmos Keyring
 - `StateDB` interface for state updates and queries
 - [JSON-RPC](../develop/api/ethereum-json-rpc) client for interacting with the EVM
 
 Most components are implemented in the [EVM module](./modules/evm/index.md).
-To archive a seamless developer UX, however, some of the components are implemented
+To achieve a seamless developer UX, however, some of the components are implemented
 outside of the module.
 
 If you want to learn more about how Evmos achieves EVM compatibility as a Cosmos chain,
