@@ -176,8 +176,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Use Evmos',
+                label: 'Build a Dapp',
+                to: '/develop/build-a-dApp/build-smart-contracts',
+              },
+              {
+                label: 'Contribute to Evmos',
                 to: '/use',
+              },
+              {
+                label: 'Become a Validator',
+                to: '/validate',
               },
             ],
           },
