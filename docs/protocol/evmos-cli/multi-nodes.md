@@ -1,26 +1,21 @@
+---
+sidebar_position: 4
+---
+
 # Multi Node
 
-## Prerequisite Readings
+Following this page, you can run a localnet setup with docker
+that consists of a 4-node local chain.
+This setup can be useful for developers to test their applications and
+protocol features on a multi-node setup.
 
-- [Install Ignite CLI](https://github.com/ignite/cli)  
-- [Install Docker](https://docs.docker.com/engine/installation/)  
-- [Install docker-compose](https://docs.docker.com/compose/install/)  
-
-## Automated Localnet with Ignite CLI
-
-Once you have installed `ignite`, just run the localnet by using
-
-```bash
-ignite chain serve 
-```
-
-Detailed instructions can be found in the [Ignite CLI documentation](https://github.com/ignite/cli)
-
-## Automated Localnet with Docker
+A similar setup is used by the Evmos team to get insights
+about the impact of new features and testing different user flows.
+This testing setup can be found on the [Evmos testing repository](https://github.com/evmos/testing).
 
 ### Build & Start
 
-To build start a 4 node testnet run:
+To build start a 4 node testnet using [docker](https://docs.docker.com/engine/installation/), run:
 
 ```bash
 make localnet-start
@@ -29,8 +24,8 @@ make localnet-start
 This command creates a 4-node network using the `evmosdnode` Docker image.
 The ports for each node are found in this table:
 
-| Node ID          | P2P Port | Tendermint RPC Port | REST/ Ethereum JSON-RPC Port | WebSocket Port |
-|------------------|----------|---------------------|------------------------------|----------------|
+| Node ID      | P2P Port | Tendermint RPC Port | REST/ Ethereum JSON-RPC Port | WebSocket Port |
+| ------------ | -------- | ------------------- | ---------------------------- | -------------- |
 | `evmosnode0` | `26656`  | `26657`             | `8545`                       | `8546`         |
 | `evmosnode1` | `26659`  | `26660`             | `8547`                       | `8548`         |
 | `evmosnode2` | `26661`  | `26662`             | `8549`                       | `8550`         |
@@ -103,13 +98,13 @@ build/
 │       ├── data
 │       └── evmosd.log
 └── node3
-    ├── evmosd
-    │   ├── key_seed.json
-    │   └── keyring-test-cosmos
-    └── evmosd
-        ├── config
-        ├── data
-        └── evmosd.log
+├── evmosd
+│   ├── key_seed.json
+│   └── keyring-test-cosmos
+└── evmosd
+    ├── config
+    ├── data
+    └── evmosd.log
 ```
 
 Each `./build/nodeN` directory is mounted to the `/evmosd` directory in each container.
@@ -171,7 +166,7 @@ docker logs -f evmosdnode0
 To interact with the testnet via WebSockets or RPC/API, you will send your request to the corresponding ports:
 
 | EVM JSON-RPC | Eth Websocket |
-|--------------|---------------|
+| ------------ | ------------- |
 | `8545`       | `8546`        |
 
 You can send a curl command such as:
@@ -184,7 +179,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 The IP address will be the public IP of the docker container.
 :::
 
-Additional instructions on how to interact with the WebSocket can be found on the [events documentation](./../clients/ethereum-JSON-RPC/event#ethereum-websocket).
+Additional instructions on how to interact with the WebSocket can be found on the 
+[events documentation](./../clients/ethereum-JSON-RPC/event#ethereum-websocket).
 
 ### Keys & Accounts
 
@@ -199,12 +195,14 @@ Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
 :::tip
-**Note**: Each node's seed is located at `./build/nodeN/evmosd/key_seed.json` and can be restored to the CLI using the `evmosd keys add --restore` command
+**Note**: Each node's seed is located at `./build/nodeN/evmosd/key_seed.json` and can be restored to the CLI using the
+`evmosd keys add --restore` command
 :::
 
 ### Special Binaries
 
-If you have multiple binaries with different names, you can specify which one to run with the BINARY environment variable. The path of the binary is relative to the attached volume. For example:
+If you have multiple binaries with different names, you can specify which one to run with the BINARY environment
+variable. The path of the binary is relative to the attached volume. For example:
 
 ```bash
 # Run with custom binary

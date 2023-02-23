@@ -25,7 +25,6 @@ const SECTIONS = [
   defineSection('develop'),
   defineSection('validate'),
   defineSection('protocol'),
-  defineSection('api'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -155,7 +154,7 @@ const config = {
           },
           {
             position: 'right',
-            label: 'APIs',
+            label: 'Networks',
             to: '/develop/api/networks',
           },
           {
