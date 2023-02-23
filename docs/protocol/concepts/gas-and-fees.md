@@ -4,7 +4,19 @@ sidebar_position: 4
 
 # Gas and Fees
 
-Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos.
+Users need to pay a fee to submit transactions on the Evmos network.
+As fees are handled differently on Ethereum and Cosmos,
+it is important to understand how the Evmos blockchain implements an Ethereum-type fee calculation,
+that is compatible with the Cosmos SDK.
+
+Therefore this overview explains the basics of gas calculation,
+how to provide fees for transactions
+and how the Ethereum-type fee calculation uses a fee market (EIP1559)
+for prioritizing transactions.
+
+Also, note the fees that are paid for interacting with smart contracts on Evmos
+can earn smart contract deployers a revenue. For information on this,
+head to [develop](../../develop/mainnet.md#revenue).
 
 ## Prerequisite Readings
 
@@ -15,25 +27,33 @@ Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos.
 
 ### Why do Transactions Need Fees?
 
-If anyone can submit transactions to a network at no cost, the network can be overrun by a handful of actors sending
-large numbers of fraudulent transactions to clog up the network and stop it from working.
+If anyone can submit transactions to a network at no cost,
+the network can be overrun by a handful of actors
+sending large numbers of fraudulent transactions
+to clog up the network and stop it from working.
 
-The solution to this is a concept called “gas," which is a resource consumed throughout transaction execution.
-In practice, a small amount of gas is spent on each step of code execution, thus effectively charging for use of a
-validator’s resources and preventing malicious actors from halting a network at will.
+The solution to this is a concept called “gas,"
+which is a resource consumed throughout transaction execution.
+In practice, a small amount of gas is spent on each step of code execution,
+thus effectively charging for use of a validator’s resources
+and preventing malicious actors from halting a network at will.
 
 ### What is Gas?
 
-In general, gas is a unit that measures the computational intensity of a particular transaction—in other words, how
- much work would be required to evaluate and perform the job. Complex, multi-step transactions, such as a Cosmos
- transaction that delegates to a dozen validators, require more gas than simple, single-step transactions, such as a
- Cosmos transaction to send tokens to another address.
+In general, gas is a unit that measures the computational intensity of a particular transaction
+— in other words, how much work would be required to evaluate and perform the job.
+Complex, multi-step transactions,
+such as a Cosmos transaction that delegates to a dozen validators,
+require more gas than simple, single-step transactions,
+such as a Cosmos transaction to send tokens to another address.
 
-When referring to a transaction, “gas” refers to the total quantity of gas required for the transaction. For example,
-a transaction may require 300,000 units of gas to be executed.
+When referring to a transaction,
+“gas” refers to the total quantity of gas required for the transaction.
+For example, a transaction may require 300,000 units of gas to be executed.
 
-Gas can be thought of as electricity (kWh) within a house or factory, or fuel for automobiles. The idea is that it costs
- something to get somewhere.
+Gas can be thought of as electricity (kWh) within a house or factory,
+or fuel for automobiles.
+The idea is that it costs something to get somewhere.
 
 More on Gas:
 
@@ -43,11 +63,13 @@ More on Gas:
 
 ### How is Gas Calculated?
 
-In general, there’s no way to know exactly how much gas a transaction will cost without simply running it. Using the
-Cosmos SDK, this can be done by [simulating the Tx](https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction).
- Otherwise, there are ways to estimate the amount of gas a transaction will require, based on the details of the
- transaction fields, and data. In the case of the EVM, for example, each bytecode operation has a
-  [corresponding amount of gas](https://ethereum.org/en/developers/docs/evm/opcodes/).
+In general, there’s no way to know exactly how much gas a transaction will cost
+without simply running it.
+Using the Cosmos SDK, this can be done by [simulating the Tx](https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction).
+Otherwise, there are ways to estimate the amount of gas a transaction will require,
+based on the details of the transaction fields, and data.
+In the case of the EVM, for example, each bytecode operation
+has a [corresponding amount of gas](https://ethereum.org/en/developers/docs/evm/opcodes/).
 
 More on Gas Calculations:
 
@@ -57,16 +79,19 @@ More on Gas Calculations:
 
 ### How does Gas Relate to Fees?
 
-While gas refers to the computational work required for execution, fees refer to the amount of the tokens you actually
-spend to execute the transaction. They are derived using the following formula:
+While gas refers to the computational work required for execution,
+fees refer to the amount of the tokens you actually spend to execute the transaction.
+They are derived using the following formula:
 
 ```markdown
 Total Fees = Gas * Gas Price (the price per unit of gas)
 ```
 
-If “gas” was measured in kWh, the “gas price” would be the rate (in dollars per kWh) determined by your energy provider,
- and the “fees” would be your bill. Just as with electricity, gas price is liable to fluctuate over a given day, depending
-  on network traffic.
+If “gas” was measured in kWh, the “gas price” would be the rate (in dollars per kWh)
+determined by your energy provider,
+and the “fees” would be your bill.
+Just as with electricity, gas price is liable to fluctuate over a given day,
+depending on network traffic.
 
 More on Gas vs. Fees:
 
