@@ -22,3 +22,6 @@ yarn-error.log*
 
 # JetBrains files
 .idea/
+
+# IDE custom plugins
+/.vscode
