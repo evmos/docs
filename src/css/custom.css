@@ -229,7 +229,7 @@ main {
 }
 
 .card__header h3 {
-  color: #e84142;
+  color: var(--ifm-color-primary-darkest);
 }
 
 article a[href^="http"]::after {
