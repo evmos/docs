@@ -1,5 +1,31 @@
 # Testnet
 
+The Evmos Testnet is a decentralized blockchain network
+that runs parallel to the Mainnet.
+It allows developers to test and deploy their decentralized applications (dApps)
+in a safe and secure environment without the risk of losing real funds.
+It is run by Validators using the same software as on the Evmos Mainnet,
+which means it is built using the Ethereum Virtual Machine (EVM)
+and supports the Ethereum toolchain.
+This makes it compatible with a vast ecosystem
+of existing Ethereum-based applications and tools.
+
+Using the Evmos Testnet provides several benefits for dApp developers.
+Firstly, it enables them to test and refine their smart contracts
+and dApps in a sandbox environment without the risk of making costly mistakes.
+Developers can experiment with different use cases and scenarios,
+simulate various network conditions,
+and stress test their applications to ensure they are scalable and resilient.
+Secondly, the Evmos Testnet provides a community-driven
+and collaborative platform for developers to share knowledge, best practices, and code.
+This can help developers to speed up their development process
+and tap into a wealth of resources and expertise.
+
+Find out below how to connect to Testnet
+and request testnet tokens from the Faucet to start developing.
+Note, that tokens on Testnet don’t have actual value,
+so that you don’t need to worry about loosing funds.
+
 ## Swagger Docs
 
 We hosted our testnet API endpoints [here](./../develop/api#clients) and it uses Swagger.
