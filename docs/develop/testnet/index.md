@@ -44,7 +44,7 @@ Follow the [Metamask](./../../use/connect-your-wallet/metamask), [Keplr](./../..
 or [Keyring](./../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
 :::
 
-## Request Testnet tokens
+### Request Testnet tokens
 
 Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens
 for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request`
@@ -80,7 +80,7 @@ View your account balance either by clicking on the Keplr extension or by using 
 it might be smaller than the number of decimals displayed in the Keplr extension.
 :::
 
-## Rate limits
+### Rate limits
 
 :::tip
 All addresses **MUST** be authenticated using ReCAPTCHA before requesting tokens.
@@ -91,11 +91,11 @@ requests for a period of time. By default, the faucet service accepts 1 request 
 <ProjectValue keyword="testnet_denom" /> from the faucet for each address only once every 24h. If you try to request
 multiple times within the 24h cooldown phase, no transaction will be initiated. Please try again in 24 hours.
 
-## Amount
+### Amount
 
 For each request, the faucet transfers 1 <ProjectValue keyword="testnet_denom" /> to the given address.
 
-## Faucet Addresses
+### Faucet Addresses
 
 The public faucet addresses for the testnet are:
 
