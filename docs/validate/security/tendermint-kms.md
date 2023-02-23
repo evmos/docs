@@ -4,13 +4,15 @@ sidebar_position: 2
 
 # Tendermint KMS
 
-[Tendermint KMS](https://github.com/iqlusioninc/tmkms) is a Key Management Service (KMS) that allows separating key management from Tendermint nodes. In addition it provides other advantages such as:
+[Tendermint KMS](https://github.com/iqlusioninc/tmkms) is a Key Management Service (KMS) that allows separating key
+management from Tendermint nodes. In addition it provides other advantages such as:
 
 - Improved security and risk management policies
 - Unified API and support for various HSM (hardware security modules)
 - Double signing protection (software or hardware based)
 
-It is recommended that the KMS service runs in a separate physical hosts. On this page you can learn how to setup a Key Management System for Evmos with our without ledger.
+It is recommended that the KMS service runs in a separate physical hosts. On this page you can learn how to setup
+a Key Management System for Evmos with our without ledger.
 
 ## Install Tendermint KMS onto the node
 
@@ -20,23 +22,23 @@ You will need the following prerequisites:
 - ✅ **C compiler**: e.g. gcc, clang
 - ✅ **pkg-config**
 - ✅ **libusb** (1.0+). Install instructions for common platforms
-    - ✅ Debian/Ubuntu
+- ✅ Debian/Ubuntu
 
-      ```bash
-      apt install libusb-1.0-0-dev
-      ```
+  ```bash
+  apt install libusb-1.0-0-dev
+  ```
 
-    - ✅ RedHat/CentOS
+- ✅ RedHat/CentOS
 
-      ```bash
-      yum install libusb1-devel
-      ```
+  ```bash
+  yum install libusb1-devel
+  ```
 
-    - ✅ macOS (Homebrew)
+- ✅ macOS (Homebrew)
 
-      ```
-      brew install libusb
-      ```
+  ```
+  brew install libusb
+  ```
 
 :::tip
 For `x86_64` architecture only:
@@ -49,7 +51,8 @@ export RUSTFLAGS=-Ctarget-feature=+aes,+ssse3
 
 :::
 
-We are ready to install KMS. There are 2 ways to do this: compile from source or install with Rusts cargo-install. We’ll use the first option.
+We are ready to install KMS. There are 2 ways to do this: compile from source or install with Rusts cargo-install.
+We’ll use the first option.
 
 ### Compile from source code
 
@@ -62,7 +65,8 @@ gh repo clone iqlusioninc/tmkms && cd tmkms
 cargo build --release --features=ledger
 ```
 
-Alternatively, substitute `--features=yubihsm` to enable [YubiHSM](https://www.yubico.com/products/hardware-security-module/) support.
+Alternatively, substitute `--features=yubihsm` to enable [YubiHSM](https://www.yubico.com/products/hardware-security-module/)
+support.
 
 If successful, it will produce the `tmkms` executable located at: `./target/release/tmkms`.
 
@@ -72,14 +76,16 @@ A KMS can be configured using the following HSMs
 
 ### YubiHSM
 
-Detailed information on how to setup a KMS with [YubiHSM 2](https://www.yubico.com/products/hardware-security-module/) can be found [here](https://github.com/iqlusioninc/tmkms/blob/master/README.yubihsm.md).
+Detailed information on how to setup a KMS with [YubiHSM 2](https://www.yubico.com/products/hardware-security-module/)
+can be found [here](https://github.com/iqlusioninc/tmkms/blob/master/README.yubihsm.md).
 
 ## Tendermint KMS + Ledger
 
 Learn how to set up Tendermint KMS with the Tendermint Ledger app.
 
 :::warning
-🚧  The following instructions are a brief walkthrough and not a comprehensive guideline. You should consider and research more about the [security implications](./validator-security) of activating an external KMS.
+🚧  The following instructions are a brief walkthrough and not a comprehensive guideline. You should consider and
+research more about the [security implications](./validator-security) of activating an external KMS.
 
 🚨**IMPORTANT**: KMS and Ledger Tendermint app are currently work in progress. Details may vary. Use under **your own risk**
 
@@ -92,14 +98,16 @@ Learn how to set up Tendermint KMS with the Tendermint Ledger app.
 
 ### Checklist
 
-- [ ] Ledger [Nano X](https://shop.ledger.com/pages/ledger-nano-x) or [Nano S](https://shop.ledger.com/products/ledger-nano-s) device (compare [here](https://shop.ledger.com/pages/hardware-wallets-comparison))
+- [ ] Ledger [Nano X](https://shop.ledger.com/pages/ledger-nano-x) or [Nano S](https://shop.ledger.com/products/ledger-nano-s)
+device (compare [here](https://shop.ledger.com/pages/hardware-wallets-comparison))
 - [ ] [Ledger Live](https://www.ledger.com/ledger-live) installed
 - [ ] Tendermint app installed (only in `Developer Mode`)
 - [ ] Latest Versions (Firmware and Tendermint app)
 
 ### Tendermint Validator app (for Ledger devices)
 
-You should be able to find the Tendermint app in Ledger Live. You will need to enable `Developer Mode` in Ledger Live `Settings` in order to find the app.
+You should be able to find the Tendermint app in Ledger Live. You will need to enable `Developer Mode` in Ledger Live
+`Settings` in order to find the app.
 
 ### KMS configuration
 
@@ -111,21 +119,22 @@ You can find other configuration examples [here](https://github.com/iqlusioninc/
 
 - Create a `~/.tmkms/tmkms.toml` file with the following content (use an adequate `chain_id`)
 
-  ```toml
-  # Example KMS configuration file
-  [[validator]]
-  addr = "tcp://localhost:26658"                  # or "unix:///path/to/socket"
-  chain_id = "evmos_9001-1"
-  reconnect = true                                # true is the default
-  secret_key = "~/.tmkms/secret_connection.key"
+```toml
+# Example KMS configuration file
+[[validator]]
+addr = "tcp://localhost:26658"                  # or "unix:///path/to/socket"
+chain_id = "evmos_9001-1"
+reconnect = true                                # true is the default
+secret_key = "~/.tmkms/secret_connection.key"
 
-  [[providers.ledger]]
-  chain_ids = ["evmos_9001-1"]
-  ```
+[[providers.ledger]]
+chain_ids = ["evmos_9001-1"]
+```
 
 - Edit `addr` to point to your `evmosd` instance.
 - Adjust `chain-id` to match your `.evmosd/config/config.toml` settings.
-- `provider.ledger` has not additional parameters at the moment, however, it is important that you keep that header to enable the feature.
+- `provider.ledger` has not additional parameters at the moment, however, it is important that you keep that
+header to enable the feature.
 
 *Plug your Ledger device and open the Tendermint validator app.*
 
@@ -161,7 +170,8 @@ Take note of the validator pubkey that appears in your screen. *We will use it i
 
 ### Evmos configuration
 
-You need to enable KMS access by editing `.evmosd/config/config.toml`. In this file, modify `priv_validator_laddr` to create a listening address/port or a unix socket in `evmosd`.
+You need to enable KMS access by editing `.evmosd/config/config.toml`. In this file, modify `priv_validator_laddr`
+to create a listening address/port or a unix socket in `evmosd`.
 
 For example:
 
@@ -173,7 +183,8 @@ priv_validator_laddr = "tcp://127.0.0.1:26658"
 ...
 ```
 
-Let's assume that you have set up your validator account and called it `kmsval`. You can tell evmosd the key that we've got in the previous section.
+Let's assume that you have set up your validator account and called it `kmsval`. You can tell evmosd the key that
+we've got in the previous section.
 
 ```bash
 evmosd gentx --name kmsval --pubkey <pub_key>
