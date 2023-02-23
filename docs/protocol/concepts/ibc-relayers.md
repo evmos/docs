@@ -4,11 +4,12 @@ sidebar_position: 5
 
 # IBC Relayers
 
-Inter-Blockchain Communication (IBC) is a protocol that allows independent blockchains to communicate with each other
-and exchange value, particularly tokens. IBC relayers are software programs that facilitate communication between two
-distinct blockchain networks that support IBC. Relayers read packets of data from one blockchain and communicate them
+Relayers read packets of data from one blockchain and communicate them
 to another blockchain, acting as a sort of decentralized postal service that allows two sovereign blockchains to send
-messages to each other.
+messages to each other. The process to enable this utilizes the Inter-Blockchain Communication (IBC) as a protocol.
+It allows independent blockchains to communicate with each other
+and exchange value, particularly tokens. IBC relayers are software programs that facilitate communication between two
+distinct blockchain networks that support IBC.
 
 ![TAO-IBC](https://tutorials.cosmos.network/resized-images/600/academy/3-ibc/images/connectionstate.png)
 

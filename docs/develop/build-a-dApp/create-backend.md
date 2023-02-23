@@ -5,6 +5,9 @@ slug: '/create-backend'
 
 # Create A Backend
 
+It is important to note that not all DApps require a backend. For example, if the DApp is designed solely for
+transactions, a backend may not be necessary. Additionally, the frontend of a DApp can use standard web technologies
+and interact with the smart contract using a library like `EvmosJS` and `ethers.js`.
 When building a dApp, having a backend can provide several benefits, including:
 
 - Resiliency: A DApp's backend is fully distributed and managed on a blockchain platform, so there is no downtime and
@@ -22,10 +25,7 @@ the platform makes it difficult for hackers to breach the system.
 - Isolation: DApps are executed in a virtual environment known as Ethereum Virtual Machine so that if the smart contract
 has a bug, it won’t hamper the normal functioning of the blockchain network.
 
-However, it is important to note that not all DApps require a backend. For example, if the DApp is designed solely for
-transactions, a backend may not be necessary. Additionally, the frontend of a DApp can use standard web technologies
-and interact with the smart contract using a library like ethers.js. If a DApp does require a backend, it is important
-to consider the following:
+If a DApp does require a backend, it is important to consider the following:
 
 - Smart contract architecture design: It is important to identify which aspects of the application need a trusted and
 decentralized execution platform, and to keep computations in the smart contract minimal to avoid high costs.

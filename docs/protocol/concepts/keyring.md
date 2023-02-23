@@ -6,7 +6,9 @@ sidebar_position: 7
 
 Create, import, export and delete keys using the CLI keyring.
 
-The keyring holds the private/public keypairs used to interact with the node. For instance, a validator key needs to be set up before running the node, so that blocks can be correctly signed. The private key can be stored in different locations, called ["backends"](#keyring-backends), such as a file or the operating system's own key storage.
+The keyring holds the private/public keypairs used to interact with the node. For instance, a validator key needs to be
+set up before running the node, so that blocks can be correctly signed. The private key can be stored in different 
+locations, called ["backends"](#keyring-backends), such as a file or the operating system's own key storage.
 
 :::tip
 In case, you need a refresher on private key and key management, please reference our [Key Management](./../../use/key-management).
@@ -14,7 +16,8 @@ In case, you need a refresher on private key and key management, please referenc
 
 ## Add keys
 
-You can use the following commands for help with the `keys` command and for more information about a particular subcommand, respectively:
+You can use the following commands for help with the `keys` command and for more information about a particular subcommand,
+respectively:
 
 ```bash
 evmosd keys
@@ -24,7 +27,8 @@ evmosd keys
 evmosd keys [command] --help
 ```
 
-To create a new key in the keyring, run the `add` subcommand with a `<key_name>` argument. You will have to provide a password for the newly generated key. This key will be used in the next section.
+To create a new key in the keyring, run the `add` subcommand with a `<key_name>` argument. You will have to provide a password
+for the newly generated key. This key will be used in the next section.
 
 ```bash
 evmosd keys add dev0
@@ -33,12 +37,16 @@ evmosd keys add dev0
 MY_VALIDATOR_ADDRESS=$(evmosd keys show dev0 -a)
 ```
 
-This command generates a new 24-word mnemonic phrase, persists it to the relevant backend, and outputs information about the keypair. If this keypair will be used to hold value-bearing tokens, be sure to write down the mnemonic phrase somewhere safe!
+This command generates a new 24-word mnemonic phrase, persists it to the relevant backend, and outputs information about
+the keypair. If this keypair will be used to hold value-bearing tokens, be sure to write down the mnemonic phrase 
+somewhere safe!
 
-By default, the keyring generates a `eth_secp256k1` key. The keyring also supports `ed25519` keys, which may be created by passing the `--algo` flag. A keyring can of course hold both types of keys simultaneously.
+By default, the keyring generates a `eth_secp256k1` key. The keyring also supports `ed25519` keys, which may be created 
+by passing the `--algo` flag. A keyring can of course hold both types of keys simultaneously.
 
 :::tip
-**Note**: The Ethereum address associated with a public key can be derived by taking the full Ethereum public key of type `eth_secp256k1`, computing the `Keccak-256` hash, and truncating the first twelve bytes.
+**Note**: The Ethereum address associated with a public key can be derived by taking the full Ethereum public key of type 
+`eth_secp256k1`, computing the `Keccak-256` hash, and truncating the first twelve bytes.
 :::
 
 :::warning
@@ -63,8 +71,8 @@ is a list of the most popular operating systems and their respective passwords m
 - macOS (since Mac OS 8.6): [Keychain](https://support.apple.com/en-gb/guide/keychain-access/welcome/mac)
 - Windows: [Credentials Management API](https://docs.microsoft.com/en-us/windows/win32/secauthn/credentials-management)
 - GNU/Linux:
-  - [libsecret](https://gitlab.gnome.org/GNOME/libsecret)
-  - [kwallet](https://api.kde.org/frameworks/kwallet/html/index.html)
+- [libsecret](https://gitlab.gnome.org/GNOME/libsecret)
+- [kwallet](https://api.kde.org/frameworks/kwallet/html/index.html)
 
 GNU/Linux distributions that use GNOME as default desktop environment typically come with
 [Seahorse](https://wiki.gnome.org/Apps/Seahorse). Users of KDE based distributions are
@@ -131,7 +139,8 @@ The `test` backend is a password-less variation of the `file` backend. Keys are 
 **unencrypted** on disk. This keyring is provided for <u>testing purposes only</u>. Use at your own risk!
 
 :::danger
-🚨 **DANGER**: <u>Never</u> create your mainnet validator keys using a `test` keying backend. Doing so might result in a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
+🚨 **DANGER**: <u>Never</u> create your mainnet validator keys using a `test` keying backend. Doing so might result in
+a loss of funds by making your funds remotely accessible via the `eth_sendTransaction` JSON-RPC endpoint.
 
 Ref: [Security Advisory: Insecurely configured geth can make funds remotely accessible](https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/)
 :::
@@ -141,5 +150,6 @@ Ref: [Security Advisory: Insecurely configured geth can make funds remotely acce
 The `memory` backend stores keys in memory. The keys are immediately deleted after the program has exited.
 
 :::danger
-**IMPORTANT**: Provided for testing purposes only. The `memory` backend is **not** recommended for use in production environments. Use at your own risk!
+**IMPORTANT**: Provided for testing purposes only. The `memory` backend is **not** recommended for use in production
+environments. Use at your own risk!
 :::

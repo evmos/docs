@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Encoding
 
+Encoding refers to the process of converting data from one format to another to make it more secure and efficient.
+In the context of blockchain, encoding is used to ensure that data is stored and transmitted in a way that is secure and
+easily accessible.
+
 The Recursive Length Prefix (RLP) is a serialization format used extensively in Ethereum's execution clients. Its purpose
 is to encode arbitrarily nested arrays of binary data, and it is the main encoding method used to serialize objects in
 Ethereum. RLP only encodes structure and leaves encoding specific atomic data types, such as strings, integers, and floats,
@@ -63,28 +67,28 @@ The `x/evm` transactions (`MsgEthereumTx`) encoding is performed by casting the 
 ```go
 // TxEncoder overwrites sdk.TxEncoder to support MsgEthereumTx
 func (g txConfig) TxEncoder() sdk.TxEncoder {
-  return func(tx sdk.Tx) ([]byte, error) {
-    msg, ok := tx.(*evmtypes.MsgEthereumTx)
-    if ok {
-      return msg.AsTransaction().MarshalBinary()
-   }
-    return g.TxConfig.TxEncoder()(tx)
+return func(tx sdk.Tx) ([]byte, error) {
+  msg, ok := tx.(*evmtypes.MsgEthereumTx)
+  if ok {
+    return msg.AsTransaction().MarshalBinary()
   }
+  return g.TxConfig.TxEncoder()(tx)
+}
 }
 
 // TxDecoder overwrites sdk.TxDecoder to support MsgEthereumTx
 func (g txConfig) TxDecoder() sdk.TxDecoder {
-  return func(txBytes []byte) (sdk.Tx, error) {
-    tx := &ethtypes.Transaction{}
+return func(txBytes []byte) (sdk.Tx, error) {
+  tx := &ethtypes.Transaction{}
 
-    err := tx.UnmarshalBinary(txBytes)
-    if err == nil {
-      msg := &evmtypes.MsgEthereumTx{}
-      msg.FromEthereumTx(tx)
-      return msg, nil
-    }
-
-    return g.TxConfig.TxDecoder()(txBytes)
+  err := tx.UnmarshalBinary(txBytes)
+  if err == nil {
+    msg := &evmtypes.MsgEthereumTx{}
+    msg.FromEthereumTx(tx)
+    return msg, nil
   }
+
+  return g.TxConfig.TxDecoder()(txBytes)
+}
 }
 ```

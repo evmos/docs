@@ -2,7 +2,7 @@
 
 ## Swagger Docs
 
-We hosted our testnet API endpoints [here](https://api.evmos.dev) and it uses Swagger.
+We hosted our testnet API endpoints [here](./../develop/api#clients) and it uses Swagger.
 
 ## Faucet
 
@@ -15,17 +15,22 @@ to anyone who can provide a valid testnet address for free. Request funds from t
 
 :::tip
 Follow the [Metamask](./../../use/connect-your-wallet/metamask), [Keplr](./../../use/connect-your-wallet/keplr)
- or [Keyring](./../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
+or [Keyring](./../../protocol/concepts/keyring) guides for more info on how to setup your wallet account.
 :::
 
 ## Request Testnet tokens
 
 Once you are signed in to the Keplr extension, visit the [Faucet](https://faucet.evmos.dev/) to request tokens
- for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request` and `Request Connection` to add the <ProjectValue keyword='name' /> testnet chain (evmos_<ProjectValue keyword="chain_id" />-<ProjectValue keyword="testnet_version_number" />) to Keplr and approve the connection.
+for the testnet. Click the `Request Funds with Keplr` button. Then approve the both following pop ups `Chain Add Request`
+and `Request Connection` to add the <ProjectValue keyword='name' /> testnet chain
+(evmos_<ProjectValue keyword="chain_id" />-<ProjectValue keyword="testnet_version_number" />) to Keplr and approve the
+connection.
 
 ![chain add request](/img/keplr_approve_chain.png)
 
-After approval, you can see a transaction confirmation informing you that <ProjectValue keyword="testnet_denom" /> have been successfully transferred to your [Evmos address](./../../protocol/concepts/accounts#address-formats-for-clients) on the testnet.
+After approval, you can see a transaction confirmation informing you that <ProjectValue keyword="testnet_denom" /> have
+been successfully transferred to your [Evmos address](./../../protocol/concepts/accounts#address-formats-for-clients) on
+the testnet.
 
 :::warning
 **Note**: only Ethereum compatible addresses (i.e `eth_secp256k1` keys) are supported on Evmos.
@@ -36,7 +41,8 @@ After approval, you can see a transaction confirmation informing you that <Proje
 Alternatively you can also fill in your address on the input field in Bech32 (`evmos1...`) or Hex (`0x...`) format.
 
 :::warning
-If you use your Bech32 address, make sure you input the [account address](./../../protocol/concepts/accounts#addresses-and-public-keys) (`evmos1...`) and **NOT** the validator operator address (`evmosvaloper1...`)
+If you use your Bech32 address, make sure you input the [account address](./../../protocol/concepts/accounts#addresses-and-public-keys)
+(`evmos1...`) and **NOT** the validator operator address (`evmosvaloper1...`)
 :::
 
 ![faucet site](/img/faucet_web_page.png)
@@ -44,7 +50,8 @@ If you use your Bech32 address, make sure you input the [account address](./../.
 View your account balance either by clicking on the Keplr extension or by using the [Testnet Explorer](https://testnet.mintscan.io/evmos-testnet).
 
 :::tip
-**Note**: Keplr might not display the amount of <ProjectValue keyword="testnet_denom" /> transferred by the faucet, as it might be smaller than the number of decimals displayed in the Keplr extension.
+**Note**: Keplr might not display the amount of <ProjectValue keyword="testnet_denom" /> transferred by the faucet, as
+it might be smaller than the number of decimals displayed in the Keplr extension.
 :::
 
 ## Rate limits
@@ -53,7 +60,10 @@ View your account balance either by clicking on the Keplr extension or by using 
 All addresses **MUST** be authenticated using ReCAPTCHA before requesting tokens.
 :::
 
-To prevent the faucet account from draining the available funds, the Evmos testnet faucet imposes a maximum number of requests for a period of time. By default, the faucet service accepts 1 request per day per address. You can request <ProjectValue keyword="testnet_denom" /> from the faucet for each address only once every 24h. If you try to request multiple times within the 24h cooldown phase, no transaction will be initiated. Please try again in 24 hours.
+To prevent the faucet account from draining the available funds, the Evmos testnet faucet imposes a maximum number of
+requests for a period of time. By default, the faucet service accepts 1 request per day per address. You can request
+<ProjectValue keyword="testnet_denom" /> from the faucet for each address only once every 24h. If you try to request
+multiple times within the 24h cooldown phase, no transaction will be initiated. Please try again in 24 hours.
 
 ## Amount
 
