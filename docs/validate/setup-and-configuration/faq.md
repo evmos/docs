@@ -15,7 +15,7 @@ Check the FAQ for running a validator on Evmos.
 Evmos is powered by [Tendermint](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) Core,
 which relies on a set of validators to secure the network. Validators run a full node and participate in consensus
 by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new
-blocks in the blockchain and receive revenue in exchange for their work. They also participate in on-procotol
+blocks in the blockchain and receive revenue in exchange for their work. They also participate in on-protocol
 treasury governance by voting on governance proposals. A validator's voting influence is weighted according to
 their total stake.
 
@@ -140,8 +140,8 @@ In short, there are two types of keys:
 
 - **Tendermint Key**: This is a unique key used to sign block hashes. It is associated with a public key
 `evmosvalconspub`.
-  - Generated when the node is created with `evmosd init`.
-  - Get this value with `evmosd tendermint show-validator`
+    - Generated when the node is created with `evmosd init`.
+    - Get this value with `evmosd tendermint show-validator`
 e.g. `evmosvalconspub1zcjduc3qcyj09qc03elte23zwshdx92jm6ce88fgc90rtqhjx8v0608qh5ssp0w94c`
 
 - **Application keys**: These keys are created from the application and used to sign transactions. As a validator,
@@ -402,16 +402,16 @@ $$9R ~ + ~ R ~ + ~ 5\%(R) ~ = ~ 1005 ~ \Leftrightarrow ~ R ~ = ~ 1005 ~/ ~10.05 
 
 - For the proposer validator:
 
-  - The pool obtains $R ~ + ~ 5\%(R)$: 105 EVMOS
-  - Commission: $105 ~ *~ 80\% ~* ~ 1\%$ = 0.84 EVMOS
-  - Validator's reward: $105 ~ * ~ 20\% ~ + ~ Commission$ = 21.84 EVMOS
-  - Delegators' rewards: $105 ~ * ~ 80\% ~ - ~ Commission$ = 83.16 EVMOS \(each delegator will be able to claim its portion
+    - The pool obtains $R ~ + ~ 5\%(R)$: 105 EVMOS
+    - Commission: $105 ~ *~ 80\% ~* ~ 1\%$ = 0.84 EVMOS
+    - Validator's reward: $105 ~ * ~ 20\% ~ + ~ Commission$ = 21.84 EVMOS
+    - Delegators' rewards: $105 ~ * ~ 80\% ~ - ~ Commission$ = 83.16 EVMOS \(each delegator will be able to claim its portion
 of these rewards in proportion to their stake\)
 
-  - The pool obtains $R$: 100 EVMOS
-  - Commission: $100 ~ *~ 80\% ~* ~ 1\%$ = 0.8 EVMOS
-  - Validator's reward: $100 ~ * ~ 20\% ~ + ~ Commission$ = 20.8 EVMOS
-  - Delegators' rewards: $100 ~ * ~ 80\% ~ - ~ Commission$ = 79.2 EVMOS \(each delegator will be able to claim its portion
+    - The pool obtains $R$: 100 EVMOS
+    - Commission: $100 ~ *~ 80\% ~* ~ 1\%$ = 0.8 EVMOS
+    - Validator's reward: $100 ~ * ~ 20\% ~ + ~ Commission$ = 20.8 EVMOS
+    - Delegators' rewards: $100 ~ * ~ 80\% ~ - ~ Commission$ = 79.2 EVMOS \(each delegator will be able to claim its portion
 of these rewards in proportion to their stake\
 
 </details>
@@ -443,24 +443,9 @@ Here are some links to community's learning from double signing worth a look:
 
 <details>
 
-<summary><b>Are there any community resources for running a validator guide?</b></summary>
-
-Most certainly! [rMalakaib's article](https://medium.com/oregon-blockchain-group/creating-a-cosmos-validator-from-0-to-hero-f8b2426fda5c)
-describes his journey to running a Cosmos validators. The learnings can be applied to the Evmos chain.
-
-Another guide is from our current validators, [Hanchon's guide](https://notes.hanchon.live/workshop-from-zero-to-validator.html)
-describe his process.
-
-</details>
-
-<details>
-
-<details>
-
 <summary><b>Are there any best practice guides on preventing double-signing?</b></summary>
 
-There is an awesome guide. Polkachu is a validator on Evmos and they have wrote 
-[this page](https://github.com/polkachu/validator-guide/blob/main/validator_server_migration_best_practice.md)
+There is an awesome guide. Polkachu is a validator on Evmos and they have wrote [this page](https://github.com/polkachu/validator-guide/blob/main/validator_server_migration_best_practice.md)
 to help out.
 
 </details>
