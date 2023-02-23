@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 ---
 # Multisig
 
@@ -13,8 +13,8 @@ A **multisig account** is an Evmos account with a special key that can require m
 - the public keys involved in signing
 
 To sign with a multisig account, the transaction must be signed individually by the different keys specified for the account.
- Then, the signatures will be combined into a multisignature which can be used to sign the transaction. If fewer than the
-  threshold number of signatures needed are present, the resultant multisignature is considered invalid.
+ Then, the signatures will be combined into a multi-signature which can be used to sign the transaction. If fewer than the
+  threshold number of signatures needed are present, the resultant multi-signature is considered invalid.
 
 ## Generate a Multisig key
 

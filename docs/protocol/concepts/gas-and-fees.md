@@ -309,3 +309,40 @@ To cover transaction fees using a tip, this user can sign a transaction with a t
 More on Cosmos Tips:
 
 - [Cosmos Tips Docs](https://docs.cosmos.network/main/core/tips)
+
+## Dealing with gas and fees with the Evmos CLI
+
+When broadcasting a transaction using the Evmos CLI client, users should keep into consideration the options available.
+There are three flags to consider when sending a transaction to the network:
+
+- `--fees`: fees to pay along with transaction; eg: 10aevmos. Defaults to `auto`.
+- `--gas`: the gas limit to set per-transaction; the default value is 20000.
+- `--gas-prices`: gas prices to determine the transaction fee (e.g. 10aevmos).
+
+However, not all of them need to be defined on each transaction.
+The correct combinations are:
+
+- without gas/fees related flags: estimates fees and gas automatically. Because `--fees` default is `auto`.
+- `--fees=auto`: estimates fees and gas automatically (same behavior as `--gas=auto`).
+  Throws an error if using any other fees-related flag (e.i, `--gas-prices` , `--fees`)
+- `--gas=auto`: same behavior as `--fees=auto`.
+  Throws an error if using any other fees-related flag (e.i, `--gas-prices` , `--fees`)
+- `--fees={int}{denom}`: uses the required fees for the tx. Uses gas default value (20000) for the tx.
+- `--fees={int}{denom} --gas={int}`: uses specified gas and fees. Calculates gas-prices with the provided params
+- `--gas-prices={int}{denom} --gas={int} --fees=""`: uses the gas specified on for the tx and calculates
+  the fee with the corresponding parameters.
+- `--gas-prices={int}{denom} --fees={int}{denom}`: uses fee provided and calculates gas limit with the provided params
+
+The reader should note that the former two options provide a frendlier user experience for new users,
+and the latter are for more advanced users, who desire more control over these parameters.
+
+The team introduced the `auto` flag option that calculates automatically the gas and fees required to execute a transaction.
+In this way, new users or developers can perform transactions without the hustle of defining specific gas and
+fees values.
+
+Keep in mind that there are other possible combinations that will fail. These are:
+
+- `--gas={int}`: Error message will explain that failed because the default value for `--fees` flag is `auto`
+- `--gas-prices={int}{denom}`: Error message will explain that failed because the default value for `--fees` flag is `auto`
+- `--gas-prices={int}{denom} --gas={int}`: Error message will explain that failed because the default value for `--fees`
+  flag is `auto`

@@ -18,13 +18,22 @@ Some common areas of focus in a security audit include:
 - Access control: ensuring that the smart contract has appropriate permissions and restrictions in place to control
 access to its methods and data
 
-Security audits are performed by experienced security experts who are familiar with the Ethereum platformm, ecosystem, and the Solidity programming language. These experts use a variety of tools and techniques to evaluate the code, and provide a detailed report of their findings and recommendations.
+Security audits are performed by experienced security experts who are familiar with the Ethereum platformm, ecosystem,
+and the Solidity programming language. These experts use a variety of tools and techniques to evaluate the code, and
+provide a detailed report of their findings and recommendations.
 
-It is important to note that security audits are not a guarantee that a dApp is 100% secure, as new vulnerabilities may be discovered over time. However, a security audit can significantly reduce the risk of security incidents and provide a higher degree of confidence in the stability and security of a dApp. Displaying the audit report on dApp can further increase transparency and trust building.
+It is important to note that security audits are not a guarantee that a dApp is 100% secure, as new vulnerabilities may
+be discovered over time. However, a security audit can significantly reduce the risk of security incidents and provide a
+higher degree of confidence in the stability and security of a dApp. Displaying the audit report on dApp can further
+increase transparency and trust building.
 
 ## Services
 
-<!--  TODO: need to add to this section more -->
+There are several partners in this space that provides auditing services worth exploring. The list below is not any
+endorsement nor an exhaustive list of companies offering auditing services. Auditing services can be a costly pursuit
+but the overall benefits can be high, depending on the product/projects.
 
 - [OpenZeppelin Security](https://www.openzeppelin.com/security-audits)
 - [Informal System](https://informal.systems/services/security-audits)
+- [CertiK](https://www.certik.com)
+- [ConsenSys Diligence](https://consensys.net/diligence/)
