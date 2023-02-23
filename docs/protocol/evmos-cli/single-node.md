@@ -186,7 +186,7 @@ You can generate a new key/mnemonic with:
 evmosd keys add $KEY
 ```
 
-To export your evmos key as an Ethereum private key (for use with [Metamask](./../../use/connect-your-wallet/metamask) for example):
+To export your Evmos key as an Ethereum private key (for use with [Metamask](./../../../use/connect-your-wallet/metamask) for example):
 
 ```bash
 evmosd keys unsafe-export-eth-key $KEY
@@ -212,7 +212,7 @@ evmosd config keyring-backend file
 ```
 
 :::tip
-For more information about the Keyring and its backend options, click [here](./../../protocol/concepts/keyring).
+For more information about the Keyring and its backend options, click [here](./../concepts/keyring).
 :::
 
 ### Enable Tracing
@@ -247,17 +247,24 @@ rm $HOME/.evmosd/config/addrbook.json $HOME/.evmosd/config/genesis.json
 evmosd tendermint unsafe-reset-all --home $HOME/.evmosd
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. 
+If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, 
+but may fail if they haven't also been upgraded.
 
 ### Delete Data
 
-Data for the {{ $themeConfig.project.binary }} binary should be stored at `~/.{{ $themeConfig.project.binary }}`, respectively by default. To **delete** the existing binaries and configuration, run:
+import Highlighter from '@site/src/components/Highlighter';
+import ProjectValue from '@site/src/components/ProjectValue';
+
+Data for the <ProjectValue keyword="binary" /> binary should be stored at <Highlighter pretext="~/." keyword="binary" />,
+ respectively by default. To **delete** the existing binaries and configuration, run:
 
 ```bash
 rm -rf ~/.evmosd
 ```
 
-To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation commands from above to start the node again.
+To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation 
+commands from above to start the node again.
 
 ## Recording Transactions Per Second (TPS)
 

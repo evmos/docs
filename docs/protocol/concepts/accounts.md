@@ -14,7 +14,8 @@ This document describes the in-built accounts system of Evmos.
 ## Evmos Accounts
 
 Evmos defines its own custom `Account` type that uses Ethereum's ECDSA secp256k1 curve for keys. This
-satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
+satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full
+[BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
 The root HD path for Evmos-based accounts is `m/44'/60'/0'/0`.
 
 +++ https://github.com/evmos/ethermint/blob/main/types/account.pb.go#L28-L33
@@ -31,9 +32,12 @@ HRP (human readable prefix) as the base HRP:
 
 There are 3 main types of HRP for the `Addresses`/`PubKeys` available by default on Evmos:
 
-- Addresses and Keys for **accounts**, which identify users (e.g. the sender of a `message`). They are derived using the **`eth_secp256k1`** curve.
-- Addresses and Keys for **validator operators**, which identify the operators of validators. They are derived using the **`eth_secp256k1`** curve.
-- Addresses and Keys for **consensus nodes**, which identify the validator nodes participating in consensus. They are derived using the **`ed25519`** curve.
+- Addresses and Keys for **accounts**, which identify users (e.g. the sender of a `message`). They are derived using
+ the **`eth_secp256k1`** curve.
+- Addresses and Keys for **validator operators**, which identify the operators of validators. They are derived using
+ the **`eth_secp256k1`** curve.
+- Addresses and Keys for **consensus nodes**, which identify the validator nodes participating in consensus. They are
+ derived using the **`ed25519`** curve.
 
 |                    | Address bech32 Prefix | Pubkey bech32 Prefix | Curve           | Address byte length | Pubkey byte length |
 |--------------------|-----------------------|----------------------|-----------------|---------------------|--------------------|
