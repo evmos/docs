@@ -16,13 +16,13 @@ function Home() {
           <div className="container">
             <div className="row cards__container">
               <Card
-                to="./develop/build-a-dApp/run-a-node"
+                to="./protocol/evmos-cli/single-node"
                 header={{
                   label: "🚀 Launch Your Local Node",
                 }}
                 body={{
                   label:
-                    "Getting started on Evmos is simple and easy with local node",
+                    "Getting started on Evmos is simple and easy with a local node",
                 }}
               />
 
@@ -49,7 +49,7 @@ function Home() {
               />
 
               <Card
-                to="./api"
+                to="./develop/api"
                 header={{
                   label: "💻 View Evmos APIs",
                 }}
