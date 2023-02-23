@@ -78,5 +78,7 @@ have staked your tokens, head over to the [Evmos Governance dApp](https://app.ev
 governance proposals.
 
 :::note
-
+Engage with our community on [Commonwealth](https://commonwealth.im/evmos) and learn about upcoming proposals. If you are
+interested in launching your own governance proposals, head over [here](https://academy.evmos.org/community/governance/overview)
+for a guide.
 :::

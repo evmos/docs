@@ -1,4 +1,4 @@
-## Guideline to Contribution
+# Guideline to Contribution
 
 Thanks for dropping by. The aim of our docs is ensure coherency and clarity. The goal any concepts introduced in our
 docs is followed up with an explanation and supporting links. The audience we are aim for in our docs are developers,
