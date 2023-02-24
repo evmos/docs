@@ -67,7 +67,7 @@ The higher the tip, the more likely the transaction is included in the block.
 Until the Cosmos SDK version v0.46, however, there is no notion of transaction prioritization.
 Thus, the tip for an EIP-1559 transaction on Evmos should be zero
 (`MaxPriorityFeePerGas` JSON-RPC endpoint returns `0`).
-Have a look at the [mempool](../../../validate/setup-and-configuration/mempool) docs
+Have a look at the [mempool](./../../../validate/setup-and-configuration/mempool) docs
 to read more about how to leverage transaction prioritization.
 
 ## Effective Gas price
