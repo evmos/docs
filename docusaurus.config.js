@@ -226,6 +226,24 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        {
+          name: "Evmos Docs", 
+          content: "Official Evmos Docs. Come discover why we are the the home for native, cross-chain applications."
+        },
+        {
+          name: "author",
+          content: "The Evmos Core Team @evmosOrg"
+        },
+        {
+          name: "keywords",
+          content: "EMM, cross-chain, Cosmos SDK, IBC, fast-finality, native, cross-chain applications, EVM on Cosmos"
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0"
+        }
+      ]
     }),
 };
 
