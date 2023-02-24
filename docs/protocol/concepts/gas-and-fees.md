@@ -16,7 +16,7 @@ for prioritizing transactions.
 
 Also, note the fees that are paid for interacting with smart contracts on Evmos
 can earn smart contract deployers a revenue. For information on this,
-head to [develop](../../develop/mainnet.md#revenue).
+head to [develop](../../develop/mainnet#revenue).
 
 ## Prerequisite Readings
 
