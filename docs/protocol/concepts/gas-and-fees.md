@@ -316,7 +316,7 @@ When broadcasting a transaction using the Evmos CLI client, users should keep in
 There are three flags to consider when sending a transaction to the network:
 
 - `--fees`: fees to pay along with transaction; eg: 10aevmos. Defaults to the required fees.
-- `--gas`: the gas limit to set per-transaction; the default value is 20000.
+- `--gas`: the gas limit to set per-transaction; the default value is 200000.
 - `--gas-prices`: gas prices to determine the transaction fee (e.g. 10aevmos).
 
 However, not all of them need to be defined on each transaction.
@@ -327,9 +327,9 @@ The correct combinations are:
 - `--gas=auto`: same behavior as `--fees=auto`.
   Throws an error if using any other fees-related flag (e.i, `--gas-prices` , `--fees`)
 - `--gas={int}`: uses the specified gas amount and the required fees for the transaction
-- `--fees={int}{denom}`: uses the specified fees for the tx. Uses gas default value (20000) for the tx.
+- `--fees={int}{denom}`: uses the specified fees for the tx. Uses gas default value (200000) for the tx.
 - `--fees={int}{denom} --gas={int}`: uses specified gas and fees. Calculates gas-prices with the provided params
-- `--gas-prices={int}{denom}`: uses the provided gas price and the default gas amount (20000)
+- `--gas-prices={int}{denom}`: uses the provided gas price and the default gas amount (200000)
 - `--gas-prices={int}{denom} --gas={int}`: uses the gas specified on for the tx and calculates
   the fee with the corresponding parameters.
 
