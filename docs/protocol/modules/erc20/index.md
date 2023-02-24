@@ -2,8 +2,8 @@
 
 :::tip
 **Note:** Working on a governance proposal related to the ERC-20 Module?
-Make sure to look at [Evmos Governance](https://docs.evmos.org/users/governance/overview.html),
-and specifically the [best practices](https://docs.evmos.org/users/governance/best_practices).
+Make sure to look at [Evmos Governance](https://academy.evmos.org/community/governance),
+and specifically the [best practices](https://academy.evmos.org/community/governance/best-practices).
 :::
 
 ## Abstract

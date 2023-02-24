@@ -9,7 +9,7 @@ in order to distribute fees between developers and validators.
 
 ## EVM Hook
 
-A [`PostTxProcessing` EVM hook](https://docs.evmos.org/modules/evm/06_hooks.html) executes custom logic
+A [`PostTxProcessing` EVM hook](./../evm/hooks) executes custom logic
 after each successful EVM transaction.
 All fees paid by a user for transaction execution are sent to the `FeeCollector` module account
 during the `AnteHandler` execution before being distributed to developers and validators.
