@@ -249,7 +249,7 @@ const config = {
         appId: 'DPTADG0ME1',
   
         // Public API key: it is safe to commit it
-        apiKey: 'fa49947284cf431e40b9d65a4d88c578',
+        apiKey: 'b4559f410c77777e8c8fbd4d5db81b42',
   
         indexName: 'evmosdocs',
   
