@@ -226,6 +226,24 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        {
+          name: "Evmos Docs", 
+          content: "Official Evmos Docs. Come discover why we are the the home for native, cross-chain applications."
+        },
+        {
+          name: "author",
+          content: "The Evmos Core Team @evmosOrg"
+        },
+        {
+          name: "keywords",
+          content: "EMM, cross-chain, Cosmos SDK, IBC, fast-finality, native, cross-chain applications, EVM on Cosmos"
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0"
+        }
+      ],
       algolia: {
         // The application ID provided by Algolia
         appId: 'DPTADG0ME1',
@@ -235,24 +253,8 @@ const config = {
   
         indexName: 'evmosdocs',
   
-        // Optional: see doc section below
         contextualSearch: true,
-
-        placeholder: 'Search Evmos Docs',
-  
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
-        },
-  
-        // Optional: Algolia search parameters
         searchParameters: {},
-  
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-  
-        //... other Algolia params
       },
     }),
 };

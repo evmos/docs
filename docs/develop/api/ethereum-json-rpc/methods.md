@@ -16,39 +16,39 @@ The examples also do not include the URL/IP & port combination which must be the
 
 | Method                                                                            | Namespace | Implemented | Public | Notes              |
 |-----------------------------------------------------------------------------------|-----------|-------------|--------|--------------------|
-| [`web3_clientVersion`](#web3-clientversion)                                       | Web3      | ✔           | ✔      |                    |
-| [`web3_sha3`](#web3-sha3)                                                         | Web3      | ✔           | ✔      |                    |
-| [`net_version`](#net-version)                                                     | Net       | ✔           | ✔      |                    |
-| [`net_peerCount`](#net-peerCount)                                                 | Net       | ✔           | ✔      |                    |
-| [`net_listening`](#net-listening)                                                 | Net       | ✔           | ✔      |                    |
-| [`eth_protocolVersion`](#eth-protocolversion)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_syncing`](#eth-syncing)                                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_gasPrice`](#eth-gasprice)                                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_accounts`](#eth-accounts)                                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_blockNumber`](#eth-blocknumber)                                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBalance`](#eth-getbalance)                                               | Eth       | ✔           | ✔      |                    |
-| [`eth_getStorageAt`](#eth-getstorageat)                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionCount`](#eth-gettransactioncount)                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockTransactionCountByNumber`](#eth-getblocktransactioncountbynumber)   | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockTransactionCountByHash`](#eth-getblocktransactioncountbyhash)       | Eth       | ✔           | ✔      |                    |
-| [`eth_getCode`](#eth-getcode)                                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_sign`](#eth-sign)                                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_sendTransaction`](#eth-sendtransaction)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_sendRawTransaction`](#eth-sendrawtransaction)                               | Eth       | ✔           | ✔      |                    |
-| [`eth_call`](#eth-call)                                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_estimateGas`](#eth-estimategas)                                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockByNumber`](#eth-getblockbynumber)                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockByHash`](#eth-getblockbyhash)                                       | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionByHash`](#eth-gettransactionbyhash)                           | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionByBlockHashAndIndex`](#eth-gettransactionbyblockhashandindex) | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionReceipt`](#eth-gettransactionreceipt)                         | Eth       | ✔           | ✔      |                    |
-| [`eth_newFilter`](#eth-newfilter)                                                 | Eth       | ✔           | ✔      |                    |
-| [`eth_newBlockFilter`](#eth-newblockfilter)                                       | Eth       | ✔           | ✔      |                    |
-| [`eth_newPendingTransactionFilter`](#eth-newpendingtransactionfilter)             | Eth       | ✔           | ✔      |                    |
-| [`eth_uninstallFilter`](#eth-uninstallfilter)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_getFilterChanges`](#eth-getfilterchanges)                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_getFilterLogs`](#eth-getfilterlogs)                                         | Eth       | ✔           | ✔      |                    |
-| [`eth_getLogs`](#eth-getlogs)                                                     | Eth       | ✔           | ✔      |                    |
+| [`web3_clientVersion`](#web3_clientversion)                                       | Web3      | ✔           | ✔      |                    |
+| [`web3_sha3`](#web3_sha3)                                                         | Web3      | ✔           | ✔      |                    |
+| [`net_version`](#net_version)                                                     | Net       | ✔           | ✔      |                    |
+| [`net_peerCount`](#net_peerCount)                                                 | Net       | ✔           | ✔      |                    |
+| [`net_listening`](#net_listening)                                                 | Net       | ✔           | ✔      |                    |
+| [`eth_protocolVersion`](#eth_protocolversion)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_syncing`](#eth_syncing)                                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_gasPrice`](#eth_gasprice)                                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_accounts`](#eth_accounts)                                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_blockNumber`](#eth_blocknumber)                                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBalance`](#eth_getbalance)                                               | Eth       | ✔           | ✔      |                    |
+| [`eth_getStorageAt`](#eth_getstorageat)                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionCount`](#eth_gettransactioncount)                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockTransactionCountByNumber`](#eth_getblocktransactioncountbynumber)   | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockTransactionCountByHash`](#eth_getblocktransactioncountbyhash)       | Eth       | ✔           | ✔      |                    |
+| [`eth_getCode`](#eth_getcode)                                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_sign`](#eth_sign)                                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_sendTransaction`](#eth_sendtransaction)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_sendRawTransaction`](#eth_sendrawtransaction)                               | Eth       | ✔           | ✔      |                    |
+| [`eth_call`](#eth_call)                                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_estimateGas`](#eth_estimategas)                                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockByNumber`](#eth_getblockbynumber)                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockByHash`](#eth_getblockbyhash)                                       | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionByHash`](#eth_gettransactionbyhash)                           | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionByBlockHashAndIndex`](#eth_gettransactionbyblockhashandindex) | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionReceipt`](#eth_gettransactionreceipt)                         | Eth       | ✔           | ✔      |                    |
+| [`eth_newFilter`](#eth_newfilter)                                                 | Eth       | ✔           | ✔      |                    |
+| [`eth_newBlockFilter`](#eth_newblockfilter)                                       | Eth       | ✔           | ✔      |                    |
+| [`eth_newPendingTransactionFilter`](#eth_newpendingtransactionfilter)             | Eth       | ✔           | ✔      |                    |
+| [`eth_uninstallFilter`](#eth_uninstallfilter)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_getFilterChanges`](#eth_getfilterchanges)                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_getFilterLogs`](#eth_getfilterlogs)                                         | Eth       | ✔           | ✔      |                    |
+| [`eth_getLogs`](#eth_getlogs)                                                     | Eth       | ✔           | ✔      |                    |
 | `eth_getTransactionbyBlockNumberAndIndex`                                         | Eth       |             | ✔      |                    |
 | `eth_getWork`                                                                     | Eth       | N/A         | ✔      | PoW-only           |
 | `eth_submitWork`                                                                  | Eth       | N/A         | ✔      | PoW-only           |
@@ -59,15 +59,15 @@ The examples also do not include the URL/IP & port combination which must be the
 | `eth_compileSerpent`                                                              | Eth       |             |        |                    |
 | `eth_signTransaction`                                                             | Eth       |             |        |                    |
 | `eth_mining`                                                                      | Eth       |             | ❌      |                    |
-| [`eth_coinbase`](#eth-coinbase)                                                   | Eth       | ✔           |        |                    |
+| [`eth_coinbase`](#eth_coinbase)                                                   | Eth       | ✔           |        |                    |
 | `eth_hashrate`                                                                    | Eth       | N/A         | ❌      | PoW-only           |
 | `eth_getUncleCountByBlockHash`                                                    | Eth       | N/A         |        | PoW-only           |
 | `eth_getUncleCountByBlockNumber`                                                  | Eth       | N/A         |        | PoW-only           |
 | `eth_getUncleByBlockHashAndIndex`                                                 | Eth       | N/A         |        | PoW-only           |
 | `eth_getUncleByBlockNumberAndIndex`                                               | Eth       | N/A         |        | PoW-only           |
-| [`eth_getProof`](#eth-getProof)                                                   | Eth       | ✔           |        |                    |
-| [`eth_subscribe`](#eth-subscribe)                                                 | Websocket | ✔           |        |                    |
-| [`eth_unsubscribe`](#eth-unsubscribe)                                             | Websocket | ✔           |        |                    |
+| [`eth_getProof`](#eth_getProof)                                                   | Eth       | ✔           |        |                    |
+| [`eth_subscribe`](#eth_subscribe)                                                 | Websocket | ✔           |        |                    |
+| [`eth_unsubscribe`](#eth_unsubscribe)                                             | Websocket | ✔           |        |                    |
 | [`personal_importRawKey`](#personal-importrawkey)                                 | Personal  | ✔           | ❌      |                    |
 | [`personal_listAccounts`](#personal-listaccounts)                                 | Personal  | ✔           | ❌      |                    |
 | [`personal_lockAccount`](#personal-lockaccount)                                   | Personal  | ✔           | ❌      |                    |
@@ -185,7 +185,6 @@ Get the web3 client version.
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_clientVersion", "params": []}'
 ```
 
-
 ```shell title="Websocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "web3_clientVersion", "params": []}'
 ```
@@ -211,7 +210,6 @@ Returns Keccak-256 (not the standardized SHA3-256) of the given data.
 ```
 
 #### Client Examples
-
 
 ```shell title="Shell HTTP"
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_sha3", "params": [<input>]}'
@@ -433,9 +431,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0x7bf7b1
 
 ### `eth_sign`
 
-The `sign` method calculates an Ethereum specific signature with: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+The `sign` method calculates an Ethereum specific signature with:
+`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature. This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
+By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature.
+This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to
+impersonate the victim.
 
 :::warning
 The address to sign with must be unlocked.
@@ -742,15 +743,22 @@ Returns an array of all logs matching a given filter object.
 
 - Object containing:
 
-    `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
+    `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the
+    last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 
-    `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
+    `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined
+    block or `"pending"`, `"earliest"` for not yet mined transactions.
 
     `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 
-    `topics`: Array of `DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of `DATA` with “or” options.
+    `topics`: Array of `DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic
+    can also be an array of `DATA` with “or” options.
 
-    `blockhash`: (optional, future) With the addition of [EIP-234](https://eips.ethereum.org/EIPS/eip-234), `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+    `blockhash`: (optional, future) With the addition of [EIP-234](https://eips.ethereum.org/EIPS/eip-234),
+    `blockHash` will be a new filter option which restricts the logs returned to the single block with the
+    32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number
+    with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock`
+    nor `toBlock` are allowed.
 
 ```json
 // Request
@@ -800,7 +808,8 @@ Read about websockets in [Tendermint Events](../tendermint-rpc.md)
 
 subscribe using JSON-RPC notifications. This allows clients to wait for events instead of polling for them.
 
-It works by subscribing to particular events. The node will return a subscription id. For each event that matches the subscription a notification with relevant data is send together with the subscription id.
+It works by subscribing to particular events. The node will return a subscription id. For each event that matches
+the subscription a notification with relevant data is send together with the subscription id.
 
 #### Parameters
 
@@ -924,9 +933,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 
 Decrypts the key with the given address from the key store.
 
-Both passphrase and unlock duration are optional when using the JavaScript console. The unencrypted key will be held in memory until the unlock duration expires. If the unlock duration defaults to 300 seconds. An explicit duration of zero seconds unlocks the key until geth exits.
+Both passphrase and unlock duration are optional when using the JavaScript console. The unencrypted key will be held
+in memory until the unlock duration expires. If the unlock duration defaults to 300 seconds. An explicit duration of
+zero seconds unlocks the key until geth exits.
 
-The account can be used with [`eth_sign`](#eth-sign) and [`eth_sendTransaction`](#eth-sendtransaction) while it is unlocked.
+The account can be used with [`eth_sign`](#eth_sign) and [`eth_sendTransaction`](#eth_sendtransaction) while it is unlocked.
 
 #### Parameters
 
@@ -952,7 +963,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_unlockAccount","params"
 
 Validate the given passphrase and submit transaction.
 
-The transaction is the same argument as for [`eth_sendTransaction`](#eth-sendtransaction) and contains the `from` address. If the passphrase can be used to decrypt the private key belonging to `tx.from` the transaction is verified, signed and send onto the network.
+The transaction is the same argument as for [`eth_sendTransaction`](#eth_sendtransaction) and contains the `from`
+address. If the passphrase can be used to decrypt the private key belonging to `tx.from` the
+transaction is verified, signed and send onto the network.
 
 :::warning
 The account is not unlocked globally in the node and cannot be used in other RPC calls.
@@ -984,7 +997,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","param
 **Private**: Requires authentication.
 :::
 
-The sign method calculates an Ethereum specific signature with: `sign(keccack256("\x19Ethereum Signed Message:\n" + len(message) + message)))`,
+The sign method calculates an Ethereum specific signature with:
+`sign(keccack256("\x19Ethereum Signed Message:\n" + len(message) + message)))`,
 
 #### Parameters
 
@@ -1074,7 +1088,6 @@ Unpair deletes a pairing between wallet and the node.
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
 
-
 ```shell title="WebSocket"
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
@@ -1087,7 +1100,9 @@ personal.unpair(url,pin);
 
 ### `debug_traceTransaction`
 
-The `traceTransaction` debugging method will attempt to run the transaction in the exact same manner as it was executed on the network. It will replay any transaction that may have been executed prior to this one before it will finally attempt to execute the transaction that corresponds to the given hash.
+The `traceTransaction` debugging method will attempt to run the transaction in the exact same manner as it was executed
+on the network. It will replay any transaction that may have been executed prior to this one before it will finally
+attempt to execute the transaction that corresponds to the given hash.
 
 #### Parameters
 
@@ -1234,7 +1249,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_stop","params":[],"id":1}'
 **Private**: Requires authentication.
 :::
 
-Sets the gas limit the miner will target when mining. Note: on networks where [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is activated, this should be set to twice what you want the gas target (i.e. the effective gas used on average per block) to be.
+Sets the gas limit the miner will target when mining. Note: on networks where
+[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is activated, this should be set to twice what you want the
+gas target (i.e. the effective gas used on average per block) to be.
 
 :::warning
 Unsupported. This endpoint always returns `false`
@@ -1276,7 +1293,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setEtherbase","params":["0
 
 ### `txpool_content`
 
-Returns a list of the exact details of all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only.
+Returns a list of the exact details of all the transactions currently pending for inclusion in the next block(s),
+as well as the ones that are being scheduled for future execution only.
 
 #### Parame (0)
 
@@ -1302,12 +1320,13 @@ txpool.content();
 
 ### `txpool_inspect`
 
-Returns a list on text format to summarize all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only. This is a method specifically tailored to developers to quickly see the transactions in the pool and find any potential issues.
+Returns a list on text format to summarize all the transactions currently pending for inclusion in the next block(s),
+as well as the ones that are being scheduled for future execution only. This is a method specifically tailored to
+developers to quickly see the transactions in the pool and find any potential issues.
 
 #### Parameters (0)
 
 #### Client Examples
-
 
 ```shell title="Shell HTTP"
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_inspect","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
@@ -1329,7 +1348,8 @@ txpool.inspect();
 
 ### `txpool_status`
 
-Returns the number of transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only.
+Returns the number of transactions currently pending for inclusion in the next block(s), as well as the ones that are
+being scheduled for future execution only.
 
 #### Parameters (0)
 

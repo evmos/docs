@@ -48,7 +48,7 @@ The message is sent to native modules asynchronously, there's no way for the cal
 
 ## Use Case: Call Native ERC20 Module on Evmos
 
-Here is an example taken from the Evmos [erc20 module](https://docs.evmos.org/modules/erc20/)
+Here is an example taken from the Evmos [erc20 module](./../erc20)
 that shows how the `EVMHooks` supports a contract calling a native module
 to convert ERC-20 Tokens into Cosmos native Coins.
 Following the steps from above.

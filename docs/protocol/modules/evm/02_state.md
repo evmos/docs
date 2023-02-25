@@ -288,12 +288,12 @@ and that it doesn't contain the private key field.
 It is also important to note that since the `auth` module on the Cosmos SDK manages the account state,
 the `Address` field must correspond to an existing `EthAccount`
 that is stored in the `auth`'s module `Keeper` (i.e `AccountKeeper`).
-Addresses use the **[EIP55](https://eips.ethereum.org/EIPS/eip-55)** hex **[format](https://docs.evmos.org/users/technical_concepts/accounts.html#address-formats-for-clients)**
+Addresses use the **[EIP55](https://eips.ethereum.org/EIPS/eip-55)** hex **[format](./../../concepts/accounts#address-formats-for-clients)**
 on `genesis.json`.
 
 ```go
 type GenesisAccount struct {
-  // address defines an ethereum hex formated address of an account
+  // address defines an ethereum hex formatted address of an account
   Address string `protobuf:"bytes,1,opt,name=address,proto3" json:"address,omitempty"`
   // code defines the hex bytes of the account code.
   Code string `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
