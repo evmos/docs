@@ -105,7 +105,7 @@ ws ws://localhost:8546/
 
 ### HEX value encoding
 
-At present there are two key data-types that are passed over JSON:
+At present there are two key datatypes that are passed over JSON:
 
 * **quantities** and
 * **unformatted byte arrays**.
