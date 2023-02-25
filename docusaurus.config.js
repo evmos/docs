@@ -243,7 +243,19 @@ const config = {
           name: "viewport",
           content: "width=device-width, initial-scale=1.0"
         }
-      ]
+      ],
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'DPTADG0ME1',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'fa49947284cf431e40b9d65a4d88c578',
+  
+        indexName: 'evmosdocs',
+  
+        contextualSearch: true,
+        searchParameters: {},
+      },
     }),
 };
 
