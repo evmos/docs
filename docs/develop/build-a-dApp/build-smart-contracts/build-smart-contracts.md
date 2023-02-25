@@ -72,7 +72,7 @@ such as insurance, borrowing, lending, or gaming.
 
 ## Deploy with Ethereum JSON-RPC
 
-Evmos is fully compatible with the [Ethereum JSON-RPC](../../develop/api/ethereum-json-rpc/) APIs,
+Evmos is fully compatible with the [Ethereum JSON-RPC](./../../develop/api/ethereum-json-rpc/) APIs,
 allowing you to deploy and interact with smart contracts on Evmos
 and connect with existing Ethereum-compatible web3 tooling.
 This gives you direct access to reading Ethereum-formatted transactions
