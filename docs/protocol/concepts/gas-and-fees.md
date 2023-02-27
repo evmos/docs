@@ -340,6 +340,12 @@ The team introduced the `auto` flag option that calculates automatically the gas
 In this way, new users or developers can perform transactions without the hustle of defining specific gas and
 fees values.
 
+Using the `auto` flag sometimes may fail on estimating the right gas and fees based on network traffic.
+To overcome this, you can use a higher value for the `--gas-adjustment` flag.
+By default, this is set to `1.2`.
+When the estimated values are insufficient,
+retry with a higher gas adjustment, for example, `--gas-adjustment 1.3`.
+
 It is not possible to use the `--gas-prices` and `--fees` flags combined.
 If so, the user will get an error stating that cannot provide both fees and gas prices.
 
