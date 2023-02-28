@@ -17,8 +17,7 @@ Like any other currency, crypto assets can be used as a storage of value or a me
 
 On Evmos, assets can be represented as different types of tokens (e.g. Cosmos IBC Coins or EVM ERC20 tokens). We believe, however, that unless you are a developer, you don't need to be concerned with the underlying representation of a token. You just use the asset name and the Evmos network performs conversions between representations automatically.
 
-<!-- TODO add assets page -->
-<!-- ![Evmos Assets page](img/evmos_dapps_assets.png) -->
+![Evmos Assets page](../../../static/img/evmos_assets.png)
 
 ## Onramp to Evmos
 

@@ -39,19 +39,3 @@ start [earning an income](./../develop/mainnet#revenue) on transaction fees from
 You can also contribute to the Evmos ecosystem without building a dApp. Head over to [tools](./tools/index.md) to learn
  how to contribute as a full-stack developer by building new dev tools or [protocol](../protocol) to help
   out building the core protocol.
-
-<!-- ### Tutorials For Ethereum Developers
-TODO: Redirect learnings & Guides to ACADEMY -->
-
-<!-- Add visual journey and tools
-  1. build deploy smart contracts on Testnet with solidity
-     1. connected to oracles
-     2. using EVM extension
-     3. Deploy with Ethereum JSON-RPC
-  2. Frontend
-     1. build EvmosJS
-     2. users interacting with Wallets to access smart contracts (Metamask, Keplr)
-  3. Backend
-  4. Tesnet
-  5. Mainnet
--->
