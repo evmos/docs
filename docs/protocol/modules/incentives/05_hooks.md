@@ -10,7 +10,7 @@ The `x/incentives` module implements two transaction hooks from the `x/evm` and 
 
 The EVM hook updates the logs that keep track of much gas was used
 for interacting with an incentivized contract during one epoch.
-An [EVM hook](https://docs.evmos.org/modules/evm/06_hooks.html) executes custom logic
+An [EVM hook](./../evm/hooks) executes custom logic
 after each successful evm transaction.
 In this case it updates the incentive’s total gas count and the participant's own gas count.
 
