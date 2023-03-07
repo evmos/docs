@@ -1388,7 +1388,7 @@ value: "0x0000000000000000000000000000000000000000000000000000000000000000"
 ### JSON-RPC
 
 For an overview on the JSON-RPC methods and namespaces supported on Evmos,
-please refer to [https://docs.evmos.org/developers/json-rpc/endpoints.html](https://docs.evmos.org/developers/json-rpc/endpoints.html)
+please refer to [https://docs.evmos.org/develop/api/ethereum-json-rpc/methodsl](https://docs.evmos.org/develop/api/ethereum-json-rpc/methods)
 
 ### gRPC
 
