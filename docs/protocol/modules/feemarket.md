@@ -81,7 +81,7 @@ and gas target (`block gas limit / elasticity multiplier`):
 
 Instead of burning the base fee (as implemented on Ethereum),
 the `feemarket` module allocates the base fee
-for regular [Cosmos SDK fee distribution](https://docs.evmos.org/modules/distribution/).
+for regular [Cosmos SDK fee distribution](https://docs.cosmos.network/main/modules/distribution).
 
 ### Priority Tip
 
@@ -92,7 +92,7 @@ The higher the tip, the more likely the transaction is included in the block.
 Until the Cosmos SDK version v0.46, however, there is no notion of transaction prioritization.
 Thus, the tip for an EIP-1559 transaction on Evmos should be zero
 (`MaxPriorityFeePerGas` JSON-RPC endpoint returns `0`).
-Have a look at the [mempool](https://docs.evmos.org/validators/setup/mempool.html) docs
+Have a look at the [mempool](https://docs.evmos.org/validate/setup-and-configuration/mempool) docs
 to read more about how to leverage transaction prioritization.
 
 ### Effective Gas price

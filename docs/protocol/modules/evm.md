@@ -196,7 +196,7 @@ Have a look at the [go-ethereum source code](https://github.com/ethereum/go-ethe
 to see how the EVM opcodes are implemented.
 Just as Geth can be run as an Ethereum node,
 Evmos can be run as a node to compute state transitions with the EVM.
-Evmos supports Geth's standard [Ethereum JSON-RPC APIs](https://docs.evmos.org/developers/json-rpc/endpoints.html)
+Evmos supports Geth's standard [Ethereum JSON-RPC APIs](https://docs.evmos.org/develop/api/ethereum-json-rpc/methods)
 in order to be Web3 and EVM compatible.
 
 #### JSON-RPC
@@ -210,7 +210,7 @@ It uses JSON (RFC 4627) as a data format.
 
 ##### JSON-RPC Example: `eth_call`
 
-The JSON-RPC method [`eth_call`](https://docs.evmos.org/developers/json-rpc/endpoints.html#eth-call) allows you
+The JSON-RPC method [`eth_call`](https://docs.evmos.org/develop/api/ethereum-json-rpc/methods#eth-call) allows you
 to execute messages against contracts.
 Usually, you need to send a transaction to a Geth node to include it in the mempool,
 then nodes gossip between each other and eventually the transaction is included in a block and gets executed.
@@ -572,7 +572,7 @@ and that it doesn't contain the private key field.
 It is also important to note that since the `auth` module on the Cosmos SDK manages the account state,
 the `Address` field must correspond to an existing `EthAccount`
 that is stored in the `auth`'s module `Keeper` (i.e `AccountKeeper`).
-Addresses use the **[EIP55](https://eips.ethereum.org/EIPS/eip-55)** hex **[format](https://docs.evmos.org/users/technical_concepts/accounts.html#address-formats-for-clients)**
+Addresses use the **[EIP55](https://eips.ethereum.org/EIPS/eip-55)** hex **[format](https://docs.evmos.org/protocol/concepts/accounts#address-formats-for-clients)**
 on `genesis.json`.
 
 ```go
@@ -1044,7 +1044,7 @@ The message is sent to native modules asynchronously, there's no way for the cal
 
 ### Use Case: Call Native ERC20 Module on Evmos
 
-Here is an example taken from the Evmos [erc20 module](https://docs.evmos.org/modules/erc20/)
+Here is an example taken from the Evmos [erc20 module](erc20.md)
 that shows how the `EVMHooks` supports a contract calling a native module
 to convert ERC-20 Tokens into Cosmos native Coins.
 Following the steps from above.

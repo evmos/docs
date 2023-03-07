@@ -58,7 +58,7 @@ This avoids the situtation, that an individual deployer who leaves your project 
 As described above, developers will earn a portion of the transaction fee after registering their contracts.
 To understand how transaction fees are distributed, we look at the following two things in detail:
 
-* The transactions eligible are only [EVM transactions](https://docs.evmos.org/modules/evm/) (`MsgEthereumTx`).
+* The transactions eligible are only [EVM transactions](evm.md) (`MsgEthereumTx`).
   Cosmos SDK transactions are not eligible at this time.
 * The registration of factory contracts (smart contracts that have been deployed by other contracts)
   requires the identification original contract's deployer.
@@ -307,7 +307,7 @@ in order to distribute fees between developers and validators.
 
 ### EVM Hook
 
-A [`PostTxProcessing` EVM hook](https://docs.evmos.org/modules/evm/06_hooks.html) executes custom logic
+A [`PostTxProcessing` EVM hook](evm.md#hooks) executes custom logic
 after each successful EVM transaction.
 All fees paid by a user for transaction execution are sent to the `FeeCollector` module account
 during the `AnteHandler` execution before being distributed to developers and validators.
