@@ -10,9 +10,9 @@ The `x/recovery` module enables users on Evmos to recover locked funds
 that were transferred to accounts whose keys are not supported on Evmos.
 This happened in particular after the initial Evmos launch (`v1.1.2`),
 where users transferred tokens to a `secp256k1` Evmos address via IBC
-in order to [claim their airdrop](https://docs.evmos.org/modules/claims/).
+in order to [claim their airdrop](./../modules/claims/concepts).
 To be EVM compatible,
-[keys on Evmos](https://docs.evmos.org/users/technical_concepts/accounts.html#evmos-accounts) are generated
+[keys on Evmos](./../concepts/accounts#evmos-accounts) are generated
 using the `eth_secp256k1` key type which results in a different address derivation
 than e.g. the `secp256k1` key type used by other Cosmos chains.
 

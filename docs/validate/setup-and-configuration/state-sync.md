@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 # State Sync
 
-Learn about Tendermint Core state sync and support offered by the Cosmos SDK. {synopsis}
+Learn about Tendermint Core state sync and support offered by the Cosmos SDK.
 
 :::tip
 **Note**: Only curious about how to sync a node with the network? Skip to [this section](#state-syncing-a-node).

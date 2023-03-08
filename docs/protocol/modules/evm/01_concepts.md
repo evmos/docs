@@ -116,7 +116,7 @@ Have a look at the [go-ethereum source code](https://github.com/ethereum/go-ethe
 to see how the EVM opcodes are implemented.
 Just as Geth can be run as an Ethereum node,
 Evmos can be run as a node to compute state transitions with the EVM.
-Evmos supports Geth's standard [Ethereum JSON-RPC APIs](https://docs.evmos.org/developers/json-rpc/endpoints.html)
+Evmos supports Geth's standard [Ethereum JSON-RPC Methods](./../../../develop/api/ethereum-json-rpc/methods)
 in order to be Web3 and EVM compatible.
 
 ### JSON-RPC
@@ -130,7 +130,7 @@ It uses JSON (RFC 4627) as a data format.
 
 #### JSON-RPC Example: `eth_call`
 
-The JSON-RPC method [`eth_call`](https://docs.evmos.org/developers/json-rpc/endpoints.html#eth-call) allows you
+The JSON-RPC method [`eth_call`](./../../../develop/api/ethereum-json-rpc/methods#eth_call) allows you
 to execute messages against contracts.
 Usually, you need to send a transaction to a Geth node to include it in the mempool,
 then nodes gossip between each other and eventually the transaction is included in a block and gets executed.

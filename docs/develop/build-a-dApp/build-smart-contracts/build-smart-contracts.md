@@ -1,12 +1,5 @@
 # EVM Smart Contracts
 
-<!-- TODO
-Add an image of a dApp with several smart contracts that use
-- are built with solitidy
-- oracles
-- evm extensions
--->
-
 Since the introduction of Ethereum in 2015,
 the ability to control digital assets through [smart contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)
 has attracted a large community of developers
@@ -72,16 +65,14 @@ such as insurance, borrowing, lending, or gaming.
 
 ## Deploy with Ethereum JSON-RPC
 
-Evmos is fully compatible with the [Ethereum JSON-RPC](../../api/ethereum-json-rpc/) APIs,
+Evmos is fully compatible with the [Ethereum JSON-RPC](./../../develop/api/ethereum-json-rpc/) APIs,
 allowing you to deploy and interact with smart contracts on Evmos
 and connect with existing Ethereum-compatible web3 tooling.
 This gives you direct access to reading Ethereum-formatted transactions
 or sending them to the network which otherwise wouldn't be possible on a Cosmos chain, such as Evmos.
 
-You can connect to the Evmos Testnet
+You can connect to the Evmos [Testnet](../../testnet/index.md)
 to deploy and test your smart contracts before moving to Mainnet.
-
-<!-- TODO: Add link to Testnet once those sections are ready -->
 
 ### Block Explorers
 

@@ -24,8 +24,6 @@ The sum of these features allows developers to leverage existing Ethereum ecosys
 software to seamlessly deploy smart contracts which interact with the rest of the Cosmos
 [ecosystem](https://cosmos.network/ecosystem).
 
-<!-- TODO ## High-level Systems Design (Add visualization) -->
-
 ## Cosmos SDK
 
 Evmos enables the full composability and modularity of the [Cosmos SDK](https://docs.cosmos.network/).
@@ -81,8 +79,6 @@ we recommend understanding the following concepts:
 There are several ways to contribute to the Evmos core protocol. To get some hands-on experience,
 we recommend you spin up a local Evmos node using the [Evmos CLI](./evmos-cli/index.md)
 and interact with it through queries and transactions using the supported [clients](../develop/api#clients).
-
-<!-- TODO add link to academy -->
 
 Then if you're hooked you can
 
