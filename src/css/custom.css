@@ -72,7 +72,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -116,7 +116,7 @@ button,
 }
 
 :root {
-  --ifm-color-primary: #e4761b;
+  --ifm-color-primary: #ed4e33;
   --ifm-color-primary-dark: #d16914;
   --ifm-color-primary-darker: #c8600b;
   --ifm-color-primary-darkest: #c05803;

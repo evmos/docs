@@ -40,9 +40,8 @@ The Evmos network supports both formats: bech32 and hex. Other EVM peers and its
 
 There are several paths users can take to acquire EVMOS Token.
 
-- Decentralized Exchanges: [Osmosis](https://app.osmosis.zone/?from=ATOM&to=EVMOS) 
-- Centralized Exchanges to purchase `ATOM` and transfer the tokens to a wallet and exchange for `EVMOS`
-- [C14 Money](https://pay.c14.money/) is an onramp service that uses credit card to purchase `EVMOS`
+- Decentralized Exchanges: [Osmosis](https://app.osmosis.zone/?from=ATOM&to=EVMOS)
+- [C14 Money](https://pay.c14.money/) is an onramp service
 - [Testnet Faucet](https://faucet.evmos.dev/) dispenses a small amount of testnet tokens
 
 </details>
