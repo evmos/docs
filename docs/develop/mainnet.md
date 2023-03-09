@@ -5,15 +5,19 @@ sidebar_position: 4
 # Mainnet
 
 Before real users begin to transact with actual funds on your dApp, it is important to take into account certain factors
- when launching it on Mainnet. Although moving your dApp from Testnet to Mainnet may be a straightforward process of
-  deploying your contracts to the Mainnet network, ensuring success and enhancing the exposure of your dApp may require
-   additional business development efforts. Here is an overview of some of the key factors to consider.
+when launching it on Mainnet. Although moving your dApp from Testnet to Mainnet may be a straightforward process of
+deploying your contracts to the Mainnet network, ensuring success and enhancing the exposure of your dApp may require
+additional business development efforts. Here is an overview of some of the key factors to consider.
+
+:::note
+An Evmos validator, Stakely.io, runs a [faucet](https://stakely.io/en/faucet/evmos-evm) for builders to request dust.
+:::
 
 ## Deployment
 
 You can deploy your contracts on Mainnet using the [JSON-RPC](../develop/build-a-dApp/build-smart-contracts#deploy-with-ethereum-json-rpc).
- This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/api/networks).
- Before you do so, have a look at the following considerations.
+This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/api/networks).
+Before you do so, have a look at the following considerations.
 
 ### Security
 
@@ -23,11 +27,11 @@ ensure all functions, error handling, and edge cases are covered.
 Whenever possible, perform a comprehensive security audit of the smart contract code to identify and eliminate any
 potential vulnerabilities or weaknesses. This is especially vital for the mainnet, as the code will be accessible to
 everyone and any security flaws could result in substantial losses. Learn about the common vulnerabilities and contract
- security practices. External auditors can also help optimize your contract's performance.
+security practices. External auditors can also help optimize your contract's performance.
 
 Ensure proper management of contract ownership and consider implementing a multi-sig mechanism for increased security.
 This will allow you to maintain deployment ownership within your team instead of one specific owner that might leave the
- team.
+team.
 
 Last but not least, verify that any external libraries or dependencies used by the contract are up-to-date and secure.
 
@@ -60,8 +64,8 @@ eligible receivers of an airdrop have a look at the [Evmos Rektdrop](https://med
 ### Token Registration
 
 Evmos allows for ERC-20 tokens to be used cross-chain. Once some of your tokens have been minted, you can register a token
- pair through governance, which will allow users to send your tokens across chains. Head over to our Academy to learn how
- to [register your ERC-20 token](https://academy.evmos.org/developers/guides/erc20-registration).
+pair through governance, which will allow users to send your tokens across chains. Head over to our Academy to learn how
+to [register your ERC-20 token](https://academy.evmos.org/developers/guides/erc20-registration).
 
 ## Revenue
 

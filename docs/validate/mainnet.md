@@ -30,7 +30,7 @@ IDs. Note that, the displayed version might differ when an active Software Upgra
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to 
+Follow the [installation](./../validate/setup-and-configuration/run-a-validator) document to
 install the <ProjectValue keyword='name' /> binary <Highlighter keyword="binary" />.
 
 :::warning

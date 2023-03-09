@@ -25,7 +25,7 @@ through the Inter Blockchain Communication Protocol (IBC).
 Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich
 ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from
 another chain, you can learn how to
-[build and deploy smart contracts](./develop/build-a-dApp/build-a-frontend) and what
+[build and deploy smart contracts](./develop/build-a-dApp/build-smart-contracts) and what
 [tools](./tools/index.md) are available to build a web3
 [frontend](./develop/build-a-dApp/build-a-frontend#wallet-integration) and
 [backend](./develop/create-backend) to create a seamless web3 experience for users of your dApp on Evmos.
@@ -37,5 +37,5 @@ start [earning an income](./../develop/mainnet#revenue) on transaction fees from
 ## Contributors
 
 You can also contribute to the Evmos ecosystem without building a dApp. Head over to [tools](./tools/index.md) to learn
- how to contribute as a full-stack developer by building new dev tools or [protocol](../protocol) to help
-  out building the core protocol.
+how to contribute as a full-stack developer by building new dev tools or [protocol](../protocol) to help
+out building the core protocol.

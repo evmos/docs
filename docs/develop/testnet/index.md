@@ -30,7 +30,7 @@ so that you don’t need to worry about loosing funds.
 
 We hosted our testnet API endpoints [here](./../develop/api#clients) and it uses Swagger.
 
-## Faucet
+## [Faucet](https://faucet.evmos.dev/)
 
 import ProjectValue from '@site/src/components/ProjectValue';
 import Highlighter from '@site/src/components/Highlighter';

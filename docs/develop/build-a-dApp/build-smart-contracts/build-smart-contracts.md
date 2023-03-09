@@ -1,7 +1,7 @@
 # EVM Smart Contracts
 
 Since the introduction of Ethereum in 2015,
-the ability to control digital assets through [smart contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)
+the ability to control digital assets through [smart contracts](https://ethereum.org/en/smart-contracts/)
 has attracted a large community of developers
 to build decentralized applications on the Ethereum Virtual Machine (EVM).
 This community is continuously creating extensive tooling and introducing standards,
