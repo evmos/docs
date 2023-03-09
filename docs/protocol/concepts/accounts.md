@@ -88,7 +88,7 @@ type EthAccountI interface {
 }
 ```
 
-For more information on Ethereum accounts head over to the [x/evm module](../modules/evm/01_concepts.md#accounts).
+For more information on Ethereum accounts head over to the [x/evm module](../modules/evm.md#concepts).
 
 ### Addresses and Public Keys
 

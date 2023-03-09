@@ -62,7 +62,7 @@ while ensuring the same developer experience as Ethereum:
 - `StateDB` interface for state updates and queries
 - [JSON-RPC](../develop/api/ethereum-json-rpc) client for interacting with the EVM
 
-Most components are implemented in the [EVM module](./modules/evm/index.md).
+Most components are implemented in the [EVM module](modules/evm.md)
 To achieve a seamless developer UX, however, some of the components are implemented
 outside of the module.
 
@@ -77,7 +77,7 @@ we recommend understanding the following concepts:
 ## Contributing
 
 There are several ways to contribute to the Evmos core protocol. To get some hands-on experience,
-we recommend you spin up a local Evmos node using the [Evmos CLI](./evmos-cli/index.md)
+we recommend you spin up a local Evmos node using the [Evmos CLI](evmos-cli/index.md)
 and interact with it through queries and transactions using the supported [clients](../develop/api#clients).
 
 Then if you're hooked you can

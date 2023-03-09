@@ -30,8 +30,8 @@ information into a database with convenient and fast search. Indexers are essent
 ## Gas & Estimation
 
 When developing and running dApps on Evmos, the wallet configuration will attempt to calculate the correct gas amount
-for user's to sign. [Gas and Fees](./../../../protocol/concepts/gas-and-fees) breaks down these concepts in more detail.
-We have a module called [feemarket](./../../../protocol/modules/feemarket/concepts) that describe our module implementation
+for user's to sign. [Gas and Fees](./../../../protocol/concepts/gas-and-fees.md) breaks down these concepts in more detail.
+We have a module called [feemarket](./../../../protocol/modules/feemarket.md#concepts) that describe our module implementation
 of transaction prioritization since prior to Cosmos SDK 0.46 it did not have such implementation.
 
 ## Wallet Integration
@@ -43,6 +43,6 @@ applications. Here are some key points from various sources on wallet integratio
 transactions and wallet interactions, and more. Developers enabling transactions on their dApp have to determine
 the wallet type of the user, create the transaction, request signatures from the corresponding wallet, and finally broadcast.
 
-- Leverage Keplr, Metamask, Ledger, WalletConnect and more with Evmos. The latest wallets are located [here](./../../../use/connect-your-wallet).
+- Leverage Keplr, Metamask, Ledger, WalletConnect and more with Evmos. The latest wallets are located [here](./../../../use/connect-your-wallet/index.mdx).
 
 - Head over to our [Evmos Client Integrations](./../../develop/tools/client-integrations) to leverage our Typescript or Python libraries.
