@@ -10,7 +10,7 @@ import ProjectValue from '@site/src/components/ProjectValue';
 
 #### Go
 
-Evmos is built using [Go](https://golang.org/dl/) version `1.19+`. Check your version with:
+Evmos is built using [Go](https://golang.org/dl/) version `1.20+`. Check your version with:
 
 ```bash
 go version
