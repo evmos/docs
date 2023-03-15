@@ -22,7 +22,7 @@ You specify the network you want to join by setting the **genesis file** and **s
 
 ## Install `evmosd`
 
-Follow the [installation](./../develop/build-a-dApp/run-a-node/installation) document to install the <ProjectValue keyword='name' /> binary <Highlighter keyword="binary" />.
+Follow the [installation](./../protocol/evmos-cli/single-node) document to install the <ProjectValue keyword='name' /> binary <Highlighter keyword="binary" />.
 
 :::warning
 Make sure you have the right version of <Highlighter keyword="binary" /> installed.
@@ -153,7 +153,7 @@ evmosd tx staking create-validator \
 
 ## Start testnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node).
+The final step is to [start the nodes](./../protocol/evmos-cli/single-node#start-node).
 Once enough voting power (+2/3) from the genesis validators is up-and-running, the
 testnet will start producing blocks.
 
@@ -211,6 +211,7 @@ To get your Node ID use
 ```bash
 evmosd tendermint show-node-id
 ```
+
 :::
 
 ## State Syncing a Node
