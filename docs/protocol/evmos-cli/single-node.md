@@ -11,7 +11,7 @@ its simplicity and speed. For more complex setups, please refer to the [Multi No
 
 ## Prerequisite Readings
 
-- [Install Binary](./installation)
+- [Install Binary](./)
 
 ## Automated Script
 
