@@ -8,7 +8,7 @@ This document outlines the steps to join an existing mainnet.
 
 ## Prerequisite Readings
 
-- [Validator Security](./security/validator-security)
+- [Validator Security](./security)
 
 import Highlighter from '@site/src/components/Highlighter';
 
@@ -24,8 +24,8 @@ IDs. Note that, the displayed version might differ when an active Software Upgra
 | `evmos_9001-1` | Evmos Mainnet 1 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-1) | [`v2.0.1`](https://github.com/evmos/evmos/releases/v2.0.1) | `Stale` |
 
 :::warning
-**IMPORTANT:** If you join mainnet as a validator make sure you follow all the 
-[security](./security/validator-security) recommendations!
+**IMPORTANT:** If you join mainnet as a validator make sure you follow all the
+[security](./security) recommendations!
 :::
 
 ## Install `evmosd`

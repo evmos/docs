@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Following this page, you can run a single node local network manually or
 by using the already prepared automated script. Running a single node setup is useful
-for developers who want to test their applications and protocol features because of 
+for developers who want to test their applications and protocol features because of
 its simplicity and speed. For more complex setups, please refer to the [Multi Node Setup](./multi-nodes) page.
 
 ## Prerequisite Readings
@@ -79,10 +79,13 @@ evmosd init $MONIKER --chain-id=$CHAINID
 ```
 
 :::tip
-You can [edit](./evmosd#configuring-the-node) this `moniker` later by updating the `config.toml` file.
+You can [edit](./configuration#client-configuration) this `moniker` later by updating the `config.toml` file.
 :::
 
-The command above creates all the configuration files needed for your node and validator to run, as well as a default genesis file, which defines the initial state of the network. All these [configuration files](./evmosd#configuring-the-node) are in `~/.evmosd` by default, but you can overwrite the location of this folder by passing the `--home` flag.
+The command above creates all the configuration files needed for your node and validator to run, as well as a default
+genesis file, which defines the initial state of the network. All these
+[configuration files](./configuration#client-configuration) are in `~/.evmosd` by default, but you can overwrite the
+location of this folder by passing the `--home` flag.
 
 ### Genesis Procedure
 
@@ -94,7 +97,8 @@ Before starting the chain, you need to populate the state with at least one acco
 evmosd keys add my_validator
 ```
 
-Once you have created a local account, go ahead and grant it some `aevmos` tokens in your chain's genesis file. Doing so will also make sure your chain is aware of this account's existence:
+Once you have created a local account, go ahead and grant it some `aevmos` tokens in your chain's genesis file. Doing 
+so will also make sure your chain is aware of this account's existence:
 
 ```bash
 evmosd add-genesis-account my_validator 10000000000aevmos
@@ -162,9 +166,6 @@ You should see blocks come in.
 The previous command allow you to run a single node. This is enough for the next section on interacting with this node, but you may wish to run multiple nodes at the same time, and see how consensus happens between them.
 
 You can then stop the node using `Ctrl+C`.
-
-
-
 
 ## Further Configuration
 
@@ -247,8 +248,8 @@ rm $HOME/.evmosd/config/addrbook.json $HOME/.evmosd/config/genesis.json
 evmosd tendermint unsafe-reset-all --home $HOME/.evmosd
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. 
-If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, 
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`.
+If you had any sentry nodes or full nodes setup before, your node will still try to connect to them,
 but may fail if they haven't also been upgraded.
 
 ### Delete Data
@@ -263,7 +264,7 @@ Data for the <ProjectValue keyword="binary" /> binary should be stored at <Highl
 rm -rf ~/.evmosd
 ```
 
-To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation 
+To clear all data except key storage (if keyring backend chosen) and then you can rerun the full node installation
 commands from above to start the node again.
 
 ## Recording Transactions Per Second (TPS)
@@ -301,7 +302,6 @@ rate(evmosd_transactions_processed[1m])
 ```
 
 which will show the rate of transactions processed.
-
 
 :::tip
 Evmos currently only supports 24 word mnemonics.
