@@ -169,7 +169,7 @@ Ref: [Security Advisory: Insecurely configured geth can make funds remotely acce
 
 ## Start mainnet
 
-The final step is to [start the nodes](./../develop/build-a-dApp/run-a-node#start-node). Once enough voting power (+2/3)
+The final step is to [start the nodes](./../protocol/evmos-cli/single-node#start-node). Once enough voting power (+2/3)
 from the genesis validators is up-and-running, the node will start producing blocks.
 
 ```bash

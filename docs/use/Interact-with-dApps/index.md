@@ -6,7 +6,7 @@ slug: '/dapps'
 # Use dApps
 
 Before engaging with dApps, it is important to have a wallet with some Evmos tokens. If you have not installed a wallet,
-please visit our [wallet's](./../wallet) section to select an appropriate wallet. If you do not have any EVMOS tokens,
+please visit our [wallet's](./../use/wallet) section to select an appropriate wallet. If you do not have any EVMOS tokens,
 you can acquire them by reading the [Onramp to Evmos](../transfer-tokens/index.md#onramp-to-evmos) strategies.
 
 <!-- add link to [dApps](../intro#what-are-dapps) -->
@@ -44,8 +44,8 @@ Alongside the applications built by the developer community, the Evmos Core Deve
 Staking plays an essential role in keeping the Evmos network secure and decentralized. The Evmos network is run by a
 technology that incentivizes a set of community members to keep it online and decentralized, called Proof-of-Stake.
 These community members, called validators, are responsible for validating transactions in a block and are usually
-  very technical teams as they have to monitor and upgrade the software that runs the Evmos network. Validators are
-  incentivized to stay online as they earn a commission on your stake.
+very technical teams as they have to monitor and upgrade the software that runs the Evmos network. Validators are
+incentivized to stay online as they earn a commission on your stake.
 
 You can help keep the network secure and put your EVMOS tokens at "stake", by delegating them to a validator. This will
 earn you a daily interest in form of new EVMOS tokens (aka. staking rewards). As long as your tokens are staked, you
@@ -79,6 +79,6 @@ governance proposals.
 
 :::note
 Engage with our community on [Commonwealth](https://commonwealth.im/evmos) and learn about upcoming proposals. If you are
-interested in launching your own governance proposals, head over [here](https://academy.evmos.org/community/governance/overview)
+interested in launching your own governance proposals, head over [here](https://academy.evmos.org/community/governance/)
 for a guide.
 :::

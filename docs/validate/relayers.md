@@ -25,7 +25,7 @@ If running many nodes on a single VM, [ensure your open files limit is increased
 ## Prerequisites
 
 Before beginning, ensure you have an Evmos node running in the background of the same machine that you intend to relay on.
- Follow [this guide](./../develop/build-a-dApp/run-a-node/run-a-node) to set up an Evmos node if you have not already.
+ Follow [this guide](./../protocol/evmos-cli/single-node) to set up an Evmos node if you have not already.
 
 In this guide, we will be relaying between [Evmos (channel-3) and Cosmos Hub (channel-292)](https://www.mintscan.io/evmos/relayers).
  When setting up your Evmos and Cosmos full nodes, be sure to offset the ports being used in both the `app.toml` and `config.toml`

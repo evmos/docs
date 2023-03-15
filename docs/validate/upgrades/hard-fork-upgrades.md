@@ -4,8 +4,8 @@ sidebar_position: 2
 
 # Hard Fork Upgrades
 
-One of the significant limitations of the normal upgrade procedure [via
-governance](./../../validate/upgrades/overview#governance-proposal) is that it requires waiting for the
+One of the significant limitations of the normal upgrade procedure
+[via governance](./../../validate/upgrades#governance-proposal) is that it requires waiting for the
 entire duration of the voting period. This duration makes it unsuitable for
 automated upgrades that involve patches for security vulnerabilities or other
 critical components.

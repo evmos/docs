@@ -32,13 +32,17 @@ HSM modules must support `ed25519` signatures for Evmos. The [YubiHSM 2](https:/
 
 ## Tendermint KMS
 
-Tendermint KMS is a signature service with support for Hardware Security Modules (HSMs), such as YubiHSM2 and Ledger Nano. It is intended to be run alongside Cosmos Validators, ideally on separate physical hosts, providing defense-in-depth for online validator signing keys, double signing protection, and functioning as a central signing service that can be used when operating multiple validators in several Cosmos Zones.
+Tendermint KMS is a signature service with support for Hardware Security Modules (HSMs), such as YubiHSM2 and Ledger 
+Nano. It is intended to be run alongside Cosmos Validators, ideally on separate physical hosts, providing 
+defense-in-depth for online validator signing keys, double signing protection, and functioning as a central 
+signing service that can be used when operating multiple validators in several Cosmos Zones.
 
 Learn how to set up a Key Management System for Evmos with Tendermint KMS [here](./tendermint-kms).
 
 ## Sentry Nodes (DDOS Protection)
 
-Validators are responsible for ensuring that the network can sustain denial-of-service attacks. One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called sentry node architecture.
+Validators are responsible for ensuring that the network can sustain denial-of-service attacks. One recommended way 
+to mitigate these risks is for validators to carefully structure their network topology in a so-called sentry node architecture.
 
 Validator nodes should only connect to full nodes they trust because they operate them themselves or are run by other validators they know socially. A validator node will typically run in a data center. Most data centers provide direct links to the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes and may require new sentry nodes to be spun up or activated to mitigate attacks on existing ones.
 
@@ -85,7 +89,7 @@ signing method of Tendermint), your Tendermint key is located at:
 Then do the following:
 
 1. Back up the `json` file mentioned above (or backup the whole `config` folder).
-2. Back up the self-delegator wallet. See [backing up wallets with the Evmos Daemon](./../../use/key-management).
+2. Back up the self-delegator wallet. See [backing up wallets with the Evmos Daemon](./../../protocol/concepts/key-management).
 
 To see your validator's associated public key:
 
@@ -109,4 +113,7 @@ By default, uppercase environment variables with the following prefixes will rep
 - `TM` (for Tendermint flags)
 - `BC` (for democli or basecli flags)
 
-For example, the environment variable `EVMOS_CHAIN_ID` will map to the command line flag `--chain-id`. Note that while explicit command-line flags will take precedence over environment variables, environment variables will take precedence over any of your configuration files. For this reason,  you must lock down your environment such that any critical parameters are defined as flags on the binary or prevent modification of any environment variables.
+For example, the environment variable `EVMOS_CHAIN_ID` will map to the command line flag `--chain-id`. Note that while
+explicit command-line flags will take precedence over environment variables, environment variables will take precedence
+over any of your configuration files. For this reason,  you must lock down your environment such that any critical
+parameters are defined as flags on the binary or prevent modification of any environment variables.

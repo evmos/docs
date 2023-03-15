@@ -180,7 +180,7 @@ The IP address will be the public IP of the docker container.
 :::
 
 Additional instructions on how to interact with the WebSocket can be found on the 
-[events documentation](./../clients/ethereum-JSON-RPC/event#ethereum-websocket).
+[events documentation](./../../develop/api/ethereum-json-rpc#ethereum-websocket).
 
 ### Keys & Accounts
 

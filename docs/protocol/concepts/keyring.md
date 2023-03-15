@@ -11,7 +11,7 @@ set up before running the node, so that blocks can be correctly signed. The priv
 locations, called ["backends"](#keyring-backends), such as a file or the operating system's own key storage.
 
 :::tip
-In case, you need a refresher on private key and key management, please reference our [Key Management](./../../use/key-management).
+In case, you need a refresher on private key and key management, please reference our [Key Management](./key-management).
 :::
 
 ## Add keys
