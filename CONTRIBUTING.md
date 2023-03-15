@@ -35,6 +35,9 @@ be made in the form of a Pull Request. Make sure to use descriptive titles and d
 Any physical code changes to the core protocol should be made with the [Evmos Repo](https://github.com/evmos/evmos/) and
 make sure to submit both code and docs changes at the same time.
 
+If there are a large scale changes, re-index might be necessary. We use Algolia DocSearch to power our search. It might
+take up to a week for the change to propagate.
+
 ## Contact Us
 
 If you need any assistance or have any questions, please reach out to the Evmos Core Team via our social links found on our
