@@ -41,7 +41,8 @@ When working with the `local_node.sh` script, it is necessary to extend all `evm
 }
 ```
 
-You can customize the local node script by changing values for convenience for example:
+You can customize the local node script by changing the configuration variables.
+See the following excerpt from the script for ideas on what can be adjusted:
 
 ```bash
 # Customize the name of your keys, the chain-id, moniker of the node, keyring backend, and more
@@ -65,7 +66,7 @@ TRACE=""
 [...]
 
   # Adjust this set a different maximum gas limit
-	jq '.consensus_params["block"]["max_gas"]="10000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.consensus_params["block"]["max_gas"]="10000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 [...]
 
