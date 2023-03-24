@@ -85,7 +85,8 @@ there is enough decentralized exchange (DEX) liquidity. Merely send the chain's 
 
 Evmos data feed can be found [here](https://adrastia.io/app/price-feeds/evmos).
 
-Adrastia uses three types of contracts to provide secure data feeds. [These three](https://docs.adrastia.io/structure/contracts) are:
+Adrastia uses three types of contracts to provide secure data feeds. [These three](https://docs.adrastia.io/structure/contracts)
+are:
 
 1. Accumulators: At the lowest level, accumulators collect observations from various DEXs.
 2. Intermediate oracles: Intermediate oracles use data from accumulators to collect, produce, and store derived data
@@ -116,8 +117,8 @@ contract are available for use. The update frequency is 2 hours. To use their AP
 
 Going beyond today’s definition of an oracle, SEDA is a multi-chain-native data transmission protocol built on an
 entirely decentralized foundation. The SEDA network is a Proof-of-Stake on-chain data provision solution that
- allows anyone to provide and access high-quality data on all blockchain networks. It is a living market and transport
-  layer that enables access and flow for any type of data through a transparent and secure medium, free of centralized intermediaries.
+allows anyone to provide and access high-quality data on all blockchain networks. It is a living market and transport
+layer that enables access and flow for any type of data through a transparent and secure medium, free of centralized intermediaries.
 
 ### Redstone
 
