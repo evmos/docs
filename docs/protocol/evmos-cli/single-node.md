@@ -15,28 +15,8 @@ its simplicity and speed. For more complex setups, please refer to the [Multi No
 
 ## Automated Script
 
-You can customize the local node script by changing values for convenience for example:
-
-```bash
-# customize the name of your key, the chain-id, moniker of the node, keyring backend, and log level
-KEY="dev0"
-CHAINID="evmos_9000-4"
-MONIKER="localtestnet"
-KEYRING="test"
-LOGLEVEL="info"
-
-
-# Allocate genesis accounts (cosmos formatted addresses)
-evmosd add-genesis-account $KEY 100000000000000000000000000aevmos --keyring-backend $KEYRING
-
-# Sign genesis transaction
-evmosd gentx $KEY 1000000000000000000000aevmos --keyring-backend $KEYRING --chain-id $CHAINID
-```
-
-The default configuration will generate a single validator localnet with the chain-id
-`evmosd-1` and one predefined account (`dev0`) with some allocated funds at the genesis.
-
-You can start the local chain using:
+The simplest way to start a local Evmos node is by using the provided helper script on the base level of the [Evmos repository](https://github.com/evmos/evmos/blob/main/local_node.sh),
+which will create a sensible default configuration for testing purposes:
 
 ```bash
  $ local_node.sh
@@ -59,6 +39,37 @@ When working with the `local_node.sh` script, it is necessary to extend all `evm
 	"node": "tcp://localhost:26657",
 	"broadcast-mode": "sync"
 }
+```
+
+You can customize the local node script by changing the configuration variables.
+See the following excerpt from the script for ideas on what can be adjusted:
+
+```bash
+# Customize the name of your keys, the chain-id, moniker of the node, keyring backend, and more
+KEYS[0]="dev0"
+KEYS[1]="dev1"
+KEYS[2]="dev2"
+CHAINID="evmos_9000-1"
+MONIKER="localtestnet"
+# Remember to change to other types of keyring like 'file' in-case exposing to outside world,
+# otherwise your balance will be wiped quickly
+# The keyring test does not require private key to steal tokens from you
+KEYRING="test"
+KEYALGO="eth_secp256k1"
+LOGLEVEL="info"
+# Set dedicated home directory for the evmosd instance
+HOMEDIR="$HOME/.tmp-evmosd"
+# to trace evm
+#TRACE="--trace"
+TRACE=""
+
+[...]
+
+  # Adjust this set a different maximum gas limit
+  jq '.consensus_params["block"]["max_gas"]="10000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+[...]
+
 ```
 
 ## Manual Deployment
