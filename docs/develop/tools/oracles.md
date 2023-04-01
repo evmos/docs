@@ -85,7 +85,8 @@ there is enough decentralized exchange (DEX) liquidity. Merely send the chain's 
 
 Evmos data feed can be found [here](https://adrastia.io/app/price-feeds/evmos).
 
-Adrastia uses three types of contracts to provide secure data feeds. [These three](https://docs.adrastia.io/structure/contracts) are:
+Adrastia uses three types of contracts to provide secure data feeds. [These three](https://docs.adrastia.io/structure/contracts)
+are:
 
 1. Accumulators: At the lowest level, accumulators collect observations from various DEXs.
 2. Intermediate oracles: Intermediate oracles use data from accumulators to collect, produce, and store derived data
@@ -110,15 +111,6 @@ DIA’s data is directly sourced from a broad array of on-chain and off-chain so
 The [Evmos](https://docs.diadata.org/documentation/oracle-documentation/deployed-contracts#evmos) Mainnet and Testnet
 contract are available for use. The update frequency is 2 hours. To use their API, head over to [here](https://docs.diadata.org/documentation/api-1).
 
-### SEDA network
-
-[SEDA Rust library](https://github.com/sedaprotocol/seda-rust)
-
-Going beyond today’s definition of an oracle, SEDA is a multi-chain-native data transmission protocol built on an
-entirely decentralized foundation. The SEDA network is a Proof-of-Stake on-chain data provision solution that
- allows anyone to provide and access high-quality data on all blockchain networks. It is a living market and transport
-  layer that enables access and flow for any type of data through a transparent and secure medium, free of centralized intermediaries.
-
 ### Redstone
 
 RedStone offers a radically different design of Oracles catering for the needs of modern Defi protocols.
@@ -139,3 +131,22 @@ npm install @redstone-finance/evm-connector
 ```
 
 Examples of Redstone EVM Connector can be found [here](https://github.com/redstone-finance/redstone-evm-connector-examples/blob/main/contracts/example-custom-urls.sol).
+
+
+### Pyth
+
+Pyth leverages over [70 first-party publishers](https://pyth.network/publishers) to publish financial market data to numerous blockchains.
+They provide data feeds to various assets classes, such as [US equities, commodities, and cryptocurrencies](https://pyth.network/price-feeds/). The service has undergone several audits and more information can be found [here](https://github.com/pyth-network/audit-reports).
+
+- [Developer Docs](https://docs.pyth.network/)
+- [Pyth Client for Linux](https://github.com/pyth-network/pyth-client)
+- [Pyth TS client NPM](https://www.npmjs.com/package/@pythnetwork/client)
+
+### SEDA network
+
+[SEDA Rust library](https://github.com/sedaprotocol/seda-rust)
+
+Going beyond today’s definition of an oracle, SEDA is a multi-chain-native data transmission protocol built on an
+entirely decentralized foundation. The SEDA network is a Proof-of-Stake on-chain data provision solution that
+allows anyone to provide and access high-quality data on all blockchain networks. It is a living market and transport
+layer that enables access and flow for any type of data through a transparent and secure medium, free of centralized intermediaries.

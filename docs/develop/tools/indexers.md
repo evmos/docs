@@ -22,3 +22,17 @@ provides an easy interface to query data via APIs.
 - Get an [API Key](https://www.covalenthq.com/platform/#/auth/register/)
 - [Docs](https://www.covalenthq.com/docs/api/#/0/0/USD/1)
 - Cost: Free to use with 100,000 credits to use their API endpoints.
+
+## Numia
+
+Numia is a public good service that indexes various chains on the Cosmos ecosystem. For Evmos, Numia indexes both
+EVM and Cosmos transactions. The service runs on Google BigQuery and requires users to sign up for their own accounts.
+
+:::note
+[Google Cloud](https://cloud.google.com/) provides free trial with ample credits ($300) to run many queries for
+at least a few months.
+:::
+
+- [Get started with GCP instruction](https://docs.numia.xyz/using-numia/getting-started-with-gcp)
+- [Pulling Numia Data Image](https://docs.numia.xyz/using-numia/querying-numia-datasets)
+- [Evmos chain](https://docs.numia.xyz/using-numia/chains/evmos)
