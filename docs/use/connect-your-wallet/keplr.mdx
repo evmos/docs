@@ -6,17 +6,6 @@ sidebar_position: 2
 
 Connect your Keplr wallet with Evmos.
 
-import { chainConfig, handler } from '@site/src/utils/ChainConfig';
-
-:::tip
-Add Evmos Testnet to Keplr.
-
-
-<button onClick={() => handler()} className="bg-red mt-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
-  Add Configuration to Testnet
-</button>
-:::
-
 - [Install Keplr](https://www.keplr.app/)
 
 ![keplr-homepage.png](/img/keplr-homepage.png)
@@ -136,10 +125,6 @@ There are times when the wallet's connected RPC or REST is not working and requi
 of the list.
 4. Update either the `RPC` or `Rest` or both inputs and click `Confirm`
 
-<button onClick={() => handler()} className="bg-red mt-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
-  Add Configuration to Testnet
-</button>
-
 ## Connect Keplr to Mainnet
 
 Once you are signed in to the Keplr extension, you can connect the wallet with the Evmos network. The Evmos mainnet network
@@ -152,6 +137,16 @@ is already built into Keplr and look for the `Evmos` network by clicking on the 
 The default network configurations for Keplr comes with mainnet as its default. To connect to the testnet environment,
 you will need to head to a site/project that has testnet configuration. A window will request your approval for the chain
 and the `chain-id`. Once approved, the testnet will be selectable under the `Beta Support` section of Keplr Wallet.
+
+import { chainConfig, handler } from '@site/src/utils/ChainConfig';
+
+:::tip
+Add Evmos Testnet to Keplr.
+
+<button onClick={() => handler()} className="bg-red mt-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
+  Add Configuration to Testnet
+</button>
+:::
 
 ## Register Interchain Nameservice (ICNS)
 
