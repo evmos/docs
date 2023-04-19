@@ -9,7 +9,8 @@ on the Evmos network. The signature is created using a specific cryptographic al
 ensures the authenticity and integrity of the transaction using methods like
 [wallets](./../../use/connect-your-wallet) and the [CLI](./../evmos-cli).
 
-There are different methods for signing, but one of the most commonly used methods is the [EIP-712]() standard.
+There are different methods for signing, but one of the most commonly used methods is the 
+[EIP-712](https://eips.ethereum.org/EIPS/eip-712) standard.
 Evmos leverages EIP-712 to homogenize the interaction between the EVM and Cosmos.
 
 ## EIP-712
