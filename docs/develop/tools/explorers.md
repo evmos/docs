@@ -24,8 +24,9 @@ Below is a list of public block explorers that support Evmos Mainnet and Testnet
 
 ### Testnet
 
-|  Service   | Support       | URL                                                                            |
-| ---------- |----------------| ------------------------------------------------------------------------------ |
+| Service    | Support        | URL                                                                            |
+| ---------- | -------------- | ------------------------------------------------------------------------------ |
+| Escan      | `cosmos` `evm` | [testnet.escan.live](https://testnet.escan.live)                               |
 | Mintscan   | `cosmos` `evm` | [testnet.mintscan.io/evmos-testnet](https://testnet.mintscan.io/evmos-testnet) |
 | BigDipper  | `cosmos`       | [testnet.bigdipper.live](https://testnet.evmos.bigdipper.live/)                |
 | Blockscout | `evm`          | [evm.evmos.dev](https://evm.evmos.dev/)                                        |
