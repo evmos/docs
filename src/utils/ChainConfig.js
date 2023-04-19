@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 export const chainConfig = {
   stakeCurrency: {
@@ -49,10 +49,10 @@ export const handler = async () => {
     try {
       await window.keplr.enable(chainConfig.chainId);
       Swal.fire({
-        title: 'Note',
+        title: "Note",
         text: `Testnet ${chainConfig.chainId} has already added`,
-        icon: 'info',
-        confirmButtonText: 'Awesome'
+        icon: "info",
+        confirmButtonText: "Awesome",
       });
     } catch (e) {
       try {
@@ -60,12 +60,19 @@ export const handler = async () => {
         await window.keplr.enable(chainConfig.chainId);
       } catch (e2) {
         Swal.fire({
-            title: 'Error',
-            text: e2?.message,
-            icon: 'error',
-            confirmButtonText: 'Ok'
-          });
+          title: "Error",
+          text: e2?.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
       }
     }
+  } else {
+    Swal.fire({
+      title: "Error",
+      text: "Keplr Wallet Extension could not be found. Please check browser compatibility or try again later.",
+      icon: "error",
+      confirmButtonText: "Ok",
+    });
   }
 };

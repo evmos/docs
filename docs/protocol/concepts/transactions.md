@@ -99,7 +99,7 @@ There are several categories of Ethereum transactions:
 - regular transactions: transactions from one account to another
 - contract deployment transactions: transactions without a `to` address, where the contract code is sent in the `data` field
 - execution of a contract: transactions that interact with a deployed smart contract,
-  where the `to` address is the smart contract address
+where the `to` address is the smart contract address
 
 An Ethereum transaction includes the following information:
 
@@ -134,6 +134,35 @@ The reason of this, is because the `MsgEthereumTx` must not be included in a `au
 (SDK's standard transaction type) as it performs gas and fee checks using the Ethereum logic
 from Geth instead of the Cosmos SDK checks done on the auth module `AnteHandler`.
 
+#### Ethereum Tx Type
+
+There are three types of transaction types used in Evmos's [Go Ethereum](https://github.com/ethereum/go-ethereum/blob/b946b7a13b749c99979e312c83dce34cac8dd7b1/core/types/transaction.go#L43-L48)
+implementation that came from Ethereum Improvement Proposals(EIPs):
+
+1. LegacyTxType (EIP-155):
+The LegacyTxType represents the original transaction format that existed before Ethereum Improvement Proposal (EIP) 155.
+These transactions do not include a chain ID, which makes them vulnerable to replay attacks. EIP-155 was introduced
+to solve this problem by incorporating a chain ID, which uniquely identifies a specific Ethereum chain to prevent
+cross-chain replay attacks.
+
+2. AccessListTxType (EIP-2930):
+AccessListTxType was introduced with EIP-2930 as part of the Berlin upgrade. This new transaction type allows users to
+specify an access list – a list of addresses and storage keys that the transaction plans to access. The primary goal
+of access lists is to mitigate some of the gas cost increases introduced with EIP-2929, which increased gas costs
+for state access operations to improve denial-of-service (DoS) attack resistance. By specifying an access list, users
+can avoid paying higher gas costs for subsequent accesses to the same addresses and storage keys within the same transaction.
+
+3. DynamicFeeTxType (EIP-1559):
+DynamicFeeTxType was introduced with EIP-1559 as part of the London upgrade. This transaction type brought significant
+changes to Ethereum's fee market, with the aim of making gas fees more predictable and improving user experience.
+EIP-1559 transactions include two main components: a base fee and a priority fee (or tip). The base fee is algorithmically
+determined by the network, while the priority fee is set by users to incentivize miners to include their transaction.
+The base fee is burned, effectively reducing the overall ETH supply, while the priority fee goes to miners as a reward
+for their work. DynamicFeeTxType transactions allow for more predictable and efficient gas fee management.
+
+These transaction types represent Ethereum's continuous evolution and improvements to its network, helping address
+challenges related to scalability, security, and user experience.
+
 ### Interchain Transactions
 
 Interchain transactions refer to the transfer of digital assets or data between two or more different blockchain networks.
@@ -155,7 +184,7 @@ To make an interchain transaction using IBC a user needs to:
 - Ensure that both blockchain networks have implemented the IBC protocol
 - Ensure there's a connection and channel established between the two blockchain networks using IBC
 - Initiate the transfer of assets or data: this is done by sending a transaction from the source blockchain
-  to the destination blockchain through the IBC channel
+to the destination blockchain through the IBC channel
 
 Interchain transactions are becoming increasingly important as the number of different blockchain networks
 and applications continues to grow.
@@ -184,6 +213,6 @@ A receipt contains the following information:
 - `logs`: Array of log objects, which this transaction generated.
 - `logsBloom`: Bloom filter for light clients to quickly retrieve related logs.
 - `type`: integer of the transaction type, 0x00 for legacy transactions, 0x01 for access list types,
-  0x02 for dynamic fees. It also returns either.
+0x02 for dynamic fees. It also returns either.
 - `root` : transaction stateroot (pre Byzantium)
 - `status`: either 1 (success) or 0 (failure)
