@@ -436,7 +436,7 @@ function approveAllStakingMethodsWithMaxAmount() public {
 
 The `stakeTokens` function allows the transaction sender to delegate the specified amount to his/her favorite validator.
 Keep in mind that, for this transaction to be successful, the user should have approved the `MSG_DELEGATE` previously
-(see the `[approveAllStakingMethodsWithMaxAmount](https://www.notion.so/Evmos-Precompiles-Document-ec70e016b5a34e04b321b88c255e548f)` as an example).
+(see the `approveAllStakingMethodsWithMaxAmount` defined in the code snippet above as an example).
 This function returns the completion time of the staking transaction and emits a `Delegate` event.
 
 ```solidity
