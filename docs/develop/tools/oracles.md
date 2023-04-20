@@ -20,6 +20,7 @@ Our oracles include:
 - [Dia](https://docs.diadata.org/introduction/readme)
 - [SEDA Network](https://docs.seda.xyz/seda-network/introduction/the-oracle-problem) - Flux has renamed to SEDA Network
 - [Redstone](https://docs.redstone.finance/docs/introduction)
+- [Pyth](https://docs.pyth.network/)
 
 ``` sql
    +------------+         +------------+         +-------------+
@@ -97,7 +98,7 @@ The interaction can be shown as a flow-chart below:
 
 ![adrastia-overview.png](/img/adrastia-overview.png)
 
-### Dia
+### DIA
 
 The DIA platform enables the sourcing, validation and sharing of transparent and verified data feeds for traditional and
  digital financial applications. DIA’s institutional-grade data feeds cover asset prices, metaverse data, lending rates
@@ -131,7 +132,6 @@ npm install @redstone-finance/evm-connector
 ```
 
 Examples of Redstone EVM Connector can be found [here](https://github.com/redstone-finance/redstone-evm-connector-examples/blob/main/contracts/example-custom-urls.sol).
-
 
 ### Pyth
 

@@ -17,7 +17,7 @@ This allows token holders on Evmos to instantaneously convert their native Cosmo
 while retaining fungibility with the original asset on the issuing environment/runtime (EVM or Cosmos)
 and preserving ownership of the ERC-20 contract.
 
-This conversion functionality is fully governed by native $EVMOS token holders
+This conversion functionality is fully governed by native EVMOS token holders
 who manage the canonical `TokenPair` registrations (ie, ERC20 ←→ Coin mappings).
 This governance functionality is implemented using the Cosmos-SDK `gov` module
 with custom proposal types for registering and updating the canonical mappings respectively.
@@ -27,7 +27,7 @@ The native Cosmos Coins cannot be used in applications that require the ERC-20 s
 Cosmos coins are held on the `x/bank` module (with access to module methods like querying the supply or balances)
 and ERC-20 Tokens live on smart contracts.
 This problem is similar to [wETH](https://coinmarketcap.com/alexandria/article/what-is-wrapped-ethereum-weth),
-with the difference, that it not only applies to gas tokens (like $EVMOS),
+with the difference, that it not only applies to gas tokens (like EVMOS),
 but to all Cosmos Coins (IBC vouchers, staking and gov coins, etc.) as well.
 
 With the `x/erc20` users on Evmos can
