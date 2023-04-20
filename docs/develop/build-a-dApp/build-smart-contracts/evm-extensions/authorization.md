@@ -131,118 +131,118 @@ interface GenericAuthorizationI {
 
 ### `Authorization.sol`
 
-#### `approve`
+- `approve`
 
-Approves a list of Cosmos or IBC transactions with a specific amount of tokens
+    Approves a list of Cosmos or IBC transactions with a specific amount of tokens
 
-```solidity
-function approve(
-        address spender,
-        uint256 amount,
-        string[] calldata methods
-    ) external returns (bool approved);
-```
+    ```solidity
+    function approve(
+            address spender,
+            uint256 amount,
+            string[] calldata methods
+        ) external returns (bool approved);
+    ```
 
-#### `increaseAllowance`
+- `increaseAllowance`
 
-Increase the allowance of a given spender by a specific amount of tokens for IBC transfer methods or staking
+    Increase the allowance of a given spender by a specific amount of tokens for IBC transfer methods or staking
 
-```solidity
-function increaseAllowance(
-        address spender,
-        uint256 amount,
-        string[] calldata methods
-    ) external returns (bool approved);
-```
+    ```solidity
+    function increaseAllowance(
+            address spender,
+            uint256 amount,
+            string[] calldata methods
+        ) external returns (bool approved);
+    ```
 
-#### `decreaseAllowance`
+- `decreaseAllowance`
 
-Decreases the allowance of a given spender by a specific amount of tokens for IBC transfer methods or staking
+    Decreases the allowance of a given spender by a specific amount of tokens for IBC transfer methods or staking
 
-```solidity
-function decreaseAllowance(
-        address spender,
-        uint256 amount,
-        string[] calldata methods
-    ) external returns (bool approved);
-```
+    ```solidity
+    function decreaseAllowance(
+            address spender,
+            uint256 amount,
+            string[] calldata methods
+        ) external returns (bool approved);
+    ```
 
 ### `GenericAuthorization.sol`
 
-#### `approve`
+- `approve`
 
-Approves a list of Cosmos message
+    Approves a list of Cosmos message
 
-```solidity
-function approve(
-        address spender,
-        string[] calldata methods
-    ) external returns (bool approved);
-```
+    ```solidity
+    function approve(
+            address spender,
+            string[] calldata methods
+        ) external returns (bool approved);
+    ```
 
 ## Queries
 
 ### `Authorization.sol`
 
-#### `allowance`
+- `allowance`
 
-Returns the remaining number of tokens that the spender will be allowed to
-spend on behalf of the owner through IBC transfer methods or staking.
-This is zero by default
+    Returns the remaining number of tokens that the spender will be allowed to
+    spend on behalf of the owner through IBC transfer methods or staking.
+    This is zero by default
 
-```solidity
-function allowance(
-    address owner,
-    address spender,
-    string calldata method
-) external view returns (uint256 remaining);
-```
+    ```solidity
+    function allowance(
+            address owner,
+            address spender,
+            string calldata method
+    ) external view returns (uint256 remaining);
+    ```
 
 ## Events
 
 ### `Authorization.sol`
 
-#### `Approval`
+- `Approval`
 
-This event is emitted when the allowance of a spender is set by a call to the `approve` method.
-The `value` field specifies the new allowance and the `methods`
-field holds the information for which methods the approval was set.
+    This event is emitted when the allowance of a spender is set by a call to the `approve` method.
+    The `value` field specifies the new allowance and the `methods`
+    field holds the information for which methods the approval was set.
 
-```solidity
-event Approval(
-    address indexed owner,
-    address indexed spender,
-    string[] methods,
-    uint256 value
-);
-```
+    ```solidity
+    event Approval(
+            address indexed owner,
+            address indexed spender,
+            string[] methods,
+            uint256 value
+        );
+    ```
 
-#### `AllowanceChange`
+- `AllowanceChange`
 
-This event is emitted when the allowance of a spender is changed by a call to the decrease or increase allowance method.
-The `values` field specifies the new allowances and the `methods`
-field holds the information for which methods the approval was set.
+    This event is emitted when the allowance of a spender is changed by a call to the decrease or increase allowance method.
+    The `values` field specifies the new allowances and the `methods`
+    field holds the information for which methods the approval was set.
 
-```solidity
-event AllowanceChange(
-    address indexed owner,
-    address indexed spender,
-    string[] methods,
-    uint256[] values
-);
-```
+    ```solidity
+    event AllowanceChange(
+            address indexed owner,
+            address indexed spender,
+            string[] methods,
+            uint256[] values
+        );
+    ```
 
 ### `GenericAuthorization.sol`
 
-#### `Approval`
+- `Approval`
 
-This event is emitted when the allowance of a spender is set by a call to the `approve` method.
-The `methods` field holds the information for which methods the approval was set.
+    This event is emitted when the allowance of a spender is set by a call to the `approve` method.
+    The `methods` field holds the information for which methods the approval was set.
 
-```solidity
-event Approval(
-    address indexed owner,
-    address indexed spender,
-    string[] methods
-);
-```
+    ```solidity
+    event Approval(
+            address indexed owner,
+            address indexed spender,
+            string[] methods
+        );
+    ```
