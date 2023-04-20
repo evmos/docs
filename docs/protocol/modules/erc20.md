@@ -2,8 +2,8 @@
 
 :::tip
 **Note:** Working on a governance proposal related to the ERC-20 Module?
-Make sure to look at [Evmos Governance](https://academy.evmos.org/community/governance/),
-and specifically the [best practices](https://academy.evmos.org/community/governance/best-practices/).
+Make sure to look at [Evmos Governance](https://academy.evmos.org/articles/advanced/governance/),
+and specifically the [best practices](https://academy.evmos.org/articles/advanced/governance/best-practices).
 :::
 
 ## Abstract
@@ -32,7 +32,7 @@ but to all Cosmos Coins (IBC vouchers, staking and gov coins, etc.) as well.
 
 With the `x/erc20` users on Evmos can
 
-- use existing native cosmos assets (like $OSMO or $ATOM) on EVM-based chains, e.g.
+- use existing native cosmos assets (like OSMO or ATOM) on EVM-based chains, e.g.
 for Trading IBC tokens on DeFi protocols, buying NFT, etc.
 - transfer existing tokens on Ethereum and other EVM-based chains to Evmos
 to take advantage of application-specific chains in the Cosmos ecosystem
