@@ -14,6 +14,8 @@ or access state data (queries), extensions are considered "stateful";
 when they don't, they're "stateless".
 :::
 
+## EVM Extensions documentation
+
 Find in this section an outline of the currently implemented EVM extensions with transactions,
 queries, and examples of using them:
 
