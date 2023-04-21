@@ -45,7 +45,7 @@ The following extensions are available in Evmos' implementation of the EVM:
 | `0x0000000000000000000000000000000000000007` | BN256ScalarMul      | No       | [EIP-196](https://eips.ethereum.org/EIPS/eip-196) |
 | `0x0000000000000000000000000000000000000008` | BN256Pairing        | No       | [EIP-197](https://eips.ethereum.org/EIPS/eip-197) |
 | `0x0000000000000000000000000000000000000009` | Blake2F             | No       | [EIP-152](https://eips.ethereum.org/EIPS/eip-152) |
-| `0x0000000000000000000000000000000000000010` | Bech32 encoding     | No       |                                                   |
+| `0x0000000000000000000000000000000000000400` | Bech32 encoding     | No       |                                                   |
 | `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   |
 | `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   |
 
