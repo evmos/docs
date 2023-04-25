@@ -1,4 +1,4 @@
-# Build A Frontend
+# Frontend
 
 The importance of having a frontend for dapp development is significant because it allows users to interact with the
 blockchain and smart contracts in a more user-friendly way. Here are some reasons why:

@@ -1,4 +1,4 @@
-# EVM Smart Contracts
+# Smart Contracts
 
 Since the introduction of Ethereum in 2015,
 the ability to control digital assets through [smart contracts](https://ethereum.org/en/smart-contracts/)

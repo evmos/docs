@@ -1,9 +1,9 @@
 ---
-sidebar_position: 4
-slug: '/create-backend'
+sidebar_position: 3
+slug: '/backend'
 ---
 
-# Create A Backend
+# Backend
 
 It is important to note that not all DApps require a backend. For example, if the DApp is designed solely for
 transactions, a backend may not be necessary. Additionally, the frontend of a DApp can use standard web technologies
