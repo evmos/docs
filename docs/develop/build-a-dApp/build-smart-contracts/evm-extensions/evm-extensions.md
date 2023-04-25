@@ -28,9 +28,9 @@ queries, and examples of using them:
 **Note**: Find the EVM Extensions Solidity interfaces and examples in the [Evmos Extensions repo](https://github.com/evmos/extensions).
 :::
 
-# List of EVM Extensions
+## List of EVM Extensions
 
-## Available Extensions
+### Available Extensions
 
 The following extensions are available in Evmos' implementation of the EVM:
 
@@ -49,6 +49,6 @@ The following extensions are available in Evmos' implementation of the EVM:
 | `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   |
 | `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   |
 
-## Further Reading
+### Further Reading
 
 - [EVM Codes: Precompiled Contracts](https://www.evm.codes/precompiled)
