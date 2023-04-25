@@ -51,7 +51,7 @@ which can only read state information.
 This is necessary because an operation like e.g. staking tokens
 will ultimately change the chain state.
 
-View a list of available evm extensions [here](evm_extensions.md).
+View a list of available evm extensions [here](./list-evm-extensions.md).
 
 ### Oracles
 
