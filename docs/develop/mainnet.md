@@ -15,7 +15,7 @@ An Evmos validator, Stakely.io, runs a [faucet](https://stakely.io/en/faucet/evm
 
 ## Deployment
 
-You can deploy your contracts on Mainnet using the [JSON-RPC](../develop/build-a-dApp/build-smart-contracts#deploy-with-ethereum-json-rpc).
+You can deploy your contracts on Mainnet using the [JSON-RPC](../develop/smart-contracts#deploy-with-ethereum-json-rpc).
 This is the same procedure as on Testnet, but instead targeting the [Mainnet network endpoints](./../develop/api/networks).
 Before you do so, have a look at the following considerations.
 

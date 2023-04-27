@@ -188,7 +188,7 @@ const config = {
             items: [
               {
                 label: 'Build a Dapp',
-                to: '/develop/build-a-dApp/build-smart-contracts',
+                to: '/develop/smart-contracts',
               },
               {
                 label: 'Contribute to Evmos',
