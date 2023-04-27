@@ -65,7 +65,7 @@ eligible receivers of an airdrop have a look at the [Evmos Rektdrop](https://med
 
 Evmos allows for ERC-20 tokens to be used cross-chain. Once some of your tokens have been minted, you can register a token
 pair through governance, which will allow users to send your tokens across chains. Head over to our Academy to learn how
-to [register your ERC-20 token](https://academy.evmos.org/developers/guides/erc20-registration).
+to [register your ERC-20 token](https://academy.evmos.org/articles/advanced/erc20-registration).
 
 ## Revenue
 
@@ -76,7 +76,7 @@ and every time someone interacts with a registered smart contract,
 the contract deployer
 or their assigned withdrawal account receives a part of the transaction fees.
 
-To learn about how to [register your smart contracts](https://academy.evmos.org/developers/guides/incentives-registration),
+To learn about how to [register your smart contracts](https://academy.evmos.org/articles/advanced/incentives-registration),
 head over to our Academy.
 If you are curious on how this is implemented on the protocol,
 check out the [revenue module specification](../protocol/modules/revenue).
