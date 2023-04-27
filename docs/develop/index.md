@@ -2,13 +2,22 @@
 sidebar_position: 1
 ---
 
-# Overview
+# Getting Started
+
+Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich
+ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from
+another chain, you'll want to check out the sections on
+
+1. Building and deploying [EVM Smart Contracts](./develop/smart-contracts)
+2. Building a web3 [Frontend](./develop/build-a-dApp/build-a-frontend#wallet-integration) that supports Keplr and Metamask
+3. Using a [Backend](./develop/create-backend) to create a seamless web3 experience
+4. Available developer [Tools](./tools/index.md)
 
 
-import { chainConfig, handler } from '@site/src/utils/ChainConfig';
+Once tested on [Testnet](./../develop/testnet) and deployed on [Mainnet](./../develop/mainnet), you can
+start [earning an income](./../develop/mainnet#revenue) on transaction fees from interacting with your dApp or
+[register your tokens](./../develop/mainnet#token-registration) for cross-chain use.
 
-:::tip
-Add Evmos Testnet to Keplr.
 
 <button onClick={() => handler()} className="bg-red mt-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
   Add Configuration to Keplr
@@ -31,20 +40,6 @@ Evmos does this by leveraging the interoperability of the Cosmos Ecosystem and t
 development. This allows dApp developers to use Ethereum smart contracts to implement the business logic on-chain
 while having access to Cosmos chain functionalities, such as exchanging value with the rest of the Cosmos Ecosystem
 through the Inter Blockchain Communication Protocol (IBC).
-
-## How to build a dApp
-
-Following this documentation and our academy you can learn how to build a dApp on Evmos and become part of the rich
-ecosystem of EVM builders on Cosmos. Whether you are building new use cases on Evmos or porting an existing dApp from
-another chain, you can learn how to
-[build and deploy smart contracts](./develop/build-a-dApp/build-smart-contracts) and what
-[tools](./tools/index.md) are available to build a web3
-[frontend](./develop/build-a-dApp/build-a-frontend#wallet-integration) and
-[backend](./develop/create-backend) to create a seamless web3 experience for users of your dApp on Evmos.
-
-Once tested on [Testnet](./../develop/testnet) and deployed on [Mainnet](./../develop/mainnet), you can
-start [earning an income](./../develop/mainnet#revenue) on transaction fees from interacting with your dApp or
-[register your tokens](./../develop/mainnet#token-registration) for cross-chain use.
 
 ## Contributors
 

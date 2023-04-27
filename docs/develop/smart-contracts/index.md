@@ -1,4 +1,4 @@
-# EVM Smart Contracts
+# Smart Contracts
 
 Since the introduction of Ethereum in 2015,
 the ability to control digital assets through [smart contracts](https://ethereum.org/en/smart-contracts/)
@@ -51,7 +51,7 @@ which can only read state information.
 This is necessary because an operation like e.g. staking tokens
 will ultimately change the chain state.
 
-View a list of available evm extensions [here](evm_extensions.md).
+View a list of available evm extensions [here](./list-evm-extensions.md).
 
 ### Oracles
 
