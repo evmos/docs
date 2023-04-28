@@ -79,7 +79,7 @@ or their assigned withdrawal account receives a part of the transaction fees.
 To learn about how to [register your smart contracts](https://academy.evmos.org/articles/advanced/incentives-registration),
 head over to our Academy.
 If you are curious on how this is implemented on the protocol,
-check out the [revenue module specification](../protocol/modules/revenue).
+check out the [revenue module specification](../protocol/modules/incentives).
 
 ## Community
 
