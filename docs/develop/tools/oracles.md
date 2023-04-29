@@ -17,7 +17,7 @@ Evmos partners with several oracles providers to help provide value feed service
 Our oracles include:
 
 - [Adrastia](https://docs.adrastia.io/)
-- [Dia](https://docs.diadata.org/introduction/readme)
+- [DIA](https://docs.diadata.org/introduction/readme)
 - [SEDA Network](https://docs.seda.xyz/seda-network/introduction/the-oracle-problem) - Flux has renamed to SEDA Network
 - [Redstone](https://docs.redstone.finance/docs/introduction)
 - [Pyth](https://docs.pyth.network/)
@@ -101,16 +101,25 @@ The interaction can be shown as a flow-chart below:
 ### DIA
 
 The DIA platform enables the sourcing, validation and sharing of transparent and verified data feeds for traditional and
- digital financial applications. DIA’s institutional-grade data feeds cover asset prices, metaverse data, lending rates
-  and more.
+digital financial applications. DIA’s institutional-grade data feeds cover asset prices, metaverse data, lending rates
+and more.
 DIA’s data is directly sourced from a broad array of on-chain and off-chain sources at individual trade-level. This
- allows DIA feeds to be fully customized with regards to the mix of sources and methodologies, resulting in tailor-made,
-  high resilience feeds and thereby setting a new paradigm for oracles.
+allows DIA feeds to be fully customized with regards to the mix of sources and methodologies, resulting in tailor-made,
+high resilience feeds and thereby setting a new paradigm for oracles.
 
 ![dia-architecture.png](/img/dia-architecture.png)
 
 The [Evmos](https://docs.diadata.org/documentation/oracle-documentation/deployed-contracts#evmos) Mainnet and Testnet
-contract are available for use. The update frequency is 2 hours. To use their API, head over to [here](https://docs.diadata.org/documentation/api-1).
+contract are available for use. The update frequency is 2 hours (demo oracles). To use their API, head over to
+[here](https://docs.diadata.org/documentation/api-1).
+
+DIA has a [custom feed builder](https://app.diadata.org/feed-builder) and the supported token pairs are located 
+[here](https://docs.diadata.org/documentation/oracle-documentation/deployed-contracts#evmos).
+
+:::note
+Project deployed to the mainnet can request custom oracle that is catered to the project's needs by reaching out
+the [DIA team](https://go.diadata.org/dev-discord) on Discord. Custom oracles would have higher performance.
+:::
 
 ### Redstone
 

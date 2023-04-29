@@ -59,7 +59,7 @@ Blockchain oracles provide a way for smart contracts to access external informat
 such as price feeds from financial exchanges or carbon emission measurements.
 They serve as bridges between blockchains and the outside world.
 
-Head over to our [Oracles section](../../tools/oracles.md) to find out
+Head over to our [Oracles section](./tools/oracles) to find out
 how smart contracts can make use of oracles on Evmos for real-life activities
 such as insurance, borrowing, lending, or gaming.
 
@@ -71,12 +71,12 @@ and connect with existing Ethereum-compatible web3 tooling.
 This gives you direct access to reading Ethereum-formatted transactions
 or sending them to the network which otherwise wouldn't be possible on a Cosmos chain, such as Evmos.
 
-You can connect to the Evmos [Testnet](../../testnet/index.md)
+You can connect to the Evmos [Testnet](./testnet)
 to deploy and test your smart contracts before moving to Mainnet.
 
 ### Block Explorers
 
-You can use [block explorers](../../tools/explorers.md)
+You can use [block explorers](./tools/explorers)
 to view and debug interactions with your smart contracts deployed on Evmos.
 Block explorers index blocks and their transactions
 so that you can search for real-time and historical information about the blockchain,
@@ -85,15 +85,15 @@ including data related to blocks, transactions, addresses, and more.
 ### Contract Verification
 
 Once deployed, smart contract data is deployed as non-human readable EVM bytecode.
-You can use [contract verification tools](../../tools/contract-verifications.md)
+You can use [contract verification tools](./tools/contract-verifications)
 that publish and verify your original Solidity code
 to prove to users that they are interacting with the correct smart contract.
 
-## Evmos features
+## Evmos Features
 
 The core protocol team is continuously building features
 that enhance the experience of smart contract developers on Evmos.
 Head over to our Mainnet sections to learn more about these functionalities,
-e.g. how to earn [revenue](../../mainnet.md#revenue) with your smart contract
-or [register your ERC-20](../../mainnet.md#token-registration) token
+e.g. how to earn [revenue](./mainnet#revenue) with your smart contract
+or [register your ERC-20](./mainnet#token-registration) token
 to be used cross-chain.

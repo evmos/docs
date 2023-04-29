@@ -2,8 +2,8 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
     mode: 'jit',
-    purge: ['./src/**/*.{js,jsx,ts,tsx}', './docs/**/*.{md,mdx}'],
-    darkMode: false, // or 'media' or 'class'
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './docs/**/*.{md,mdx}'],
+    // media: false, // or 'media' or 'class'
     theme: {
       extend: {
         colors: {
