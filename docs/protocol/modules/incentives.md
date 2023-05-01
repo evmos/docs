@@ -11,9 +11,9 @@ The rewards drive users to interact with applications on Evmos and reinvest thei
 
 The usage incentives are taken from block reward emission (inflation)
 and are pooled up in the Incentives module account (escrow address).
-The incentives functionality is fully governed by native $EVMOS token holders
+The incentives functionality is fully governed by native EVMOS token holders
 who manage the registration of `Incentives`,
-so that native $EVMOS token holders decide which application should be part of the usage incentives.
+so that native EVMOS token holders decide which application should be part of the usage incentives.
 This governance functionality is implemented using the Cosmos-SDK `gov` module
 with custom proposal types for registering the incentives.
 
@@ -149,10 +149,10 @@ type GasMeter struct {
 An allocation meter stores the sum of all registered incentives’ allocations for a given denomination
 and is used to limit the amount of registered incentives.
 
-Say, there are several incentives that have registered an allocation for the $EVMOS coin
-and the allocation meter for $EVMOS is at 97%.
-Then a new incentve proposal can only include an $EVMOS allocation at up to 3%,
-claiming the last remaining allocation capacity from the $EVMOS rewards in the inflation pool.
+Say, there are several incentives that have registered an allocation for the EVMOS coin
+and the allocation meter for EVMOS is at 97%.
+Then a new incentve proposal can only include an EVMOS allocation at up to 3%,
+claiming the last remaining allocation capacity from the EVMOS rewards in the inflation pool.
 
 ### Genesis State
 
@@ -285,7 +285,7 @@ This distribution process first 1) allocates the rewards for each incentive from
 and then 2) distributes these rewards to all participants of each incentive.
 
 1. A `RegisterIncentiveProposal` passes and an `incentive` for the proposed contract is created.
-2. An `epoch` begins and `rewards` ($EVMOS and other denoms) that are minted on every block for inflation
+2. An `epoch` begins and `rewards` (EVMOS and other denoms) that are minted on every block for inflation
    are added to the inflation pool every block.
 3. Users submit transactions and call functions on the incentivized smart contracts to interact
    and gas gets logged through the EVM Hook.

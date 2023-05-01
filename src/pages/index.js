@@ -60,7 +60,7 @@ function Home() {
               />
 
               <Card
-                to="./develop/build-a-dApp/build-smart-contracts"
+                to="./develop/smart-contracts"
                 header={{
                   label: "🛠️ Launch dApp on Evmos",
                 }}

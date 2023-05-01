@@ -75,7 +75,7 @@ Checksums-Sha256:
 
 ### Builder Image
 
-The [Tendermint rbuilder Docker image](https://github.com/tendermint/images/tree/master/rbuilder)
+The [Tendermint builder Docker image](https://github.com/tendermint/images/tree/master/rbuilder)
 provides a deterministic build environment that is used to build Cosmos SDK applications.
 It provides a way to be reasonably sure that the executables are really built from the git source.
 It also makes sure that the same, tested dependencies are used and statically built into the executable.
@@ -84,4 +84,4 @@ It also makes sure that the same, tested dependencies are used and statically bu
 
 Now that you have built the Evmos binary, either for local use or in a Docker container,
 you'll find information to run a node instance in the following section
-on [setting up a local network](./single-node.md).
+on [setting up a local network](./single-node).
