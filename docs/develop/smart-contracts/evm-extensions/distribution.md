@@ -9,7 +9,7 @@ sidebar_position: 4
 `Distribution.sol` is an interface through which Solidity contracts can interact with Cosmos SDK distribution.
 This is convenient for developers as they don’t need to know the implementation details behind
 the `x/distribution` module in the Cosmos SDK. Instead,
-they can interact with staking functions using the Ethereum interface they are familiar with.
+they can interact with distribution functions using the Ethereum interface they are familiar with.
 
 ### Interface `Distribution.sol`
 
