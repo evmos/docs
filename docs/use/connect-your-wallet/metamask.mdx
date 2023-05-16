@@ -4,107 +4,105 @@ sidebar_position: 3
 
 # MetaMask
 
-Connect your Metamask wallet with Evmos. 
+To interact with the Evmos blockchain, you can use MetaMask, a popular wallet
+browser extension that launched with Ethereum. Once connected to Evmos, you can use Metamask
+to manage your Evmos accounts and interact with dApps on Evmos.
+
+## Connect to Mainnet
+
+If you don't have MetaMask installed, go to the [MetaMask
+website](https://metamask.io/download/) and install the extension for your
+browser. Once installed, click the button below to connect your Metamask wallet
+with Evmos Mainnet using Chainlist.
+
+<button onClick={() => parent.open('https://chainlist.org/chain/9001')} className="bg-red mb-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
+    Connect to Mainnnet
+</button>
+
+Chainlist helps you connect to the Evmos Blockchain. It provides an overview of
+RPC nodes that you can connect to. The purpose of RPC nodes is to allow
+applications and users to communicate with a Blockchain network. RPC nodes
+listen for requests, respond with the necessary data, or execute the requested
+transaction.
+
+Click `Add to Metamask` to connect to the standard provider or choose
+from a list of RPC Server providers by clicking `Connect Wallet` next to the
+address.
+
+Once you've connected to an RPC Server, you're ready to go and can start using
+Evmos. If you run into any issues, you can switch your RPC endpoint, and you
+should be good to go.
+
+## Connect to Testnet
+
+You might want to connect your wallet to the Evmos Testnet to interact with
+dApps that havn't launched on Mainnet yet. Click the button below to connect
+your Metamask wallet with Evmos Testnet using Chainlist:
+
+<button onClick={() => parent.open('https://chainlist.org/chain/9000')} className="bg-red mb-4 hover:bg-red1 text-white font-bold py-2 px-4 rounded">
+    Connect to Testnet
+</button>
+
+## Connect to Local Node
+
+You can also connect Metamask to a local node, which is useful if you are
+planning on developing on Evmos locally. If you haven't already set up your own
+local node, refer to [the quickstart
+tutorial](./../../protocol/evmos-cli/single-node), or follow the instructions in
+the [GitHub repository](https://github.com/evmos/evmos/).
+
+Open the MetaMask extension on your browser and log in to your
+MetaMask account if you are not already. Then click the top right circle and go
+to `Settings` > `Networks` > `Add Network` and fill the form as shown below.
 
 import ProjectValue from '@site/src/components/ProjectValue';
 import Highlighter from '@site/src/components/Highlighter';
-
-- [Install Metamask](https://metamask.io/download/)
-
-The [MetaMask](https://metamask.io/) browser extension is a wallet for accessing Ethereum-enabled applications and managing user identities. It can be used to connect to <ProjectValue keyword="name" /> through the official testnet or via a locally-running <ProjectValue keyword="name" /> node.
-
-:::note
-If you are planning on developing on Evmos locally and you haven’t already set up your own local node, refer to [the quickstart tutorial](./../../protocol/evmos-cli/single-node), or follow the instructions in the [GitHub repository](https://github.com/evmos/evmos/).
-:::
-
-:::tip
-If you need to add Evmos Testnet and Mainnet to Metamask wallet, head over [here](https://chainlist.org/?testnets=true&search=evmos) to add configurations.
-:::
-
-## Adding a New Network
-
-Open the MetaMask extension on your browser, you may have to log in to your MetaMask account if you are not already. Then click the top right circle and go to `Settings` > `Networks` > `Add Network` and fill the form as shown below.
-
-:::note
-You can also lookup the [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `Chain ID` by referring to [chainlist.org](https://chainlist.org/). Alternatively, to get the full Chain ID from Genesis, check the [Chain ID](./../../protocol/concepts/chain-id) documentation page.
-:::
 
 ![metamask networks settings](/img/metamask_network_settings.png)
 
 Here is the list of fields that you can use to paste on Metamask:
 
-- Mainnet
+- **Network Name:** <Highlighter keyword="name" postText=" Local" />
+- **New RPC URL:** <Highlighter keyword="rpc_url_local" />
+- **Chain ID:** <Highlighter keyword="rpc_url_local" />
+- **Currency Symbol (optional):** <Highlighter keyword="testnet_ticker" />
+- **Block Explorer URL (optional):** `n/a`
 
-    - **Network Name:**  <Highlighter keyword="name" postText=" Mainnet" />
-    - **New RPC URL:**  <Highlighter keyword="rpc_url" />
-    - **Chain ID:**  <Highlighter keyword="chain_id" />
-    - **Currency Symbol (optional):** <Highlighter keyword="ticker" />
-    - **Block Explorer URL (optional):** <Highlighter keyword="evm_explorer_url" />
-  
-- Testnet
+## Importing Accounts
 
-    - **Network Name:** <Highlighter keyword="name" postText=" Testnet" />
-    - **New RPC URL:**  <Highlighter keyword="rpc_url_testnet" />
-    - **Chain ID:** <Highlighter keyword="testnet_chain_id" />
-    - **Currency Symbol (optional):**  <Highlighter keyword="testnet_ticker" />
-    - **Block Explorer URL (optional):**  <Highlighter keyword="testnet_evm_explorer_url" />
-  
-- Local Node
-
-    - **Network Name:**  <Highlighter keyword="name" postText=" Local" />
-    - **New RPC URL:**  <Highlighter keyword="rpc_url_local" />
-    - **Chain ID:**  <Highlighter keyword="rpc_url_local" />
-    - **Currency Symbol (optional):** <Highlighter keyword="testnet_ticker" />
-    - **Block Explorer URL (optional):** `n/a`
-
-## Import Account to Metamask
-
-### Automatic Import
-
-Once you have added <ProjectValue keyword="name" /> to the Metamask `Networks`, you can automatically import your accounts by:
-
-1. Go to the official EVM Chain ID Registry website: [chainlist.org](https://chainlist.org/)
-2. Search for `"Evmos"`
-   ![chainlist.org website](/img/chainlist.png)
-3. Click the `Connect Wallet` button under `Evmos Testnet`
-   ![add accounts via chainlist](/img/chainlist_metamask.png)
-
-### Manual Import
-
-Close the `Settings`, go to `My Accounts` (top right circle) and select `Import Account`. You should see an image like the following one:
+If you own the private key to an account, you can import it to Metamask to use
+the account on Evmos. Go to `My Accounts` (top right circle) and select `Import
+Account`. You should see an image like the following one:
 
 ![metamask manual import account page](/img/metamask_import.png)
 
-Now you can export your private key from the terminal using the following command. Again, make sure to replace `dev0` with the name of the key that you want to export and use the correct `keyring-backend`:
-
-```bash
-evmosd keys unsafe-export-eth-key dev0
-```
-
-Go back to the browser and select the `Private Key` option. Then paste the private key exported from the `unsafe-export-eth-key` command.
-
-Your account balance should show up as <Highlighter pretext="1 " keyword="testnet_ticker" /> and do transfers as usual.
-
 :::tip
-If it takes some time to load the balance of the account, change the network to `Main Ethereum Network` (or any other than `Localhost 8545` or <Highlighter keyword="name" />) and then switch back to <Highlighter keyword="name" />.
+If it takes some time to load the balance of the account, change the
+network to `Main Ethereum Network` (or any other than `Localhost 8545` or
+<Highlighter keyword="name" />) and then switch back to <Highlighter
+keyword="name" />.
 :::
-
-## Reset Account
-
-If you used your Metamask account for a legacy testnet/mainnet upgrade, you will need to reset your account in order to use it with the new network. This will clear your account's transaction history, but it won't change the balances in your accounts or require you to re-enter your `Secret Recovery Phrase`.
-
-:::warning
-Make sure you download your [account state](#download-account-state) to persist public account addresses and transactions before clearing your wallet accounts.
-:::
-
-Go to `Settings` > `Advanced`  and click the `Reset Account` button as shown below:
-
-![Metamask Account Reset](/img/reset_account.png)
 
 ## Download Account State
 
-To see your Metamask logs, click the top right circle and go to `Settings` > `Advanced` > `State Logs`. If you search through the JSON file for the account address you'll find the transaction history.
+To see your Metamask logs, click the top right circle and go to `Settings` >
+`Advanced` > `State Logs`. If you search through the JSON file for the account
+address you'll find the transaction history.
 
-## Registering for Evmos Domains
+## Reset Account
 
-Evmos Domains are modelled after the Ethereum Name Service (ENS), link [here](https://ens.domains/), Evmos users can register for an Evmos Domains with the help of [this](https://evmos.domains/) service. This service will use Metamask to connect and allow users to search for a name not taken. The registration process will take some EVMOS token.
+If you used your Metamask account for a legacy testnet/mainnet upgrade, you will
+need to reset your account in order to use it with the new network. This will
+clear your account's transaction history, but it won't change the balances in
+your accounts or require you to re-enter your Secret Recovery Phrase.
+
+:::warning
+Make sure you download your [account state](#download-account-state)
+to persist public account addresses and transactions before clearing your wallet
+accounts.
+:::
+
+Go to `Settings` > `Advanced`  and click the `Reset Account` button as shown
+below:
+
+![Metamask Account Reset](/img/reset_account.png)
