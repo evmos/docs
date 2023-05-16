@@ -33,4 +33,4 @@ queries, and examples of using them:
 
 - [EVM Extensions - Staking & Distribution](https://academy.evmos.org/articles/advanced/evm-extensions-stk-distr)
   academy article
-- [Diving into EVM Extensions Workshop (Dora Hacks Hackathon)](https://www.youtube.com/live/pJhOfZ0ScAE?feature=share)
+- [Diving into EVM Extensions Workshop (DoraHacks Hackathon)](https://www.youtube.com/live/pJhOfZ0ScAE?feature=share)
