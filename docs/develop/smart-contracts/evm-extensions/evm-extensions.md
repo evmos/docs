@@ -28,3 +28,9 @@ queries, and examples of using them:
 :::tip
 **Note**: Find the EVM Extensions Solidity interfaces and examples in the [Evmos Extensions repo](https://github.com/evmos/extensions).
 :::
+
+## Other Learning Resources
+
+- [EVM Extensions - Staking & Distribution](https://academy.evmos.org/articles/advanced/evm-extensions-stk-distr)
+  academy article
+- [Diving into EVM Extensions Workshop (DoraHacks Hackathon)](https://www.youtube.com/live/pJhOfZ0ScAE?feature=share)
