@@ -29,7 +29,7 @@ queries, and examples of using them:
 **Note**: Find the EVM Extensions Solidity interfaces and examples in the [Evmos Extensions repo](https://github.com/evmos/extensions).
 :::
 
-## Other learning resources
+## Other Learning Resources
 
 - [EVM Extensions - Staking & Distribution](https://academy.evmos.org/articles/advanced/evm-extensions-stk-distr)
   academy article
