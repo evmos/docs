@@ -26,7 +26,7 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
     ```solidity
     /// @dev Approves IBC transfer with a specific amount of tokens.
     /// @param spender spender The address which will spend the funds.
-    /// @param allocations the allocations for the authorization.
+    /// @param allocations The allocations for the authorization.
     function approve(
         address spender,
         Allocation[] calldata allocations
@@ -37,7 +37,7 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
 
     ```solidity
     /// @dev Revokes IBC transfer authorization for a specific spender
-    /// @param spender spender The address which will spend the funds.
+    /// @param spender The address which will spend the funds.
     function revoke(address spender) external returns (bool revoked);
     ```
 
