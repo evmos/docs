@@ -22,6 +22,7 @@ The following extensions are available in Evmos' implementation of the EVM:
 | `0x0000000000000000000000000000000000000400` | Bech32 encoding     | No       |                                                   |
 | `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   |
 | `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   |
+| `0x0000000000000000000000000000000000000802` | IBC Transfer        | Yes      |                                                   |
 
 ## Further Reading
 
