@@ -10,7 +10,7 @@ The timeout-commit value in the node config defines how long we wait after commi
 
 :::tip
 **Note**: From v6, this is handled automatically by the server when initializing the node.
-Validators will need to ensure their local node configurations in order to speed up the network to ~3s block times.
+Validators will need to ensure their local node configurations in order to speed up the network to ~4s block times.
 :::
 
 ```toml
