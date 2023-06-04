@@ -305,3 +305,9 @@ article a[href^="http"]::after {
 .alert a {
   text-decoration-color: var(--ifm-color-primary);
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--ifm-container-width-xl);
+  }
+}
