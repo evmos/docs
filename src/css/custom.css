@@ -75,10 +75,6 @@
   font-display: swap;
 }
 
-html {
-  font-size: 17px;
-}
-
 body {
   color: var(--color-pearl);
   background: var(--color-darkGray-1);
@@ -117,6 +113,10 @@ button,
 .h6 {
   font-family: "GreyCliff", sans-serif;
   font-weight: bold;
+}
+
+h1 {
+  font-size: var(--ifm-h1-font-size);
 }
 
 :root {
@@ -308,6 +308,11 @@ article a[href^="http"]::after {
 
 @media (min-width: 1440px) {
   .container {
-    max-width: var(--ifm-container-width-xl);
+    max-width: var(--ifm-container-width-xl) !important;
   }
+}
+
+.breadcrumbs > .breadcrumbs__item:first-of-type > a {
+  position: relative;
+  top: 8px;
 }
