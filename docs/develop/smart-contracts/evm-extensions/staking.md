@@ -29,10 +29,10 @@ The Staking solidity interface includes the following transactions
 
     ```solidity
     function delegate(
-            address delegatorAddress,
-            string memory validatorAddress,
-            uint256 amount
-        ) external returns (int64 completionTime);
+        address delegatorAddress,
+        string memory validatorAddress,
+        uint256 amount
+    ) external returns (bool success);
     ```
 
 - `undelegate`
@@ -41,10 +41,10 @@ The Staking solidity interface includes the following transactions
 
     ```solidity
     function undelegate(
-            address delegatorAddress,
-            string memory validatorAddress,
-            uint256 amount
-        ) external returns (int64 completionTime);
+        address delegatorAddress,
+        string memory validatorAddress,
+        uint256 amount
+    ) external returns (int64 completionTime);
     ```
 
 - `redelegate`
@@ -54,11 +54,11 @@ The Staking solidity interface includes the following transactions
 
     ```solidity
     function redelegate(
-            address delegatorAddress,
-            string memory validatorSrcAddress,
-            string memory validatorDstAddress,
-            uint256 amount
-        ) external returns (int64 completionTime);
+        address delegatorAddress,
+        string memory validatorSrcAddress,
+        string memory validatorDstAddress,
+        uint256 amount
+    ) external returns (int64 completionTime);
     ```
 
 - `cancelUnbondingDelegation`
@@ -68,11 +68,11 @@ The Staking solidity interface includes the following transactions
 
     ```solidity
     function cancelUnbondingDelegation(
-            address delegatorAddress,
-            string memory validatorAddress,
-            uint256 amount,
-            uint256 creationHeight
-        ) external returns (int64 completionTime);
+        address delegatorAddress,
+        string memory validatorAddress,
+        uint256 amount,
+        uint256 creationHeight
+    ) external returns (bool success);
     ```
 
 ## Queries
@@ -144,11 +144,17 @@ The Staking solidity interface includes the following transactions
 
     ```solidity
     function redelegations(
-            address delegatorAddress,
-            string memory srcValidatorAddress,
-            string memory dstValidatorAddress,
-            PageRequest calldata pageRequest
-        ) external view returns (RedelegationResponse calldata response);
+        string memory delegatorAddress,
+        string memory srcValidatorAddress,
+        string memory dstValidatorAddress,
+        PageRequest calldata pageRequest
+    )
+        external
+        view
+        returns (
+            RedelegationResponse[] calldata response,
+            PageResponse calldata pageResponse
+        );
     ```
 
 ## Events
@@ -334,7 +340,7 @@ function cancelUnbondingDelegation(
     string memory _validatorAddr,
     uint256 _amount,
     uint256 _creationHeight
-) public returns (int64 completionTime) {
+) public returns (bool success) {
     return
         STAKING_CONTRACT.cancelUnbondingDelegation(
             msg.sender,
