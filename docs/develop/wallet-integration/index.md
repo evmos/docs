@@ -16,5 +16,5 @@ the wallet type of the user, create the transaction, request signatures from the
 
 When developing and running dApps on Evmos, the wallet configuration will attempt to calculate the correct gas amount
 for user's to sign. [Gas and Fees](./../../../protocol/concepts/gas-and-fees) breaks down these concepts in more detail.
-We have a module called [feemarket](./../../../protocol/modules/feemarket#concepts) that describe our module implementation
+We have a module called [feemarket](./../../../protocol/modules/feemarket#concepts) that describes our module implementation
 of transaction prioritization since prior to Cosmos SDK 0.46 it did not have such implementation.

@@ -24,11 +24,11 @@ Below is a table of modules, their respective wallet addresses and permissions:
 | `evm`                   | [evmos1vqu8rska6swzdmnhf90zuv0xmelej4lq0n56wq](https://www.mintscan.io/evmos/account/evmos1vqu8rska6swzdmnhf90zuv0xmelej4lq0n56wq)   | `minter` `burner`  |
 | `ibc`                   | [evmos1a53udazy8ayufvy0s434pfwjcedzqv345dnt3x](https://www.mintscan.io/evmos/account/evmos1a53udazy8ayufvy0s434pfwjcedzqv345dnt3x)   | `minter` `burner`  |
 
-## Account Permisions
+## Account Permissions
 
 * The `burner` permission means this account has the permission to burn or destroy tokens.
 * The `minter` permission means this account has permission to mint or create new tokens.
-* The `staking` permission means this account has permission to stake tokens on behalf of it's owner.
+* The `staking` permission means this account has permission to stake tokens on behalf of its owner.
 
 ## IBC Module Accounts
 
@@ -37,7 +37,7 @@ For each IBC connection, there's an account of type `ModuleAccount` used to escr
 Their addresses are derived using the first 20 bytes of the SHA256 checksum of the account name and following the format as outlined in [ADR 028](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-028-public-key-addresses.md):
 
 ```go
-// accountName is composed by the current version the IBC tranfer module supports (in this case, ics20-1), the portID (transfer) and the channelID
+// accountName is composed by the current version the IBC transfer module supports (in this case, ics20-1), the portID (transfer) and the channelID
 accountName := Version + "\0" + portID + "/" + channelID
 addr := sha256.Sum256(accountName)[:20]
 
