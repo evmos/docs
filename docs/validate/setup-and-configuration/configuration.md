@@ -6,7 +6,10 @@ sidebar_position: 2
 
 ## Block Time
 
-The timeout-commit value in the node config defines how long we wait after committing a block, before starting on the new height (this gives us a chance to receive some more pre-commits, even though we already have +2/3). The current default value is `"3s"`.
+The timeout-commit value in the node config defines how long we wait after committing a block,
+before starting on the new height
+(this gives us a chance to receive some more pre-commits, even though we already have +2/3).
+The current default value is `"3s"`.
 
 :::tip
 **Note**: From v6, this is handled automatically by the server when initializing the node.
@@ -33,7 +36,7 @@ timeout_commit = "3s"
 
 In `~/.evmosd/config/config.toml` you can set your peers.
 
-See the [Add persistent peers section](./../testnet#add-persistent-peers) in our docs for an automated method, but 
+See the [Add persistent peers section](./../testnet#add-persistent-peers) in our docs for an automated method, but
 field should look something like a comma separated string of peers (do not copy this, just an example):
 
 ```bash
@@ -54,7 +57,8 @@ ac29d21d0a6885465048a4481d16c12f59b2e58b
 
 ### Healthy peers
 
-If you are relying on just seed node and no persistent peers or a low amount of them, please increase the following params in the `config.toml`:
+If you are relying on just seed node and no persistent peers or a low amount of them,
+please increase the following params in the `config.toml`:
 
 ```bash
 # Maximum number of inbound peers
