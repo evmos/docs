@@ -60,7 +60,7 @@ ws ws://localhost:8080/websocket
 ```
 
 The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are
-looking for. For example, a an Ethereum transaction on Evmos (`MsgEthereumTx`) triggers an `event` of type `ethermint` and
+looking for. For example, an Ethereum transaction on Evmos (`MsgEthereumTx`) triggers an `event` of type `ethermint` and
 has `sender` and `recipient` as `attributes`. Subscribing to this `event` would be done like so:
 
 ```json
@@ -76,7 +76,7 @@ has `sender` and `recipient` as `attributes`. Subscribing to this `event` would 
 
 where `hexAddress` is an Ethereum hex address (eg: `0x1122334455667788990011223344556677889900`).
 
-The generic syntax look like this:
+The generic syntax looks like this:
 
 ```json
 {
