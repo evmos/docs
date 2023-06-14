@@ -16,6 +16,7 @@ Here is a list of all production-grade modules that can be used on the Evmos blo
 - [incentives](incentives.md) - Incentivize user interaction with governance-approved smart contracts.
 - [inflation](inflation.md) - Mint tokens and allocate them to staking rewards,
   usage incentives and community pool.
+- [recovery](recovery.md) - Recover tokens that are stuck on unsupported Evmos accounts.  
 - [vesting](vesting.md) - Vesting accounts with lockup and clawback capabilities.
 
 ## Cosmos SDK
