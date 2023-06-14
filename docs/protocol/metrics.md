@@ -29,8 +29,8 @@ and display them in a [Grafana](https://grafana.com/) dashboard.
 | `tx_msg_convert_erc20_amount_total`            | Total amount of converted erc20 using a `ConvertERC20` msg                          | token       | counter |
 | `tx_msg_convert_erc20_total`                   | Total number of txs with a `ConvertERC20` msg                                       | tx          | counter |
 | `tx_msg_ethereum_tx_total`                     | Total number of txs processed via the EVM                                           | tx          | counter |
-| `tx_msg_ethereum_tx_gas_used_total`            | Total amount of gas used by an etheruem tx                                          | token       | counter |
-| `tx_msg_ethereum_tx_gas_limit_per_gas_used`    | Ratio of gas limit to gas used for a etheruem tx                                    | ratio       | gauge   |
+| `tx_msg_ethereum_tx_gas_used_total`            | Total amount of gas used by an ethereum tx                                          | token       | counter |
+| `tx_msg_ethereum_tx_gas_limit_per_gas_used`    | Ratio of gas limit to gas used for an ethereum tx                                   | ratio       | gauge   |
 | `tx_msg_ethereum_tx_incentives_total`          | Total number of txs with an incentivized contract processed via the EVM             | tx          | counter |
 | `tx_msg_ethereum_tx_incentives_gas_used_total` | Total amount of gas used by txs with an incentivized contract processed via the EVM | token       | counter |
 | `incentives_distribute_reward_total`           | Total amount of rewards that are distributed to all incentives' participants        | token       | counter |

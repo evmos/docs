@@ -169,7 +169,7 @@ hermes 0.12.0
 Edit the hermes configuration (use ports according the port configuration set above, adding only chains that will be relayed):
 
 ```bash
-vim $HOME/.hermes/config/config.toml
+vim $HOME/.hermes/config.toml
 ```
 
 ```bash
