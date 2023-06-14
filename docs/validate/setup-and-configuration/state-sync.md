@@ -351,7 +351,7 @@ You will see logs similar to this:
 
 ```bash
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 30000)); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 40000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 ```
 
