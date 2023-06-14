@@ -350,15 +350,15 @@ You will see logs similar to this:
 :::
 
 ```bash
-LATEST_SNAPSHOT_HEIGHT=<fill_with_the_latest_snapshot_height>; \
-BLOCK_HEIGHT=$((LATEST_SNAPSHOT_HEIGHT - 2000)); \
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_SNAPSHOT_HEIGHT - 30000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 ```
 
 Check
 
 ```bash
-echo $LATEST_SNAPSHOT_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 
 Output example (numbers will be different):
