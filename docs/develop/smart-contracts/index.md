@@ -59,7 +59,7 @@ Blockchain oracles provide a way for smart contracts to access external informat
 such as price feeds from financial exchanges or carbon emission measurements.
 They serve as bridges between blockchains and the outside world.
 
-Head over to our [Oracles section](./tools/oracles) to find out
+Head over to our [Oracles section](./oracles) to find out
 how smart contracts can make use of oracles on Evmos for real-life activities
 such as insurance, borrowing, lending, or gaming.
 
