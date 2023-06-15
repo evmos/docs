@@ -9,7 +9,7 @@ It is typically performed by independent auditors, security experts, or automate
 
 ## [Escan](https://escan.live/)
 
-Escan is a service that allows block exploration as well as contract verification. For more information about the different block explorers, please proceed to our [block explorers's page](./explorers).
+Escan is a service that allows block exploration as well as contract verification. For more information about the different block explorers, please proceed to our [block explorers's page](../explorers).
 
 [Link](https://escan.live/verifyContract) to verify and publish the contract source code.
 
