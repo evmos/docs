@@ -20,7 +20,7 @@ More on Ethereum JSON-RPC:
 - [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)
 
 :::note
-Head over to our Academy to learn about our [Geth Javascript Console Guide](https://academy.evmos.org/developers/guides/geth-js-console).
+Head over to our Academy to learn about our [Geth Javascript Console Guide](https://academy.evmos.org/articles/advanced/geth-js-console).
 :::
 
 ## JSON-RPC over HTTP
@@ -87,7 +87,7 @@ You can start a connection with the Ethereum websocket using the `--json-rpc.ws-
 the node (default `"0.0.0.0:8546"`):
 
 ```bash
-evmosd start  --json-rpc.address"0.0.0.0:8545" --json-rpc.ws-address="0.0.0.0:8546" --evm.rpc.api="eth,web3,net,txpool,debug" --json-rpc.enable
+evmosd start --json-rpc.address="0.0.0.0:8545" --json-rpc.ws-address="0.0.0.0:8546" --json-rpc.api="eth,web3,net,txpool,debug" --json-rpc.enable
 ```
 
 Then, start a websocket subscription with [`ws`](https://github.com/hashrocket/ws)
