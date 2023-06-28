@@ -244,12 +244,12 @@ string[] private stakingMethods = [
     MSG_CANCEL_UNDELEGATION
 ];
 
-/// @dev Approves all staking transactions with the maximum amount of tokens.
+/// @dev Approves this smart contract to perform all staking transactions with the maximum amount of tokens on behalf of the transaction signer.
 /// @dev This creates a Cosmos Authorization Grant for the given methods.
 /// @dev This emits an Approval event.
 function approveAllStakingMethodsWithMaxAmount() public {
     bool success = STAKING_CONTRACT.approve(
-        msg.sender,
+        address(this),
         type(uint256).max,
         stakingMethods
     );
