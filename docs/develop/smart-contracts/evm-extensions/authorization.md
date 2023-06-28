@@ -76,14 +76,20 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
 
 - `approve`
 
-    Approves a list of Cosmos message
+    Approves a list of Cosmos message.
 
     ```solidity
     function approve(
-            address spender,
-            string[] calldata methods
-        ) external returns (bool approved);
+        address spender,
+        string[] calldata methods,
+        string[] calldata allowedList
+    ) external returns (bool approved);
     ```
+
+    The `allowedList` is the list of allowed addresses.
+    It always include the `tx.origin` if it is not passed in manually.
+    You can use this paramter on the `MsgSetWithdrawAddress` for example.
+    If you wish to change the withdraw address for a user, the new `withdrawerAddress` should be present in the `allowedList`.
 
 - `revoke`
   
@@ -171,7 +177,8 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
     event Approval(
             address indexed owner,
             address indexed spender,
-            string[] methods
+            string[] methods,
+            string[] allowedList            
         );
     ```
 
