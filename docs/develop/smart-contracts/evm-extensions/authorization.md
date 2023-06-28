@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Authorization
 
-The user should grant authorization to allow smart contracts (including precompiled ones)
+The user should grant authorization to allow smart contracts
 to send messages on behalf of a user account.
-This is achieved by the `Authorization.sol` and `GenericAuthorization.sol`
+This is achieved by the `Authorization.sol` and `DistributionAuthorization.sol`
 that provide the necessary functions to grant approvals and allowances.
-The precompiled contracts use these interfaces, `AuthorizationI` and `GenericAuthorizationI`,
+The precompiled contracts use these interfaces, `AuthorizationI` and `DistributionAuthorizationI`,
 to allow users to approve the corresponding messages and amounts if needed.
 
 ## Solidity Interfaces
@@ -17,9 +17,9 @@ to allow users to approve the corresponding messages and amounts if needed.
 
 Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/common/Authorization.sol).
 
-### `GenericAuthorization.sol`
+### `DistributionAuthorization.sol`
 
-Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/common/GenericAuthorization.sol).
+Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/common/DistributionAuthorization.sol).
 
 ## Transactions
 
@@ -35,6 +35,17 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
             uint256 amount,
             string[] calldata methods
         ) external returns (bool approved);
+    ```
+
+- `revoke`
+  
+    Revokes authorizations of Cosmos transactions.
+
+    ```solidity
+    function revoke(
+        address spender,
+        string[] calldata methods
+    ) external returns (bool revoked);
     ```
 
 - `increaseAllowance`
@@ -61,7 +72,7 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
         ) external returns (bool approved);
     ```
 
-### `GenericAuthorization.sol`
+### `DistributionAuthorization.sol`
 
 - `approve`
 
@@ -72,6 +83,17 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
             address spender,
             string[] calldata methods
         ) external returns (bool approved);
+    ```
+
+- `revoke`
+  
+    Revokes authorizations of Cosmos transactions.
+
+    ```solidity
+    function revoke(
+        address spender,
+        string[] calldata methods
+    ) external returns (bool revoked);
     ```
 
 ## Queries
@@ -111,6 +133,18 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
         );
     ```
 
+- `Revocation`
+
+    This event is emitted when an owner revokes a spender's allowance.
+
+    ```solidity
+    event Revocation(
+        address indexed owner,
+        address indexed spender,
+        string[] methods
+    );
+    ```
+
 - `AllowanceChange`
 
     This event is emitted when the allowance of a spender is changed by a call to the decrease or increase allowance method.
@@ -126,7 +160,7 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
         );
     ```
 
-### `GenericAuthorization.sol`
+### `DistributionAuthorization.sol`
 
 - `Approval`
 
@@ -139,4 +173,16 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
             address indexed spender,
             string[] methods
         );
+    ```
+
+- `Revocation`
+
+    This event is emitted when an owner revokes a spender's allowance.
+
+    ```solidity
+    event Revocation(
+        address indexed owner,
+        address indexed spender,
+        string[] methods
+    );
     ```
