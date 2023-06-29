@@ -76,7 +76,7 @@ to deploy and test your smart contracts before moving to Mainnet.
 
 ### Block Explorers
 
-You can use [block explorers](./tools/explorers)
+You can use [block explorers](./block-explorers)
 to view and debug interactions with your smart contracts deployed on Evmos.
 Block explorers index blocks and their transactions
 so that you can search for real-time and historical information about the blockchain,
