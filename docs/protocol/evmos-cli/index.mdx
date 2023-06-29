@@ -33,12 +33,27 @@ jq --version
 
 ## Installation
 
-You can build and install the `evmosd` binaries from source or using Docker.
+You can download the latest binaries from the repo and install them, or 
+you can build and install the `evmosd` binaries from source or using Docker.
+
+### Download the binaries
+
+- Go to the [releases section of the repository](https://github.com/evmos/evmos/releases)
+- Choose the desired release or pre-release you want to install on your machine
+- Select and download from the `Assets` dropdown the corresponding tar or zip file for your OS
+- Extract the files. The `evmosd` binaries is located in the `bin` directory of the extrated files
+- Add the `evmosd` binaries to your path, e.g. you can move it to `$(go env GOPATH)/bin`
+
+After installation is done, check that the `evmosd` binaries have been successfully installed:
+
+```bash
+evmosd version
+```
 
 ### Build From Source
 
-Clone and build the Evmos from source using `git`. The `<tag>` refers to a release tag on Github. The latest Evmos
- [version](https://github.com/evmos/evmos/releases) is <ProjectValue keyword='latest_version'/>:
+Clone and build the Evmos from source using `git`. The `<tag>` refers to a release tag on Github. Check the latest Evmos
+version on the [releases section of the repository](https://github.com/evmos/evmos/releases):
 
 ```bash
 git clone https://github.com/evmos/evmos.git
