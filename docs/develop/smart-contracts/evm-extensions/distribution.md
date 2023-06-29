@@ -265,13 +265,15 @@ string[] private distributionMethods = [
     MSG_WITHDRAW_VALIDATOR_COMMISSION,
 ];
 
-/// @dev Approves all distribution transactions.
+/// @dev Approves this smart contract to perform all distribution transactions on behalf of the transaction signer.
 /// @dev This creates a Cosmos Authorization Grant for the given methods.
-/// @dev This emits an Approval event from the GenericAuthorization.sol.
+/// @dev This emits an Approval event from the DistributionAuthorization.sol.
 function approveAllDistributionMethods() public {
+    string[] memory allowedList = new string[](0); // backend logic automatically adds tx.origin if it's not passed in manually
     bool success = DISTRIBUTION_CONTRACT.approve(
-        msg.sender,
-        distributionMethods
+        address(this),
+        distributionMethods,
+        allowedList
     );
     require(success, "Failed to approve distribution methods");
 }

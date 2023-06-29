@@ -111,14 +111,21 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
     /// @dev DenomTrace defines a method for returning a denom trace.
     function denomTrace(
         string memory hash
-    ) external returns (DenomTrace memory denomTrace);
+    ) external returns (DenomTrace[] memory denomTrace);
     ```
 
 - `denomTraces`
   
     ```solidity
     /// @dev DenomTraces defines a method for returning all denom traces.
-    function denomTraces() external returns (DenomTrace[] memory denomTraces);
+    function denomTraces(
+        PageRequest memory pageRequest
+    )
+        external
+        returns (
+            DenomTrace[] memory denomTraces,
+            PageResponse memory pageResponse
+        );
     ```
 
 - `denomHash`
@@ -153,12 +160,16 @@ Each of the transactions emits its corresponding event. These are:
     /// @dev Emitted when an ICS-20 transfer is executed.
     /// @param sender The address of the sender.
     /// @param receiver The address of the receiver.
+    /// @param sourcePort The source port of the IBC transaction.
+    /// @param sourceChannel The source channel of the IBC transaction.
     /// @param denom The denomination of the tokens transferred.
     /// @param amount The amount of tokens transferred.
     /// @param memo The IBC transaction memo.
     event IBCTransfer(
         address indexed sender,
         string indexed receiver,
+        string sourcePort,
+        string sourceChannel,
         string denom,
         uint256 amount,
         string memo
@@ -173,15 +184,13 @@ Each of the transactions emits its corresponding event. These are:
     /// @param granter The address of the granter.
     /// @param sourcePort The source port of the IBC transaction.
     /// @param sourceChannel The source channel of the IBC transaction.
-    /// @param denom The denomination of the tokens transferred.
-    /// @param amount The amount of tokens transferred.
+    /// @param spendLimit The coins approved in the allocation
     event IBCTransferAuthorization(
         address indexed grantee,
         address indexed granter,
         string sourcePort,
         string sourceChannel,
-        string denom,
-        uint256 amount
+        Coin[] spendLimit
     );
     ```
 
