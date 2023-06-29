@@ -269,7 +269,7 @@ string[] private distributionMethods = [
 /// @dev This creates a Cosmos Authorization Grant for the given methods.
 /// @dev This emits an Approval event from the DistributionAuthorization.sol.
 function approveAllDistributionMethods() public {
-    string[] memory allowedList = new string[](0); // Will always add tx.origin address if it's not passed in manually
+    string[] memory allowedList = new string[](0); // backend logic automatically adds tx.origin if it's not passed in manually
     bool success = DISTRIBUTION_CONTRACT.approve(
         address(this),
         distributionMethods,
