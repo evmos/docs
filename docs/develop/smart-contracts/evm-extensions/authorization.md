@@ -6,10 +6,10 @@ sidebar_position: 1
 
 The user should grant authorization to allow smart contracts
 to send messages on behalf of a user account.
-This is achieved by the `Authorization.sol` and `DistributionAuthorization.sol`
-that provide the necessary functions to grant approvals and allowances.
-The precompiled contracts use these interfaces, `AuthorizationI` and `DistributionAuthorizationI`,
-to allow users to approve the corresponding messages and amounts if needed.
+This is achieved by the `Authorization.sol`
+that provides the necessary functions to grant approvals and allowances.
+The precompiled contracts use the `AuthorizationI` interface,
+to allow users to approve the corresponding messages and amounts.
 
 ## Solidity Interfaces
 
@@ -17,13 +17,7 @@ to allow users to approve the corresponding messages and amounts if needed.
 
 Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/common/Authorization.sol).
 
-### `DistributionAuthorization.sol`
-
-Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/common/DistributionAuthorization.sol).
-
 ## Transactions
-
-### `Authorization.sol`
 
 - `approve`
 
@@ -72,39 +66,7 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
         ) external returns (bool approved);
     ```
 
-### `DistributionAuthorization.sol`
-
-- `approve`
-
-    Approves a list of Cosmos transactions.
-
-    ```solidity
-    function approve(
-        address spender,
-        string[] calldata methods,
-        string[] calldata allowedList
-    ) external returns (bool approved);
-    ```
-
-    The `allowedList` is the list of allowed addresses.
-    It always includes the `tx.origin` if it is not passed in manually.
-    You can use this parameter on the `MsgSetWithdrawAddress` for example.
-    If you wish to change the withdraw address for a user, the new `withdrawerAddress` should be present in the `allowedList`.
-
-- `revoke`
-  
-    Revokes authorizations of Cosmos transactions.
-
-    ```solidity
-    function revoke(
-        address spender,
-        string[] calldata methods
-    ) external returns (bool revoked);
-    ```
-
 ## Queries
-
-### `Authorization.sol`
 
 - `allowance`
 
@@ -121,8 +83,6 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
     ```
 
 ## Events
-
-### `Authorization.sol`
 
 - `Approval`
 
@@ -164,32 +124,4 @@ Find the [Solidity interface in the evmos/extensions repo](https://github.com/ev
             string[] methods,
             uint256[] values
         );
-    ```
-
-### `DistributionAuthorization.sol`
-
-- `Approval`
-
-    This event is emitted when the allowance of a spender is set by a call to the `approve` method.
-    The `methods` field holds the information for which methods the approval was set.
-
-    ```solidity
-    event Approval(
-            address indexed owner,
-            address indexed spender,
-            string[] methods,
-            string[] allowedList            
-        );
-    ```
-
-- `Revocation`
-
-    This event is emitted when an owner revokes a spender's allowance.
-
-    ```solidity
-    event Revocation(
-        address indexed owner,
-        address indexed spender,
-        string[] methods
-    );
     ```

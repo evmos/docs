@@ -81,7 +81,7 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
     external
     view
     returns (
-        ValidatorDistributionInfo[] calldata distributionInfo
+        ValidatorDistributionInfo calldata distributionInfo
     );
     ```
 
@@ -253,32 +253,6 @@ Make sure to import the precompiled interface, e.g.:
 import "https://github.com/evmos/extensions/blob/main/precompiles/stateful/Distribution.sol";
 ```
 
-### Grant approval for the desired messages
-
-See below a function that grants approval to the smart contract to send all `x/distribution` module messages
-on behalf of the sender account. You can tweak this function to approve only the desired messages.
-
-```solidity
-string[] private distributionMethods = [
-    MSG_SET_WITHDRAWER_ADDRESS,
-    MSG_WITHDRAW_DELEGATOR_REWARD,
-    MSG_WITHDRAW_VALIDATOR_COMMISSION,
-];
-
-/// @dev Approves this smart contract to perform all distribution transactions on behalf of the transaction signer.
-/// @dev This creates a Cosmos Authorization Grant for the given methods.
-/// @dev This emits an Approval event from the DistributionAuthorization.sol.
-function approveAllDistributionMethods() public {
-    string[] memory allowedList = new string[](0); // backend logic automatically adds tx.origin if it's not passed in manually
-    bool success = DISTRIBUTION_CONTRACT.approve(
-        address(this),
-        distributionMethods,
-        allowedList
-    );
-    require(success, "Failed to approve distribution methods");
-}
-```
-
 ### Set withdraw address
 
 The `changeWithdrawAddress` function allows a user to set a new withdraw address in the Cosmos `x/distribution` module.
@@ -333,8 +307,7 @@ function withdrawCommission(
 
 ### Queries
 
-Similarly to transactions, smart contracts can use query methods. To use these methods,
-there is no need for authorization, as these are read-only methods.
+Similarly to transactions, smart contracts can use query methods. These are read-only methods.
 Examples of this are the `getDelegationRewards` and `getValidatorCommision`
 functions that return the information for the specified validator address.
 
