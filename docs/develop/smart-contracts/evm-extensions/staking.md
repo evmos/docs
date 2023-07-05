@@ -140,7 +140,7 @@ The Staking solidity interface includes the following transactions
 
 - `redelegations`
 
-    `redelegations` queries all based on the specified criteria:
+    `redelegations` queries all redelgations based on the specified criteria:
     for a given delegator and/or origin validator address
     and/or destination validator address
     in a specified pagination manner.

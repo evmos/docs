@@ -141,7 +141,7 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
   
     ```solidity
     /// @dev Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through
-    /// IBC transfers. This is an empty by array.
+    /// IBC transfers. This is an empty array by default.
     /// @param owner The address of the account owning tokens.
     /// @param spender The address of the account able to transfer the tokens.
     /// @return allocations The remaining amounts allowed to spend for
