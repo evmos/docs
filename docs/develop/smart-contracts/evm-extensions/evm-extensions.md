@@ -19,7 +19,7 @@ when they don't, they're "stateless".
 Find in this section an outline of the currently implemented EVM extensions with transactions,
 queries, and examples of using them:
 
-- [Authorization interfaces (read first if you're new to EVM extensions)](./authorization.md)
+- [Authorization interface (read first if you're new to EVM extensions)](./authorization.md)
 - [EVM Extensions shared types](./types.md)
 - [`x/staking` module EVM extension](./staking.md)
 - [`x/distribution` module EVM extension](./distribution.md)

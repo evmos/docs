@@ -111,7 +111,7 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
     /// @dev DenomTrace defines a method for returning a denom trace.
     function denomTrace(
         string memory hash
-    ) external returns (DenomTrace[] memory denomTrace);
+    ) external returns (DenomTrace memory denomTrace);
     ```
 
 - `denomTraces`
@@ -141,13 +141,15 @@ Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/
   
     ```solidity
     /// @dev Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through
-    /// IBC transfers. This is zero by default.
+    /// IBC transfers. This is an empty by array.
     /// @param owner The address of the account owning tokens.
     /// @param spender The address of the account able to transfer the tokens.
+    /// @return allocations The remaining amounts allowed to spend for
+    /// corresponding source port and channel.
     function allowance(
         address owner,
         address spender
-    ) external view returns (uint256 remaining);
+    ) external view returns (Allocation[] memory allocations);
     ```
 
 ## Events
