@@ -108,7 +108,7 @@ The Staking solidity interface includes the following transactions
             string memory validatorAddress
         )
         external view returns (
-            Validator[] calldata validators
+            Validator calldata validator
         );
     ```
 
@@ -140,11 +140,14 @@ The Staking solidity interface includes the following transactions
 
 - `redelegations`
 
-    `redelegations` queries redelegations of given address for a given delegator in a specified pagination manner
+    `redelegations` queries all based on the specified criteria:
+    for a given delegator and/or origin validator address
+    and/or destination validator address
+    in a specified pagination manner.
 
     ```solidity
     function redelegations(
-        string memory delegatorAddress,
+        address delegatorAddress,
         string memory srcValidatorAddress,
         string memory dstValidatorAddress,
         PageRequest calldata pageRequest
@@ -269,11 +272,11 @@ This function returns the completion time of the staking transaction and emits a
 /// @dev This emits an Delegate event.
 /// @param _validatorAddr The address of the validator.
 /// @param _amount The amount of tokens to stake in aevmos.
-/// @return completionTime The completion time of the staking transaction.
+/// @return success Boolean to inform if the operation was successful or not.
 function stakeTokens(
     string memory _validatorAddr,
     uint256 _amount
-) public returns (int64 completionTime) {
+) public returns (bool success) {
     return STAKING_CONTRACT.delegate(msg.sender, _validatorAddr, _amount);
 }
 ```
