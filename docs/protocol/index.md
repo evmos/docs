@@ -77,7 +77,7 @@ we recommend understanding the following concepts:
 ## Contributing
 
 There are several ways to contribute to the Evmos core protocol. To get some hands-on experience,
-we recommend you spin up a local Evmos node using the [Evmos CLI](evmos-cli/index.md)
+we recommend you spin up a local Evmos node using the [Evmos CLI](./protocol/evmos-cli)
 and interact with it through queries and transactions using the supported [clients](../develop/api#clients).
 
 Then if you're hooked you can
