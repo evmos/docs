@@ -316,3 +316,7 @@ article a[href^="http"]::after {
   position: relative;
   top: 8px;
 }
+
+a.footer__link-item svg, footer .iconExternalLink, footer .theme-edit-this-page svg {
+  display: inline-block;
+}
