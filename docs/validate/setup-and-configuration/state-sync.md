@@ -406,7 +406,7 @@ sudo systemctl enable evmosd.service && sudo systemctl daemon-reload
 ### Run evmosd
 
 ```bash
-sytemctl start evmosd
+systemctl start evmosd
 ```
 
 ### Check logs
