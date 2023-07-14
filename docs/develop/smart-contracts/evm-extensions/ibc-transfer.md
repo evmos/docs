@@ -6,18 +6,18 @@ sidebar_position: 5
 
 ## Solidity Interface & ABI
 
-`IBCTransfer.sol` is an interface through which Solidity contracts can interact with the IBC protocol on Evmos chain.
-This is convenient for developers as they don’t need to know the implementation details behind
-the `transfer` module in [IBC-go](https://ibc.cosmos.network/). Instead,
-they can perform IBC transfers using the Ethereum interface they are familiar with.
+`ICS20.sol` - previously known as `IBCTransfer.sol` - is an interface through which Solidity contracts can interact with the IBC protocol on Evmos chain.
+This is convenient for developers as they don’t need to know the implementation details behind the `transfer` module in [IBC-go](https://ibc.cosmos.network/).
+Instead, they can perform IBC transfers using the Ethereum interface they are familiar with.
+An example of a simple implementation can be found in the [evmos/extensions repo](https://github.com/evmos/extensions/tree/main/examples/simple-ibc-transfer).
 
-### Interface `IBCTransfer.sol`
+### Interface `ICS20.sol`
 
-Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/stateful/IBCTransfer.sol).
+Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/stateful/ICS20.sol).
 
 ### ABI
 
-Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/abi/ibctransfer.json).
+Find the [ABI in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/abi/ics20.json).
 
 ## Transactions
 
