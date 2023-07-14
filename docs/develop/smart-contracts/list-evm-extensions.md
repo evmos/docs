@@ -20,9 +20,9 @@ The following extensions are available in Evmos' implementation of the EVM:
 | `0x0000000000000000000000000000000000000008` | BN256Pairing        | No       | [EIP-197](https://eips.ethereum.org/EIPS/eip-197) | :heavy_check_mark:       | :heavy_check_mark:       |
 | `0x0000000000000000000000000000000000000009` | Blake2F             | No       | [EIP-152](https://eips.ethereum.org/EIPS/eip-152) | :heavy_check_mark:       | :heavy_check_mark:       |
 | `0x0000000000000000000000000000000000000400` | Bech32 encoding     | No       |                                                   | :heavy_multiplication_x: | :heavy_multiplication_x: |
-| `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   | :heavy_check_mark:       | :heavy_multiplication_x: |
-| `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   | :heavy_check_mark:       | :heavy_multiplication_x: |
-| `0x0000000000000000000000000000000000000802` | IBC Transfer        | Yes      |                                                   | :heavy_check_mark:       | :heavy_multiplication_x: |
+| `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
+| `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
+| `0x0000000000000000000000000000000000000802` | IBC Transfer        | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
 
 ## Further Reading
 
