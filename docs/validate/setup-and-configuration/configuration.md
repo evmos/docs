@@ -4,6 +4,17 @@ sidebar_position: 2
 
 # Configuration
 
+## Server Timezone configuration
+
+Make sure your server **timezone configuration is UTC**.
+To know what is your current timezone, run the `timedatectl` command.
+
+:::danger
+🚨 **DANGER**: Having a different timezone configuration
+may cause a `LastResultsHash` mismatch error.
+This will take down your node!
+:::
+
 ## Block Time
 
 The timeout-commit value in the node config defines how long we wait after committing a block,

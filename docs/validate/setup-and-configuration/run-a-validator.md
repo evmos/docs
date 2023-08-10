@@ -17,6 +17,12 @@ If you plan to use a Key Management System (KMS), you should go through these st
 
 ## Create Your Validator
 
+:::warning
+:warning: **WARNING**: Make sure your server **timezone configuration is UTC**.
+Having a different timezone configuration may cause a `LastResultsHash` mismatch error.
+This will take down your node!
+:::
+
 Your node consensus public key (`evmosvalconspub...`) can be used to create a new validator by staking EVMOS tokens. You can find your validator pubkey by running:
 
 ```bash
