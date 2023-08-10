@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Configuration
 
-## Server Timezone configuration
+## Server Timezone
 
 Make sure your server **timezone configuration is UTC**.
 To know what is your current timezone, run the `timedatectl` command.
