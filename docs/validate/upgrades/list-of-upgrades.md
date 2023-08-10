@@ -10,10 +10,18 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                  | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                            |
 | ------------------------------------------------------------------------ | :-----: | :------: | :--------: | :-----------------: | --------------------------------------------------------- |
-| [`v11.0.2`](https://github.com/evmos/evmos/releases/tag/v11.0.2)         |   ✅    |    ❌    |     ❌     |         ❌          |                                                           |
-| [`v11.0.1`](https://github.com/evmos/evmos/releases/tag/v11.0.1)         |   ✅    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v13.0.2`](https://github.com/evmos/evmos/releases/tag/v13.0.2)         |   ✅    |    ✅    |     ❌     |         ❌          | [14538200](https://www.mintscan.io/evmos/blocks/14538200) |
+| [`v12.1.6`](https://github.com/evmos/evmos/releases/tag/v12.1.6)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.5`](https://github.com/evmos/evmos/releases/tag/v12.1.5)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.4`](https://github.com/evmos/evmos/releases/tag/v12.1.4)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.3`](https://github.com/evmos/evmos/releases/tag/v12.1.3)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.2`](https://github.com/evmos/evmos/releases/tag/v12.1.2)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.1`](https://github.com/evmos/evmos/releases/tag/v12.1.1)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v12.1.0`](https://github.com/evmos/evmos/releases/tag/v12.1.0)         |   ✅    |    ✅    |     ❌     |         ❌          | [12303000](https://www.mintscan.io/evmos/blocks/12303000) |
+| [`v11.0.2`](https://github.com/evmos/evmos/releases/tag/v11.0.2)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v11.0.1`](https://github.com/evmos/evmos/releases/tag/v11.0.1)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
 | [`v11.0.0`](https://github.com/evmos/evmos/releases/tag/v11.0.0)         |   ✅    |    ✅    |     ❌     |         ❌          | [10561414](https://www.mintscan.io/evmos/blocks/10561414) |
-| [`v10.0.1`](https://github.com/evmos/evmos/releases/tag/v10.0.1)         |   ✅    |    ❌    |     ❌     |         ❌          |                                                           |
+| [`v10.0.1`](https://github.com/evmos/evmos/releases/tag/v10.0.1)         |   ❌    |    ❌    |     ❌     |         ❌          |                                                           |
 | [`v10.0.0`](https://github.com/evmos/evmos/releases/tag/v10.0.0)         |   ✅    |    ✅    |     ❌     |         ❌          | [9,495,000](https://www.mintscan.io/evmos/blocks/9495000) |
 | [`v9.1.0`](https://github.com/evmos/evmos/releases/tag/v9.1.0)           |   ✅    |    ✅    |     ❌     |         ❌          | [6,654,000](https://www.mintscan.io/evmos/blocks/6654000) |
 | [`v8.2.0`](https://github.com/evmos/evmos/releases/tag/v8.2.0)           |   ✅    |    ✅    |     ❌     |         ✅          | [4,888,000](https://www.mintscan.io/evmos/blocks/4888000) |
@@ -32,6 +40,14 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                              | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                                          |
 |--------------------------------------------------------------------------------------| :-----: | :------: | :--------: | :-----------------: |-------------------------------------------------------------------------|
+| [`v14.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v14.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [16,092,000](https://testnet.mintscan.io/evmos-testnet/blocks/16092000) |
+| [`v13.0.0`](https://github.com/evmos/evmos/releases/tag/v13.0.0)                     |    ✅    |    ✅     |     ❌      |          ❌          | [15,374,000](https://testnet.mintscan.io/evmos-testnet/blocks/15374000) |
+| [`v13.0.0-rc3`](https://github.com/evmos/evmos/releases/tag/v13.0.0-rc3)             |    ✅    |    ✅     |     ❌      |          ❌          | [14,956,000](https://testnet.mintscan.io/evmos-testnet/blocks/14956000) |
+| [`v13.0.0-rc2`](https://github.com/evmos/evmos/releases/tag/v13.0.0-rc2)             |    ✅    |    ✅     |     ❌      |          ❌          | [14,894,679](https://testnet.mintscan.io/evmos-testnet/blocks/14894679) |
+| [`v13.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v13.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [13,824,000](https://testnet.mintscan.io/evmos-testnet/blocks/13824000) |
+| [`v12.0.0-rc4`](https://github.com/evmos/evmos/releases/tag/v12.0.0-rc4)             |    ✅    |    ✅     |     ❌      |          ❌          | [12,853,500](https://testnet.mintscan.io/evmos-testnet/blocks/12853500) |
+| [`v11.0.0-rc3`](https://github.com/evmos/evmos/releases/tag/v11.0.0-rc3)             |    ✅    |    ❌     |     ❌      |          ❌          | [11,407,580](https://testnet.mintscan.io/evmos-testnet/blocks/11407580) |
+| [`v11.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v11.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [11,151,500](https://testnet.mintscan.io/evmos-testnet/blocks/11151500) |
 | [`v10.0.0-rc4`](https://github.com/evmos/evmos/releases/tag/v10.0.0-rc4)             |    ✅    |    ❌     |     ❌      |          ❌          |                                                                         |
 | [`v10.0.0-rc2`](https://github.com/evmos/evmos/releases/tag/v10.0.0-rc2)             |    ✅    |    ✅     |     ❌      |          ❌          | [10,010,000](https://testnet.mintscan.io/evmos-testnet/blocks/10010000) |
 | [`v10.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v10.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [8,700,000](https://testnet.mintscan.io/evmos-testnet/blocks/8700000)   |
