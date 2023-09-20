@@ -236,32 +236,42 @@ This section defines the concrete `sdk.Msg` types, that result in the state tran
 
 ```go
 type MsgCreateClawbackVestingAccount struct {
-	// from_address specifies the account to provide the funds and sign the
-	// clawback request
-	FromAddress string `protobuf:"bytes,1,opt,name=from_address,json=fromAddress,proto3" json:"from_address,omitempty"`
-	// to_address specifies the account to receive the funds
-	ToAddress string `protobuf:"bytes,2,opt,name=to_address,json=toAddress,proto3" json:"to_address,omitempty"`
-	// start_time defines the time at which the vesting period begins
-	StartTime time.Time `protobuf:"bytes,3,opt,name=start_time,json=startTime,proto3,stdtime" json:"start_time"`
-	// lockup_periods defines the unlocking schedule relative to the start_time
-	LockupPeriods []types.Period `protobuf:"bytes,4,rep,name=lockup_periods,json=lockupPeriods,proto3" json:"lockup_periods"`
-	// vesting_periods defines thevesting schedule relative to the start_time
-	VestingPeriods []types.Period `protobuf:"bytes,5,rep,name=vesting_periods,json=vestingPeriods,proto3" json:"vesting_periods"`
-	// merge specifies a the creation mechanism for existing
-	// ClawbackVestingAccounts. If true, merge this new grant into an existing
-	// ClawbackVestingAccount, or create it if it does not exist. If false,
-	// creates a new account. New grants to an existing account must be from the
-	// same from_address.
-	Merge bool `protobuf:"varint,6,opt,name=merge,proto3" json:"merge,omitempty"`
+	// funder_address specifies the account that will be able to fund the vesting account
+	FunderAddress string `protobuf:"bytes,1,opt,name=funder_address,json=funderAddress,proto3" json:"funder_address,omitempty"`
+	// vesting_address specifies the address that will receive the vesting tokens
+	VestingAddress string `protobuf:"bytes,2,opt,name=vesting_address,json=vestingAddress,proto3" json:"vesting_address,omitempty"`
+	// enable_gov_clawback specifies whether the governance module can clawback this account
+	EnableGovClawback bool `protobuf:"varint,3,opt,name=enable_gov_clawback,json=enableGovClawback,proto3" json:"enable_gov_clawback,omitempty"`
 }
 ```
 
 The msg content stateless validation fails if:
 
-- `FromAddress` or `ToAddress` are invalid
+- `FunderAddress` or `VestingAddress` are invalid
+
+### `FundVestingAccount`
+
+```go
+type MsgFundVestingAccount struct {
+	// funder_address specifies the account that funds the vesting account
+	FunderAddress string `protobuf:"bytes,1,opt,name=funder_address,json=funderAddress,proto3" json:"funder_address,omitempty"`
+	// vesting_address specifies the account that receives the funds
+	VestingAddress string `protobuf:"bytes,2,opt,name=vesting_address,json=vestingAddress,proto3" json:"vesting_address,omitempty"`
+	// start_time defines the time at which the vesting period begins
+	StartTime time.Time `protobuf:"bytes,3,opt,name=start_time,json=startTime,proto3,stdtime" json:"start_time"`
+	// lockup_periods defines the unlocking schedule relative to the start_time
+	LockupPeriods github_com_cosmos_cosmos_sdk_x_auth_vesting_types.Periods `protobuf:"bytes,4,rep,name=lockup_periods,json=lockupPeriods,proto3,castrepeated=github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods" json:"lockup_periods"`
+	// vesting_periods defines the vesting schedule relative to the start_time
+	VestingPeriods github_com_cosmos_cosmos_sdk_x_auth_vesting_types.Periods `protobuf:"bytes,5,rep,name=vesting_periods,json=vestingPeriods,proto3,castrepeated=github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods" json:"vesting_periods"`
+}
+```
+
+The msg content stateless validation fails if:
+
+- `FunderAddress` or `VestingAddress` are invalid
 - `LockupPeriods` and `VestingPeriods`
-    - include period with a non-positive length
-    - describe the same total amount
+    - include a period with a non-positive length or amount
+    - do not describe the same total amount
 
 ### `Clawback`
 
@@ -356,13 +366,19 @@ The `x/vesting` module emits the following events:
 
 ### Create Clawback Vesting Account
 
-| Type                              | Attibute Key   | Attibute Value                    |
-| --------------------------------- | -------------- | --------------------------------- |
-| `create_clawback_vesting_account` | `"from"`       | `{msg.FromAddress}`               |
-| `create_clawback_vesting_account` | `"coins"`      | `{vestingCoins.String()}`         |
-| `create_clawback_vesting_account` | `"start_time"` | `{msg.StartTime.String()}`        |
-| `create_clawback_vesting_account` | `"merge"`      | `{strconv.FormatBool(msg.Merge)}` |
-| `create_clawback_vesting_account` | `"amount"`     | `{msg.ToAddress}`                 |
+| Type                              | Attibute Key   | Attibute Value         |
+| --------------------------------- | -------------- | ---------------------- |
+| `create_clawback_vesting_account` | `"funder"`     | `{msg.FunderAddress}`  |
+| `create_clawback_vesting_account` | `"sender"`     | `{msg.VestingAddress}` |
+
+### Fund Vesting Account
+
+| Type                   | Attibute Key   | Attibute Value             |
+| ---------------------- | -------------- | -------------------------- |
+| `fund_vesting_account` | `"funder"`     | `{msg.FunderAddress}`      |
+| `fund_vesting_account` | `"coins"`      | `{vestingCoins.String()}`  |
+| `fund_vesting_account` | `"start_time"` | `{msg.StartTime.String()}` |
+| `fund_vesting_account` | `"account"`    | `{msg.VestingAddress}`     |
 
 ### Clawback
 
