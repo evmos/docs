@@ -170,19 +170,29 @@ or perform a clawback of unvested funds with `Clawback`.
 
 ### Create Clawback Vesting Account
 
-A funder creates a new clawback vesting account defining the address to fund as well as the vesting/lockup schedules.
-Additionally, new grants can be added to existing clawback vesting accounts with the same message.
+An externally owned account can be converted to a clawback vesting account by the owner.
+Upon creation, the owner assigns a funder, who is able to fund the account with vesting and/or lockup schedules.
 
-1. Funder submits a `MsgCreateClawbackVestingAccount` through one of the clients.
+1. Owner submits a `MsgCreateClawbackVestingAccount` through one of the clients.
 2. Check if
-    1. the vesting account address is not blocked
-    2. there is at least one vesting or lockup schedule provided.
+    1. the vesting account address is not blocked.
+    2. the account at the vesting account address is not already a vesting account.
+3. Create a clawback vesting account at the target address with empty vesting and lockup schedules.
+
+### Fund Clawback Vesting Account
+
+ The funder of a clawback vesting account can fund it with vesting and/or lockup schedules.
+ If a vesting account already has funds, the schedules are merged together.
+
+ 1. Funder submits a `MsgFundVestingAccount` through one of the clients.
+ 2. Check if
+	1. the vesting address is not a blocked address.
+	2. the vesting address is a clawback vesting account.
+	3. there is at least one vesting or lockup schedule provided.
        If one of them is absent, default to instant vesting or unlock schedule.
-    3. lockup and vesting total amounts are equal
-3. Create or update a clawback vesting account and send coins from the funder to the vesting account
-    1. if the clawback vesting account already exists and `--merge` is set to true,
-       add a grant to the existing total vesting amount and update the vesting and lockup schedules.
-    2. else create a new clawback vesting account
+    4. lockup and vesting total amounts are equal.
+ 3. Update the clawback vesting account and send coins from the funder to the vesting account,
+    merging any existing schedules with the new funding.
 
 ### Clawback
 
@@ -210,7 +220,7 @@ The funding address of an existing clawback vesting account can be updated only 
 
 ### Convert Vesting Account
 
-Once all tokens are vested, the vesting account can be converted to an `ETHAccount`
+Once all tokens are vested, the vesting account can be converted back to an `EthAccount`.
 
 1. Owner of vesting account submits a `MsgConvertVestingAccount` through one of the clients.
 2. Check if
@@ -220,7 +230,7 @@ Once all tokens are vested, the vesting account can be converted to an `ETHAccou
 
 ## Transactions
 
-This section defines the concrete `sdk.Msg`  types that result in the state transitions defined on the previous section.
+This section defines the concrete `sdk.Msg` types, that result in the state transitions defined on the previous section.
 
 ### `CreateClawbackVestingAccount`
 
