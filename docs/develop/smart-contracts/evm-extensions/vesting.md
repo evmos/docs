@@ -11,6 +11,10 @@ This is convenient for developers as they don’t need to know the implementatio
 module in Evmos. Instead,
 they can interact with vesting accounts using the Ethereum interface they are familiar with.
 
+:::tip
+To learn more about the `x/vesting` module, check out the [module's docs](../../../protocol/modules/vesting).
+:::
+
 ### Interface `Vesting.sol`
 
 Find the [Solidity interface in the evmos/extensions repo](https://github.com/evmos/extensions/blob/main/precompiles/stateful/Vesting.sol).
@@ -157,7 +161,3 @@ Each of the transactions emits its corresponding event. These are:
         address indexed vestingAddress
     );
     ```
-
-:::tip
-To learn more about the `x/vesting` module, check out the [module's docs](../../../protocol/modules/vesting).
-:::
