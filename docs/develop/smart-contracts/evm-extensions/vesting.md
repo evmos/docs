@@ -159,5 +159,5 @@ Each of the transactions emits its corresponding event. These are:
     ```
 
 :::tip
-To learn more about the `x/vesting` module, check out the [module's docs](../../../protocol/modules/vesting.md).
+To learn more about the `x/vesting` module, check out the [module's docs](../../../protocol/modules/vesting).
 :::
