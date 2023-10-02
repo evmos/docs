@@ -24,6 +24,7 @@ queries, and examples of using them:
 - [`x/staking` module EVM extension](./staking.md)
 - [`x/distribution` module EVM extension](./distribution.md)
 - [`ibc/transfer` module EVM extension](./ibc-transfer.md)
+- [`x/vesting` module EVM extension](./vesting.md)
 
 :::tip
 **Note**: Find the EVM Extensions Solidity interfaces and examples in the [Evmos Extensions repo](https://github.com/evmos/extensions).
