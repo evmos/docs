@@ -12,7 +12,7 @@ module in Evmos. Instead,
 they can interact with vesting accounts using the Ethereum interface they are familiar with.
 
 :::tip
-To learn more about the `x/vesting` module, check out the [module's docs](../../../protocol/modules/vesting).
+To learn more about the `x/vesting` module, check out the [module's docs](https://docs.evmos.org/protocol/modules/vesting).
 :::
 
 ### Interface `Vesting.sol`
