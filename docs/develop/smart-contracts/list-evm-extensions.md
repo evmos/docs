@@ -23,6 +23,7 @@ The following extensions are available in Evmos' implementation of the EVM:
 | `0x0000000000000000000000000000000000000800` | Staking module      | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
 | `0x0000000000000000000000000000000000000801` | Distribution module | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
 | `0x0000000000000000000000000000000000000802` | IBC Transfer        | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
+| `0x0000000000000000000000000000000000000803` | Vesting module      | Yes      |                                                   | :heavy_check_mark:       | :heavy_check_mark:       |
 
 ## Further Reading
 
