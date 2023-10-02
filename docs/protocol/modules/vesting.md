@@ -170,19 +170,29 @@ or perform a clawback of unvested funds with `Clawback`.
 
 ### Create Clawback Vesting Account
 
-A funder creates a new clawback vesting account defining the address to fund as well as the vesting/lockup schedules.
-Additionally, new grants can be added to existing clawback vesting accounts with the same message.
+An externally owned account can be converted to a clawback vesting account by the owner.
+Upon creation, the owner assigns a funder, who is able to fund the account with vesting and/or lockup schedules.
 
-1. Funder submits a `MsgCreateClawbackVestingAccount` through one of the clients.
+1. Owner submits a `MsgCreateClawbackVestingAccount` through one of the clients.
 2. Check if
-    1. the vesting account address is not blocked
-    2. there is at least one vesting or lockup schedule provided.
+    1. the vesting account address is not blocked.
+    2. the account at the vesting account address is not already a vesting account.
+3. Create a clawback vesting account at the target address with empty vesting and lockup schedules.
+
+### Fund Clawback Vesting Account
+
+ The funder of a clawback vesting account can fund it with vesting and/or lockup schedules.
+ If a vesting account already has funds, the schedules are merged together.
+
+ 1. Funder submits a `MsgFundVestingAccount` through one of the clients.
+ 2. Check if
+	1. the vesting address is not a blocked address.
+	2. the vesting address is a clawback vesting account.
+	3. there is at least one vesting or lockup schedule provided.
        If one of them is absent, default to instant vesting or unlock schedule.
-    3. lockup and vesting total amounts are equal
-3. Create or update a clawback vesting account and send coins from the funder to the vesting account
-    1. if the clawback vesting account already exists and `--merge` is set to true,
-       add a grant to the existing total vesting amount and update the vesting and lockup schedules.
-    2. else create a new clawback vesting account
+    4. lockup and vesting total amounts are equal.
+ 3. Update the clawback vesting account and send coins from the funder to the vesting account,
+    merging any existing schedules with the new funding.
 
 ### Clawback
 
@@ -210,7 +220,7 @@ The funding address of an existing clawback vesting account can be updated only 
 
 ### Convert Vesting Account
 
-Once all tokens are vested, the vesting account can be converted to an `ETHAccount`
+Once all tokens are vested, the vesting account can be converted back to an `EthAccount`.
 
 1. Owner of vesting account submits a `MsgConvertVestingAccount` through one of the clients.
 2. Check if
@@ -220,38 +230,48 @@ Once all tokens are vested, the vesting account can be converted to an `ETHAccou
 
 ## Transactions
 
-This section defines the concrete `sdk.Msg`  types that result in the state transitions defined on the previous section.
+This section defines the concrete `sdk.Msg` types, that result in the state transitions defined on the previous section.
 
 ### `CreateClawbackVestingAccount`
 
 ```go
 type MsgCreateClawbackVestingAccount struct {
-	// from_address specifies the account to provide the funds and sign the
-	// clawback request
-	FromAddress string `protobuf:"bytes,1,opt,name=from_address,json=fromAddress,proto3" json:"from_address,omitempty"`
-	// to_address specifies the account to receive the funds
-	ToAddress string `protobuf:"bytes,2,opt,name=to_address,json=toAddress,proto3" json:"to_address,omitempty"`
-	// start_time defines the time at which the vesting period begins
-	StartTime time.Time `protobuf:"bytes,3,opt,name=start_time,json=startTime,proto3,stdtime" json:"start_time"`
-	// lockup_periods defines the unlocking schedule relative to the start_time
-	LockupPeriods []types.Period `protobuf:"bytes,4,rep,name=lockup_periods,json=lockupPeriods,proto3" json:"lockup_periods"`
-	// vesting_periods defines thevesting schedule relative to the start_time
-	VestingPeriods []types.Period `protobuf:"bytes,5,rep,name=vesting_periods,json=vestingPeriods,proto3" json:"vesting_periods"`
-	// merge specifies a the creation mechanism for existing
-	// ClawbackVestingAccounts. If true, merge this new grant into an existing
-	// ClawbackVestingAccount, or create it if it does not exist. If false,
-	// creates a new account. New grants to an existing account must be from the
-	// same from_address.
-	Merge bool `protobuf:"varint,6,opt,name=merge,proto3" json:"merge,omitempty"`
+	// funder_address specifies the account that will be able to fund the vesting account
+	FunderAddress string `protobuf:"bytes,1,opt,name=funder_address,json=funderAddress,proto3" json:"funder_address,omitempty"`
+	// vesting_address specifies the address that will receive the vesting tokens
+	VestingAddress string `protobuf:"bytes,2,opt,name=vesting_address,json=vestingAddress,proto3" json:"vesting_address,omitempty"`
+	// enable_gov_clawback specifies whether the governance module can clawback this account
+	EnableGovClawback bool `protobuf:"varint,3,opt,name=enable_gov_clawback,json=enableGovClawback,proto3" json:"enable_gov_clawback,omitempty"`
 }
 ```
 
 The msg content stateless validation fails if:
 
-- `FromAddress` or `ToAddress` are invalid
+- `FunderAddress` or `VestingAddress` are invalid
+
+### `FundVestingAccount`
+
+```go
+type MsgFundVestingAccount struct {
+	// funder_address specifies the account that funds the vesting account
+	FunderAddress string `protobuf:"bytes,1,opt,name=funder_address,json=funderAddress,proto3" json:"funder_address,omitempty"`
+	// vesting_address specifies the account that receives the funds
+	VestingAddress string `protobuf:"bytes,2,opt,name=vesting_address,json=vestingAddress,proto3" json:"vesting_address,omitempty"`
+	// start_time defines the time at which the vesting period begins
+	StartTime time.Time `protobuf:"bytes,3,opt,name=start_time,json=startTime,proto3,stdtime" json:"start_time"`
+	// lockup_periods defines the unlocking schedule relative to the start_time
+	LockupPeriods github_com_cosmos_cosmos_sdk_x_auth_vesting_types.Periods `protobuf:"bytes,4,rep,name=lockup_periods,json=lockupPeriods,proto3,castrepeated=github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods" json:"lockup_periods"`
+	// vesting_periods defines the vesting schedule relative to the start_time
+	VestingPeriods github_com_cosmos_cosmos_sdk_x_auth_vesting_types.Periods `protobuf:"bytes,5,rep,name=vesting_periods,json=vestingPeriods,proto3,castrepeated=github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods" json:"vesting_periods"`
+}
+```
+
+The msg content stateless validation fails if:
+
+- `FunderAddress` or `VestingAddress` are invalid
 - `LockupPeriods` and `VestingPeriods`
-    - include period with a non-positive length
-    - describe the same total amount
+    - include a period with a non-positive length or amount
+    - do not describe the same total amount
 
 ### `Clawback`
 
@@ -346,13 +366,19 @@ The `x/vesting` module emits the following events:
 
 ### Create Clawback Vesting Account
 
-| Type                              | Attibute Key   | Attibute Value                    |
-| --------------------------------- | -------------- | --------------------------------- |
-| `create_clawback_vesting_account` | `"from"`       | `{msg.FromAddress}`               |
-| `create_clawback_vesting_account` | `"coins"`      | `{vestingCoins.String()}`         |
-| `create_clawback_vesting_account` | `"start_time"` | `{msg.StartTime.String()}`        |
-| `create_clawback_vesting_account` | `"merge"`      | `{strconv.FormatBool(msg.Merge)}` |
-| `create_clawback_vesting_account` | `"amount"`     | `{msg.ToAddress}`                 |
+| Type                              | Attibute Key   | Attibute Value         |
+| --------------------------------- | -------------- | ---------------------- |
+| `create_clawback_vesting_account` | `"funder"`     | `{msg.FunderAddress}`  |
+| `create_clawback_vesting_account` | `"sender"`     | `{msg.VestingAddress}` |
+
+### Fund Vesting Account
+
+| Type                   | Attibute Key   | Attibute Value             |
+| ---------------------- | -------------- | -------------------------- |
+| `fund_vesting_account` | `"funder"`     | `{msg.FunderAddress}`      |
+| `fund_vesting_account` | `"coins"`      | `{vestingCoins.String()}`  |
+| `fund_vesting_account` | `"start_time"` | `{msg.StartTime.String()}` |
+| `fund_vesting_account` | `"account"`    | `{msg.VestingAddress}`     |
 
 ### Clawback
 
@@ -418,7 +444,20 @@ The `tx` commands allow users to create and clawback `vesting` account state
 
 **`create-clawback-vesting-account`**
 
-Allows users to create a new vesting account funded with an allocation of tokens, subject to clawback.
+A new clawback vesting account is created for the sender account (`--from`),
+if it is not already of such type.
+Only the designated funder will be able to define lockup and vesting schedules
+and has to do so using the fund-vesting-account subcommand.
+Clawback via governance is enabled or disabled through the second argument.
+
+```go
+evmosd tx vesting create-clawback-vesting-account FUNDER_ADDRESS ENABLE_GOV_CLAWBACK --from=VESTING_ADDRESS [flags]
+```
+
+**`fund-vesting-account`**
+
+Allows a funder account to update a clawback vesting account with new schedules.
+Any existing schedules are merged with the newly added schedules.
 Must provide a lockup periods file (--lockup), a vesting periods file (--vesting), or both.
 
 If both files are given, they must describe schedules for the same total amount.
@@ -430,43 +469,37 @@ Only vested coins may be staked.
 For an example of how to set this see [this link](https://github.com/evmos/evmos/pull/303).
 
 ```go
-evmosd tx vesting create-clawback-vesting-account TO_ADDRESS [flags]
+evmosd tx vesting fund-vesting-account VESTING_ADDRESS --from=FUNDER_ADDRESS [flags]
 ```
 
 **`clawback`**
 
-Allows users to create a transfer unvested amount out of a ClawbackVestingAccount.
+Allows to transfer all unvested unvested tokens out of a ClawbackVestingAccount.
 Must be requested by the original funder address (--from) and may provide a destination address (--dest),
-otherwise the coins return to the funder.
-Delegated or undelegating staking tokens will be transferred in the delegated (undelegating) state.
+otherwise the coins are returned to the funder.
+Delegated or unbonding staking tokens will be transferred in the delegated or unbonding state.
 The recipient is vulnerable to slashing, and must act to unbond the tokens if desired.
 
 ```go
-evmosd tx vesting clawback ADDRESS [flags]
+evmosd tx vesting clawback VESTING_ADDRESS --from=FUNDER_ADDRESS [flags]
 ```
 
 **`update-vesting-funder`**
 
 Allows users to update the funder of an existent `ClawbackVestingAccount`.
 Must be requested by the original funder address (`--from`).
-To perform this action, the user needs to provide two arguments:
-
-1. the new funder address
-2. the vesting account address
 
 ```go
-evmosd tx vesting update-vesting-funder VESTING_ACCOUNT_ADDRESS NEW_FUNDER_ADDRESS --from=FUNDER_ADDRESS [flags]
+evmosd tx vesting update-vesting-funder VESTING_ADDRESS NEW_FUNDER_ADDRESS --from=FUNDER_ADDRESS [flags]
 ```
 
 **`convert`**
 
 Allows users to convert their vesting account to the chain's default account (i.e `EthAccount`).
-To perform this action a user needs to provide one argument:
-
-1.the vesting account address
+This operation only succeeds if there are no unvested tokens left in the account.
 
 ```go
-evmosd tx vesting convert VESTING_ACCOUNT_ADDRESS [flags]
+evmosd tx vesting convert VESTING_ADDRESS [flags]
 ```
 
 ### gRPC
@@ -483,9 +516,10 @@ evmosd tx vesting convert VESTING_ACCOUNT_ADDRESS [flags]
 | Verb   | Method                                                 | Description                      |
 | ------ | ------------------------------------------------------ | -------------------------------- |
 | `gRPC` | `evmos.vesting.v1.Msg/CreateClawbackVestingAccount`    | Creates clawback vesting account |
+| `gRPC` | `evmos.vesting.v1.Msg/FundVestingAccount`              | Funds a clawback vesting account |
 | `gRPC` | `/evmos.vesting.v1.Msg/Clawback`                       | Performs clawback                |
 | `gRPC` | `/evmos.vesting.v1.Msg/UpdateVestingFunder`            | Updates vesting account funder   |
 | `GET`  | `/evmos/vesting/v1/tx/create_clawback_vesting_account` | Creates clawback vesting account |
+| `GET`  | `/evmos/vesting/v1/tx/fund_vesting_account`            | Funds a clawback vesting account |
 | `GET`  | `/evmos/vesting/v1/tx/clawback`                        | Performs clawback                |
 | `GET`  | `/evmos/vesting/v1/tx/update_vesting_funder`           | Updates vesting account funder   |
-

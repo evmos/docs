@@ -8,7 +8,7 @@ Crypto Wallets (or Accounts) can be created
 and represented in unique ways on different blockchains.
 For developers who interface with account types on Evmos,
 e.g. during wallet integration on their dApp frontend,
-it is therefore important to understand that accounts on Evnos are implemented
+it is therefore important to understand that accounts on Evmos are implemented
 to be compatible with Ethereum type addresses.
 
 ## Prerequisite Readings

@@ -15,9 +15,16 @@ Learn how to run a validator node.
 If you plan to use a Key Management System (KMS), you should go through these steps first: [Using a KMS](./../../validate/security/tendermint-kms).
 :::
 
+:::warning
+:warning: **WARNING**: Make sure your server **timezone configuration is UTC**.
+Having a different timezone configuration may cause a `LastResultsHash` mismatch error.
+This will take down your node!
+:::
+
 ## Create Your Validator
 
-Your node consensus public key (`evmosvalconspub...`) can be used to create a new validator by staking EVMOS tokens. You can find your validator pubkey by running:
+Your node consensus public key (`evmosvalconspub...`) can be used to create a new validator by staking EVMOS tokens.
+You can find your validator pubkey by running:
 
 ```bash
 evmosd tendermint show-validator

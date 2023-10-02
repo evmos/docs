@@ -29,6 +29,17 @@ IDs. Note that, the displayed version might differ when an active Software Upgra
 [security](./security) recommendations!
 :::
 
+## Server Timezone Configuration
+
+Make sure your server **timezone configuration is UTC**.
+To know what is your current timezone, run the `timedatectl` command.
+
+:::danger
+🚨 **DANGER**: Having a different timezone configuration
+may cause a `LastResultsHash` mismatch error.
+This will take down your node!
+:::
+
 ## Install `evmosd`
 
 Follow the [installation](./../validate/setup-and-configuration/run-a-validator) document to
@@ -121,22 +132,7 @@ For more information on seeds and peers, you can the Tendermint [P2P documentati
 
 We can set the [`persistent_peers`](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer)
 field in `~/.evmosd/config/config.toml` to specify peers that your node will maintain persistent
-connections with. You can retrieve them from the list of
-available peers on the [`mainnet`](https://github.com/evmos/mainnet) repo.
-
-A list of available persistent peers is also available in the `#find-peers` channel in the [Evmos Discord](https://discord.gg/evmos).
-You can get a random 10 entries from the `peers.txt` file in the `PEERS` variable by running
-the following command:
-
-```bash
-PEERS=`curl -sL https://raw.githubusercontent.com/evmos/mainnet/main/evmos_9001-2/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
-```
-
-Use `sed` to include them into the configuration. You can also add them manually:
-
-```bash
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.evmosd/config/config.toml
-```
+connections with.
 
 ## Run a Mainnet Validator
 
