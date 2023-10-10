@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Metrics
 
-Evmos nodes can enable [Cosmos SDK telemetry](https://docs.cosmos.network/main/core/telemetry.html)
+Evmos nodes can enable [Cosmos SDK telemetry](https://docs.cosmos.network/main/learn/advanced/telemetry)
 to allow for observing and gathering insights about the Evmos application.
 Under the hood, it uses the [`go-metrics`](https://github.com/hashicorp/go-metrics) package
 and the Prometheus client library to expose different [types of metrics](https://prometheus.io/docs/concepts/metric_types/)
