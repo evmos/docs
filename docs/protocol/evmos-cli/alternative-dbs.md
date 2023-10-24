@@ -223,7 +223,7 @@ db_backend = "rocksdb"
 
 ## Version DB & MemIAVL
 
-:::warning
+:::note
 The Evmos team carried out an
 [analysis to compare the performance of a 5-node network with levelDB vs versionDB + memIAVL](https://www.notion.so/altiplanic/LevelDB-vs-MemIAVL-VersionDB-2034a05c7e1646369d034eb423a25279?pvs=4).
 The results of the analysis show that even though MemIAVL offers
