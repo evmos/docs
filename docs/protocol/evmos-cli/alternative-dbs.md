@@ -29,7 +29,7 @@ If you wish to use this database, you need to replace this dependency by a fork 
 To do this and install the binary with this database, execute the following commands:
 
 ```bash
-# cd into the directory where you have the evmos protocol source code
+# cd into the directory where you have the Evmos protocol source code
 cd evmos
 
 # replace the cometbft-db dependency
@@ -67,7 +67,6 @@ To setup a node with rocksDB, you need to install the [corresponding library](ht
 and related dependencies.
 
 The installation process described below applies to Ubuntu OS.
-
 For other operating system, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v7.9.2/INSTALL.md).
 
 ### Install dependencies
@@ -225,7 +224,7 @@ db_backend = "rocksdb"
 
 :::note
 The Evmos team carried out an
-[analysis to compare the performance of a 5-node network with levelDB vs versionDB + memIAVL](https://www.notion.so/altiplanic/LevelDB-vs-MemIAVL-VersionDB-2034a05c7e1646369d034eb423a25279?pvs=4).
+[analysis to compare the performance of a 5-node network with LevelDB vs VersionDB + MemIAVL](https://www.notion.so/altiplanic/LevelDB-vs-MemIAVL-VersionDB-2034a05c7e1646369d034eb423a25279?pvs=4).
 The results of the analysis show that even though MemIAVL offers
 a performance boost for state-sync and fast-sync processes,
 it takes a toll on the resources required for the node.
@@ -243,7 +242,7 @@ For more information about it, refer to these resources:
 
 #### Prerequisites
 
-- `evmosd` binary with `librocksdb`. Refer to the previous section for the procedure on how to build this binary.
+- `evmosd` binary with `librocksdb`. Refer to [the previous section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
@@ -270,7 +269,7 @@ For more information about it, check [the documentation](https://github.com/cryp
 
 #### Prerequisites
 
-- `evmosd` binary with `librocksdb`. Refer to the previous section for the procedure on how to build this binary.
+- `evmosd` binary with `librocksdb`. Refer to [the RocksDB section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
@@ -280,7 +279,7 @@ is equivalent to `pruning=everything`,
 to support historical grpc query service, you should enable versionDB together with it.
 If you need to support very old merkle proof generations, don't use memIAVL.
 
-The default memIAVL section in `app.toml`:
+The default MemIAVL section in `app.toml`:
 
 ```toml
 [memiavl]
