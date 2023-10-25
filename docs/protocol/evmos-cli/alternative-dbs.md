@@ -236,7 +236,10 @@ which enhances the chances of missing blocks in validator nodes
 ### Version DB
 
 VersionDB is a solution developed by Cronos team to address the size of the IAVL database.
-For more information about it, refer to [its documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
+For more information about it, refer to these resources:
+
+- [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
+- [Blog post](https://blog.cronos.org/p/optimising-cronos-node-storage-with)
 
 #### Prerequisites
 
