@@ -186,7 +186,7 @@ COSMOS_BUILD_OPTIONS=rocksdb \
 make install
 ```
 
-If getting the errors:
+If getting the errors related to dynamic loading of shared libraries:
 
 ```bash
 .../rocksdb/env/env_posix.cc:108: undefined reference to `dlclose'
@@ -194,7 +194,7 @@ If getting the errors:
 ...
 ```
 
-Retry the command adding the `-ldl` flag in the `CGO_LDFLAGS`:
+Retry the command adding the dynamic linker library in your executable, the `-ldl` flag in the `CGO_LDFLAGS`:
 
 ```bash
 CGO_ENABLED=1 \ 
