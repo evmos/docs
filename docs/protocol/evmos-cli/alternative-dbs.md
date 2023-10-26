@@ -229,12 +229,12 @@ The results of the analysis show that even though MemIAVL offers
 a performance boost for state-sync and fast-sync processes,
 it takes a toll on the resources required for the node.
 Additionally, the block processing time is higher,
-which enhances the chances of missing blocks in validator nodes
+which enhances the chances of missing blocks in validator nodes.
 :::
 
 ### Version DB
 
-VersionDB is a solution developed by Cronos team to address the size of the IAVL database.
+VersionDB is a solution developed by the Cronos team to address the size of the IAVL database.
 For more information about it, refer to these resources:
 
 - [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
@@ -258,13 +258,13 @@ you should see a `version.db` file in the `data` directory.
 
 #### Migration
 
-If have an existing database and want to migrate this data to versionDB,
+If you have an existing database and want to migrate this data to versionDB,
 follow the [migration guide](https://github.com/crypto-org-chain/cronos/wiki/VersionDB-Migration).
 
 ### MemIAVL
 
-MemIAVL is a solution developed by Cronos team to address
-performance issues of current IAVL implementation ([benchmarks here](https://github.com/crypto-org-chain/cronos/wiki/MemIAVL-Benchmark)).
+MemIAVL is a solution developed by the Cronos team to address
+performance issues of the current IAVL implementation ([benchmarks here](https://github.com/crypto-org-chain/cronos/wiki/MemIAVL-Benchmark)).
 For more information about it, check [the documentation](https://github.com/crypto-org-chain/cronos/wiki/MemIAVL).
 
 #### Prerequisites
@@ -275,8 +275,8 @@ For more information about it, check [the documentation](https://github.com/cryp
 
 To enable MemIAVL turn on the `memiavl.enable` config item in `app.toml`.
 MemIAVL only supports pruned node, the default configuration (`memiavl.snapshot-keep-recent=0`)
-is equivalent to `pruning=everything`,
-to support historical grpc query service, you should enable versionDB together with it.
+is equivalent to `pruning=everything`.
+To support historical grpc query services, you should enable versionDB together with it.
 If you need to support very old merkle proof generations, don't use memIAVL.
 
 The default MemIAVL section in `app.toml`:
