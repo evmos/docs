@@ -452,7 +452,7 @@ evmosd tx gov submit-proposal proposal.json [flags]
 ```
 
 :::tip
-**Tip:** To generate the required JSON file, you can use the following command:
+To generate the required JSON file, you can use the following command:
 
 ```bash
 evmosd tx gov draft-proposal 
