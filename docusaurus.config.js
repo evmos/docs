@@ -59,7 +59,7 @@ const config = {
       binary: "evmosd",
       testnet_denom: "tEvmos",
       testnet_ticker: "tEVMOS",
-      rpc_url: "https://eth.bd.evmos.org:8545",
+      rpc_url: "https://evmos.lava.build",
       rpc_url_testnet: "https://eth.bd.evmos.dev:8545",
       rpc_url_local: "http://localhost:8545/",
       chain_id: "9001",
