@@ -442,13 +442,45 @@ Allows users to submit a `CanelIncentiveProposal`.
 evmosd tx gov submit-legacy-proposal cancel-incentive CONTRACT_ADDRESS [flags]
 ```
 
-**`param-change`**
+**Update Params**
 
-Allows users to submit a `ParameterChangeProposal``.
+Allows users to submit a `MsgUpdateParams` with the desired changes on the `x/incentives` module parameters.
+To do this, you will have to provide a JSON file with the proposal.
 
 ```bash
-evmosd tx gov submit-legacy-proposal param-change PROPOSAL_FILE [flags]
+evmosd tx gov submit-proposal proposal.json [flags]
 ```
+
+:::tip
+**Tip:** To generate the required JSON file, you can use the following command:
+
+```bash
+evmosd tx gov draft-proposal 
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select proposal type: 
+    text
+    community-pool-spend
+    software-upgrade
+    cancel-software-upgrade
+  ▸ other
+```
+
+Select `other` option and look for the `/evmos.incentives.v1.MsgUpdateParams` message
+
+```bash
+✔ other
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select proposal message type:: 
+↑   /evmos.erc20.v1.MsgUpdateParams
+  ▸ /evmos.incentives.v1.MsgUpdateParams
+    /evmos.inflation.v1.MsgUpdateParams
+    /evmos.recovery.v1.MsgUpdateParams
+↓   /evmos.revenue.v1.MsgCancelRevenue
+```
+
+Follow the instructions. Once you're done with it, it will generate a JSON file.
+Make any changes if necessary and use that file in the `submit-proposal` transaction
+:::
 
 ### gRPC
 

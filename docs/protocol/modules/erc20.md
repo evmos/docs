@@ -174,8 +174,8 @@ Here are our recommendations for the reviewing process:
 
 The `x/erc20` module keeps the following objects in state:
 
-| State Object       | Description                                    | Key                         | Value               | Store    |
-| ------------------ | ---------------------------------------------- | --------------------------- | ------------------- | --- |
+| State Object       | Description                                    | Key                         | Value               | Store |
+| ------------------ | ---------------------------------------------- | --------------------------- | ------------------- | ----- |
 | `TokenPair`        | Token Pair bytecode                            | `[]byte{1} + []byte(id)`    | `[]byte{tokenPair}` | KV    |
 | `TokenPairByERC20` | Token Pair id bytecode by erc20 contract bytes | `[]byte{2} + []byte(erc20)` | `[]byte(id)`        | KV    |
 | `TokenPairByDenom` | Token Pair id bytecode by denom string         | `[]byte{3} + []byte(denom)` | `[]byte(id)`        | KV    |
@@ -610,10 +610,10 @@ The `x/erc20` module emits the following events:
 
 The erc20 module contains the following parameters:
 
-| Key                     | Type          | Default Value                 |
-| ----------------------- | ------------- | ----------------------------- |
-| `EnableErc20`    | bool          | `true`                        |
-| `EnableEVMHook`         | bool          | `true`                        |
+| Key             | Type | Default Value |
+| --------------- | ---- | ------------- |
+| `EnableErc20`   | bool | `true`        |
+| `EnableEVMHook` | bool | `true`        |
 
 ### Enable ERC20
 
@@ -713,13 +713,45 @@ Allows users to submit a `ToggleTokenConversionProposal`.
 evmosd tx gov submit-legacy-proposal toggle-token-conversion TOKEN [flags]
 ```
 
-**`param-change`**
+**Update Params**
 
-Allows users to submit a `ParameterChangeProposal``.
+Allows users to submit a `MsgUpdateParams` with the desired changes on the `x/erc20` module parameters.
+To do this, you will have to provide a JSON file with the proposal.
 
 ```bash
-evmosd tx gov submit-legacy-proposal param-change PROPOSAL_FILE [flags]
+evmosd tx gov submit-proposal proposal.json [flags]
 ```
+
+:::tip
+**Tip:** To generate the required JSON file, you can use the following command:
+
+```bash
+evmosd tx gov draft-proposal 
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select proposal type: 
+    text
+    community-pool-spend
+    software-upgrade
+    cancel-software-upgrade
+  ▸ other
+```
+
+Select `other` option and look for the `/evmos.erc20.v1.MsgUpdateParams` message
+
+```bash
+✔ other
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select proposal message type:: 
+↑ ▸ /evmos.erc20.v1.MsgUpdateParams
+    /evmos.incentives.v1.MsgUpdateParams
+    /evmos.inflation.v1.MsgUpdateParams
+    /evmos.recovery.v1.MsgUpdateParams
+↓   /evmos.revenue.v1.MsgCancelRevenue
+```
+
+Follow the instructions. Once you're done with it, it will generate a JSON file.
+Make any changes if necessary and use that file in the `submit-proposal` transaction
+:::
 
 ### gRPC
 
