@@ -442,12 +442,15 @@ Allows users to submit a `CanelIncentiveProposal`.
 evmosd tx gov submit-legacy-proposal cancel-incentive CONTRACT_ADDRESS [flags]
 ```
 
-**`param-change`**
+**Update Params**
 
-Allows users to submit a `ParameterChangeProposal``.
+Allows users to submit a `MsgUpdateParams` with the desired changes on the `x/incentives` module parameters.
+To do this, you will have to provide a JSON file with the correspondiong message in the `submit-proposal` command.
+
+For more information on how to draft a proposal, refer to the [Drafting a proposal section](../evmos-cli/proposal-draft.md).
 
 ```bash
-evmosd tx gov submit-legacy-proposal param-change PROPOSAL_FILE [flags]
+evmosd tx gov submit-proposal proposal.json [flags]
 ```
 
 ### gRPC

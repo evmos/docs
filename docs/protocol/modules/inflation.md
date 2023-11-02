@@ -119,12 +119,12 @@ f(3)     46 875 000      600 000 000	 128 424
 
 The `x/inflation` module keeps the following objects in state:
 
-| State Object       | Description                    | Key         | Value                        | Store |
-| ------------------ | ------------------------------ | ----------- | ---------------------------- | ----- |
-| Period             | Period Counter                 | `[]byte{1}` | `[]byte{period}`             | KV    |
-| EpochIdentifier    | Epoch identifier bytes         | `[]byte{3}` | `[]byte{epochIdentifier}`    | KV    |
-| EpochsPerPeriod    | Epochs per period bytes        | `[]byte{4}` | `[]byte{epochsPerPeriod}`    | KV    |
-| SkippedEpochs      | Number of skipped epochs bytes | `[]byte{5}` | `[]byte{skippedEpochs}`      | KV    |
+| State Object    | Description                    | Key         | Value                     | Store |
+| --------------- | ------------------------------ | ----------- | ------------------------- | ----- |
+| Period          | Period Counter                 | `[]byte{1}` | `[]byte{period}`          | KV    |
+| EpochIdentifier | Epoch identifier bytes         | `[]byte{3}` | `[]byte{epochIdentifier}` | KV    |
+| EpochsPerPeriod | Epochs per period bytes        | `[]byte{4}` | `[]byte{epochsPerPeriod}` | KV    |
+| SkippedEpochs   | Number of skipped epochs bytes | `[]byte{5}` | `[]byte{skippedEpochs}`   | KV    |
 
 #### Period
 
@@ -189,7 +189,7 @@ The `x/inflation` module emits the following events:
 ### Inflation
 
 | Type        | Attribute Key        | Attribute Value                               |
-| ----------- |----------------------|-----------------------------------------------|
+| ----------- | -------------------- | --------------------------------------------- |
 | `inflation` | `"epoch_provisions"` | `{fmt.Sprintf("%d", epochNumber)}`            |
 | `inflation` | `"epoch_number"`     | `{strconv.FormatUint(uint64(in.Epochs), 10)}` |
 | `inflation` | `"amount"`           | `{mintedCoin.Amount.String()}`                |
@@ -201,7 +201,7 @@ The `x/inflation` module contains the parameters described below. All parameters
 can be modified via governance.
 
 | Key                                   | Type                   | Default Value                                                                 |
-| ------------------------              | ---------------------- | ----------------------------------------------------------------------------- |
+| ------------------------------------- | ---------------------- | ----------------------------------------------------------------------------- |
 | `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “aevmos”                                             |
 | `ParamStoreKeyExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                                           |
 |                                       |                        | `R: sdk.NewDecWithPrec(50, 2)`                                                |
@@ -314,15 +314,15 @@ evmosd query inflation params [flags]
 
 #### Proposals
 
-The `tx gov submit-legacy-proposal` commands allow users to query create a proposal
-using the governance module CLI:
+**Update Params**
 
-**`param-change`**
+Allows users to submit a `MsgUpdateParams` with the desired changes on the `x/inflation` module parameters.
+To do this, you will have to provide a JSON file with the correspondiong message in the `submit-proposal` command.
 
-Allows users to submit a `ParameterChangeProposal`.
+For more information on how to draft a proposal, refer to the [Drafting a proposal section](../evmos-cli/proposal-draft.md).
 
 ```bash
-evmosd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
+evmosd tx gov submit-proposal proposal.json [flags]
 ```
 
 ### gRPC
@@ -340,6 +340,6 @@ evmosd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
 | `GET`  | `/evmos/inflation/v1/period`                  | Gets current inflation period                 |
 | `GET`  | `/evmos/inflation/v1/epoch_mint_provision`    | Gets current inflation epoch provisions value |
 | `GET`  | `/evmos/inflation/v1/skipped_epochs`          | Gets current number of skipped epochs         |
-| `GET`  | `/evmos/inflation/v1/total_supply`          | Gets current total supply                     |
+| `GET`  | `/evmos/inflation/v1/total_supply`            | Gets current total supply                     |
 | `GET`  | `/evmos/inflation/v1/inflation_rate`          | Gets current inflation rate                   |
 | `GET`  | `/evmos/inflation/v1/params`                  | Gets current inflation parameters             |
