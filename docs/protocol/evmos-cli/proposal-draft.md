@@ -61,5 +61,5 @@ To create a draft proposal using the `evmosd tx gov draft-proposal` command, fol
    your proposal using the `evmosd tx gov submit-proposal` command.
 
     ```bash
-    evmosd tx gov submit-proposal draft_proposal.json
+    evmosd tx gov submit-proposal draft_proposal.json [flags]
     ```
