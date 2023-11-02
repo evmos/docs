@@ -20,9 +20,9 @@ To create a draft proposal using the `evmosd tx gov draft-proposal` command, fol
 
 1. Run the command
 
-```bash
-evmosd tx gov draft-proposal
-```
+   ```bash
+   evmosd tx gov draft-proposal
+   ```
 
 2. The command will present a list of proposal types for selection.
    The available options typically include:
