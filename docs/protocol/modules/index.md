@@ -26,8 +26,7 @@ Evmos uses the following Cosmos SDK modules:
 - [auth](https://docs.cosmos.network/main/modules/auth) - Authentication of accounts and transactions for Cosmos SDK applications.
 - [authz](https://docs.cosmos.network/main/modules/authz) - Authorization for accounts to perform actions on behalf of other accounts.
 - [bank](https://docs.cosmos.network/main/modules/bank) - Token transfer functionalities.
-- [capability](https://docs.cosmos.network/v0.47/modules/capability) - Object capability implementation.
-- [crisis](https://docs.cosmos.network/main/modules/crisis) - Halting the blockchain under certain circumstances (e.g. if an invariant is broken).
+- [capability](https://ibc.cosmos.network/main/ibc/capability-module) - Object capability implementation.
 - [distribution](https://docs.cosmos.network/main/modules/distribution) - Fee distribution, and staking token provision distribution.
 - [evidence](https://docs.cosmos.network/main/modules/evidence) - Evidence handling for double signing, misbehaviour, etc.
 - [feegrant](https://docs.cosmos.network/main/modules/feegrant) - Grant fee allowances for executing transactions.
