@@ -7,7 +7,7 @@ sidebar_position: 11
 Signing is the process of creating a digital signature using a private key to verify a transaction
 on the Evmos network. The signature is created using a specific cryptographic algorithm that
 ensures the authenticity and integrity of the transaction using methods like
-[wallets](./../../use/connect-your-wallet) and the [CLI](./../evmos-cli).
+[wallets](https://academy.evmos.org/articles/wallet) and the [CLI](./../evmos-cli).
 
 There are different methods for signing, but one of the most commonly used methods is the 
 [EIP-712](https://eips.ethereum.org/EIPS/eip-712) standard.
@@ -39,5 +39,5 @@ Ethereum and Cosmos networks, ultimately fostering greater interoperability betw
 :::note
 EvmosJS supports signing with EIP-712. More information about the library can be found [here](https://github.com/evmos/evmosjs).
 
-Supported: [Ledger support](./../../use/connect-your-wallet/ledger) and [CLI Commands](./../evmos-cli/cli-commands).
+Supported: [Ledger support](https://academy.evmos.org/articles/beginner/connect-your-wallet/ledger) and [CLI Commands](./../evmos-cli/cli-commands).
 :::
