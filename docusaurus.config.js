@@ -21,7 +21,6 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('use'),
   defineSection('develop'),
   defineSection('validate'),
   defineSection('protocol'),
@@ -140,11 +139,6 @@ const config = {
         items: [
           {
             position: 'left',
-            label: 'Use',
-            to: '/use',
-          },
-          {
-            position: 'left',
             label: 'Develop',
             to: '/develop',
           },
@@ -192,7 +186,7 @@ const config = {
               },
               {
                 label: 'Contribute to Evmos',
-                to: '/use',
+                to: 'https://academy.evmos.org/',
               },
               {
                 label: 'Become a Validator',
