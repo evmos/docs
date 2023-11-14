@@ -1,8 +1,8 @@
-import React from "react"
-import Layout from "@theme/Layout"
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
-import styles from "./index.module.css"
-import Card from "../components/Card"
+import React from "react";
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import styles from "./index.module.css";
+import Card from "../components/Card";
 
 function Home() {
   const context = useDocusaurusContext();
@@ -11,7 +11,9 @@ function Home() {
     <Layout title="Homepage" description="Evmos Docs">
       <main>
         <br />
-        <h1 align="center" style={{ fontWeight: '750' }}>Welcome to Evmos Docs</h1>
+        <h1 align="center" style={{ fontWeight: "750" }}>
+          Welcome to Evmos Docs
+        </h1>
         <section className={styles.features}>
           <div className="container">
             <div className="row cards__container">
@@ -27,7 +29,7 @@ function Home() {
               />
 
               <Card
-                to="./use"
+                to="./protocol"
                 header={{
                   label: "☄️ Learn about Evmos",
                 }}
@@ -76,8 +78,7 @@ function Home() {
                   label: "🛡️ Security on Evmos",
                 }}
                 body={{
-                  label:
-                    "Learn about our Security Policy",
+                  label: "Learn about our Security Policy",
                 }}
               />
 
@@ -96,7 +97,7 @@ function Home() {
         </section>
       </main>
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;
