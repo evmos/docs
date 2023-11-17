@@ -180,7 +180,7 @@ cd evmos
 
 # compile and install the binary
 # IMPORTANT: make sure to have the PATH_TO_ROCKSDB with the path where you cloned the rocksdb repository
-CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \ 
+CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \
 CGO_LDFLAGS="-L"$PATH_TO_ROCKSDB" -lrocksdb -lstdc++ -lm -lz -lbz2 -lsnappy -llz4 -lzstd" \
 COSMOS_BUILD_OPTIONS=rocksdb \
 make install
@@ -198,7 +198,7 @@ Retry the command adding the dynamic linker library in your executable, the `-ld
 
 ```bash
 CGO_ENABLED=1 \ 
-CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \ 
+CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \
 CGO_LDFLAGS="-L"$PATH_TO_ROCKSDB" -lrocksdb -lstdc++ -lm -lz -lbz2 -lsnappy -llz4 -lzstd -ldl" \
 COSMOS_BUILD_OPTIONS=rocksdb \
 make install
