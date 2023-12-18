@@ -21,7 +21,6 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('use'),
   defineSection('develop'),
   defineSection('validate'),
   defineSection('protocol'),
@@ -59,7 +58,7 @@ const config = {
       binary: "evmosd",
       testnet_denom: "tEvmos",
       testnet_ticker: "tEVMOS",
-      rpc_url: "https://eth.bd.evmos.org:8545",
+      rpc_url: "https://evmos.lava.build",
       rpc_url_testnet: "https://eth.bd.evmos.dev:8545",
       rpc_url_local: "http://localhost:8545/",
       chain_id: "9001",
@@ -140,11 +139,6 @@ const config = {
         items: [
           {
             position: 'left',
-            label: 'Use',
-            to: '/use',
-          },
-          {
-            position: 'left',
             label: 'Develop',
             to: '/develop',
           },
@@ -192,7 +186,7 @@ const config = {
               },
               {
                 label: 'Contribute to Evmos',
-                to: '/use',
+                to: 'https://academy.evmos.org/',
               },
               {
                 label: 'Become a Validator',
