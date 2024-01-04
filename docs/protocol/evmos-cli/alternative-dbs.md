@@ -161,7 +161,7 @@ cd rocksdb
 PATH_TO_ROCKSDB=$(pwd)
 
 # install librocksdb
-PORTABLE=1 WITH_JNI=0 WITH_BENCHMARK_TOOLS=0 \ 
+PORTABLE=1 WITH_JNI=0 WITH_BENCHMARK_TOOLS=0 \
 WITH_TESTS=1 WITH_TOOLS=0 WITH_CORE_TOOLS=1 \
 WITH_BZ2=1 WITH_LZ4=1 WITH_SNAPPY=1 WITH_ZLIB=1 \
 WITH_ZSTD=1 WITH_GFLAGS=0 USE_RTTI=1 \
@@ -180,7 +180,7 @@ cd evmos
 
 # compile and install the binary
 # IMPORTANT: make sure to have the PATH_TO_ROCKSDB with the path where you cloned the rocksdb repository
-CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \ 
+CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \
 CGO_LDFLAGS="-L"$PATH_TO_ROCKSDB" -lrocksdb -lstdc++ -lm -lz -lbz2 -lsnappy -llz4 -lzstd" \
 COSMOS_BUILD_OPTIONS=rocksdb \
 make install
@@ -197,8 +197,8 @@ If getting the errors related to dynamic loading of shared libraries:
 Retry the command adding the dynamic linker library in your executable, the `-ldl` flag in the `CGO_LDFLAGS`:
 
 ```bash
-CGO_ENABLED=1 \ 
-CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \ 
+CGO_ENABLED=1 \
+CGO_CFLAGS="-I"$PATH_TO_ROCKSDB"/include" \
 CGO_LDFLAGS="-L"$PATH_TO_ROCKSDB" -lrocksdb -lstdc++ -lm -lz -lbz2 -lsnappy -llz4 -lzstd -ldl" \
 COSMOS_BUILD_OPTIONS=rocksdb \
 make install
