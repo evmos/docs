@@ -39,7 +39,8 @@ implementation, such as hashing, elliptic curve cryptography, and modular expone
 
 By adding custom EVM extensions to Ethereum's basic feature set,
 Evmos allows developers to use previously unavailable functionality in smart contracts, like staking and governance operations.
-This will allow more complex smart contracts to be built on Evmos and further improves the interoperability between Cosmos and Ethereum.
+This will allow more complex smart contracts to be built on Evmos
+and further improves the interoperability between Cosmos and Ethereum.
 It also is a key feature to achieve Evmos' vision of being the definitive dApp
 chain, where any dApp can be deployed once and users can interact with
 a wide range of different blockchains natively.

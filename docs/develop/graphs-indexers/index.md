@@ -9,6 +9,7 @@ find all transactions that include a specific token. This type of indexing can g
 of decentralized applications and make it easier for users to access and analyze the data stored on the blockchain.
 
 ## List of Graph Indexers
+
 ### Mainnet
 
 | Service      | Description                                                                                                                                                                                     | Support        | Links & Features                                                                                                                                                                                                                                                                                                                                                                                                                      |

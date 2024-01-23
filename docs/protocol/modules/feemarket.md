@@ -10,7 +10,7 @@ The `MempoolFeeDecorator` in `x/auth` module needs to be overwritten
 to check the `baseFee` along with the `minimal-gas-prices` allowing
 to implement a global fee mechanism which vary depending on the network activity.
 
-For more reference to EIP1559:
+For more reference to EIP-1559:
 
 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md>
 
@@ -25,7 +25,6 @@ For more reference to EIP1559:
 7. **[Params](#params)**
 8. **[Client](#client)**
 9. **[AnteHandlers](#antehandlers)**
-
 
 ## Concepts
 
@@ -145,7 +144,6 @@ This is implemented, so that the base fee can't drop to gas prices
 that wouldn't allow transactions to be accepted in the mempool, because of a higher `MinGasPrice`.
 :::
 
-
 ## State
 
 The x/feemarket module keeps in the state variable needed to the fee calculation:
@@ -155,7 +153,6 @@ Only BlockGasUsed in previous block needs to be tracked in state for the next ba
 |                  | Description                    | Key            | Value               | Store     |
 | -----------      | ------------------------------ | ---------------| ------------------- | --------- |
 | BlockGasUsed     | gas used in the block          | `[]byte{1}`    | `[]byte{gas_used}`  | KV        |
-
 
 ## Begin block
 
@@ -214,7 +211,6 @@ else:
 
 ```
 
-
 ## End block
 
 The `block_gas_used` value is updated at the end of each block.
@@ -224,7 +220,6 @@ The `block_gas_used` value is updated at the end of each block.
 The total gas used by current block is stored in the KVStore at `EndBlock`.
 
 It is initialized to `block_gas` defined in the genesis.
-
 
 ## Keeper
 
@@ -237,7 +232,6 @@ type Keeper interface {
     GetBaseFee(ctx sdk.Context) *big.Int
 }
 ```
-
 
 ## Events
 
@@ -256,7 +250,6 @@ The `x/feemarket` module emits the following events:
 | block_gas  | height          | {blockHeight}   |
 | block_gas  | amount          | {blockGasUsed}  |
 
-
 ## Parameters
 
 The `x/feemarket` module contains the following parameters:
@@ -269,7 +262,6 @@ The `x/feemarket` module contains the following parameters:
 | BaseFee                  | uint32  | 1000000000     | base fee for EIP-1559 blocks                                                                                            |
 | EnableHeight             | uint32  | 0              | height which enable fee adjustment                                                                                      |
 | MinGasPrice              | sdk.Dec | 0              | global minimum gas price that needs to be paid to include a transaction in a block                                      |
-
 
 ## Client
 
@@ -359,7 +351,6 @@ value: "2"
 | `GET`  | `/ethermint/feemarket/v1/params`        | Get the module params  |
 | `GET`  | `/ethermint/feemarket/v1/base_fee`      | Get the block base fee |
 | `GET`  | `/ethermint/feemarket/v1/block_gas`     | Get the block gas used |
-
 
 ## AnteHandlers
 

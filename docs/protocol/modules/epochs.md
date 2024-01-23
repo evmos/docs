@@ -31,7 +31,6 @@ We refer to the period in between two timer ticks as an "epoch".
 Every timer has a unique identifier, and every epoch will have a start time and an end time,
 where `end time = start time + timer interval`.
 
-
 ## State
 
 ### State Objects
@@ -190,7 +189,6 @@ so they can be modified by governance.
 
 Governance can change epoch periods from `week` to `day` as needed.
 
-
 ## Queries
 
 The `x/epochs` module provides the following queries to check the module's state.
@@ -203,7 +201,6 @@ service Query {
   rpc CurrentEpoch(QueryCurrentEpochRequest) returns (QueryCurrentEpochResponse) {}
 }
 ```
-
 
 ## Future Improvements
 
