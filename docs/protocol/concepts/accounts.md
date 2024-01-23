@@ -29,7 +29,8 @@ Creating a mnemonic phrase gives you control of many accounts,
 all accessible with that same phrase.
 
 Cosmos blockchains, like Evmos, support creating accounts with mnemonic phrases,
-otherwise known as [hierarchical deterministic key generation](https://github.com/confio/cosmos-hd-key-derivation-spec) (HD keys).
+otherwise known as
+[hierarchical deterministic key generation](https://github.com/confio/cosmos-hd-key-derivation-spec) (HD keys).
 This allows the user to create accounts on multiple blockchains
 without having to manage multiple secrets.
 
@@ -117,7 +118,8 @@ There are 3 main types of HRP for the `Addresses`/`PubKeys` available by default
 
 ### Address formats for clients
 
-`EthAccount` can be represented in both [Bech32](https://en.bitcoin.it/wiki/Bech32) (`evmos1...`) and hex (`0x...`) formats for Ethereum's Web3 tooling compatibility.
+`EthAccount` can be represented in both [Bech32](https://en.bitcoin.it/wiki/Bech32) (`evmos1...`)
+and hex (`0x...`) formats for Ethereum's Web3 tooling compatibility.
 
 The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST
 clients. The hex format on the other hand, is the Ethereum `common.Address` representation of a
@@ -213,7 +215,9 @@ curl -X GET "http://localhost:10337/cosmos/auth/v1beta1/accounts/evmos14au322k9m
 
 ### JSON-RPC
 
-To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`eth_accounts`](./../../develop/api/ethereum-json-rpc/methods#eth-accounts) or [`personal_listAccounts`](./../../develop/api/ethereum-json-rpc/methods#personal-listAccounts) endpoints:
+To retrieve the Ethereum hex address using Web3,
+use the JSON-RPC [`eth_accounts`](./../../develop/api/ethereum-json-rpc/methods#eth-accounts)
+or [`personal_listAccounts`](./../../develop/api/ethereum-json-rpc/methods#personal-listAccounts) endpoints:
 
 ```bash
 # query against a local node
