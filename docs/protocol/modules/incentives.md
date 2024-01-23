@@ -91,7 +91,6 @@ by transferring them to the participants accounts.
 because the hook has access to the actual gas spent and the hash only includes the gas limit.
 :::
 
-
 ## State
 
 ### State Objects
@@ -172,7 +171,6 @@ type GenesisState struct {
 }
 ```
 
-
 ## State Transitions
 
 The `x/incentive` module allows for two types of registration state transitions:
@@ -196,7 +194,6 @@ the incentive module creates the incentive and distributes rewards.
        but for other denominations (IBC vouchers, ERC20 tokens using the `x/erc20` module)
        the module account needs to have a positive amount to distribute the incentives
     4. The sum of all registered allocations for each denom (current + proposed) is < 100%
-
 
 ## Transactions
 
@@ -256,7 +253,6 @@ The proposal content stateless validation fails if:
 - Description is invalid (length or char)
 - Contract address is invalid
 
-
 ## Hooks
 
 The `x/incentives` module implements two transaction hooks from the `x/evm` and `x/epoch` modules.
@@ -306,7 +302,6 @@ and then 2) distributes these rewards to all participants of each incentive.
    and the sum of all active incentivized contracts' allocation is < 100%.
    The accumulated rewards are added to the allocation in the following epoch.
 
-
 ## Events
 
 The `x/incentives` module emits the following events:
@@ -330,7 +325,6 @@ The `x/incentives` module emits the following events:
 | ----------------------- | ------------ | --------------------------------------------- |
 | `distribute_incentives` | `"contract"` | `{erc20_address}`                             |
 | `distribute_incentives` | `"epochs"`   | `{strconv.FormatUint(uint64(in.Epochs), 10)}` |
-
 
 ## Parameters
 
@@ -367,7 +361,6 @@ The `rewardScaler` parameter defines  each participant’s reward limit, relativ
 An incentive allows users to earn rewards up to `rewards = k * sum(txFees)`,
 where `k` defines the reward scaler parameter that caps the incentives allocated to a single user
 by multiplying it to the sum of transaction fees that they’ve spent in the current epoch.
-
 
 ## Clients
 

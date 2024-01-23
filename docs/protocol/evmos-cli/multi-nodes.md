@@ -179,7 +179,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 The IP address will be the public IP of the docker container.
 :::
 
-Additional instructions on how to interact with the WebSocket can be found on the 
+Additional instructions on how to interact with the WebSocket can be found on the
 [events documentation](./../../develop/api/ethereum-json-rpc#ethereum-websocket).
 
 ### Keys & Accounts

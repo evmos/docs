@@ -2,8 +2,8 @@
 
 :::tip
 **Note:** Working on a governance proposal related to the ERC-20 Module?
-Make sure to look at [Evmos Governance](https://academy.evmos.org/articles/advanced/governance/),
-and specifically the [best practices](https://academy.evmos.org/articles/advanced/governance/best-practices).
+Make sure to look at [Evmos Governance](https://academy.evmos.org/articles/governance/),
+and specifically the [best practices](https://academy.evmos.org/articles/governance/best-practices).
 :::
 
 ## Abstract
@@ -167,7 +167,6 @@ Here are our recommendations for the reviewing process:
 - contract should be audited by a reputabele auditor
 - inherited contracts need to be verified for correctness
 
-
 ## State
 
 ### State Objects
@@ -262,7 +261,6 @@ type GenesisState struct {
 	TokenPairs []TokenPair `protobuf:"bytes,2,rep,name=token_pairs,json=tokenPairs,proto3" json:"token_pairs"`
 }
 ```
-
 
 ## State Transitions
 
@@ -403,7 +401,6 @@ by using escrow & mint / burn & unescrow logic.
 4. Check if token balance increased by amount
 5. Fail if unexpected `Approval` event found in logs to prevent malicious contract behaviour
 
-
 ## Transactions
 
 This section defines the `sdk.Msg` concrete types that result in the state transitions defined on the previous section.
@@ -522,7 +519,6 @@ type ToggleTokenConversionProposal struct {
 }
 ```
 
-
 ## Hooks
 
 The erc20 module implements transaction hooks from the EVM in order to trigger token pair conversion.
@@ -558,7 +554,6 @@ as the balance prior to the transaction is not available in the hook.
 3. If the token contract address is a native ERC20 token
     1. Mint Cosmos Coin
     2. Transfer Cosmos Coin to the bech32 account address of the sender hex
-
 
 ## Events
 
@@ -605,7 +600,6 @@ The `x/erc20` module emits the following events:
 | `convert_erc20` | `"cosmos_coin"` | `{denom}`               |
 | `convert_erc20` | `"erc20_token"` | `{msg.ContractAddress}` |
 
-
 ## Parameters
 
 The erc20 module contains the following parameters:
@@ -624,7 +618,6 @@ When the parameter is disabled, it will prevent all token pair registration and 
 
 The `EnableEVMHook` parameter enables the EVM hook to convert an ERC20 token
 to a Cosmos Coin by transferring the Tokens through a `MsgEthereumTx`  to the `ModuleAddress` Ethereum address.
-
 
 ## Clients
 
