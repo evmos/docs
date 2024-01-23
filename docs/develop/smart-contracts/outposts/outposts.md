@@ -39,7 +39,7 @@ two outposts at the moment:
 
 ## Stride Outpost
 
-[The Stride Outpost](https://app.evmos.org/dapps/staking/stride) interacts with the
+[The Stride Outpost](https://store.evmos.org/dapps/staking/stride) interacts with the
 [Autopilot](https://docs.stride.zone/docs/integrate-liquid-staking) middleware of the Stride protocol.
 It simplifies using Stride Autopilot for liquid staking and claiming EVMOS tokens with a single transaction
 and returns stEVMOS back to the Evmos chain. This Outpost automatically builds the correct packet data so users
@@ -61,7 +61,7 @@ and the Cross Chain Swaps contract. It provides an easy-to-use interface for exe
 Osmosis and Evmos and vice versa and routes them back to the Evmos chain.
 
 Users can interact with the Osmosis Outpost directly using the Osmosis Instant dApp
-from the [Evmos dApp store](https://app.evmos.org/dapps/defi/osmosis). The dApp will automatically build
+from the [Evmos dApp store](https://store.evmos.org/dapps/defi/osmosis). The dApp will automatically build
 the correct `memo` field for the user and send the IBC transfer to the Osmosis chain. The possible actions are:
 
 1. **Swap Osmosis for Evmos** - Send your Osmosis tokens to the Osmosis Outpost and receive Evmos tokens in return.
