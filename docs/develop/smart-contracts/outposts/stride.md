@@ -34,7 +34,7 @@ the Stride documentation for more info on [redeeming](https://docs.stride.zone/d
 ## Fallback Mechanism
 
 The Stride Outpost has a fallback mechanism in case the Autopilot middleware is not available or is not working
-correctly. This is why each IBC Transfer is send to a specific address on the Stride chain. This address is 
+correctly. This is why each IBC Transfer is sent to a specific address on the Stride chain. This address is 
 a multi-sig account controlled by the AP team that will return any stuck funds to the original sender. 
 
 ## For Developers
