@@ -187,8 +187,9 @@ Upon creation, the owner assigns a funder, who is able to fund the account with 
  2. Check if
 	1. the vesting address is not a blocked address.
 	2. the vesting address is a clawback vesting account.
-	3. there is at least one vesting or lockup schedule provided. If one of them is absent, default to instant vesting or unlock schedule.
-    4. lockup and vesting total amounts are equal.
+	3. there is at least one vesting or lockup schedule provided.
+	If one of them is absent, default to instant vesting or unlock schedule.
+ 4. lockup and vesting total amounts are equal.
  3. Update the clawback vesting account and send coins from the funder to the vesting account,
     merging any existing schedules with the new funding.
 

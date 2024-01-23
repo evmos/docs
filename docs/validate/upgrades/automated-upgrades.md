@@ -101,7 +101,8 @@ If there will be any issue with downloading a binary,
 `cosmovisor` will stop and won't restart and the chain (which could lead it to a halt).
 :::
 
-It is possible to have Cosmovisor [automatically download](https://docs.cosmos.network/main/tooling/cosmovisor#auto-download) the new binary.
+It is possible to have Cosmovisor
+[automatically download](https://docs.cosmos.network/main/tooling/cosmovisor#auto-download) the new binary.
 Validators can use the automatic download option to prevent unnecessary downtime during the upgrade process.
 This option will automatically restart the chain with the upgrade binary
 once the chain has halted at the proposed `upgrade-height`.
