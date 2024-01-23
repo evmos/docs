@@ -46,3 +46,4 @@ and display them in a [Grafana](https://grafana.com/) dashboard.
 | `tx_clawback_gas_used`                         | Total amount of gas used by a `Clawback` msg                                                                 | gas      | counter   |
 | `tx_update_vesting_funder_gas_used`            | Total amount of gas used by a `UpdateVestingFunder` msg                                                      | gas      | counter   |
 | `epochs_begin_blocker`                         | Time spent during `BeginBlocker` of the `x/epochs` module                                                    | ms       | histogram |
+| `burned_tx_fee_amount`                         | Total amount of fees burned on a tx                                                                          | token    | counter   |
