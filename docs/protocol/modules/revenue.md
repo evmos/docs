@@ -338,7 +338,6 @@ to the withdraw address set for that contract, or to the contract deployer.
 5. Distribute the remaining amount in the `FeeCollector` to validators according to the
    [SDK  Distribution Scheme](https://docs.cosmos.network/main/modules/distribution#the-distribution-scheme).
 
-
 ## Events
 
 The `x/revenue` module emits the following events:
@@ -465,5 +464,3 @@ evmosd query revenue params
 - `CREATE2` opcode support for address derivation.
   When registering a smart contract, we verify that its address is derived from the deployer’s address.
   At this time, we only support the derivation path using the `CREATE` opcode, which accounts for most cases.
-
-

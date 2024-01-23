@@ -112,7 +112,6 @@ f(2)     84 375 000      553 125 000	 231 164
 f(3)     46 875 000      600 000 000	 128 424
 ```
 
-
 ## State
 
 ### State Objects
@@ -160,7 +159,6 @@ type GenesisState struct {
 }
 ```
 
-
 ## Hooks
 
 The `x/inflation` module implements the `AfterEpochEnd`  hook from the
@@ -181,7 +179,6 @@ well as updating it:
    pool.
 4. If a period ends with the current epoch, increment the period by `1` and set new value to the store.
 
-
 ## Events
 
 The `x/inflation` module emits the following events:
@@ -193,7 +190,6 @@ The `x/inflation` module emits the following events:
 | `inflation` | `"epoch_provisions"` | `{fmt.Sprintf("%d", epochNumber)}`            |
 | `inflation` | `"epoch_number"`     | `{strconv.FormatUint(uint64(in.Epochs), 10)}` |
 | `inflation` | `"amount"`           | `{mintedCoin.Amount.String()}`                |
-
 
 ## Parameters
 
@@ -248,7 +244,6 @@ stakingRewards = evmosTokenModelDistribution / (1 - teamVestingDistribution)
 The `ParamStoreKeyEnableInflation` parameter enables the daily inflation. If it is disabled,
 no tokens are minted and the number of skipped epochs increases for each passed
 epoch.
-
 
 ## Clients
 

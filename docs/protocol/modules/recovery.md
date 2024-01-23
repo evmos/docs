@@ -153,7 +153,6 @@ and in that case the recovery will not be triggered by the transaction, as it wi
 So if at any point either the IBC transfer or the claims middleware return an error,
 then the recovery middleware will not be executed.
 
-
 ## Hooks
 
 The `x/recovery` module allows for state transitions that return IBC tokens
@@ -198,7 +197,6 @@ The behavior is implemented using an IBC`OnRecvPacket` callback.
 
 5. If the recipient does not have any balance, return without recovering tokens
 
-
 ## Events
 
 The `x/recovery` module emits the following event:
@@ -214,7 +212,6 @@ The `x/recovery` module emits the following event:
 | `recovery` |  `packet_src_port`   |         `packet.SourcePort` |
 | `recovery` | `packet_dst_channel` |    `packet.DestinationPort` |
 | `recovery` |  `packet_dst_port`   | `packet.DestinationChannel` |
-
 
 ## Parameters
 
@@ -234,7 +231,6 @@ When the parameter is disabled, it will disable the recovery of stuck tokens to 
 
 The `PacketTimeoutDuration` parameter is the duration before the IBC packet timeouts
 and the transaction is reverted on the counter party chain.
-
 
 ## Clients
 
@@ -264,4 +260,3 @@ evmosd query recovery params [flags]
 | :----- | :------------------------------- | :-------------------- |
 | `gRPC` | `evmos.recovery.v1.Query/Params` | `Get Recovery params` |
 | `GET`  |   `/evmos/recovery/v1/params`    | `Get Recovery params` |
-

@@ -39,11 +39,15 @@ You can get the full list of `event` categories and values [here](#list-of-tende
 
 More on Events:
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
+- [Cosmos SDK Events](https://docs.cosmos.network/main/learn/advanced/events)
 
 ### Subscribing to Events via Websocket
 
-Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection to subscribe or unsubscribe to Tendermint `Events`. To start a connection with the Tendermint websocket you need to define the address with the `--rpc.laddr` flag when starting the node (default `tcp://127.0.0.1:26657`):
+Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection
+to subscribe or unsubscribe to Tendermint `Events`.
+To start a connection with the Tendermint websocket you need to
+define the address with the `--rpc.laddr` flag when starting the node
+(default `tcp://127.0.0.1:26657`):
 
 ```bash
 evmosd start --rpc.laddr="tcp://127.0.0.1:26657"
@@ -98,7 +102,8 @@ The main events you can subscribe to are:
 - `ValidatorSetUpdates`: Contains validator set updates for the block.
 
 :::tip
-👉 The list of events types and values for each Cosmos SDK module can be found in the [Modules Specification](./../../../../protocol/modules/) section.
+👉 The list of events types and values for each Cosmos SDK module
+can be found in the [Modules Specification](./../../../../protocol/modules/) section.
 Check the `Events` page to obtain the event list of each supported module on Evmos.
 :::
 

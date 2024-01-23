@@ -29,7 +29,6 @@ of security and performance, and you can afford to sacrifice some compatibility,
 
 </details>
 
-
 <details>
 
 <summary><b>Where can I find the Protobuf interfaces for Evmos?</b></summary>
