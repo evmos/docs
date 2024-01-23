@@ -37,7 +37,7 @@ of the actual data and offset; according to the type and offset of data, decode 
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Encoding](https://docs.cosmos.network/main/core/encoding.html)
+- [Cosmos SDK Encoding](https://docs.cosmos.network/main/learn/advanced/encoding)
 - [Ethereum RLP](https://eth.wiki/en/fundamentals/rlp)
 
 ## Encoding Formats

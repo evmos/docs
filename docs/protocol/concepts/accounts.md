@@ -13,7 +13,7 @@ to be compatible with Ethereum type addresses.
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Accounts](https://docs.cosmos.network/main/basics/accounts.html)
+- [Cosmos SDK Accounts](https://docs.cosmos.network/main/learn/beginner/accounts)
 - [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts)
 
 ## Creating Accounts

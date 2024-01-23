@@ -39,7 +39,7 @@ You can get the full list of `event` categories and values [here](#list-of-tende
 
 More on Events:
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
+- [Cosmos SDK Events](https://docs.cosmos.network/main/learn/advanced/events)
 
 ### Subscribing to Events via Websocket
 

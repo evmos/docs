@@ -16,7 +16,7 @@ and tokens and assets in the network to come from different independent sources.
 
 Evmos enables these key features by:
 
-* Leveraging [modules](https://docs.cosmos.network/main/building-modules/intro.html)
+* Leveraging [modules](https://docs.cosmos.network/v0.47/build/building-modules/intro)
 and other mechanisms implemented by the [Cosmos SDK](https://docs.cosmos.network/).
 * Implementing CometBFT's Application Blockchain Interface ([ABCI](https://docs.tendermint.com/master/spec/abci/))
 to manage the blockchain.

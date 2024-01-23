@@ -104,6 +104,7 @@ The first time you add a key to an empty keyring, you will be prompted to type t
 
 ### Password Store
 
+<!--markdown-link-check-disable-next-line-->
 The `pass` backend uses the [pass](https://www.passwordstore.org/) utility to manage on-disk
 encryption of keys' sensitive data and metadata. Keys are stored inside `gpg` encrypted files
 within app-specific directories. `pass` is available for the most popular UNIX

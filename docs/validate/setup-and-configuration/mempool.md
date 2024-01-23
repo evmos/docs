@@ -24,7 +24,7 @@ It is achieved by passing a `priority` field with each [`CheckTx` response](http
 which is run on any transaction trying to enter the mempool.
 
 Evmos supports [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559#simple-summary) EVM transactions through its
-[feemarket module](../../protocol/modules/feemarket).
+[feemarket module](./../../protocol/modules/feemarket).
 This transaction type uses a base fee and a selectable priority tip that add up to the total transaction fees.
 The prioritized mempool presents an option to automatically make use of this mechanism regarding block generation.
 
