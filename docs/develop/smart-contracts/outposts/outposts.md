@@ -19,8 +19,8 @@ two outposts at the moment:
 
 - **`memo` field**: An extra JSON string attached to IBC Transfer packets. This additional information helps
   the receiving chain to identify the user and action to be performed.
-- **IBC Extension**: A precompiled contract that allows users to send IBC transfers to other chains through the EVM.
 - **ICS20 Transfers**: Protocol for transferring fungible tokens using Inter-Blockchain Communication (IBC).
+- **ICS20 Extension**: A precompiled contract that allows users to send IBC transfers to other chains through the EVM.
 
 ### Stride Specific
 
