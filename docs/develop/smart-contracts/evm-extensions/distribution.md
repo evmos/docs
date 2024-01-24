@@ -276,7 +276,7 @@ The `withdrawStakingRewards` function allows a user to withdraw his/her rewards 
 For this transaction to be successful, make sure the user had already approved the `MSG_WITHDRAW_DELEGATOR_REWARD` message.
 
 ```solidity
-	function withdrawStakingRewards(
+function withdrawStakingRewards(
     string memory _valAddr
 ) public returns (types.Coin[] memory) {
     return
