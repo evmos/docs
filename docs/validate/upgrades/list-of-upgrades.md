@@ -42,6 +42,7 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                              | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                                             |
 |--------------------------------------------------------------------------------------| :-----: | :------: | :--------: | :-----------------: |--------------------------------------------------------------------------- |
+| [`v16.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v16.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [18,334,000](https://testnet.mintscan.io/evmos-testnet/blocks/18334000) |
 | [`v15.0.0-rc2`](https://github.com/evmos/evmos/releases/tag/v15.0.0-rc2)             |    ✅    |    ✅     |     ❌      |          ❌          | [18,334,000](https://testnet.mintscan.io/evmos-testnet/blocks/18334000) |
 | [`v15.0.0-rc1`](https://github.com/evmos/evmos/releases/tag/v15.0.0-rc1)             |    ✅    |    ✅     |     ❌      |          ❌          | [18,034,000](https://testnet.mintscan.io/evmos-testnet/blocks/18034000) |
 | [`v14.0.0-rc5`](https://github.com/evmos/evmos/releases/tag/v14.0.0-rc5)             |    ✅    |    ✅     |     ❌      |          ❌          | [17,148,000](https://testnet.mintscan.io/evmos-testnet/blocks/17148000) |
