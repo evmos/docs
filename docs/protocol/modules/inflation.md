@@ -12,7 +12,7 @@ Model](https://evmos.blog/the-evmos-token-model-edc07014978b) distribution to
 
 It replaces the Cosmos SDK `x/mint` module, that other Cosmos chains are using.
 
-The allocation of new coins incentivizes specific behaviour in the Evmos network. 
+The allocation of new coins incentivizes specific behaviour in the Evmos network.
 Inflation allocates funds to 1) the community pool(managed by sdk `x/distr` module) to fund spending proposals,
 and 2) the `Fee Collector account` (in the sdk `x/auth` module) to increase staking rewards.
 The now deprecated `x/incentives` module (3) does not accrue any tokens anymore.
@@ -74,7 +74,7 @@ transaction with `unvested` tokens until they are unlocked represented as
 The inflation distribution for staking and community pool is
 implemented through an exponential formula, a.k.a. the Half Life.
 
-Inflation is minted in daily epochs. During a period of 365 epochs (one year), 
+Inflation is minted in daily epochs. During a period of 365 epochs (one year),
 a daily provision (`epochProvison`) of Evmos tokens is minted
 and allocated to staking rewards and the community pool.
 The epoch provision depends on module parameters and is recalculated at the end of every epoch.
@@ -193,19 +193,18 @@ The `x/inflation` module emits the following events:
 The `x/inflation` module contains the parameters described below. All parameters
 can be modified via governance.
 
-| Key                                   | Type                   | Default Value                                                                 |
-| ------------------------------------- | ---------------------- | ----------------------------------------------------------------------------- |
-| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “aevmos”                                             |
-| `ParamStoreKeyExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                                           |
-|                                       |                        | `R: sdk.NewDecWithPrec(50, 2)`                                                |
-|                                       |                        | `C: sdk.NewDec(int64(9_375_000))`                                             |
-|                                       |                        | `BondingTarget: sdk.NewDecWithPrec(66, 2)`                                    |
-|                                       |                        | `MaxVariance: sdk.ZeroDec()`                                                  |
-| `ParamStoreKeyInflationDistribution`  | InflationDistribution  | `StakingRewards: sdk.NewDecWithPrec(533333334, 9)`  // 0.53 = 40% / (1 - 25%) |
-<!-- what to do with this line? -->
-|                                       |                        | `UsageIncentives: sdk.NewDecWithPrec(333333333, 9)` // 0.33 = 25% / (1 - 25%) |
-|                                       |                        | `CommunityPool: sdk.NewDecWithPrec(133333333, 9)`  // 0.13 = 10% / (1 - 25%)  |
-| `ParamStoreKeyEnableInflation`        | bool                   | `true`                                                                        |
+| Key                                   | Type                   | Default Value                                        |
+| ------------------------------------- | ---------------------- |------------------------------------------------------|
+| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “aevmos”                    |
+| `ParamStoreKeyExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                  |
+|                                       |                        | `R: sdk.NewDecWithPrec(50, 2)`                       |
+|                                       |                        | `C: sdk.NewDec(int64(9_375_000))`                    |
+|                                       |                        | `BondingTarget: sdk.NewDecWithPrec(66, 2)`           |
+|                                       |                        | `MaxVariance: sdk.ZeroDec()`                         |
+| `ParamStoreKeyInflationDistribution`  | InflationDistribution  | `StakingRewards: sdk.NewDecWithPrec(500000000, 9)`   |
+|                                       |                        | `UsageIncentives: sdk.NewDecWithPrec(000000000, 9)`  |
+|                                       |                        | `CommunityPool: sdk.NewDecWithPrec(500000000, 9)`    |
+| `ParamStoreKeyEnableInflation`        | bool                   | `true`                                               |
 
 ### Mint Denom
 
