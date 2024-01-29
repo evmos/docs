@@ -24,7 +24,7 @@ It is achieved by passing a `priority` field with each [`CheckTx` response](http
 which is run on any transaction trying to enter the mempool.
 
 Evmos supports [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559#simple-summary) EVM transactions through its
-[feemarket module](../../protocol/modules/feemarket).
+[feemarket module](./../../protocol/modules/feemarket).
 This transaction type uses a base fee and a selectable priority tip that add up to the total transaction fees.
 The prioritized mempool presents an option to automatically make use of this mechanism regarding block generation.
 
@@ -32,10 +32,13 @@ When using the prioritized mempool, transactions for the next produced block are
 by order of their priority (i.e. their fees) from highest to lowest.
 Should the mempool be full, the prioritized implementation allows
 to remove the transactions with the lowest priority until enough disk space is available for
-an incoming, higher-priority transaction (see [v1/mempool.go](https://github.com/tendermint/tendermint/blob/17c94bb0dcb354c57f49cdcd1e62f4742752c803/mempool/v1/mempool.go#L505C2-L576) implementation for more details).
+an incoming, higher-priority transaction
+(see [v1/mempool.go](https://github.com/tendermint/tendermint/blob/17c94bb0dcb354c57f49cdcd1e62f4742752c803/mempool/v1/mempool.go#L505C2-L576)
+implementation for more details).
 
 :::tip
-Even though the transaction processing can be ordered by priority, the gossiping of transactions will always be according to FIFO.
+Even though the transaction processing can be ordered by priority,
+the gossiping of transactions will always be according to FIFO.
 :::
 
 ## Configuration

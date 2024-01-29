@@ -41,7 +41,6 @@ to incentivize long-term participation in the project.
 - Agoric’s Vesting Clawback Account: [https://github.com/Agoric/agoric-sdk/issues/4085](https://github.com/Agoric/agoric-sdk/issues/4085)
 - Agoric’s `vestcalc` tool: [https://github.com/agoric-labs/cosmos-sdk/tree/Agoric/x/auth/vesting/cmd/vestcalc](https://github.com/agoric-labs/cosmos-sdk/tree/Agoric/x/auth/vesting/cmd/vestcalc)
 
-
 ## Concepts
 
 ### Vesting
@@ -189,8 +188,8 @@ Upon creation, the owner assigns a funder, who is able to fund the account with 
 	1. the vesting address is not a blocked address.
 	2. the vesting address is a clawback vesting account.
 	3. there is at least one vesting or lockup schedule provided.
-       If one of them is absent, default to instant vesting or unlock schedule.
-    4. lockup and vesting total amounts are equal.
+	If one of them is absent, default to instant vesting or unlock schedule.
+ 4. lockup and vesting total amounts are equal.
  3. Update the clawback vesting account and send coins from the funder to the vesting account,
     merging any existing schedules with the new funding.
 

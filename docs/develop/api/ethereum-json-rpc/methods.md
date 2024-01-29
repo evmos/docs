@@ -8,7 +8,10 @@ Find below a list of JSON-RPC methods supported on Evmos, sorted by namespaces.
 
 ## Curl Examples Explained
 
-The curl options below might return a response where the node complains about the content type, this is because the `--data` option sets the content type to `application/x-www-form-urlencoded`. If your node does complain, manually set the header by placing `-H "Content-Type: application/json"` at the start of the call.
+The curl options below might return a response where the node complains about the content type,
+this is because the `--data` option sets the content type to `application/x-www-form-urlencoded`.
+If your node does complain, manually set the header
+by placing `-H "Content-Type: application/json"` at the start of the call.
 
 The examples also do not include the URL/IP & port combination which must be the last argument given to curl e.x. `127.0.0.1:8545`
 
@@ -277,7 +280,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 ### `eth_syncing`
 
-The sync status object may need to be different depending on the details of Tendermint's sync protocol. However, the 'synced' result is simply a boolean, and can easily be derived from Tendermint's internal sync state.
+The sync status object may need to be different depending on the details of Tendermint's sync protocol.
+However, the 'synced' result is simply a boolean, and can easily be derived from Tendermint's internal sync state.
 
 ```json
 // Request
@@ -468,15 +472,18 @@ Sends transaction from given account to a given account.
 
     `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
 
-    `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
+    `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for the transaction execution.
+    It will return unused gas.
 
     `gasPrice`: QUANTITY - (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas
 
     `value`: QUANTITY - value sent with this transaction
 
-    `data`: `DATA` - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI
+    `data`: `DATA` - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters.
+    For details see Ethereum Contract ABI.
 
-    `nonce`: QUANTITY - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
+    `nonce`: QUANTITY - (optional) Integer of a nonce.
+    This allows to overwrite your own pending transactions that use the same nonce.
 
 ```json
 // Request
@@ -515,13 +522,15 @@ Executes a new message call immediately without creating a transaction on the bl
 
     `to`: `DATA`, 20 Bytes - The address the transaction is directed to.
 
-    `gas`: QUANTITY - gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
+    `gas`: QUANTITY - gas provided for the transaction execution.
+    eth_call consumes zero gas, but this parameter may be needed by some executions.
 
     `gasPrice`: QUANTITY - gasPrice used for each paid gas
 
     `value`: QUANTITY - value sent with this transaction
 
-    `data`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
+    `data`: `DATA` - (optional) Hash of the method signature and encoded parameters.
+    For details see Ethereum Contract ABI in the Solidity documentation
 
 - Block number  or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
@@ -911,7 +920,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_lockAccount","params":[
 **Private**: Requires authentication.
 :::
 
-Generates a new private key and stores it in the key store directory. The key file is encrypted with the given passphrase. Returns the address of the new account.
+Generates a new private key and stores it in the key store directory.
+The key file is encrypted with the given passphrase.
+It returns the address of the new account.
 
 #### Parameters
 
@@ -1184,11 +1195,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setExtra","params":["data"
 **Private**: Requires authentication.
 :::
 
-Sets the minimal gas price used to accept transactions. Any transaction below this limit is excluded from the validator block proposal process.
+Sets the minimal gas price used to accept transactions.
+Any transaction below this limit is excluded from the validator block proposal process.
 
 This method requires a `node` restart after being called because it changes the configuration file.
 
-Make sure your `evmosd start` call is not using the flag `minimum-gas-prices` because this value will be used instead of the one set on the configuration file.
+Make sure your `evmosd start` call is not using the flag `minimum-gas-prices`,
+because this value will be used instead of the one set on the configuration file.
 
 #### Parameters
 

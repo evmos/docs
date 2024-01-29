@@ -27,7 +27,7 @@ In summary, the SAFU states the following:
   by hackers but do not have their own SAFU program).
 
 For more information,
-visit [the SAFU agreement](https://github.com/evmos/evmos/tree/main/SAFU.pdf).<!-- markdown-link-check-disable-line -->
+visit [the SAFU agreement](https://github.com/evmos/evmos/tree/main/SAFU.pdf).
 
 ## Dropbox Address
 
