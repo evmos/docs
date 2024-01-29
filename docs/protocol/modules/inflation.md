@@ -6,18 +6,16 @@ The `x/inflation` module mints new Evmos tokens and allocates them in daily
 epochs according to the [Evmos Token
 Model](https://evmos.blog/the-evmos-token-model-edc07014978b) distribution to
 
-* Staking Rewards `40%`,
-* Team Vesting `25%`,
-* Usage Incentives: `25%`,
-* Community Pool `10%`.
+* Community Pool `50%`.
+* Staking Rewards `50%`,
+* Usage Incentives: `0%`,
 
-It replaces the currently used Cosmos SDK `x/mint` module.
+It replaces the Cosmos SDK `x/mint` module, that other Cosmos chains are using.
 
-The allocation of new coins incentivizes specific behaviour in the Evmos
-network. Inflation allocates funds to 1) the `Fee Collector account` (in the sdk
-`x/auth` module) to increase staking rewards, 2) the  `x/incentives` module
-account  to provide supply for usage incentives and 3) the community pool
-(managed by sdk `x/distr` module) to fund spending proposals.
+The allocation of new coins incentivizes specific behaviour in the Evmos network. 
+Inflation allocates funds to 1) the community pool(managed by sdk `x/distr` module) to fund spending proposals,
+and 2) the `Fee Collector account` (in the sdk `x/auth` module) to increase staking rewards.
+The now deprecated `x/incentives` module (3) does not accrue any tokens anymore.
 
 ## Contents
 
@@ -58,8 +56,7 @@ issue 1 billion Evmos tokens within the first 4 years.
 We implement two different inflation mechanisms to support the token model:
 
 1. linear inflation for team vesting and
-2. exponential inflation for staking rewards, usage incentives and community
-   pool.
+2. exponential inflation for staking rewards and community pool.
 
 #### Linear Inflation - Team Vesting
 
@@ -74,12 +71,12 @@ transaction with `unvested` tokens until they are unlocked represented as
 
 #### Exponential Inflation - **The Half Life**
 
-The inflation distribution for staking, usage incentives and community pool is
+The inflation distribution for staking and community pool is
 implemented through an exponential formula, a.k.a. the Half Life.
 
-Inflation is minted in daily epochs. During a period of 365 epochs (one year), a
-daily provision (`epochProvison`) of Evmos tokens is minted and allocated to staking rewards,
-usage incentives and the community pool.
+Inflation is minted in daily epochs. During a period of 365 epochs (one year), 
+a daily provision (`epochProvison`) of Evmos tokens is minted
+and allocated to staking rewards and the community pool.
 The epoch provision depends on module parameters and is recalculated at the end of every epoch.
 
 The calculation of the epoch provision is done according to the following formula:
@@ -141,7 +138,8 @@ Amount of epochs in one period
 
 The `x/inflation` module's `GenesisState` defines the state necessary for
 initializing the chain from a previously exported height. It contains the module
-parameters and the list of active incentives and their corresponding gas meters
+parameters, the current period, epoch identifier, epochs per period and
+the number of skipped epochs.
 :
 
 ```go
@@ -175,8 +173,7 @@ well as updating it:
 2. A block is committed, that signalizes that an `epoch` has ended (block
    `header.Time` has surpassed `epoch_start` + `epochIdentifier`).
 3. Mint coin in amount of calculated `epochMintProvision` and allocate according to
-   inflation distribution to staking rewards, usage incentives and community
-   pool.
+   inflation distribution to staking rewards and community pool.
 4. If a period ends with the current epoch, increment the period by `1` and set new value to the store.
 
 ## Events
@@ -205,6 +202,7 @@ can be modified via governance.
 |                                       |                        | `BondingTarget: sdk.NewDecWithPrec(66, 2)`                                    |
 |                                       |                        | `MaxVariance: sdk.ZeroDec()`                                                  |
 | `ParamStoreKeyInflationDistribution`  | InflationDistribution  | `StakingRewards: sdk.NewDecWithPrec(533333334, 9)`  // 0.53 = 40% / (1 - 25%) |
+<!-- what to do with this line? -->
 |                                       |                        | `UsageIncentives: sdk.NewDecWithPrec(333333333, 9)` // 0.33 = 25% / (1 - 25%) |
 |                                       |                        | `CommunityPool: sdk.NewDecWithPrec(133333333, 9)`  // 0.13 = 10% / (1 - 25%)  |
 | `ParamStoreKeyEnableInflation`        | bool                   | `true`                                                                        |
@@ -227,9 +225,11 @@ can be found under
 
 The `ParamStoreKeyInflationDistribution` parameter defines the distribution in which
 inflation is allocated through minting on each epoch (`stakingRewards`,
-`usageIncentives`,  `CommunityPool`). The `x/inflation` excludes the team
-vesting distribution, as team vesting is minted once at genesis. To reflect this
-the distribution from the Evmos Token Model is recalculated into a distribution
+`usageIncentives`,  `CommunityPool`).
+The `x/inflation` excludes the team vesting distribution,
+as team vesting is minted once at genesis.
+<!-- This does not really apply anymore -->
+To reflect this the distribution from the Evmos Token Model is recalculated into a distribution
 that excludes team vesting. Note, that this does not change the inflation
 proposed in the Evmos Token Model. Each `InflationDistribution` can be
 calculated like this:
@@ -247,7 +247,7 @@ epoch.
 
 ## Clients
 
-A user can query the `x/incentives` module using the CLI, JSON-RPC, gRPC or
+A user can query the `x/inflation` module using the CLI, JSON-RPC, gRPC or
 REST.
 
 ### CLI
