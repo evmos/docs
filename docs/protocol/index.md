@@ -6,7 +6,8 @@ sidebar_position: 0
 
 Evmos is a scalable Proof-of-Stake blockchain that is fully compatible and
 interoperable with the Ethereum Virtual Machine (EVM). It is built using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/)
-which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) (a fork of [Tendermint Core](https://docs.tendermint.com/)) consensus engine,
+which runs on top of the [CometBFT](https://github.com/cometbft/cometbft)
+(a fork of [Tendermint Core](https://docs.tendermint.com/)) consensus engine,
 to accomplish fast finality, high transaction throughput and short block times (~2 seconds).
 
 This architecture allows users to perform both Cosmos and EVM formatted transactions,
@@ -15,10 +16,13 @@ and tokens and assets in the network to come from different independent sources.
 
 Evmos enables these key features by:
 
-* Leveraging [modules](https://docs.cosmos.network/main/building-modules/intro.html) and other mechanisms implemented by the [Cosmos SDK](https://docs.cosmos.network/).
-* Implementing CometBFT's Application Blockchain Interface ([ABCI](https://docs.tendermint.com/master/spec/abci/)) to manage the blockchain.
+* Leveraging [modules](https://docs.cosmos.network/v0.47/build/building-modules/intro)
+and other mechanisms implemented by the [Cosmos SDK](https://docs.cosmos.network/).
+* Implementing CometBFT's Application Blockchain Interface ([ABCI](https://docs.tendermint.com/master/spec/abci/))
+to manage the blockchain.
 * Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to promote code reuse and improve maintainability.
-* Exposing a fully compatible Web3 [JSON-RPC](./../develop/api/ethereum-json-rpc/methods) layer for interacting with existing Ethereum clients and tooling (Metamask, Remix, Truffle, etc).
+* Exposing a fully compatible Web3 [JSON-RPC](./../develop/api/ethereum-json-rpc/methods) layer
+for interacting with existing Ethereum clients and tooling (Metamask, Remix, Truffle, etc).
 
 The sum of these features allows developers to leverage existing Ethereum ecosystem tooling and
 software to seamlessly deploy smart contracts which interact with the rest of the Cosmos

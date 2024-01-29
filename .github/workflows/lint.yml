@@ -4,13 +4,9 @@ name: Markdown Linter
 # The linter will pass without running if no *.md files have been changed.
 on: 
   pull_request:
-    paths:
-      - '**.md'
   push:
     branches:
       - main
-    paths:
-      - '**.md'
 
 jobs:
   markdown-lint:
@@ -23,5 +19,3 @@ jobs:
           files: .
           config_file: .markdownlint.yml
           # ignore_path: .markdownlintignore
-        # Check only if there are differences in the source code
-        if: env.GIT_DIFF

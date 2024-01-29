@@ -7,7 +7,7 @@ sidebar_position: 7
 Create, import, export and delete keys using the CLI keyring.
 
 The keyring holds the private/public keypairs used to interact with the node. For instance, a validator key needs to be
-set up before running the node, so that blocks can be correctly signed. The private key can be stored in different 
+set up before running the node, so that blocks can be correctly signed. The private key can be stored in different
 locations, called ["backends"](#keyring-backends), such as a file or the operating system's own key storage.
 
 :::tip
@@ -38,14 +38,14 @@ MY_VALIDATOR_ADDRESS=$(evmosd keys show dev0 -a)
 ```
 
 This command generates a new 24-word mnemonic phrase, persists it to the relevant backend, and outputs information about
-the keypair. If this keypair will be used to hold value-bearing tokens, be sure to write down the mnemonic phrase 
+the keypair. If this keypair will be used to hold value-bearing tokens, be sure to write down the mnemonic phrase
 somewhere safe!
 
-By default, the keyring generates a `eth_secp256k1` key. The keyring also supports `ed25519` keys, which may be created 
+By default, the keyring generates a `eth_secp256k1` key. The keyring also supports `ed25519` keys, which may be created
 by passing the `--algo` flag. A keyring can of course hold both types of keys simultaneously.
 
 :::tip
-**Note**: The Ethereum address associated with a public key can be derived by taking the full Ethereum public key of type 
+**Note**: The Ethereum address associated with a public key can be derived by taking the full Ethereum public key of type
 `eth_secp256k1`, computing the `Keccak-256` hash, and truncating the first twelve bytes.
 :::
 
@@ -104,6 +104,7 @@ The first time you add a key to an empty keyring, you will be prompted to type t
 
 ### Password Store
 
+<!--markdown-link-check-disable-next-line-->
 The `pass` backend uses the [pass](https://www.passwordstore.org/) utility to manage on-disk
 encryption of keys' sensitive data and metadata. Keys are stored inside `gpg` encrypted files
 within app-specific directories. `pass` is available for the most popular UNIX

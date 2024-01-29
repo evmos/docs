@@ -163,7 +163,6 @@ After the claim period ends, the tokens that were not claimed by users will be t
 In the same way, users with tokens allocated but no transactions (i.e nonce = 0),
 will have their balance clawbacked to the community pool.
 
-
 ## State
 
 ### State Objects
@@ -224,7 +223,6 @@ balance := k.bankKeeper.GetBalance(ctx, moduleAccAddr, params.ClaimsDenom)
 isInvariantBroken := !expectedUnclaimed.Equal(balance.Amount.ToDec())
 ```
 
-
 ## State Transitions
 
 ### ABCI
@@ -247,7 +245,6 @@ The ABCI EndBlock checks if the airdrop has ended in order to process the clawba
     - the account does not have any other balances on other denominations except for the claims denominations.
 4. Prune all the claim records from the state
 5. Disable any further claim by setting the global parameter to `false`
-
 
 ## Hooks
 
@@ -365,7 +362,6 @@ the `ClaimsRecord` is merged with the recipient's claims record.
     4. neither the sender or recipient have a claims record ->
        perform a no-op by returning the original success acknowledgement
 
-
 ## Events
 
 The `x/claims` module emits the following events:
@@ -385,7 +381,6 @@ The `x/claims` module emits the following events:
 | `merge_claims_records` | `"recipient"`                 | `{recipient.String()}`      |
 | `merge_claims_records` | `"claimed_coins"`             | `{claimed_coins.String()}`  |
 | `merge_claims_records` | `"fund_community_pool_coins"` | `{remainderCoins.String()}` |
-
 
 ## Parameters
 
@@ -436,7 +431,6 @@ that users can perform the ibc callback with to claim coins for the ibc action.
 
 The `EVMChannels` parameter describes the list of Evmos channels
 that connected to EVM compatible chains and can be used during the ibc callback action.
-
 
 ## Clients
 
