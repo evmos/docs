@@ -13,9 +13,9 @@ Model](https://evmos.blog/the-evmos-token-model-edc07014978b) distribution to
 It replaces the Cosmos SDK `x/mint` module, that other Cosmos chains are using.
 
 The allocation of new coins incentivizes specific behaviour in the Evmos network.
-Inflation allocates funds to 1) the community pool(managed by sdk `x/distr` module) to fund spending proposals,
+Inflation allocates funds to 1) the community pool(managed by sdk `x/distribution` module) to fund spending proposals,
 and 2) the `Fee Collector account` (in the sdk `x/auth` module) to increase staking rewards.
-The now deprecated `x/incentives` module (3) does not accrue any tokens anymore.
+The now deprecated `x/incentives` module account (3) does not accrue tokens anymore.
 
 ## Contents
 
