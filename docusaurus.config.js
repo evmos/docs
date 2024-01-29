@@ -63,7 +63,7 @@ const config = {
       rpc_url_local: "http://localhost:8545/",
       chain_id: "9001",
       testnet_chain_id: "9000",
-      latest_version: "v16.0.0",
+      latest_version: "v16.0.2",
       mainnet_version: "v16.0.0",
       testnet_version: "v16.0.0-rc5",
       version_number: "2",

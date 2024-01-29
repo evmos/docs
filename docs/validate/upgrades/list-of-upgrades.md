@@ -10,8 +10,8 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                  | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                              |
 |--------------------------------------------------------------------------|:-------:|:--------:|:----------:|:-------------------:|-------------------------------------------------------------|
-| [`v16.0.2`](https://github.com/evmos/evmos/releases/tag/v16.0.2)         |    ✅    |    ✅     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
-| [`v16.0.1`](https://github.com/evmos/evmos/releases/tag/v16.0.1)         |    ✅    |    ✅     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
+| [`v16.0.2`](https://github.com/evmos/evmos/releases/tag/v16.0.2)         |    ✅    |    ❌     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
+| [`v16.0.1`](https://github.com/evmos/evmos/releases/tag/v16.0.1)         |    ✅    |   ❌     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
 | [`v16.0.0`](https://github.com/evmos/evmos/releases/tag/v16.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
 | [`v15.0.0`](https://github.com/evmos/evmos/releases/tag/v15.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [16,946,771](https://www.mintscan.io/evmos/blocks/16946771) |
 | [`v14.1.0`](https://github.com/evmos/evmos/releases/tag/v14.1.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [16,105,000](https://www.mintscan.io/evmos/blocks/16105000) |
