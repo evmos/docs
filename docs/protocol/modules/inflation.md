@@ -109,6 +109,10 @@ f(2)     84 375 000      553 125 000	 231 164
 f(3)     46 875 000      600 000 000	 128 424
 ```
 
+Note, that after discussion with the validator community,
+it was decided to decrease the inflation to 1/3
+during the upgrade to [v16.0.0](https://www.mintscan.io/evmos/proposals/265).
+
 ## State
 
 ### State Objects
