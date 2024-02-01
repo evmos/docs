@@ -109,8 +109,8 @@ f(2)     84 375 000      553 125 000	 231 164
 f(3)     46 875 000      600 000 000	 128 424
 ```
 
-Note, that after discussion with the validator community,
-it was decided to decrease the inflation to 1/3
+Note, that after [discussion](https://www.mintscan.io/evmos/proposals/258)
+with the validator community, it was decided to decrease the inflation to 1/3
 during the upgrade to [v16.0.0](https://www.mintscan.io/evmos/proposals/265).
 
 ## State
@@ -227,20 +227,8 @@ can be found under
 ### Inflation Distribution
 
 The `ParamStoreKeyInflationDistribution` parameter defines the distribution in which
-inflation is allocated through minting on each epoch (`stakingRewards`,
-`usageIncentives`,  `CommunityPool`).
-The `x/inflation` excludes the team vesting distribution,
-as team vesting is minted once at genesis.
-<!-- This does not really apply anymore -->
-To reflect this the distribution from the Evmos Token Model is recalculated into a distribution
-that excludes team vesting. Note, that this does not change the inflation
-proposed in the Evmos Token Model. Each `InflationDistribution` can be
-calculated like this:
-
-```markdown
-stakingRewards = evmosTokenModelDistribution / (1 - teamVestingDistribution)
-0.5333333      = 40%                         / (1 - 25%)
-```
+inflation is allocated through minting on each epoch
+(`stakingRewards`, `CommunityPool`).
 
 ### Enable Inflation
 
