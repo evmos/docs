@@ -44,11 +44,11 @@ To create a draft proposal using the `evmosd tx gov draft-proposal` command, fol
     ✔ other
     Use the arrow keys to navigate: ↓ ↑ → ← 
     ? Select proposal message type:: 
-    ↑   /evmos.erc20.v1.MsgUpdateParams
-      ▸ /evmos.incentives.v1.MsgUpdateParams
-        /evmos.inflation.v1.MsgUpdateParams
-        /evmos.recovery.v1.MsgUpdateParams
-    ↓   /evmos.revenue.v1.MsgCancelRevenue
+    ↑   /evmos.erc20.v1.MsgConvertERC20
+        /evmos.erc20.v1.MsgUpdateParams
+      ▸ /evmos.inflation.v1.MsgUpdateParams
+        /evmos.revenue.v1.MsgCancelRevenue
+    ↓   /evmos.revenue.v1.MsgRegisterRevenue
     ```
 
 3. Follow the on-screen instructions to complete the process.
