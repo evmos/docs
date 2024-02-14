@@ -22,8 +22,6 @@ and display them in a [Grafana](https://grafana.com/) dashboard.
 | :--------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | :------- | :-------- |
 | `feemarket_base_fee`                           | Amount of base fee per EIP-1559 block                                                                        | token    | gauge     |
 | `feemarket_block_gas`                          | Amount of gas used in an EIP-1559 block                                                                      | token    | gauge     |
-| `recovery_ibc_on_recv_total`                   | Total number of recoveries using the ibc `onRecvPacket` callback                                             | recovery | counter   |
-| `recovery_ibc_on_recv_token_total`             | Total amount of tokens recovered using the ibc `onRecvPacket` callback                                       | token    | counter   |
 | `erc20_ibc_on_recv_total`                      | Total amount of times an IBC coin was autoconverted to an ERC20 token in the ibc `onRecvPacket` callback     | transfer | counter   |
 | `erc20_ibc_err_total`                          | Total amount of times an IBC coin autoconvertion to ERC20 token failed during an ibc transaction             | transfer | counter   |
 | `erc20_ibc_transfer_total`                     | Total amount of times an IBC coin or its ERC20 representation was transferred via ibc (outgoing transaction) | transfer | counter   |
@@ -36,7 +34,6 @@ and display them in a [Grafana](https://grafana.com/) dashboard.
 | `tx_msg_ethereum_tx_gas_limit_per_gas_used`    | Ratio of gas limit to gas used for an ethereum tx                                                            | ratio    | gauge     |
 | `tx_msg_ethereum_tx_incentives_total`          | Total number of txs with an incentivized contract processed via the EVM                                      | tx       | counter   |
 | `tx_msg_ethereum_tx_incentives_gas_used_total` | Total amount of gas used by txs with an incentivized contract processed via the EVM                          | gas      | counter   |
-| `incentives_distribute_reward_total`           | Total amount of rewards that are distributed to all incentives' participants                                 | token    | counter   |
 | `inflation_allocate_total`                     | Total amount of tokens allocated through inflation                                                           | token    | counter   |
 | `inflation_allocate_staking_total`             | Total amount of tokens allocated through inflation to staking                                                | token    | counter   |
 | `inflation_allocate_incentives_total`          | Total amount of tokens allocated through inflation to incentives                                             | token    | counter   |
