@@ -506,19 +506,21 @@ evmosd tx vesting convert VESTING_ADDRESS [flags]
 #### Queries
 
 | Verb   | Method                                 | Description                            |
-| ------ | -------------------------------------- | -------------------------------------- |
+|--------|----------------------------------------|----------------------------------------|
 | `gRPC` | `evmos.vesting.v2.Query/Balances`      | Gets locked, unvested and vested coins |
 | `GET`  | `/evmos/vesting/v2/balances/{address}` | Gets locked, unvested and vested coins |
 
 #### Transactions
 
-| Verb   | Method                                                 | Description                      |
-| ------ | ------------------------------------------------------ | -------------------------------- |
-| `gRPC` | `evmos.vesting.v2.Msg/CreateClawbackVestingAccount`    | Creates clawback vesting account |
-| `gRPC` | `evmos.vesting.v2.Msg/FundVestingAccount`              | Funds a clawback vesting account |
-| `gRPC` | `/evmos.vesting.v2.Msg/Clawback`                       | Performs clawback                |
-| `gRPC` | `/evmos.vesting.v2.Msg/UpdateVestingFunder`            | Updates vesting account funder   |
-| `GET`  | `/evmos/vesting/v2/tx/create_clawback_vesting_account` | Creates clawback vesting account |
-| `GET`  | `/evmos/vesting/v2/tx/fund_vesting_account`            | Funds a clawback vesting account |
-| `GET`  | `/evmos/vesting/v2/tx/clawback`                        | Performs clawback                |
-| `GET`  | `/evmos/vesting/v2/tx/update_vesting_funder`           | Updates vesting account funder   |
+| Verb   | Method                                                 | Description                                     |
+|--------|--------------------------------------------------------|-------------------------------------------------|
+| `gRPC` | `evmos.vesting.v2.Msg/CreateClawbackVestingAccount`    | Creates clawback vesting account                |
+| `gRPC` | `evmos.vesting.v2.Msg/FundVestingAccount`              | Funds a clawback vesting account                |
+| `gRPC` | `/evmos.vesting.v2.Msg/Clawback`                       | Performs clawback                               |
+| `gRPC` | `/evmos.vesting.v2.Msg/UpdateVestingFunder`            | Updates vesting account funder                  |
+| `gRPC` | `/evmos.vesting.v2.Msg/ConvertVestingAccount`          | Converts vesting account back to normal account |
+| `GET`  | `/evmos/vesting/v2/tx/create_clawback_vesting_account` | Creates clawback vesting account                |
+| `GET`  | `/evmos/vesting/v2/tx/fund_vesting_account`            | Funds a clawback vesting account                |
+| `GET`  | `/evmos/vesting/v2/tx/clawback`                        | Performs clawback                               |
+| `GET`  | `/evmos/vesting/v2/tx/update_vesting_funder`           | Updates vesting account funder                  |
+| `GET`  | `/evmos/vesting/v2/tx/convert_vesting_account`         | Converts vesting account back to normal account |
