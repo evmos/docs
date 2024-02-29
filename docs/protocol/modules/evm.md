@@ -13,7 +13,7 @@ which are further increasing the adoption rate of EVM compatible technology.
 
 The growth of EVM-based chains (e.g.
 Ethereum), however, has uncovered several scalability challenges
-that are often referred to as the [trilemma of decentralization, security, and scalability](https://vitalik.ca/general/2021/04/07/sharding.html).
+that are often referred to as the [trilemma of decentralization, security, and scalability](https://vitalik.eth.limo/general/2021/04/07/sharding.html).
 Developers are frustrated by high gas fees, slow transaction speed & throughput,
 and chain-specific governance that can only undergo slow change
 because of its wide range of deployed applications.
@@ -21,7 +21,7 @@ A solution is required that eliminates these concerns for developers,
 who build applications within a familiar EVM environment.
 
 The `x/evm` module provides this EVM familiarity on a scalable, high-throughput Proof-of-Stake blockchain.
-It is built as a [Cosmos SDK module](https://docs.cosmos.network/main/building-modules/intro.html)
+It is built as a [Cosmos SDK module](https://docs.cosmos.network/main/build/building-modules/intro)
 which allows for the deployment of smart contracts,
 interaction with the EVM state machine (state transitions),
 and the use of EVM tooling.
@@ -47,7 +47,7 @@ The `x/evm` module is part of the [ethermint library](https://pkg.go.dev/github.
 ## Module Architecture
 
 > **NOTE:**: If you're not familiar with the overall module structure from
-the SDK modules, please check this [document](https://docs.cosmos.network/main/building-modules/structure.html) as
+the SDK modules, please check this [document](https://docs.cosmos.network/main/build/building-modules/structure) as
 prerequisite reading.
 
 ```shell
@@ -615,7 +615,7 @@ to understand the State Transitions in detail.
 4. The `Tx` is **signed** using the key associated with the sender address
    and the latest ethereum hard fork (`London`, `Berlin`, etc) from the `ChainConfig`
 5. The `Tx` is **built** from the msg fields using the Cosmos Config builder
-6. The `Tx` is **broadcast** in [sync mode](https://docs.cosmos.network/main/run-node/txs.html#broadcasting-a-transaction)
+6. The `Tx` is **broadcast** in [sync mode](https://docs.cosmos.network/main/user/run-node/txs#broadcasting-a-transaction)
    to ensure to wait for
    a [`CheckTx`](https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci) execution response.
    Transactions are validated by the application using `CheckTx()`,

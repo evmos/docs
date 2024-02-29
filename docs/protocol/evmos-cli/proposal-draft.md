@@ -46,7 +46,7 @@ To create a draft proposal using the `evmosd tx gov draft-proposal` command, fol
     ? Select proposal message type:: 
     ↑   /evmos.erc20.v1.MsgConvertERC20
       ▸ /evmos.erc20.v1.MsgUpdateParams
-↑       /evmos.vesting.v2.MsgFundVestingAccount
+        /evmos.vesting.v2.MsgFundVestingAccount
         /evmos.vesting.v2.MsgUpdateVestingFunder
     ↓   /evmos.inflation.v1.MsgUpdateParams
     ```
