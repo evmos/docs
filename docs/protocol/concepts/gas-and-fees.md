@@ -294,10 +294,6 @@ To cover transaction fees using a tip, this user can sign a transaction with a t
  to a fee relayer. The fee relayer will then cover the fee in the native currency (Evmos in this case), and receive the
   tip in payment, behaving as an intermediary exchange.
 
-More on Cosmos Tips:
-
-- [Cosmos Tips Docs](https://docs.cosmos.network/main/core/tips)
-
 ## Dealing with gas and fees with the Evmos CLI
 
 When broadcasting a transaction using the Evmos CLI client, users should keep into consideration the options available.

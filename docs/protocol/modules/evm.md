@@ -629,7 +629,7 @@ to understand the State Transitions in detail.
 Once a block (containing the `Tx`) has been committed during consensus,
 it is applied to the application in a series of ABCI msgs server-side.
 
-Each `Tx` is handled by the application by calling [`RunTx`](https://docs.cosmos.network/main/core/baseapp.html#runtx).
+Each `Tx` is handled by the application by calling [`RunTx`](https://docs.cosmos.network/main/learn/advanced/baseapp).
 After a stateless validation on each `sdk.Msg` in the `Tx`,
 the `AnteHandler` confirms whether the `Tx` is an Ethereum or SDK transaction.
 As an Ethereum transaction it's containing msgs are then handled
