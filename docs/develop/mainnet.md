@@ -67,20 +67,6 @@ Evmos allows for ERC-20 tokens to be used cross-chain. Once some of your tokens 
 pair through governance, which will allow users to send your tokens across chains. Head over to our Academy to learn how
 to [register your ERC-20 token](https://academy.evmos.org/articles/advanced/erc20-registration).
 
-## Revenue
-
-On Evmos, you can generate revenue, every time a user interacts with your dApp,
-gaining you a steady income.
-Developers can register their smart contracts
-and every time someone interacts with a registered smart contract,
-the contract deployer
-or their assigned withdrawal account receives a part of the transaction fees.
-
-To learn about how to [register your smart contracts](https://academy.evmos.org/articles/advanced/incentives-registration),
-head over to our Academy.
-If you are curious on how this is implemented on the protocol,
-check out the [revenue module specification](./../protocol/modules/revenue).
-
 ## Community
 
 Make yourself heard in the Evmos community and explain what value your dApp provides.

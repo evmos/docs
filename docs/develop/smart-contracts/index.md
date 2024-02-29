@@ -94,7 +94,4 @@ to prove to users that they are interacting with the correct smart contract.
 
 The core protocol team is continuously building features
 that enhance the experience of smart contract developers on Evmos.
-Head over to our Mainnet sections to learn more about these functionalities,
-e.g. how to earn [revenue](./mainnet#revenue) with your smart contract
-or [register your ERC-20](./mainnet#token-registration) token
-to be used cross-chain.
+Head over to our Mainnet sections to learn more about these functionalities.
