@@ -14,10 +14,6 @@ how to provide fees for transactions
 and how the Ethereum-type fee calculation uses a fee market (EIP1559)
 for prioritizing transactions.
 
-Also, note the fees that are paid for interacting with smart contracts on Evmos
-can earn smart contract deployers a revenue. For information on this,
-head to [develop](./../../develop/mainnet#revenue).
-
 ## Prerequisite Readings
 
 - [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
@@ -174,12 +170,6 @@ delegators. A few key distinctions are as follows:
     Evmos refunds a fraction (at least 50% by default) of the unused gas for EVM transactions to approximate the current
     behavior on Ethereum. [Why not always 100%?](https://github.com/evmos/ethermint/issues/1085)
 
-3. Revenue Module
-
-    Evmos developed the Revenue Module as a way to reward developers for creating useful dApps—any contract that is
-    registered with Evmos’ Revenue Module rewards a fraction of the transaction fee (currently 95%) from each transaction
-     that interacts with the contract to the contract developer. Validators and delegators earn the remaining portion.
-
 ### Detailed Timeline
 
 1. Nodes execute the previous block and run the `EndBlock` hook
@@ -208,8 +198,6 @@ delegators. A few key distinctions are as follows:
     * For Ethereum Transactions, nodes:
         1. Execute the transaction and update the state
         2. Calculate the gas used and compare it to the gas supplied, then refund a designated portion of the surplus
-        3. Send a fraction of the fees used as revenue to contract developers as part of the Revenue Module, if the
-        transaction interacted with a registered smart contract
 5. Nodes run `EndBlock` for this block and store the block’s `GasWanted`
 
 ## Detailed Mechanics
