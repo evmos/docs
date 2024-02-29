@@ -678,7 +678,7 @@ The `antehandler` runs through a series of options and their `AnteHandle` functi
 
 The options `authante.NewMempoolFeeDecorator()`, `authante.NewTxTimeoutHeightDecorator()`
 and `authante.NewValidateMemoDecorator(ak)` are the same as for a Cosmos `Tx`.
-Click [here](https://docs.cosmos.network/main/basics/gas-fees.html#antehandler) for more on the `anteHandler`.
+Click [here](https://docs.cosmos.network/main/learn/beginner/gas-fees.html#antehandler) for more on the `anteHandler`.
 
 #### EVM module
 

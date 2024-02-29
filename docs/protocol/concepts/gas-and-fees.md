@@ -16,7 +16,7 @@ for prioritizing transactions.
 
 ## Prerequisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
+- [Cosmos SDK Gas](https://docs.cosmos.network/main/learn/beginner/gas-fees.html)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/)
 
 ## Basics
@@ -53,8 +53,8 @@ The idea is that it costs something to get somewhere.
 
 More on Gas:
 
-- [Cosmos Gas Fees](https://docs.cosmos.network/main/basics/gas-fees)
-- [Cosmos Tx Lifecycle](https://docs.cosmos.network/main/basics/tx-lifecycle.html)
+- [Cosmos Gas Fees](https://docs.cosmos.network/main/learn/beginner/gas-fees)
+- [Cosmos Tx Lifecycle](https://docs.cosmos.network/main/learn/beginner/tx-lifecycle.html)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/)
 
 ### How is Gas Calculated?
@@ -91,7 +91,7 @@ depending on network traffic.
 
 More on Gas vs. Fees:
 
-- [Cosmos Gas and Fees](https://docs.cosmos.network/main/basics/gas-fees)
+- [Cosmos Gas and Fees](https://docs.cosmos.network/main/learn/beginner/gas-fees)
 - [Ethereum Gas and Fees](https://ethereum.org/en/developers/docs/gas/)
 
 ### How are Fees Handled on Cosmos?
@@ -215,7 +215,7 @@ Since gas is priced per-byte, the same interaction is more gas-intensive with la
 (unlike Ethereum's `uint256` values, Cosmos SDK numericals are represented using [Big.Int](https://pkg.go.dev/math/big#Int)
  types, which are dynamically sized).
 
-More information regarding gas as part of the Cosmos SDK can be found [here](https://docs.cosmos.network/main/basics/gas-fees.html).
+More information regarding gas as part of the Cosmos SDK can be found [here](https://docs.cosmos.network/main/learn/beginner/gas-fees.html).
 
 ### Matching EVM Gas consumption
 
@@ -238,7 +238,7 @@ To ignore the SDK gas consumption, we reset the transaction `GasMeter` count to 
 
 ### `AnteHandler`
 
-The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/main/basics/gas-fees.html#antehandler)
+The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/main/learn/beginner/gas-fees.html#antehandler)
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 
