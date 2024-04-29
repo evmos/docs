@@ -367,7 +367,8 @@ via the EVM. Since `ClawbackVestingAccount` are allowed to stake only unlocked &
 we have to ensure that all other configurations are not permitted to perform a state transition. Instead of
 having these checks implemented in both the `AnteHandler`s for Cosmos transactions and Ethereum transactions,
 Evmos core wraps the Cosmos SDK `x/staking` module to introduce these checks in the `MsgServer` of this module.
- With this approach we ensure that all staking actions, through direct Cosmos message or through extensions, are validating the
+ With this approach we ensure that all staking actions, through direct Cosmos message or through extensions,
+ are validating the
 account balance in the proper way.
 
 The staking wrapper uses the same functionalities of the original staking module but introduces required
