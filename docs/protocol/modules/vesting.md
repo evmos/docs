@@ -54,9 +54,8 @@ The duration until which the first tokens are vested is called the `cliff`.
 ### Lockup
 
 The lockup describes the schedule by which tokens are converted from a `locked` to an `unlocked` state.
-As long as all tokens are locked, the account cannot perform any Ethereum transactions
-that spend EVMOS using the `x/evm` module.
-However, the account can perform Ethereum transactions that don't spend EVMOS tokens.
+As long as all tokens are locked, the account cannot perform any transaction
+that spend EVMOS. However, the account can perform transactions that don't spend EVMOS tokens.
 Additionally, locked tokens cannot be transferred to other accounts.
 In the case in which tokens are both locked and vested at the same time,
 it is possible to delegate them to validators, but not transfer them to other accounts.
@@ -96,10 +95,18 @@ vestcalc --write --start=2022-01-01 --coins=200000000000000000000000aevmos --mon
 ### Clawback
 
 In case a `ClawbackVestingAccount`'s underlying commitment or contract is breached,
-the clawback provides a mechanism to return unvested funds to the original funder.
-The funder of the `ClawbackVestingAccount` is the address that sends tokens to the account at account creation.
-Only the funder can perform the clawback to return the funds to their account.
-Alternatively, they can specify a destination address to send unvested funds to.
+the clawback provides a mechanism to return unvested funds. The account authorized to perform the clawback is 
+defined during `ClawbackVestingAccount` account creation. It can be:
+
+- The governance module if allowed
+- The address specified as the `FunderAddress`
+
+It should be noted that the information if an account has governance clawback enabled or not is not stored with
+the account itself but it is stored directly in the vesting module. 
+
+When a clawback is initiated, or by the funder or the governance, unvested tokens are send to the destination
+address specified in the clawback message. If no destination address is specified, the default is to return 
+tokens to the funder.
 
 ## State
 
@@ -171,6 +178,7 @@ or perform a clawback of unvested funds with `Clawback`.
 
 An externally owned account can be converted to a clawback vesting account by the owner.
 Upon creation, the owner assigns a funder, who is able to fund the account with vesting and/or lockup schedules.
+The account has also the possibility to specify if the vested tokens can be calwbacked from the governance.
 
 1. Owner submits a `MsgCreateClawbackVestingAccount` through one of the clients.
 2. Check if
@@ -326,24 +334,15 @@ The msg content stateless validation fails if:
 
 The `x/vesting` module provides `AnteDecorator`s that are recursively chained together
 into a single [`Antehandler`](https://github.com/cosmos/cosmos-sdk/blob/v0.43.0-alpha1/docs/architecture/adr-010-modular-antehandler.md).
-These decorators perform basic validity checks on an Ethereum or SDK transaction,
+These decorators perform basic validity checks on an Ethereum,
 such that it could be thrown out of the transaction Mempool.
 
 Note that the `AnteHandler` is called on both `CheckTx` and `DeliverTx`,
-as Tendermint proposers presently have the ability to include in their proposed block transactions that fail `CheckTx`.
+as CometBFT proposers presently have the ability to include in their proposed block transactions that fail `CheckTx`.
 
 ### Decorators
 
 The following decorators implement the vesting logic for token delegation and performing EVM transactions.
-
-#### `VestingDelegationDecorator`
-
-Validates if a transaction contains a staking delegation of unvested coins. This AnteHandler decorator will fail if:
-
-- the message is not a `MsgDelegate`
-- sender account cannot be found
-- sender account is not a `ClawbackVestingAccount`
-- the bond amount is greater than the coins already vested
 
 #### `EthVestingTransactionDecorator`
 
@@ -358,6 +357,24 @@ This AnteHandler decorator will fail if:
 - block time is before surpassing vesting cliff end (with zero vested coins) AND
 - block time is before surpassing all lockup periods (with non-zero locked coins)
 - sender account has insufficient unlocked tokens to execute the transaction
+
+### Custom Staking Module
+
+Evomos introduced the concept of [EVM extensions](https://docs.evmos.org/develop/smart-contracts/evm-extensions) to 
+allow smart contract to interact with Cosmos SDK modules
+like the bank and the staking to provide a better developer experience allowing users to interact with Cosmos native module
+via the EVM. Since `ClawbackVestingAccount` are allowed to stake only unlocked & vested coins, or locked & vested,
+we have to ensure that all other configurations are not permitted to perform a state transition. Instead of 
+having these checks implemented in both the `AnteHandler`s for Cosmos transactions and Ethereum transactions,
+Evmos core wraps the Cosmos SDK `x/staking` module to introduce these checks in the `MsgServer` of this module. With this approach
+we ensure that all staking actions, through direct Cosmos message or through extensions, are validating the
+account balance in the proper way.
+
+The staking wrapper uses the same functionalities of the original staking module but introduces required
+checks in the following methods:
+
+- `Delegate`
+- `CreateValidator`
 
 ## Events
 
@@ -455,7 +472,7 @@ evmosd tx vesting create-clawback-vesting-account FUNDER_ADDRESS ENABLE_GOV_CLAW
 
 **`fund-vesting-account`**
 
-Allows a funder account to update a clawback vesting account with new schedules.
+Allows the funder account to update a clawback vesting account with new schedules.
 Any existing schedules are merged with the newly added schedules.
 Must provide a lockup periods file (--lockup), a vesting periods file (--vesting), or both.
 
