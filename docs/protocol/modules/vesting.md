@@ -95,17 +95,17 @@ vestcalc --write --start=2022-01-01 --coins=200000000000000000000000aevmos --mon
 ### Clawback
 
 In case a `ClawbackVestingAccount`'s underlying commitment or contract is breached,
-the clawback provides a mechanism to return unvested funds. The account authorized to perform the clawback is 
+the clawback provides a mechanism to return unvested funds. The account authorized to perform the clawback is
 defined during `ClawbackVestingAccount` account creation. It can be:
 
 - The governance module if allowed
 - The address specified as the `FunderAddress`
 
 It should be noted that the information if an account has governance clawback enabled or not is not stored with
-the account itself but it is stored directly in the vesting module. 
+the account itself but it is stored directly in the vesting module.
 
 When a clawback is initiated, or by the funder or the governance, unvested tokens are send to the destination
-address specified in the clawback message. If no destination address is specified, the default is to return 
+address specified in the clawback message. If no destination address is specified, the default is to return
 tokens to the funder.
 
 ## State
@@ -360,14 +360,14 @@ This AnteHandler decorator will fail if:
 
 ### Custom Staking Module
 
-Evomos introduced the concept of [EVM extensions](https://docs.evmos.org/develop/smart-contracts/evm-extensions) to 
+Evomos introduced the concept of [EVM extensions](https://docs.evmos.org/develop/smart-contracts/evm-extensions) to
 allow smart contract to interact with Cosmos SDK modules
 like the bank and the staking to provide a better developer experience allowing users to interact with Cosmos native module
 via the EVM. Since `ClawbackVestingAccount` are allowed to stake only unlocked & vested coins, or locked & vested,
-we have to ensure that all other configurations are not permitted to perform a state transition. Instead of 
+we have to ensure that all other configurations are not permitted to perform a state transition. Instead of
 having these checks implemented in both the `AnteHandler`s for Cosmos transactions and Ethereum transactions,
-Evmos core wraps the Cosmos SDK `x/staking` module to introduce these checks in the `MsgServer` of this module. With this approach
-we ensure that all staking actions, through direct Cosmos message or through extensions, are validating the
+Evmos core wraps the Cosmos SDK `x/staking` module to introduce these checks in the `MsgServer` of this module.
+ With this approach we ensure that all staking actions, through direct Cosmos message or through extensions, are validating the
 account balance in the proper way.
 
 The staking wrapper uses the same functionalities of the original staking module but introduces required
