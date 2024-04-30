@@ -178,7 +178,7 @@ or perform a clawback of unvested funds with `Clawback`.
 
 An externally owned account can be converted to a clawback vesting account by the owner.
 Upon creation, the owner assigns a funder, who is able to fund the account with vesting and/or lockup schedules.
-The account has also the possibility to specify if the vested tokens can be calwbacked from the governance.
+The account has also the possibility to specify if the vested tokens can be clawbacked from the governance.
 
 1. Owner submits a `MsgCreateClawbackVestingAccount` through one of the clients.
 2. Check if
