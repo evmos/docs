@@ -363,7 +363,7 @@ This AnteHandler decorator will fail if:
 Evomos introduced the concept of [EVM extensions](https://docs.evmos.org/develop/smart-contracts/evm-extensions) to
 allow smart contract to interact with Cosmos SDK modules
 like staking and distribution, to provide a better developer experience allowing users to interact with Cosmos native module
-via the EVM. Since `ClawbackVestingAccount` are allowed to stake only unlocked & vested coins, or locked & vested,
+via the EVM. Since a `ClawbackVestingAccount` is allowed to stake only unlocked & vested coins, or locked & vested,
 we have to ensure that all other configurations are not permitted to perform a state transition. Instead of
 having these checks implemented in both the `AnteHandler`s for Cosmos transactions and Ethereum transactions,
 Evmos core wraps the Cosmos SDK `x/staking` module to introduce these checks in the `MsgServer` of this module.
