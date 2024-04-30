@@ -202,7 +202,8 @@ list = [
 
 Add your relayer wallet to Hermes' keyring (located in `$HOME/.hermes/keys`)
 
-The best practice is to use the same mnemonic over all networks. Do not use your relaying-addresses for anything else, because it will lead to account sequence errors.
+The best practice is to use the same mnemonic over all networks. Do not use your relaying-addresses for anything else,
+because it will lead to account sequence errors.
 
 ```bash
 hermes keys restore cosmoshub-4 -m "24-word mnemonic seed"
@@ -238,7 +239,8 @@ When your nodes are fully synced, you can start the hermes daemon:
 hermes start
 ```
 
-Watch hermes' output for successfully relayed packets, or any errors. It will try and clear any unrecieved packets after startup has completed.
+Watch hermes' output for successfully relayed packets, or any errors.
+It will try and clear any unrecieved packets after startup has completed.
 
 ## Helpful Commands
 
@@ -268,7 +270,9 @@ hermes clear packets cosmoshub-4 transfer channel-292
 hermes clear packets evmos_9001-2 transfer channel-3
 ```
 
-Clear unrecieved packets manually (experimental, will need to stop hermes daemon to prevent confusion with account sequences) with the following:
+Clear unrecieved packets manually
+(experimental, will need to stop hermes daemon to prevent confusion with account sequences)
+with the following:
 
 ```bash
 hermes tx raw packet-recv evmos_9001-2 cosmoshub-4 transfer channel-292
