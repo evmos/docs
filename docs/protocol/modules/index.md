@@ -12,7 +12,6 @@ Here is a list of all production-grade modules that can be used on the Evmos blo
 - [evm](evm.md) - Smart Contract deployment and execution on Cosmos
 - [feemarket](feemarket.md) - Fee market implementation based on the EIP1559 specification.
 - [inflation](inflation.md) - Mint tokens and allocate them to staking rewards and the community pool.
-- [revenue](revenue.md) - Split EVM transaction fees between block proposer and smart contract developers.
 - [vesting](vesting.md) - Vesting accounts with lockup and clawback capabilities.
 
 ## Cosmos SDK

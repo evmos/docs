@@ -14,13 +14,9 @@ how to provide fees for transactions
 and how the Ethereum-type fee calculation uses a fee market (EIP1559)
 for prioritizing transactions.
 
-Also, note the fees that are paid for interacting with smart contracts on Evmos
-can earn smart contract deployers a revenue. For information on this,
-head to [develop](./../../develop/mainnet#revenue).
-
 ## Prerequisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
+- [Cosmos SDK Gas](https://docs.cosmos.network/main/learn/beginner/gas-fees.html)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/)
 
 ## Basics
@@ -57,8 +53,8 @@ The idea is that it costs something to get somewhere.
 
 More on Gas:
 
-- [Cosmos Gas Fees](https://docs.cosmos.network/main/basics/gas-fees)
-- [Cosmos Tx Lifecycle](https://docs.cosmos.network/main/basics/tx-lifecycle.html)
+- [Cosmos Gas Fees](https://docs.cosmos.network/main/learn/beginner/gas-fees)
+- [Cosmos Tx Lifecycle](https://docs.cosmos.network/main/learn/beginner/tx-lifecycle.html)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/)
 
 ### How is Gas Calculated?
@@ -95,7 +91,7 @@ depending on network traffic.
 
 More on Gas vs. Fees:
 
-- [Cosmos Gas and Fees](https://docs.cosmos.network/main/basics/gas-fees)
+- [Cosmos Gas and Fees](https://docs.cosmos.network/main/learn/beginner/gas-fees)
 - [Ethereum Gas and Fees](https://ethereum.org/en/developers/docs/gas/)
 
 ### How are Fees Handled on Cosmos?
@@ -174,12 +170,6 @@ delegators. A few key distinctions are as follows:
     Evmos refunds a fraction (at least 50% by default) of the unused gas for EVM transactions to approximate the current
     behavior on Ethereum. [Why not always 100%?](https://github.com/evmos/ethermint/issues/1085)
 
-3. Revenue Module
-
-    Evmos developed the Revenue Module as a way to reward developers for creating useful dApps—any contract that is
-    registered with Evmos’ Revenue Module rewards a fraction of the transaction fee (currently 95%) from each transaction
-     that interacts with the contract to the contract developer. Validators and delegators earn the remaining portion.
-
 ### Detailed Timeline
 
 1. Nodes execute the previous block and run the `EndBlock` hook
@@ -208,8 +198,6 @@ delegators. A few key distinctions are as follows:
     * For Ethereum Transactions, nodes:
         1. Execute the transaction and update the state
         2. Calculate the gas used and compare it to the gas supplied, then refund a designated portion of the surplus
-        3. Send a fraction of the fees used as revenue to contract developers as part of the Revenue Module, if the
-        transaction interacted with a registered smart contract
 5. Nodes run `EndBlock` for this block and store the block’s `GasWanted`
 
 ## Detailed Mechanics
@@ -227,7 +215,7 @@ Since gas is priced per-byte, the same interaction is more gas-intensive with la
 (unlike Ethereum's `uint256` values, Cosmos SDK numericals are represented using [Big.Int](https://pkg.go.dev/math/big#Int)
  types, which are dynamically sized).
 
-More information regarding gas as part of the Cosmos SDK can be found [here](https://docs.cosmos.network/main/basics/gas-fees.html).
+More information regarding gas as part of the Cosmos SDK can be found [here](https://docs.cosmos.network/main/learn/beginner/gas-fees.html).
 
 ### Matching EVM Gas consumption
 
@@ -250,7 +238,7 @@ To ignore the SDK gas consumption, we reset the transaction `GasMeter` count to 
 
 ### `AnteHandler`
 
-The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/main/basics/gas-fees.html#antehandler)
+The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/main/learn/beginner/gas-fees.html#antehandler)
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 
@@ -305,10 +293,6 @@ Let’s say a user transfers tokens from Chain A to Evmos via IBC-transfer and w
 To cover transaction fees using a tip, this user can sign a transaction with a tip and no fees, then send the transaction
  to a fee relayer. The fee relayer will then cover the fee in the native currency (Evmos in this case), and receive the
   tip in payment, behaving as an intermediary exchange.
-
-More on Cosmos Tips:
-
-- [Cosmos Tips Docs](https://docs.cosmos.network/main/core/tips)
 
 ## Dealing with gas and fees with the Evmos CLI
 
