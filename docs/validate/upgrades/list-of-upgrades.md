@@ -10,8 +10,13 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                  | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                              |
 |--------------------------------------------------------------------------|:-------:|:--------:|:----------:|:-------------------:|-------------------------------------------------------------|
+| [`v18.1.0`](https://github.com/evmos/evmos/releases/tag/v18.1.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [21,209,000](https://www.mintscan.io/evmos/blocks/21209000) |
+| [`v18.0.1`](https://github.com/evmos/evmos/releases/tag/v18.0.1)         |    ❌    |    ❌     |     ❌      |          ❌          |                                                             |
+| [`v18.0.0`](https://github.com/evmos/evmos/releases/tag/v18.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [20,396,852](https://www.mintscan.io/evmos/blocks/20396852) |
+| [`v17.0.1`](https://github.com/evmos/evmos/releases/tag/v17.0.1)         |    ❌    |    ❌     |     ❌      |          ❌          |                                                             |
+| [`v17.0.0`](https://github.com/evmos/evmos/releases/tag/v17.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [20,101,000](https://www.mintscan.io/evmos/blocks/20101000) |
 | [`v16.0.2`](https://github.com/evmos/evmos/releases/tag/v16.0.2)         |    ✅    |    ❌     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
-| [`v16.0.1`](https://github.com/evmos/evmos/releases/tag/v16.0.1)         |    ✅    |   ❌     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
+| [`v16.0.1`](https://github.com/evmos/evmos/releases/tag/v16.0.1)         |    ✅    |    ❌     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
 | [`v16.0.0`](https://github.com/evmos/evmos/releases/tag/v16.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [18,295,000](https://www.mintscan.io/evmos/blocks/18295000) |
 | [`v15.0.0`](https://github.com/evmos/evmos/releases/tag/v15.0.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [16,946,771](https://www.mintscan.io/evmos/blocks/16946771) |
 | [`v14.1.0`](https://github.com/evmos/evmos/releases/tag/v14.1.0)         |    ✅    |    ✅     |     ❌      |          ❌          | [16,105,000](https://www.mintscan.io/evmos/blocks/16105000) |
@@ -45,6 +50,8 @@ Check the details and requirements for each mainnet and testnet upgrade.
 
 | Version                                                                              | Planned | Breaking | Data Reset | Manual Upgrade Only | Upgrade Height                                                          |
 |--------------------------------------------------------------------------------------|:-------:|:--------:|:----------:|:-------------------:|-------------------------------------------------------------------------|
+| [`v18.0.0`](https://github.com/evmos/evmos/releases/tag/v18.0.0)                     |    ✅    |    ✅     |     ❌      |          ❌          | [22,933,646](https://testnet.mintscan.io/evmos-testnet/blocks/22933646) |
+| [`v17.0.0`](https://github.com/evmos/evmos/releases/tag/v17.0.0)                     |    ✅    |    ✅     |     ❌      |          ❌          | [22,541,000](https://testnet.mintscan.io/evmos-testnet/blocks/22541000) |
 | [`v16.0.0-rc5`](https://github.com/evmos/evmos/releases/tag/v16.0.0-rc5)             |    ✅    |    ✅     |     ❌      |          ❌          | [20,017,000](https://testnet.mintscan.io/evmos-testnet/blocks/20017000) |
 | [`v16.0.0-rc4`](https://github.com/evmos/evmos/releases/tag/v16.0.0-rc4)             |    ✅    |    ❌     |     ❌      |          ❌          |                                                                         |
 | [`v16.0.0-rc3`](https://github.com/evmos/evmos/releases/tag/v16.0.0-rc3)             |    ✅    |    ❌     |     ❌      |          ❌          |                                                                         |
