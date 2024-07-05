@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document specifies the feemarket module which allows to define a global transaction fee for the network.
+This document specifies the feemarket module, which allows defining a global transaction fee for the network.
 
 This module has been designed to support EIP-1559 in cosmos-sdk.
 

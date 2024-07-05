@@ -68,7 +68,7 @@ ac29d21d0a6885465048a4481d16c12f59b2e58b
 
 ### Healthy peers
 
-If you are relying on just seed node and no persistent peers or a low amount of them,
+If you are relying on just a seed node and no persistent peers or a low amount of them,
 please increase the following params in the `config.toml`:
 
 ```toml
