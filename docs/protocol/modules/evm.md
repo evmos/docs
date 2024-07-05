@@ -1239,10 +1239,13 @@ The evm module contains the following parameters:
 | Key            | Type        | Default Value   |
 |----------------|-------------|-----------------|
 | `EVMDenom`     | string      | `"aevmos"`      |
-| `EnableCreate` | bool        | `true`          |
-| `EnableCall`   | bool        | `true`          |
+| ~~`EnableCreate`~~ | bool        | `true`          |
+| ~~`EnableCall`~~   | bool        | `true`          |
 | `ExtraEIPs`    | []int       | TBD             |
 | `ChainConfig`  | ChainConfig | See ChainConfig |
+| `AllowUnprotectedTxs`  | bool |  false |
+| `ActivePrecompiles`  | []string | [] |
+| `AccessControl`  | AccessControl | Permissionless EVM |
 
 ### EVM denom
 
@@ -1261,11 +1264,13 @@ will need to set their own `evm_denom` (i.e not `"aevmos"`).
 
 ### Enable Create
 
+**(deprecated in v19.0.0)**
 The enable create parameter toggles state transitions that use the `vm.Create` function.
 When the parameter is disabled, it will prevent all contract creation functionality.
 
 ### Enable Transfer
 
+**(deprecated in v19.0.0)**
 The enable transfer toggles state transitions that use the `vm.Call` function.
 When the parameter is disabled, it will prevent transfers between accounts and executing a smart contract call.
 
@@ -1287,6 +1292,7 @@ The supported activateable EIPS are:
 - **[EIP 2929](https://eips.ethereum.org/EIPS/eip-2929)**
 - **[EIP 3198](https://eips.ethereum.org/EIPS/eip-3198)**
 - **[EIP 3529](https://eips.ethereum.org/EIPS/eip-3529)**
+- **[EIP 3855](https://eips.ethereum.org/EIPS/eip-3855)**
 
 ### Chain Config
 
@@ -1319,6 +1325,37 @@ By default, all block configuration fields but `ConstantinopleBlock`, are enable
 | MergeNetsplitBlock  | 0                                                                    |
 | ShanghaiBlock       | 0                                                                    |
 | CancunBlock.        | 0                                                                    |
+
+### Allow Unprotected Transactions
+
+This parameter enforces [EIP-155 replay protection](../concepts/replay-protection.md) globally for all nodes
+partaking in consensus.
+If disabled, this delegates control of replay protection to the individual nodes
+(read more [here](../../validate/setup-and-configuration/configuration.md#eip-155-replay-protection)).
+
+### Active Precompiles
+
+This parameters governs which [EVM Extensions](../../develop/smart-contracts/evm-extensions/evm-extensions.md) are enabled on the given network.
+It accepts a list of addresses in Hex format,
+which is evaluated in EVM transactions to only allow interactions
+with the selected precompiled contracts.
+
+### Access Control
+
+(added in v19.0.0) This parameter enables detailed control of the EVM.
+The former parameters `enable_create` and `enable_call` have been extended
+to give exact control of who can access these features.
+
+By default, the EVM is _permissionless_, meaning that everyone can deploy smart contracts
+and send EVM transaction unless they specifically been blacklisted.
+The blacklisted addresses can be defined in the corresponding `AccessControlList`. 
+
+By setting the individual `AccessControlType` for either the create or call functionality as _restricted_,
+the EVM does not accept further interactions with the specific functionality.
+
+When defining the control type as being _permissioned_, the given list of addresses is
+interpreted as a collection of whitelisted addresses, which are the only ones capable of
+deploying contracts or calling the EVM respectively.
 
 ## Client
 
