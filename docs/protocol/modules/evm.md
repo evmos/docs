@@ -504,7 +504,7 @@ To support the interface functionality, it imports 4 module Keepers:
 - `auth`: CRUD accounts
 - `bank`: accounting (supply) and CRUD of balances
 - `staking`: query historical headers
-- `fee market`: EIP1559 base fee for processing `DynamicFeeTx`
+- `fee market`: EIP-1559 base fee for processing `DynamicFeeTx`
   after the `London` hard fork has been activated on the `ChainConfig` parameters
 
 ```go
@@ -793,7 +793,7 @@ func (tx *Transaction) AsMessage(s Signer, baseFee *big.Int) (Message, error) {
 
 In order for the signature verification to be valid, the  `TxData` must contain the `v | r | s` values from the `Signer`.
 Sign calculates a secp256k1 ECDSA signature and signs the transaction.
-It takes a keyring signer and the chainID to sign an Ethereum transaction according to EIP155 standard.
+It takes a keyring signer and the chainID to sign an Ethereum transaction according to EIP-155 standard.
 This method mutates the transaction as it populates the V, R, S fields of the Transaction's Signature.
 The function will fail if the sender address is not defined for the msg
 or if the sender is not registered on the keyring.
@@ -801,7 +801,7 @@ or if the sender is not registered on the keyring.
 ```go
 // Sign calculates a secp256k1 ECDSA signature and signs the transaction. It
 // takes a keyring signer and the chainID to sign an Ethereum transaction according to
-// EIP155 standard.
+// EIP-155 standard.
 // This method mutates the transaction as it populates the V, R, S
 // fields of the Transaction's Signature.
 // The function will fail if the sender address is not defined for the msg or if
@@ -985,7 +985,7 @@ The main objective of this function is to:
 
 - Set the context for the current block so that the block header, store, gas meter, etc.
   are available to the `Keeper` once one of the `StateDB` functions are called during EVM state transitions.
-- Set the EIP155 `ChainID` number (obtained from the full chain-id),
+- Set the EIP-155 `ChainID` number (obtained from the full chain-id),
   in case it hasn't been set before during `InitChain`
 
 ### EndBlock

@@ -4,7 +4,7 @@
 
 This document specifies the feemarket module which allows to define a global transaction fee for the network.
 
-This module has been designed to support EIP1559 in cosmos-sdk.
+This module has been designed to support EIP-1559 in cosmos-sdk.
 
 The `MempoolFeeDecorator` in `x/auth` module needs to be overwritten
 to check the `baseFee` along with the `minimal-gas-prices` allowing
@@ -179,13 +179,13 @@ Those parameters allow us to introduce a static base fee or activate the base fe
 
 #### Enabling base fee
 
-To enable EIP1559 with the EVM, the following parameters should be set :
+To enable EIP-1559 with the EVM, the following parameters should be set :
 
 - NoBaseFee should be false
 - EnableHeight should be set to a positive integer >= upgrade height.
   It defines at which height the chain starts the base fee adjustment
 - LondonBlock evm's param should be set to a positive integer >= upgrade height.
-  It defines at which height the chain start to accept EIP1559 transactions
+  It defines at which height the chain starts to accept EIP-1559 transactions.
 
 #### Calculation
 
