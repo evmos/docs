@@ -4,10 +4,11 @@ sidebar_position: 2
 
 # EIP-155: Replay Protection
 
-As Cosmos SDK based blockchains use Bech32 representations for address, which contain a unique prefix per chain,
+As Cosmos SDK based blockchains use Bech32 representations for addresses, which contain a unique prefix per chain,
 replay protection of transactions is inherently present.
 However, as Ethereum based transactions rely on the Hex representation of addresses, this unique property is evaded.
-This means, that theoretically transactions signed on a different network are valid transactions on other networks too.
+This means that transactions signed on a different network could be valid transactions on other networks too,
+as the same addresses are involved e.g. in a token transfer.
 This potential exploit is addressed by including the chain ID information in the transaction data that is signed.
 
 This requires special care to be taken when selecting an EIP-155 compliant [chain ID](./chain-id.mdx)
