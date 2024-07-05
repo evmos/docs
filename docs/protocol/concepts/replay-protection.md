@@ -10,7 +10,7 @@ However, as Ethereum based transactions rely on the Hex representation of addres
 This means, that theoretically transactions signed on a different network are valid transactions on other networks too.
 This potential exploit is addressed by including the chain ID information in the transaction data that is signed.
 
-This requires special care to be taken when selecting an EIP-155 compliant [chain ID](./chain-id.mdx) 
+This requires special care to be taken when selecting an EIP-155 compliant [chain ID](./chain-id.mdx)
 to avoid duplication amongst chains.
 
 ## Configuring Replay Protection
@@ -19,7 +19,7 @@ By default, replay protection is enabled on any Evmos node.
 There are two distinct steps required to accept unprotected transactions, i.e. those that do not contain the chain ID
 in the signed transaction data:
 
-1. **Disable Module Parameter**: 
+1. **Disable Module Parameter**:
 The [EVM module](../modules/evm.md#parameters) contains a governance controlled parameter,
 that globally dictates if unprotected transactions are supported.
 This has to be disabled via a governance vote or

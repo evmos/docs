@@ -1335,7 +1335,8 @@ If disabled, this delegates control of replay protection to the individual nodes
 
 ### Active Precompiles
 
-This parameters governs which [EVM Extensions](../../develop/smart-contracts/evm-extensions/evm-extensions.md) are enabled on the given network.
+This parameters governs which [EVM Extensions](../../develop/smart-contracts/evm-extensions/evm-extensions.md)
+are enabled on the given network.
 It accepts a list of addresses in Hex format,
 which is evaluated in EVM transactions to only allow interactions
 with the selected precompiled contracts.
@@ -1346,14 +1347,14 @@ with the selected precompiled contracts.
 The former parameters `enable_create` and `enable_call` have been extended
 to give exact control of who can access these features.
 
-By default, the EVM is _permissionless_, meaning that everyone can deploy smart contracts
+By default, the EVM is *permissionless*, meaning that everyone can deploy smart contracts
 and send EVM transaction unless they specifically been blacklisted.
-The blacklisted addresses can be defined in the corresponding `AccessControlList`. 
+The blacklisted addresses can be defined in the corresponding `AccessControlList`.
 
-By setting the individual `AccessControlType` for either the create or call functionality as _restricted_,
+By setting the individual `AccessControlType` for either the create or call functionality as *restricted*,
 the EVM does not accept further interactions with the specific functionality.
 
-When defining the control type as being _permissioned_, the given list of addresses is
+When defining the control type as being *permissioned*, the given list of addresses is
 interpreted as a collection of whitelisted addresses, which are the only ones capable of
 deploying contracts or calling the EVM respectively.
 
