@@ -10,7 +10,7 @@ Here is a list of all production-grade modules that can be used on the Evmos blo
 - [erc20](erc20.md) - Trustless, on-chain bidirectional internal conversion of tokens
   between Evmos' EVM and Cosmos runtimes.
 - [evm](evm.md) - Smart Contract deployment and execution on Cosmos
-- [feemarket](feemarket.md) - Fee market implementation based on the EIP1559 specification.
+- [feemarket](feemarket.md) - Fee market implementation based on the EIP-1559 specification.
 - [inflation](inflation.md) - Mint tokens and allocate them to staking rewards and the community pool.
 - [vesting](vesting.md) - Vesting accounts with lockup and clawback capabilities.
 

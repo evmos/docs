@@ -11,7 +11,7 @@ that is compatible with the Cosmos SDK.
 
 Therefore this overview explains the basics of gas calculation,
 how to provide fees for transactions
-and how the Ethereum-type fee calculation uses a fee market (EIP1559)
+and how the Ethereum-type fee calculation uses a fee market (EIP-1559)
 for prioritizing transactions.
 
 ## Prerequisite Readings
