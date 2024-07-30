@@ -36,7 +36,7 @@ v19.0.0-pebbledb
 ```
 
 :::warning
-NOTE: if using a version **previous to v19**, you'll need
+NOTE: if using a version **before v19**, you'll need
 to replace the cometbft-db dependency before installing the binary:
 
 ```bash
@@ -78,7 +78,7 @@ To setup a node with rocksDB, you need to install the [corresponding library](ht
 and related dependencies.
 
 The installation process described below applies to Ubuntu OS.
-For other operating system, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v9.2.1/INSTALL.md).
+For other operating systems, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v9.2.1/INSTALL.md).
 
 ### Install dependencies
 
