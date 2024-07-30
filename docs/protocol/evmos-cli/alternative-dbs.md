@@ -35,6 +35,24 @@ Check the binary version has the `-pebbledb` suffix
 v19.0.0-pebbledb
 ```
 
+NOTE: if using a version **previous to v19**, you'll need
+to replace the cometbft-db dependency before installing the binary:
+
+```bash
+# cd into the directory where you have the Evmos protocol source code
+cd evmos
+
+# replace the cometbft-db dependency
+go mod edit -replace github.com/cometbft/cometbft-db=github.com/notional-labs/cometbft-db@pebble
+go mod tidy
+
+# compile and install the binary
+go install -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb \
+ -X github.com/cosmos/cosmos-sdk/version.Version=$(git describe --tags)-pebbledb \
+ -X github.com/cosmos/cosmos-sdk/version.Commit=$(git log -1 --format='%H')" -tags pebbledb ./...
+```
+
+
 ### Update configuration
 
 Make sure to update the `db_backend` configuration parameter in the `config.toml`:
