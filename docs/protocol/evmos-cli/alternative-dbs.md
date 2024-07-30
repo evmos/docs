@@ -11,13 +11,13 @@ Learn about the different options supported.
 
 ## Prerequisites
 
--   Golang version `>=1.22.2` ([installation guide](https://go.dev/doc/install))
--   [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
-    For example, if want to use `v19.0.0`, execute the following command to download only the necessary code:
+- Golang version `>=1.22.2` ([installation guide](https://go.dev/doc/install))
+- [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
+  For example, if want to use `v19.0.0`, execute the following command to download only the necessary code:
 
-    ```bash
-    git clone -b v19.0.0 --single-branch https://github.com/evmos/evmos
-    ```
+  ```bash
+  git clone -b v19.0.0 --single-branch https://github.com/evmos/evmos
+  ```
 
 ## Pebble DB
 
@@ -52,6 +52,7 @@ go install -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbl
  -X github.com/cosmos/cosmos-sdk/version.Version=$(git describe --tags)-pebbledb \
  -X github.com/cosmos/cosmos-sdk/version.Commit=$(git log -1 --format='%H')" -tags pebbledb ./...
 ```
+
 :::
 
 ### Update configuration
@@ -81,55 +82,55 @@ For other operating system, refer to the [rocksdb installation guide](https://gi
 
 ### Install dependencies
 
--   `gflags`
+- `gflags`
 
-    ```bash
-    sudo apt-get install libgflags-dev
-    ```
+  ```bash
+  sudo apt-get install libgflags-dev
+  ```
 
-    If this doesn't work and you're using Ubuntu, [here's a nice tutorial](https://askubuntu.com/questions/312173/installing-gflags-12-04)
+  If this doesn't work and you're using Ubuntu, [here's a nice tutorial](https://askubuntu.com/questions/312173/installing-gflags-12-04)
 
--   `snappy`
+- `snappy`
 
-    ```bash
-    sudo apt-get install libsnappy-dev
-    ```
+  ```bash
+  sudo apt-get install libsnappy-dev
+  ```
 
--   `zlib`
+- `zlib`
 
-    ```bash
-    sudo apt-get install zlib1g-dev
-    ```
+  ```bash
+  sudo apt-get install zlib1g-dev
+  ```
 
--   `bzip2`
+- `bzip2`
 
-    ```bash
-    sudo apt-get install libbz2-dev
-    ```
+  ```bash
+  sudo apt-get install libbz2-dev
+  ```
 
--   `lz4`
+- `lz4`
 
-    ```bash
-    sudo apt-get install liblz4-dev
-    ```
+  ```bash
+  sudo apt-get install liblz4-dev
+  ```
 
--   `zstandard`
+- `zstandard`
 
-    ```bash
-    sudo apt-get install libzstd-dev
-    ```
+  ```bash
+  sudo apt-get install libzstd-dev
+  ```
 
--   `gcc` >= 7
+- `gcc` >= 7
 
-    ```bash
-    sudo apt-get install build-essential
-    ```
+  ```bash
+  sudo apt-get install build-essential
+  ```
 
--   `clang` >= 5
+- `clang` >= 5
 
-    ```bash
-    sudo apt-get install clang
-    ```
+  ```bash
+  sudo apt-get install clang
+  ```
 
 Install all dependencies at once with this command:
 
@@ -248,12 +249,12 @@ which enhances the chances of missing blocks in validator nodes.
 VersionDB is a solution developed by the Cronos team to address the size of the IAVL database.
 For more information about it, refer to these resources:
 
--   [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
--   [Blog post](https://blog.cronos.org/p/optimising-cronos-node-storage-with)
+- [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
+- [Blog post](https://blog.cronos.org/p/optimising-cronos-node-storage-with)
 
 #### Prerequisites
 
--   `evmosd` binary with `librocksdb`. Refer to [the previous section](#rocks-db) for the procedure on how to build this binary.
+- `evmosd` binary with `librocksdb`. Refer to [the previous section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
@@ -280,7 +281,7 @@ For more information about it, check [the documentation](https://github.com/cryp
 
 #### Prerequisites
 
--   `evmosd` binary with `librocksdb`. Refer to [the RocksDB section](#rocks-db) for the procedure on how to build this binary.
+- `evmosd` binary with `librocksdb`. Refer to [the RocksDB section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
