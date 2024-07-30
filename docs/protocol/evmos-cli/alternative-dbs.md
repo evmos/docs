@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 ---
+
 # Alternative databases
 
 To use a different database than the default one (levelDB),
@@ -10,47 +11,28 @@ Learn about the different options supported.
 
 ## Prerequisites
 
-- Golang version `1.20+` ([installation guide](https://go.dev/doc/install))
-- [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
-  For example, if want to use `v14.0.0`, execute the following command to download only the necessary code:
-  
-  ```bash
-  git clone -b v14.0.0 --single-branch https://github.com/evmos/evmos
-  ```
+-   Golang version `>=1.22.2` ([installation guide](https://go.dev/doc/install))
+-   [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
+    For example, if want to use `v19.0.0`, execute the following command to download only the necessary code:
+
+    ```bash
+    git clone -b v19.0.0 --single-branch https://github.com/evmos/evmos
+    ```
 
 ## Pebble DB
 
-Currently, the supported database backends on the [cometbft-db](https://github.com/cometbft/cometbft-db) dependency
-do not include pebbleDB.
-
-### Install dependencies
-
-If you wish to use this database, you need to replace this dependency by a fork that includes pebbleDB.
-To do this and install the binary with this database, execute the following commands:
-
-```bash
-# cd into the directory where you have the Evmos protocol source code
-cd evmos
-
-# replace the cometbft-db dependency
-go mod edit -replace github.com/cometbft/cometbft-db=github.com/notional-labs/cometbft-db@pebble
-go mod tidy
-```
-
-### Install `evmosd` binary
+### Install `evmosd` from source
 
 ```bash
 # compile and install the binary
-go install -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb \
- -X github.com/cosmos/cosmos-sdk/version.Version=$(git describe --tags)-pebbledb \
- -X github.com/cosmos/cosmos-sdk/version.Commit=$(git log -1 --format='%H')" -tags pebbledb ./...
+COSMOS_BUILD_OPTIONS=pebbledb make install
 ```
 
 Check the binary version has the `-pebbledb` suffix
 
 ```bash
 ❯ evmosd version
-v14.0.0-pebbledb
+v19.0.0-pebbledb
 ```
 
 ### Update configuration
@@ -61,64 +43,74 @@ Make sure to update the `db_backend` configuration parameter in the `config.toml
 db_backend = "pebbledb"
 ```
 
+### Build docker image
+
+To build a docker image with the `evmosd` binary compiled
+to use pebbledb, run the following command:
+
+```
+make build-docker-pebbledb
+```
+
 ## Rocks DB
 
 To setup a node with rocksDB, you need to install the [corresponding library](https://github.com/facebook/rocksdb)
 and related dependencies.
 
 The installation process described below applies to Ubuntu OS.
-For other operating system, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v7.9.2/INSTALL.md).
+For other operating system, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v9.2.1/INSTALL.md).
 
 ### Install dependencies
 
-- `gflags`
+-   `gflags`
 
-  ```bash
-  sudo apt-get install libgflags-dev
-  ```
+    ```bash
+    sudo apt-get install libgflags-dev
+    ```
 
-  If this doesn't work and you're using Ubuntu, [here's a nice tutorial](https://askubuntu.com/questions/312173/installing-gflags-12-04)
-- `snappy`
+    If this doesn't work and you're using Ubuntu, [here's a nice tutorial](https://askubuntu.com/questions/312173/installing-gflags-12-04)
 
-  ```bash
-  sudo apt-get install libsnappy-dev
-  ```
+-   `snappy`
 
-- `zlib`
+    ```bash
+    sudo apt-get install libsnappy-dev
+    ```
 
-  ```bash
-  sudo apt-get install zlib1g-dev
-  ```
+-   `zlib`
 
-- `bzip2`
+    ```bash
+    sudo apt-get install zlib1g-dev
+    ```
 
-  ```bash
-  sudo apt-get install libbz2-dev
-  ```
+-   `bzip2`
 
-- `lz4`
+    ```bash
+    sudo apt-get install libbz2-dev
+    ```
 
-  ```bash
-  sudo apt-get install liblz4-dev
-  ```
+-   `lz4`
 
-- `zstandard`
+    ```bash
+    sudo apt-get install liblz4-dev
+    ```
 
-  ```bash
-  sudo apt-get install libzstd-dev
-  ```
+-   `zstandard`
 
-- `gcc` >= 7
+    ```bash
+    sudo apt-get install libzstd-dev
+    ```
 
-  ```bash
-  sudo apt-get install build-essential
-  ```
+-   `gcc` >= 7
 
-- `clang` >= 5
+    ```bash
+    sudo apt-get install build-essential
+    ```
 
-  ```bash
-  sudo apt-get install clang
-  ```
+-   `clang` >= 5
+
+    ```bash
+    sudo apt-get install clang
+    ```
 
 Install all dependencies at once with this command:
 
@@ -137,21 +129,21 @@ check the tag of the `grocksdb` dependency in the `go.mod` file of the evmos rep
 For example, if the `go.mod` has:
 
 ```golang
-github.com/linxGnu/grocksdb v1.8.4
+github.com/linxGnu/grocksdb v1.9.2
 ```
 
 You should check in the [grocksdb repo](https://github.com/linxGnu/grocksdb/releases),
-which RocksDB version is supported in the `v1.8.4` tag.
-In this case, `v1.8.4` supports RocksDB `v8.5.3`.
+which RocksDB version is supported in the `v1.9.2` tag.
+In this case, `v1.9.2` supports RocksDB `v9.2.1`.
 
-To install `librocksdb v8.5.3`, run the following commands:
+To install `librocksdb v9.2.1`, run the following commands:
 
 ```bash
 # remove rocksdb repo from your machine if you have a previous version installed
 rm -rf rocksdb
 
 # download the source code of the desired version
-git clone -b v8.5.3 --single-branch https://github.com/facebook/rocksdb
+git clone -b v9.2.1 --single-branch https://github.com/facebook/rocksdb
 
 # cd into the directory where the source code was downloaded
 cd rocksdb
@@ -208,7 +200,7 @@ Check the binary version has the `-rocksdb` suffix
 
 ```bash
 ❯ evmosd version
-v14.0.0-rocksdb
+v19.0.0-rocksdb
 ```
 
 ### Update database configuration
@@ -237,12 +229,12 @@ which enhances the chances of missing blocks in validator nodes.
 VersionDB is a solution developed by the Cronos team to address the size of the IAVL database.
 For more information about it, refer to these resources:
 
-- [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
-- [Blog post](https://blog.cronos.org/p/optimising-cronos-node-storage-with)
+-   [VersionDB documentation](https://github.com/crypto-org-chain/cronos/tree/main/versiondb)
+-   [Blog post](https://blog.cronos.org/p/optimising-cronos-node-storage-with)
 
 #### Prerequisites
 
-- `evmosd` binary with `librocksdb`. Refer to [the previous section](#rocks-db) for the procedure on how to build this binary.
+-   `evmosd` binary with `librocksdb`. Refer to [the previous section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
@@ -269,7 +261,7 @@ For more information about it, check [the documentation](https://github.com/cryp
 
 #### Prerequisites
 
-- `evmosd` binary with `librocksdb`. Refer to [the RocksDB section](#rocks-db) for the procedure on how to build this binary.
+-   `evmosd` binary with `librocksdb`. Refer to [the RocksDB section](#rocks-db) for the procedure on how to build this binary.
 
 #### Update configuration
 
