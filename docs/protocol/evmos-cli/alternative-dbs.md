@@ -21,7 +21,7 @@ Learn about the different options supported.
 
 ## Pebble DB
 
-### Install `evmosd` from source
+### Install `evmosd` binary from source
 
 ```bash
 # compile and install the binary
