@@ -6,11 +6,6 @@ evmOS framework. Custom improvement proposals allow protocol developers to
 modify the behavior of the EVM opcodes to tailor their functionalities to the
 specific needs.
 
-Improvement proposals are a way to introduce new standards, aimed to improve
-protocol functionalities. Changes proposed in this way can affect any aspect
-of the protocol but are mainly used to customize the behavior of
-smart contract execution.
-
 ## Operations
 
 Operations are the base components of the Ethereum Virtual Machine (EVM) which
