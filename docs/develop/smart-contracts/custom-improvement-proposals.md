@@ -1,27 +1,27 @@
 # Custom Improvement Proposals
 
 With the release [v19.0.0](https://github.com/evmos/evmos/releases/tag/v19.0.0)
-a new feature called custom improvement proposal has been introduced in the
+a new feature called custom improvement proposals has been introduced in the
 evmOS framework. Custom improvement proposals allow protocol developers to
 modify the behavior of the EVM opcodes to tailor their functionalities to the
 specific needs.
 
 Improvement proposals are a way to introduce new standards, aimed to improve
 protocol functionalities. Changes proposed in this way can affect any aspect
-of protocol functionalities but are mainly used to customize the behavior of
+of the protocol but are mainly used to customize the behavior of
 smart contract execution.
 
 ## Operations
 
 Operations are the base components of the Ethereum Virtual Machine (EVM) which
-allows the execution of the smart contract logic. When a developer build a smart
+allow the execution of the smart contract logic. When a developer build a smart
 contract, the code written in Solidity, or Viper, is not directly interpretable
 by the EVM. Before being able to execute the code in the blockchain, the
-contract has to be compiled via one of the available compilers, like `solc`. The
-step of the compilation convert the contract, written in a human readable
+contract has to be compiled via one of the available compilers, like **solc**. The
+step of the compilation, convert the contract, written in a human readable
 language, into a sequence of operations that the virtual machine can interpret
 and execute to perform state transition or query the latest committed state.
-These operations are called, in the EVM context, **opcodes** and are contained
+These operations are called, in the EVM context, **opcodes**, and are contained
 in a structure called **jump table**.
 
 Some example of operations are the addition, defined by the opcode `ADD`, and
@@ -38,19 +38,19 @@ associated with it. More specifically, an opcodes is completely defined by:
 - `SetDynamicGas`: update the function used to compute the dynamic gas cost.
 
 - `SetMinStack`: update the minimum number of items in the stack required to
-execute the `operation`.
+execute the operation.
 
 - `SetMaxStack`: update the maximum number of items that will be in the stack
-after executing the `operation`.
+after executing the operation.
 
-- `SetMemorySize`: the memory size required by the `operation`.
+- `SetMemorySize`: the memory size required by the operation.
 
-Within evmOS framework, developer can modify any of the previous properties.
+Within the evmOS framework, developers can modify any of the previous properties.
 
 ## Improvement Proposals
 
 Improvement proposal are the approach used by evmOS and Ethereum to modify the
-the behavior of opcodes. They are composed by a function, which have the access
+behavior of opcodes. They are composed by a function, which have the access
 to the jump table to apply specific changes to operations behavior, and a name.
 
 In the context of Ethereum, these protocol changes are
@@ -62,9 +62,9 @@ To allow any evmOS user to define their specific
 improvements without overlapping with evmOS and Ethereum default ones, each
 proposal is identified by a string composed by the chain name and a number. For
 example, default evmOS improvements are associated with the string `evmos_XXXX`.
-In this way, every chain can define their improvement without the risk of
-overwriting already present functions and is free to start the numeration from
-0.
+In this way, each chain can define their improvement without the risk of
+overwriting already present functions, and is free to start the numeration from
+0 to have a more consistent history.
 
 Below an example of how Evmos chain uses this functionalities to modify the
 behavior of the `CREATE` and `CREATE2` opcodes. First the modifier function has
@@ -84,7 +84,7 @@ func Enable0000(jt *vm.JumpTable) {
 }
 ```
 
-then, the function as to be associated with a name via a custom activator:
+Then, the function as to be associated with a name via a custom activator:
 
 ```go
 evmosActivators = map[int]func(*vm.JumpTable){
@@ -94,7 +94,7 @@ evmosActivators = map[int]func(*vm.JumpTable){
 
 ## Activation of Improvement Proposals
 
-Due to continuous changes in the interaction of users with the protocol, and to
+Due to continuous changes in the users interaction with the protocol, and to
 introduce a safety measure along with the freedom to customize the virtual
 machine behavior, custom improvement proposals are not active by default. The
 two just defined structures are used to define a modifier, and associate it with
@@ -102,10 +102,10 @@ a namespace. The activation of selected improvement proposals is made via
 `x/evm` parameters. It is possible to activate specific improvement proposals in
 two ways:
 
-1. Upgrade: create a protocol upgrade handler that introduce the proposal name
+1. **Upgrade**: create a protocol upgrade handler which introduces the proposal name
 in the active list.
 
-2. Governance: create governance proposal to activate a improvement that is
+2. **Governance**: create governance proposal to activate an improvement that is
 registered in the custom activator.
 
 With this approach, it is given to developers the possibility to quickly react
