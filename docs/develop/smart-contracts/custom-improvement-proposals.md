@@ -29,19 +29,19 @@ Each opcode is defined by specifying the logic that has to be executed when it
 is called inside the EVM, its relationship with the memory, and the gas cost
 associated with it. More specifically, an opcode is completely defined by:
 
-- `SetExecute` update the execution logic for the opcode.
+- `SetExecute`: update the execution logic for the opcode.
 
-- `SetConstantGas` update the value used for the constant gas cost.
+- `SetConstantGas`: update the value used for the constant gas cost.
 
-- `SetDynamicGas` update the function used to compute the dynamic gas cost.
+- `SetDynamicGas`: update the function used to compute the dynamic gas cost.
 
-- `SetMinStack` update the minimum number of items in the stack required to
+- `SetMinStack`: update the minimum number of items in the stack required to
 execute the operation.
 
-- `SetMaxStack` update the maximum number of items that will be in the stack
+- `SetMaxStack`: update the maximum number of items that will be in the stack
 after executing the operation.
 
-- `SetMemorySize` the memory size required by the operation.
+- `SetMemorySize`: the memory size required by the operation.
 
 Within the evmOS framework, developers can modify any of the previous properties.
 
