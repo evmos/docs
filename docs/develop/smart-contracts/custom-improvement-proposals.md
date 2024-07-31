@@ -17,8 +17,9 @@ Operations are the base components of the Ethereum Virtual Machine (EVM) which
 allow the execution of the smart contract logic. When a developer builds a smart
 contract, the code written in Solidity, or Viper, is not directly interpretable
 by the EVM. Before being able to execute the code in the blockchain, the
-contract has to be compiled via one of the available compilers, like [solc](https://docs.soliditylang.org/en/latest/using-the-compiler.html). The
-compilation converts the human readable contract code into a sequence of operations
+contract has to be compiled via one of the available compilers, like
+[solc](https://docs.soliditylang.org/en/latest/using-the-compiler.html). The
+compilation converts the human-readable contract code into a sequence of operations
 that the virtual machine can interpret and execute
 to perform state transitions or query the latest committed state.
 These operations are called **opcodes**, and are contained
@@ -26,28 +27,28 @@ in a structure called [**jump table**](https://github.com/evmos/evmos/blob/v19.0
 
 Each opcode is defined by specifying the logic that has to be executed when it
 is called inside the EVM, its relationship with the memory, and the gas cost
-associated with it. More specifically, an opcodes is completely defined by:
+associated with it. More specifically, an opcode is completely defined by:
 
-- `SetExecute`: update the execution logic for the opcode.
+- `SetExecute` update the execution logic for the opcode.
 
-- `SetConstantGas`: update the value used for the constant gas cost.
+- `SetConstantGas` update the value used for the constant gas cost.
 
-- `SetDynamicGas`: update the function used to compute the dynamic gas cost.
+- `SetDynamicGas` update the function used to compute the dynamic gas cost.
 
-- `SetMinStack`: update the minimum number of items in the stack required to
+- `SetMinStack` update the minimum number of items in the stack required to
 execute the operation.
 
-- `SetMaxStack`: update the maximum number of items that will be in the stack
+- `SetMaxStack` update the maximum number of items that will be in the stack
 after executing the operation.
 
-- `SetMemorySize`: the memory size required by the operation.
+- `SetMemorySize` the memory size required by the operation.
 
 Within the evmOS framework, developers can modify any of the previous properties.
 
 ## Improvement Proposals
 
 Improvement proposals are the approach used by evmOS and Ethereum to modify the
-behavior of opcodes. They are composed by a function, which has access
+behavior of opcodes. They are composed of a function, which has access
 to the jump table to apply specific changes to operations behavior, and a name.
 
 In the context of Ethereum, these protocol changes are
@@ -64,7 +65,7 @@ about existing or future ID clashes between different chains.
 On top of that, the ability to start enumeration at 0 is better to handle for chain developers
 and allows to have a better overview of the historical progress for each chain.
 
-Below you will find an example of how the Evmos chain uses this functionality to modify the
+Below, you will find an example of how the Evmos chain uses this functionality to modify the
 behavior of the `CREATE` and `CREATE2` opcodes. First, the modifier function has
 to be defined:
 
@@ -94,7 +95,7 @@ evmosActivators = map[string]func(*vm.JumpTable){
 
 Due to continuous changes in the users interaction with the protocol, and to
 introduce a safety measure along with the freedom to customize the virtual
-machine behavior, custom improvement proposals are not active by default. 
+machine behavior, custom improvement proposals are not active by default.
 The activation of selected improvement proposals is controlled by the [EVM module's parameters](https://github.com/evmos/evmos/blob/main/proto/ethermint/evm/v1/evm.proto#L17-L18).
 There are two ways of introducing the required parameter changes:
 
