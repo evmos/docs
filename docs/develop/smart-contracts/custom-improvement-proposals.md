@@ -15,7 +15,7 @@ smart contract execution.
 
 Operations are the base components of the Ethereum Virtual Machine (EVM) which
 allow the execution of the smart contract logic. When a developer builds a smart
-contract, the code written in Solidity, or Viper, is not directly interpretable
+contract, the code written in Solidity, or Vyper, is not directly interpretable
 by the EVM. Before being able to execute the code in the blockchain, the
 contract has to be compiled via one of the available compilers, like
 [solc](https://docs.soliditylang.org/en/latest/using-the-compiler.html). The
@@ -49,7 +49,7 @@ Within the evmOS framework, developers can modify any of the previous properties
 
 Improvement proposals are the approach used by evmOS and Ethereum to modify the
 behavior of opcodes. They are composed of a function, which has access
-to the jump table to apply specific changes to operations behavior, and a name.
+to the jump table to apply specific changes to operation behavior, and a name.
 
 In the context of Ethereum, these protocol changes are
 named Ethereum Improvement Proposals (EIPs) and are identified by a unique ID.
@@ -62,8 +62,8 @@ proposal is identified by a string, that is composed of the chain name and a num
 example, default evmOS improvements are associated with the string `evmos_XXXX`.
 This allows each chain to define their improvements without having to worry
 about existing or future ID clashes between different chains.
-On top of that, the ability to start enumeration at 0 is better to handle for chain developers
-and allows to have a better overview of the historical progress for each chain.
+Additionally, the ability to start enumeration at 0 is better for chain developers
+and allows having a better overview of the historical progress for each chain.
 
 Below, you will find an example of how the Evmos chain uses this functionality to modify the
 behavior of the `CREATE` and `CREATE2` opcodes. First, the modifier function has
@@ -93,7 +93,7 @@ evmosActivators = map[string]func(*vm.JumpTable){
 
 ## Activation of Improvement Proposals
 
-Due to continuous changes in the users interaction with the protocol, and to
+Due to continuous changes in the users' interaction with the protocol, and to
 introduce a safety measure along with the freedom to customize the virtual
 machine behavior, custom improvement proposals are not active by default.
 The activation of selected improvement proposals is controlled by the [EVM module's parameters](https://github.com/evmos/evmos/blob/main/proto/ethermint/evm/v1/evm.proto#L17-L18).
