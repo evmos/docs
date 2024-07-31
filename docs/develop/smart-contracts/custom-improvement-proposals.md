@@ -14,18 +14,15 @@ smart contract execution.
 ## Operations
 
 Operations are the base components of the Ethereum Virtual Machine (EVM) which
-allow the execution of the smart contract logic. When a developer build a smart
+allow the execution of the smart contract logic. When a developer builds a smart
 contract, the code written in Solidity, or Viper, is not directly interpretable
 by the EVM. Before being able to execute the code in the blockchain, the
-contract has to be compiled via one of the available compilers, like **solc**. The
-step of the compilation, convert the contract, written in a human readable
-language, into a sequence of operations that the virtual machine can interpret
-and execute to perform state transition or query the latest committed state.
-These operations are called, in the EVM context, **opcodes**, and are contained
-in a structure called **jump table**.
-
-Some example of operations are the addition, defined by the opcode `ADD`, and
-the subtraction, defined by the opcode `SUB`.
+contract has to be compiled via one of the available compilers, like [solc](https://docs.soliditylang.org/en/latest/using-the-compiler.html). The
+compilation converts the human readable contract code into a sequence of operations
+that the virtual machine can interpret and execute
+to perform state transitions or query the latest committed state.
+These operations are called **opcodes**, and are contained
+in a structure called [**jump table**](https://github.com/evmos/evmos/blob/v19.0.0/x/evm/core/vm/jump_table.go#L120-L1094).
 
 Each opcode is defined by specifying the logic that has to be executed when it
 is called inside the EVM, its relationship with the memory, and the gas cost
@@ -49,25 +46,26 @@ Within the evmOS framework, developers can modify any of the previous properties
 
 ## Improvement Proposals
 
-Improvement proposal are the approach used by evmOS and Ethereum to modify the
-behavior of opcodes. They are composed by a function, which have the access
+Improvement proposals are the approach used by evmOS and Ethereum to modify the
+behavior of opcodes. They are composed by a function, which has access
 to the jump table to apply specific changes to operations behavior, and a name.
 
 In the context of Ethereum, these protocol changes are
-named Ethereum Improvement Proposals (EIPs) and are associated to a numerical
-name. For example, the [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is
+named Ethereum Improvement Proposals (EIPs) and are identified by a unique ID.
+For example, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is
 used to introduce the base fee.
 
-To allow any evmOS user to define their specific
-improvements without overlapping with evmOS and Ethereum default ones, each
-proposal is identified by a string composed by the chain name and a number. For
+To allow any evmOS partner to define their own specific
+improvements without overlapping with evmOS and Ethereum ones, each
+proposal is identified by a string, that is composed of the chain name and a number. For
 example, default evmOS improvements are associated with the string `evmos_XXXX`.
-In this way, each chain can define their improvement without the risk of
-overwriting already present functions, and is free to start the numeration from
-0 to have a more consistent history.
+This allows each chain to define their improvements without having to worry
+about existing or future ID clashes between different chains.
+On top of that, the ability to start enumeration at 0 is better to handle for chain developers
+and allows to have a better overview of the historical progress for each chain.
 
-Below an example of how Evmos chain uses this functionalities to modify the
-behavior of the `CREATE` and `CREATE2` opcodes. First the modifier function has
+Below you will find an example of how the Evmos chain uses this functionality to modify the
+behavior of the `CREATE` and `CREATE2` opcodes. First, the modifier function has
 to be defined:
 
 ```go
@@ -87,7 +85,7 @@ func Enable0000(jt *vm.JumpTable) {
 Then, the function as to be associated with a name via a custom activator:
 
 ```go
-evmosActivators = map[int]func(*vm.JumpTable){
+evmosActivators = map[string]func(*vm.JumpTable){
     "evmos_0": eips.Enable0000,
 }
 ```
@@ -96,24 +94,20 @@ evmosActivators = map[int]func(*vm.JumpTable){
 
 Due to continuous changes in the users interaction with the protocol, and to
 introduce a safety measure along with the freedom to customize the virtual
-machine behavior, custom improvement proposals are not active by default. The
-two just defined structures are used to define a modifier, and associate it with
-a namespace. The activation of selected improvement proposals is made via
-`x/evm` parameters. It is possible to activate specific improvement proposals in
-two ways:
+machine behavior, custom improvement proposals are not active by default. 
+The activation of selected improvement proposals is controlled by the [EVM module's parameters](https://github.com/evmos/evmos/blob/main/proto/ethermint/evm/v1/evm.proto#L17-L18).
+There are two ways of introducing the required parameter changes:
 
 1. **Upgrade**: create a protocol upgrade handler which introduces the proposal name
 in the active list.
 
-2. **Governance**: create governance proposal to activate an improvement that is
-registered in the custom activator.
+2. **Governance**: create governance proposal to add an improvement proposal to the EVM module parameters.
 
-With this approach, it is given to developers the possibility to quickly react
-to security issues or market conditions, still keeping chain's participants in
-the loop.
+This approach gives developers the ability to react to security issues or market conditions,
+while keeping the chain's participants in the loop.
 
 ## Additional Resources
 
 1. [Evmos Custom EIPs](https://github.com/evmos/evmos/blob/main/app/eips/README.md):
 please refer to this document for a detailed description of how opcodes and
-custom improvement proposals has to be used in the evmOS framework.
+custom improvement proposals have to be used in the evmOS framework.
