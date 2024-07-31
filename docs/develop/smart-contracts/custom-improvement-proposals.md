@@ -4,11 +4,9 @@ With the release [v19.0.0](https://github.com/evmos/evmos/releases/tag/v19.0.0)
 a new feature called custom improvement proposal has been introduced in the
 evmOS framework. Custom improvement proposals allow protocol developers to
 modify the behavior of the EVM opcodes to tailor their functionalities to the
-specific needs. 
+specific needs.
 
-## Improvement Proposals
-
-Improvement proposals are a way to introduce new standards aimed to improve
+Improvement proposals are a way to introduce new standards, aimed to improve
 protocol functionalities. Changes proposed in this way can affect any aspect
 of protocol functionalities but are mainly used to customize the behavior of
 smart contract execution.
@@ -58,7 +56,7 @@ to the jump table to apply specific changes to operations behavior, and a name.
 In the context of Ethereum, these protocol changes are
 named Ethereum Improvement Proposals (EIPs) and are associated to a numerical
 name. For example, the [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is
-used to introduce the base fee. 
+used to introduce the base fee.
 
 To allow any evmOS user to define their specific
 improvements without overlapping with evmOS and Ethereum default ones, each
