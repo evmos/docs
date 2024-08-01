@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 ---
+
 # Alternative databases
 
 To use a different database than the default one (levelDB),
@@ -10,23 +11,33 @@ Learn about the different options supported.
 
 ## Prerequisites
 
-- Golang version `1.20+` ([installation guide](https://go.dev/doc/install))
+- Golang version `>=1.22.2` ([installation guide](https://go.dev/doc/install))
 - [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
-  For example, if want to use `v14.0.0`, execute the following command to download only the necessary code:
-  
+  For example, if you want to use `v19.0.0`, execute the following command to download only the necessary code:
+
   ```bash
-  git clone -b v14.0.0 --single-branch https://github.com/evmos/evmos
+  git clone -b v19.0.0 --single-branch https://github.com/evmos/evmos
   ```
 
 ## Pebble DB
 
-Currently, the supported database backends on the [cometbft-db](https://github.com/cometbft/cometbft-db) dependency
-do not include pebbleDB.
+### Install `evmosd` binary from source
 
-### Install dependencies
+```bash
+# compile and install the binary
+COSMOS_BUILD_OPTIONS=pebbledb make install
+```
 
-If you wish to use this database, you need to replace this dependency by a fork that includes pebbleDB.
-To do this and install the binary with this database, execute the following commands:
+Check the binary version has the `-pebbledb` suffix
+
+```bash
+❯ evmosd version
+v19.0.0-pebbledb
+```
+
+:::warning
+NOTE: if using a version **before v19**, you'll need
+to replace the cometbft-db dependency before installing the binary:
 
 ```bash
 # cd into the directory where you have the Evmos protocol source code
@@ -35,23 +46,14 @@ cd evmos
 # replace the cometbft-db dependency
 go mod edit -replace github.com/cometbft/cometbft-db=github.com/notional-labs/cometbft-db@pebble
 go mod tidy
-```
 
-### Install `evmosd` binary
-
-```bash
 # compile and install the binary
 go install -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb \
  -X github.com/cosmos/cosmos-sdk/version.Version=$(git describe --tags)-pebbledb \
  -X github.com/cosmos/cosmos-sdk/version.Commit=$(git log -1 --format='%H')" -tags pebbledb ./...
 ```
 
-Check the binary version has the `-pebbledb` suffix
-
-```bash
-❯ evmosd version
-v14.0.0-pebbledb
-```
+:::
 
 ### Update configuration
 
@@ -61,13 +63,22 @@ Make sure to update the `db_backend` configuration parameter in the `config.toml
 db_backend = "pebbledb"
 ```
 
+### Build docker image
+
+To build a docker image with the `evmosd` binary compiled
+to use pebbledb, run the following command:
+
+```
+make build-docker-pebbledb
+```
+
 ## Rocks DB
 
-To setup a node with rocksDB, you need to install the [corresponding library](https://github.com/facebook/rocksdb)
+To set up a node with rocksDB, you need to install the [corresponding library](https://github.com/facebook/rocksdb)
 and related dependencies.
 
 The installation process described below applies to Ubuntu OS.
-For other operating system, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v7.9.2/INSTALL.md).
+For other operating systems, refer to the [rocksdb installation guide](https://github.com/facebook/rocksdb/blob/v9.2.1/INSTALL.md).
 
 ### Install dependencies
 
@@ -78,6 +89,7 @@ For other operating system, refer to the [rocksdb installation guide](https://gi
   ```
 
   If this doesn't work and you're using Ubuntu, [here's a nice tutorial](https://askubuntu.com/questions/312173/installing-gflags-12-04)
+
 - `snappy`
 
   ```bash
@@ -137,21 +149,21 @@ check the tag of the `grocksdb` dependency in the `go.mod` file of the evmos rep
 For example, if the `go.mod` has:
 
 ```golang
-github.com/linxGnu/grocksdb v1.8.4
+github.com/linxGnu/grocksdb v1.9.2
 ```
 
 You should check in the [grocksdb repo](https://github.com/linxGnu/grocksdb/releases),
-which RocksDB version is supported in the `v1.8.4` tag.
-In this case, `v1.8.4` supports RocksDB `v8.5.3`.
+which RocksDB version is supported in the `v1.9.2` tag.
+In this case, `v1.9.2` supports RocksDB `v9.2.1`.
 
-To install `librocksdb v8.5.3`, run the following commands:
+To install `librocksdb v9.2.1`, run the following commands:
 
 ```bash
 # remove rocksdb repo from your machine if you have a previous version installed
 rm -rf rocksdb
 
 # download the source code of the desired version
-git clone -b v8.5.3 --single-branch https://github.com/facebook/rocksdb
+git clone -b v9.2.1 --single-branch https://github.com/facebook/rocksdb
 
 # cd into the directory where the source code was downloaded
 cd rocksdb
@@ -208,7 +220,7 @@ Check the binary version has the `-rocksdb` suffix
 
 ```bash
 ❯ evmosd version
-v14.0.0-rocksdb
+v19.0.0-rocksdb
 ```
 
 ### Update database configuration
