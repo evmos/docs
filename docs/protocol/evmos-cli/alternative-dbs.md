@@ -74,7 +74,7 @@ make build-docker-pebbledb
 
 ## Rocks DB
 
-To setup a node with rocksDB, you need to install the [corresponding library](https://github.com/facebook/rocksdb)
+To set up a node with rocksDB, you need to install the [corresponding library](https://github.com/facebook/rocksdb)
 and related dependencies.
 
 The installation process described below applies to Ubuntu OS.
