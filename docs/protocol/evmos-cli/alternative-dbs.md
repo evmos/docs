@@ -13,7 +13,7 @@ Learn about the different options supported.
 
 - Golang version `>=1.22.2` ([installation guide](https://go.dev/doc/install))
 - [Source code of the desired `evmosd`](https://github.com/evmos/evmos) version.
-  For example, if want to use `v19.0.0`, execute the following command to download only the necessary code:
+  For example, if you want to use `v19.0.0`, execute the following command to download only the necessary code:
 
   ```bash
   git clone -b v19.0.0 --single-branch https://github.com/evmos/evmos
