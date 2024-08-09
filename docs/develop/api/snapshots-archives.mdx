@@ -1,6 +1,6 @@
 # Snapshots & Archive Nodes
 
-Quickly sync your node with Evmos using a snapshot or serve queries for prev versions using archive nodes 
+Quickly sync your node with Evmos using a snapshot or serve queries for prev versions using archive nodes
 
 ## List of Snapshots and Archives
 
@@ -9,32 +9,58 @@ archived [9001-1 mainnet](https://github.com/evmos/mainnet/tree/main/evmos_9001-
 
 ### Snapshots
 
-| Name        | URL                                                                     |
-| -------------|------------------------------------------------------------------------ |
-| `Staketab`   | [github.com/staketab/nginx-cosmos-snap](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/evmos.md) |
-| `Polkachu`   | [polkachu.com](https://www.polkachu.com/tendermint_snapshots/evmos)                   |                |
-| `Notional`   | [mainnet/pruned/evmos_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos/) <br /> [mainnet/archive/evmos_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos-archive/) <br /> [testnet/archive/evmos_9000-4(pebbledb)](https://snapshot.notional.ventures/evmos-testnet-archive/)                   |
-| `Windpowerstake`   | [mainnet/archive/evmos_9001-2(goleveldb)](http://backup03.windpowerstake.com/)                    |
-| `GalaxyStaking`   | [galaxystaking.space](https://tools.galaxystaking.space/evmos/)                    |
+| Name            | URL                                                                                                                                                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| `Staketab`      | [github.com/staketab/nginx-cosmos-snap](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/evmos.md)                                                                                                                                                                                   |
+| `Polkachu`      | [polkachu.com](https://www.polkachu.com/tendermint_snapshots/evmos)                                                                                                                                                                                                                              |     |
+| `Notional`      | [mainnet/pruned/evmos_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos/) <br /> [mainnet/archive/evmos_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos-archive/) <br /> [testnet/archive/evmos_9000-4(pebbledb)](https://snapshot.notional.ventures/evmos-testnet-archive/) |
+| `GalaxyStaking` | [galaxystaking.space](https://tools.galaxystaking.space/evmos/)                                                                                                                                                                                                                                  |
 
 ### Archives
 
-| Name           | URL                                                                             |
-| ---------------|---------------------------------------------------------------------------------|                            
-| `Polkachu`     | [polkachu.com/tendermint_snapshots/evmos](https://www.polkachu.com/tendermint_snapshots/evmos)   |                        
+| Name             | URL                                                                            |
+| ---------------- | ------------------------------------------------------------------------------ |
+| `Windpowerstake` | [mainnet/archive/evmos_9001-2(goleveldb)](http://backup03.windpowerstake.com/) |
 
+### Altiplanic Snapshots
+
+Altiplanic provides pruned and archive snapshots. They can be downloaded using the BackBlaze CLI tool:
+
+- Steps for pruned snapshots (goleveldb)
+
+1. Install the [B2 command-line tool](https://www.backblaze.com/docs/cloud-storage-command-line-tools)
+2. Authenticate using the following command:
+
+```bash
+b2 authorize-account 004d09b92c841240000000007 K004+SV4bZKkBuwjdwnjtFidMdISWf4
+```
+
+1. Download the data using the following command:
+
+```bash
+b2 sync b2://evmos-pruned-mainnet-snapshot <destination_path>
+```
+
+- Steps for archive snapshots (PebbleDB)
+
+1. Install the [B2 command-line tool](https://www.backblaze.com/docs/cloud-storage-command-line-tools)
+2. Authenticate using the following command:
+
+```bash
+b2 authorize-account 004d09b92c841240000000006 K0048Rp2re6yLYzsTCKzrMYZmoWOgEM
+```
+
+1. Download the data using the following command:
+
+```bash
+b2 sync b2://evmos-archive-mainnet-snapshot <destination_path>
+```
 
 ### PebbleDB
 
 To use PebbleDB instead of GoLevelDB when using snapshots from Notional:
 
-Build:
-
-```bash
-go mod edit -replace github.com/tendermint/tm-db=github.com/baabeetaa/tm-db@pebble
-go mod tidy
-go install -tags pebbledb -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb" ./...
-```
+The build instructinos are in the [alternative dbs](/protocol/evmos-cli/alternative-dbs) section.
 
 Download snapshot:
 
