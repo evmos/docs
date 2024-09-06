@@ -64,7 +64,7 @@ updating your server as well.
 Seek legal advice if you intend to run a validator.
 :::
 
-Set up a dedicated validator's website, social profile (eg: Twitter) and signal your intention to become a validator on
+Set up a dedicated validator's website, social profile (eg: X (Twitter)) and signal your intention to become a validator on
 Discord. This is important since users will want to have information about the entity they are staking their EVMOS to.
 
 ## Community
