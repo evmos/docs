@@ -4,12 +4,9 @@ Any non-responsive endpoints are being flagged to be either discussed
 with the corresponding partners or removed.
 """
 
-import os
-import shutil
 from typing import Union
 from endpoints import Endpoint, get_endpoints
 from queries import query_endpoint
-from evmosd import get_binary
 
 ENDPOINTS_FILE = "docs/develop/api/networks.mdx"
 
@@ -19,7 +16,7 @@ def print_output(endpoint: Endpoint, ok: Union[bool, None]):
     print(f"  {ok_emoji} - {endpoint.address}")
 
 
-def check_endpoints(file: str, evmosd_path: str) -> bool:
+def check_endpoints(file: str) -> bool:
     """
     This function contains the main logic of the script,
     which gets the list of available endpoints on the docs
@@ -30,7 +27,7 @@ def check_endpoints(file: str, evmosd_path: str) -> bool:
 
     print("\n--------------\nChecking mainnet endpoints")
     for endpoint in mainnet_endpoints:
-        ok = query_endpoint(endpoint, evmosd_path)
+        ok = query_endpoint(endpoint)
         if ok is False:
             failed_endpoints.append(endpoint.address)
             
@@ -38,7 +35,7 @@ def check_endpoints(file: str, evmosd_path: str) -> bool:
 
     print("\n--------------\nChecking testnet endpoints")
     for endpoint in testnet_endpoints:
-        ok = query_endpoint(endpoint, evmosd_path)
+        ok = query_endpoint(endpoint)
         if ok is False:
             failed_endpoints.append(endpoint.address)
             
@@ -48,16 +45,6 @@ def check_endpoints(file: str, evmosd_path: str) -> bool:
 
 
 if __name__ == "__main__":
-    print("\n--------------\nDownloading latest evmosd binary")
-    download_path, extract_path, binary_path = get_binary()
-
-    all_passed = check_endpoints(ENDPOINTS_FILE, binary_path)
-
-    print("\n--------------\nCleaning up")
-    print(f"  Removing {download_path}")
-    os.remove(download_path)
-    print(f"  Removing {extract_path}")
-    shutil.rmtree(extract_path)
-
+    all_passed = check_endpoints(ENDPOINTS_FILE)
     if not all_passed:
         raise ValueError("some endpoints failed to return a response; check the output")

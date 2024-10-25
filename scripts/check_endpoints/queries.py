@@ -5,12 +5,11 @@ based on the type of endpoint.
 """
 
 from endpoints import Endpoint
-from evmosd import run_binary
 import requests
 from typing import Union
 
 
-def query_endpoint(ep: Endpoint, evmosd_path: str) -> Union[bool, None]:
+def query_endpoint(ep: Endpoint) -> Union[bool, None]:
     """
     This function queries an endpoint based on its type.
     """
