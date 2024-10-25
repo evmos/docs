@@ -5,7 +5,11 @@ from the Markdown file.
 """
 
 import os
-from .endpoints import Endpoint, get_endpoint_from_line, get_endpoints
+import sys
+
+sys.path.append(os.path.dirname(__file__))
+
+from endpoints import Endpoint, get_endpoint_from_line, get_endpoints
 
 
 def test_get_endpoint_from_line_pass():

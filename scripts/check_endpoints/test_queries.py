@@ -2,6 +2,11 @@
 This file contains the tests for the endpoint queries.
 """
 
+import os
+import sys
+
+sys.path.append(os.path.dirname(__file__))
+
 from .endpoints import Endpoint
 from .queries import query_endpoint
 
