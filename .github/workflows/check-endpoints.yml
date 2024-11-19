@@ -1,0 +1,32 @@
+name: Check Endpoints
+
+on:
+  pull_request:
+    paths:
+    - docs/develop/api/networks.mdx
+    - scripts/check_endpoints/**
+  schedule:
+  - cron: '0 0 * * 0'  # This cron expression schedules the workflow to run every Sunday at midnight UTC
+  workflow_dispatch: # allows manual triggering
+
+
+jobs:
+  check-endpoints:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r scripts/check_endpoints/requirements.txt
+
+    - name: Run endpoints check
+      run: python scripts/check_endpoints/main.py

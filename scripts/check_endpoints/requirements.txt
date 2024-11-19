@@ -1,0 +1,11 @@
+certifi==2024.8.30
+charset-normalizer==3.4.0
+exceptiongroup==1.2.0
+idna==3.10
+iniconfig==2.0.0
+packaging==24.0
+pluggy==1.4.0
+pytest==8.1.1
+requests==2.32.3
+tomli==2.0.1
+urllib3==2.2.3
