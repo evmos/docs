@@ -1,0 +1,104 @@
+---
+sidebar_position: 1
+---
+
+# Networks
+
+## Public Available Endpoints
+
+Below is a list of publicly available endpoints that you can use to connect to the Evmos mainnet and
+public testnets:
+
+:::tip
+You can also use [chainlist.org](https://chainlist.org/) to add the node directly to [Metamask](https://academy.evmos.org/articles/beginner/connect-your-wallet/metamask).
+:::
+
+:::note
+If you are searching for the protobuf interfaces, head over [here](https://buf.build/evmos).
+:::
+
+### Mainnet
+
+| Address                                       | Category               | Maintainer                              | Node Type  |
+| --------------------------------------------- | ---------------------- | --------------------------------------- | -----------|
+| `https://evmos.lava.build`                    | `Ethereum` `JSON-RPC`  | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `wss://evmos.lava.build/websocket`            | `Ethereum` `WSS`       | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://rest.evmos.lava.build`               | `Cosmos` `REST`        | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://tm.evmos.lava.build`                 | `Tendermint` `RPC`     | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `wss://tm.evmos.lava.build/websocket`         | `Tendermint` `WSS`     | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `grpc.evmos.lava.build:443`                   | `Cosmos` `gRPC`        | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://grpc.evmos.lava.build`               | `Cosmos` `Web-gRPC`    | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://evmos-json-rpc.stakely.io`           | `Ethereum` `JSON-RPC`  | [Stakely](https://stakely.io/)          | Pruned  |
+| `https://evmos-rpc.stakely.io`                | `Cosmos` `RPC`         | [Stakely](https://stakely.io/)          | Pruned  |
+| `https://evmos-lcd.stakely.io`                | `Cosmos` `REST`        | [Stakely](https://stakely.io/)          | Pruned  |
+| `https://jsonrpc-evmos-ia.cosmosia.notional.ventures/` | `Ethereum` `JSON-RPC`  | [Notional](https://notional.ventures/)  | Pruned  |
+| `https://rpc-evmos-ia.cosmosia.notional.ventures:443`  | `Tendermint` `RPC`     | [Notional](https://notional.ventures/)  | Pruned  |
+| `https://grpc-evmos-ia.cosmosia.notional.ventures:443` | `Tendermint` `gRPC`    | [Notional](https://notional.ventures/)  | Pruned  |
+| `https://api-evmos-ia.cosmosia.notional.ventures:443`  | `Tendermint` `RPC`     | [Notional](https://notional.ventures/)  | Pruned  |
+| `https://rpc.evmos.nodestake.top`             | `Tendermint` `RPC`     | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://grpc.evmos.nodestake.top`            | `Cosmos` `gRPC`        | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://api.evmos.nodestake.top`             | `Cosmos` `REST`        | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://jsonrpc.evmos.nodestake.top`         | `Ethereum` `JSON-RPC`  | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://rpc.evmos.chaintools.tech/`          | `Tendermint` `RPC`     | [ChainTools](https://chaintools.tech/)  | Pruned  |
+| `https://evmos.grpcui.chaintools.host`        | `Cosmos` `gRPC`        | [ChainTools](https://chaintools.tech/)  | Pruned  |
+| `https://api.evmos.chaintools.tech/`          | `Tendermint` `API`     | [ChainTools](https://chaintools.tech/)  | Pruned  |
+| `https://rpc.evmos.silknodes.io`              | `Tendermint` `RPC`     | [Silk Nodes](https://silknodes.io/)     | Pruned  |
+| `https://grpc.evmos.silknodes.io`             | `Cosmos` `gRPC`        | [Silk Nodes](https://silknodes.io/)     | Pruned  |
+| `https://api.evmos.silknodes.io`              | `Cosmos` `REST`        | [Silk Nodes](https://silknodes.io/)     | Pruned  |
+| `https://evmos-mainnet.public.blastapi.io`    | `Ethereum` `JSON-RPC`  | [BLAST](https://blastapi.io/)           | Pruned  |
+| `wss://evmos-mainnet.public.blastapi.io`      | `Ethereum` `Websocket` | [BLAST](https://blastapi.io/)           | Pruned  |
+| `https://evmos-evm.publicnode.com`            | `Ethereum` `JSON-RPC`  | [PublicNode (by Allnodes)](https://evmos.publicnode.com/) | Pruned  |
+| `https://evmos-rpc.publicnode.com`            | `Tendermint` `RPC`     | [PublicNode (by Allnodes)](https://evmos.publicnode.com/) | Pruned  |
+| `https://evmos-rest.publicnode.com`           | `Cosmos` `REST`        | [PublicNode (by Allnodes)](https://evmos.publicnode.com/) | Pruned  |
+| `https://evmos-api.validatrium.club`           | `Tendermint` `API`        | [Validatrium](https://validatrium.com/) | Pruned  |
+| `https://evmos-rpc.validatrium.club`           | `Tendermint` `RPC`        | [Validatrium](https://validatrium.com/) | Pruned  |
+| `https://evmos-rpc.gateway.pokt.network`      | `Ethereum` `JSON-RPC`  | [PocketNetwork](https://www.pokt.network/)  | Pruned  |
+| `https://api-evmos.mms.team:443`              | `Cosmos` `REST`        | [MMS](https://mms.team/) | Pruned  |
+| `https://grpc-evmos.mms.team:443`             | `Cosmos` `gRPC`        | [MMS](https://mms.team/) | Pruned  |
+| `https://rpc-evmos.mms.team:443`              | `Tendermint` `RPC`     | [MMS](https://mms.team/) | Pruned  |
+| `https://jsonrpc-evmos.mms.team:443`          | `Ethereum` `JSON-RPC`  | [MMS](https://mms.team/) | Pruned  |
+| `https://web3endpoints.com/evmos-mainnet`     | `Ethereum` `JSON-RPC`  | [BlockSpaces](https://www.blockspaces.com/web3-infrastructure) | Pruned |
+| `https://evmos-rest.antrixy.org`              | `Cosmos` `REST`        | Antrix Validators                               | Pruned  |
+| `https://evmos-grpc.antrixy.org`              | `Cosmos` `gRPC`        | Antrix Validators                               | Pruned  |
+| `https://evmos-rpc.antrixy.org`               | `Tendermint` `RPC`     | Antrix Validators                               | Pruned  |
+| `https://evmos-json.antrixy.org`              | `Ethereum` `JSON-RPC`  | Antrix Validators                               | Pruned  |
+| `https://evmos.drpc.org`                      | `Ethereum` `JSON-RPC`   | [dRPC](https://drpc.org/)  | Pruned |
+| `wss://evmos.drpc.org`                        | `Ethereum` `Websocket` | [dRPC](https://drpc.org/)  | Pruned |
+
+
+### Testnet
+
+| Address                                      | Category               | Maintainer                              | Node Type  |
+| --------------------------------------------- | ---------------------- | --------------------------------------- | -----------|
+| `https://evmos-testnet.lava.build`            | `Ethereum` `JSON-RPC`  | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `wss://evmos-testnet.lava.build/websocket`    | `Ethereum` `WSS`       | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://rest.evmos-testnet.lava.build`       | `Cosmos` `REST`        | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://tm.evmos-testnet.lava.build`         | `Tendermint` `RPC`     | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `wss://tm.evmos-testnet.lava.build/websocket` | `Tendermint` `WSS`     | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `grpc.evmos-testnet.lava.build:443`           | `Cosmos` `gRPC`        | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://grpc.evmos-testnet.lava.build`       | `Cosmos` `Web-gRPC`    | [Lava Network](https://lavanet.xyz)             | Pruned     |
+| `https://evmos-testnet-rpc.polkachu.com:443` | `Tendermint` `RPC`     | [Polkachu](https://polkachu.com)        | Pruned  |
+| `https://rpc-t.evmos.nodestake.top`          | `Tendermint` `RPC`     | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://grpc-t.evmos.nodestake.top`         | `Cosmos` `gRPC`        | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://api-t.evmos.nodestake.top`          | `Cosmos` `REST`        | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://jsonrpc-t.evmos.nodestake.top`      | `Ethereum` `JSON-RPC`  | [NodeStake](https://nodestake.top/)     | Pruned  |
+| `https://evmos-testnet-rpc.qubelabs.io`      | `Tendermint` `RPC`     | [Qubelabs](https://qubelabs.io/)        | Pruned  |
+| `https://evmos-testnet-lcd.qubelabs.io`      | `Cosmos` `REST`        | [Qubelabs](https://qubelabs.io/)        | Pruned  |
+| `https://evmos-testnet-grpc.qubelabs.io`     | `Cosmos` `gRPC`        | [Qubelabs](https://qubelabs.io/)        | Pruned  |
+| `https://evmos-testnet-json.qubelabs.io`     | `Ethereum` `JSON-RPC`  | [Qubelabs](https://qubelabs.io/)        | Pruned  |
+| `https://evmos-trpc.antrixy.org`             | `Tendermint` `RPC`     | Antrix Validators                       | Pruned  |
+| `https://evmos-trest.antrixy.org`            | `Cosmos` `REST`        | Antrix Validators                       | Pruned  |
+| `https://evmos-tgrpc.antrixy.org`            | `Cosmos` `gRPC`        | Antrix Validators                       | Pruned  |
+| `https://evmos-testnet.drpc.org`             | `Ethereum` `JSON-RPC`  | [dRPC](https://drpc.org/)               | Pruned  |
+| `wss://evmos-testnet.drpc.org`               | `Ethereum` `Websocket` | [dRPC](https://drpc.org/)               | Pruned  |
+
+
+## On-Demand Services
+
+### Lava
+
+Lava is an open source protocol that serves as a p2p market for blockchain RPC & APIs. It gives wallets, dapps and indexers the most reliable RPC by optimally routing requests through a globally distributed network of node providers.
+
+In simpler words, Lava pairs consumers and providers of RPC in a similar way to how Uber connects passengers and drivers. Users of Lava enjoy top quality of service and data reliability & accuracy, ensured by Lava protocol and the crypto-economic framework
+
+In partnership with Evmos, Lava is the providing a highly reliable, community-powered free public endpoints you can find above. If you’re looking for higher rate-limits and usage analytics, [check out the Lava Gateway](https://gateway.lavanet.xyz?utm_source=evmos-docs&utm_medium=referral&utm_campaign=evmos-iprpc).
